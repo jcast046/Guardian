@@ -9,7 +9,7 @@
     "name_full": {"type":"string"},
     "aliases": {"type":"array","items":{"type":"string"}},
     "age_years": {"type":"number","minimum":0,"maximum":18},
-    "gender": {"type":"string","enum":["female","male","unknown"]},
+    "gender": {"type":"string","enum":["female","male"]},
     "race_ethnicity": {"type":"string"},
     "height_cm": {"type":"number"},
     "weight_kg": {"type":"number"},
@@ -97,3 +97,4 @@
   },
   "additionalProperties": false
 }
+
