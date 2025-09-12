@@ -1,0 +1,88 @@
+{
+  "synthetic_case_templates": {
+    "Initial_Report": {
+      "template": "A {child_age}-year-old {child_gender} was last seen at {location} at {time}. The child was reported missing by {witness_guardian} after failing to {expected_activity}.",
+      "fields": {
+        "child_age": "integer (1–17)",
+        "child_gender": "string ['male','female']",
+        "location": "string (street, park, school, store, etc. within Virginia)",
+        "time": "ISO 8601 timestamp (t0)",
+        "witness_guardian": "string (parent, teacher, friend, neighbor)",
+        "expected_activity": "string (return home, arrive at school, meet a friend)"
+      }
+    },
+
+    "Movement_Sighting": {
+      "template": "At approximately {time_offset} hours later, the child was reportedly seen near {poi}. The sighting was made by {person_type}.",
+      "fields": {
+        "time_offset": "integer (1–72, hours since t0)",
+        "poi": "string (transit hub, gas station, highway exit, mall, neighborhood)",
+        "person_type": "string (driver, store clerk, neighbor, passerby)",
+        "in_state": "boolean (true if sighting location is within Virginia, false if out-of-state)",
+        "out_of_state_penalty": "float (applied if in_state=false, e.g., -1.0)"
+      }
+    },
+
+    "Route_Movement": {
+      "template": "Within {time_offset} hours of disappearance, movement cues {movement_cues_text} suggest travel {direction_area} along {route_name}. A {vehicle_description} was observed departing near {origin_city}, Virginia.",
+      "fields": {
+        "time_offset": "integer (1–72, hours since t0)",
+        "movement_cues_text": "string (e.g., 'toward I-95', 'to the Tidewater region')",
+        "direction_area": "string (northbound, southbound, west toward Blue Ridge, east toward Tidewater)",
+        "route_name": "string (I-95, I-64, I-81, US-29, VA-58, etc.)",
+        "vehicle_description": "string (sedan, SUV, white van, unknown)",
+        "origin_city": "string (last-seen city/county in Virginia)",
+        "in_state": "boolean (true if route segment is within Virginia, false if it exits VA)",
+        "out_of_state_penalty": "float (applied if in_state=false, e.g., -1.0)"
+      }
+    },
+
+    "Witness_Encounter": {
+      "template": "Around {time_offset} hours later, a {witness_type} reported someone matching the description ({child_age}-year-old {child_gender}, wearing {clothing_description}) near {poi_city_or_county}.",
+      "fields": {
+        "time_offset": "integer (1–72, hours since t0)",
+        "witness_type": "string (driver, store clerk, neighbor, passerby)",
+        "child_age": "integer (1–17)",
+        "child_gender": "string ['male','female']",
+        "clothing_description": "string (from description/behavioral_patterns)",
+        "poi_city_or_county": "string (Virginia city/county)",
+        "in_state": "boolean (true if the encounter location is within Virginia, false otherwise)",
+        "out_of_state_penalty": "float (applied if in_state=false, e.g., -1.0)"
+      }
+    },
+
+    "Search_Expansion_TimeGap": {
+      "template": "After {duration} hours without confirmed sightings, the search radius expanded to {distance} miles from {last_seen_city}, focusing on {direction_area}. Resources deployed: {resources}.",
+      "fields": {
+        "duration": "integer (1–72, hours since t0)",
+        "distance": "integer (1–430 miles, capped by Virginia’s maximum span)",
+        "last_seen_city": "string (derived from last_seen_lat/lon; Virginia)",
+        "direction_area": "string (Shenandoah Valley, Tidewater, NoVA, along I-95, toward Appalachia)",
+        "resources": "string (K9 units, helicopters, drones, volunteers)",
+        "in_state": "boolean (true if search areas remain within Virginia, false otherwise)",
+        "out_of_state_penalty": "float (applied if in_state=false, e.g., -1.0)"
+      }
+    },
+
+    "Search_Hypothesis": {
+      "template": "For the {time_window} window, prioritize the following {num_zones} search zones based on movement cues, POIs, and routes.",
+      "fields": {
+        "time_window": "string enum ['0-24','24-48','48-72']",
+        "transport_mode": "string enum ['vehicle','foot','transit','unknown']",
+        "num_zones": "integer (1–5)",
+        "priority_zones": "array of objects (see zone schema below)"
+      },
+      "zone_schema": {
+        "center_lat": "float",
+        "center_lon": "float",
+        "radius_miles": "float (0.5–100; <=430)",
+        "corridor": "string (route_name/direction_area if applicable)",
+        "region_tag": "string (e.g., Tidewater, Shenandoah, NoVA, Appalachia, Piedmont)",
+        "confidence": "float (0.0–1.0)",
+        "justification": "string (brief rationale citing cues: e.g., 'last seen near gas station; witness report of white van heading NB I-95')",
+        "in_state": "boolean (true if center & radius remain in Virginia, else false)",
+        "out_of_state_penalty": "float (apply if in_state=false, e.g., -1.0)"
+      }
+    }
+  }
+}

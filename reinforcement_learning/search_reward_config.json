@@ -1,0 +1,97 @@
+{
+    "rl_search_config": {
+      "time_windows": [
+        { "id": "0-24", "start_hr": 0, "end_hr": 24, "weight": 1.0 },
+        { "id": "24-48", "start_hr": 24, "end_hr": 48, "weight": 0.7 },
+        { "id": "48-72", "start_hr": 48, "end_hr": 72, "weight": 0.5 }
+      ],
+  
+      "action_space": {
+        "zones_per_window": 3,
+        "zone_schema": {
+          "center_lat": "float",
+          "center_lon": "float",
+          "radius_miles": "float (0.5–100)",
+          "corridor": "string (e.g., I-95 NB, US-29 SW)",
+          "region_tag": "string (NoVA, Tidewater, Shenandoah, Appalachia, Piedmont)",
+          "priority": "float (0.0–1.0; agent-assigned)",
+          "in_state": "boolean",
+          "out_of_state_penalty": "float (applied if in_state=false; default -1.0)"
+        }
+      },
+  
+      "reward_structures": {
+        "zone_level": {
+          "distance_based": {
+            "description": "Reward for geographic accuracy to true location at time t within the window.",
+            "formula": "1 / (1 + max(0, d_center_true_miles - radius_miles))",
+            "parameters": {
+              "d_center_true_miles": "float (great-circle distance in miles from zone center to true location)",
+              "radius_miles": "float",
+              "max_state_distance": 430
+            }
+          },
+          "time_based": {
+            "description": "Reward for earlier coverage within the window.",
+            "formula": "max(0, (window_end_hr - t_hit_hr) / (window_end_hr - window_start_hr))",
+            "parameters": {
+              "t_hit_hr": "earliest hour within the window when true location falls inside the zone (or when distance_based >= inside_threshold)"
+            }
+          },
+          "hybrid": {
+            "description": "Balanced zone score within a window.",
+            "formula": "alpha * distance_component + beta * time_factor + inside_bonus + corridor_bonus",
+            "parameters": {
+              "alpha": 0.7,
+              "beta": 0.3,
+              "inside_threshold": 0.95,
+              "inside_bonus": 0.1,
+              "corridor_bonus": 0.05
+            }
+          },
+          "regularizers": {
+            "radius_penalty": {
+              "description": "Discourage overly broad radii.",
+              "formula": "-lambda_radius * (radius_miles / max_radius_miles)^p",
+              "parameters": { "lambda_radius": 0.2, "max_radius_miles": 50, "p": 2 }
+            },
+            "out_of_state": {
+              "description": "Hard penalty if any zone center+radius exits Virginia.",
+              "penalty_value": -1.0
+            }
+          }
+        },
+  
+        "window_aggregation": {
+          "description": "Combine multiple zones in a window.",
+          "method": "priority_weighted_sum",
+          "priority_transform": "softmax",
+          "formula": "sum_i( softmax(priority_i) * zone_score_i )",
+          "penalties": {
+            "wasted_zone": {
+              "description": "Zone never gets within inside_threshold during the window and is > threshold_to_true miles away on average.",
+              "penalty_value": -0.2,
+              "parameters": { "threshold_to_true": 30 }
+            },
+            "overlap_penalty": {
+              "description": "Discourage redundant overlapping zones.",
+              "formula": "-lambda_overlap * mean_pairwise_overlap",
+              "parameters": { "lambda_overlap": 0.1 }
+            }
+          }
+        },
+  
+        "episode_aggregation": {
+          "description": "Combine window scores across 0–24, 24–48, 48–72 using window weights.",
+          "formula": "sum_w( weight_w * window_score_w )"
+        }
+      },
+  
+      "mapping": {
+        "distance_units": "miles",
+        "state_boundary": "Virginia",
+        "max_state_distance": 430
+      }
+    }
+  }
+  
