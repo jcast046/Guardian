@@ -1,0 +1,1070 @@
+{
+    "version": "1.0",
+    "crs": "WGS84",
+    "entries": [
+      {
+        "slug": "alexandria-city",
+        "name": "Alexandria",
+        "type": "city",
+        "lat": 38.80,
+        "lon": -77.04,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "bristol-city",
+        "name": "Bristol",
+        "type": "city",
+        "lat": 36.59,
+        "lon": -82.18,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "buena-vista-city",
+        "name": "Buena Vista",
+        "type": "city",
+        "lat": 37.73,
+        "lon": -79.35,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "charlottesville-city",
+        "name": "Charlottesville",
+        "type": "city",
+        "lat": 38.02,
+        "lon": -78.47,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "chesapeake-city",
+        "name": "Chesapeake",
+        "type": "city",
+        "lat": 36.71,
+        "lon": -76.25,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "colonial-heights-city",
+        "name": "Colonial Heights",
+        "type": "city",
+        "lat": 37.26,
+        "lon": -77.40,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "covington-city",
+        "name": "Covington",
+        "type": "city",
+        "lat": 37.76,
+        "lon": -79.99,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "danville-city",
+        "name": "Danville",
+        "type": "city",
+        "lat": 36.58,
+        "lon": -79.39,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "emporia-city",
+        "name": "Emporia",
+        "type": "city",
+        "lat": 36.69,
+        "lon": -77.54,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "fairfax-city",
+        "name": "Fairfax",
+        "type": "city",
+        "lat": 38.84,
+        "lon": -77.30,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "falls-church-city",
+        "name": "Falls Church",
+        "type": "city",
+        "lat": 38.88,
+        "lon": -77.17,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "franklin-city",
+        "name": "Franklin",
+        "type": "city",
+        "lat": 36.67,
+        "lon": -76.93,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "fredericksburg-city",
+        "name": "Fredericksburg",
+        "type": "city",
+        "lat": 38.30,
+        "lon": -77.46,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "galax-city",
+        "name": "Galax",
+        "type": "city",
+        "lat": 36.66,
+        "lon": -80.92,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "hampton-city",
+        "name": "Hampton",
+        "type": "city",
+        "lat": 37.02,
+        "lon": -76.34,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "harrisonburg-city",
+        "name": "Harrisonburg",
+        "type": "city",
+        "lat": 38.44,
+        "lon": -78.86,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "hopewell-city",
+        "name": "Hopewell",
+        "type": "city",
+        "lat": 37.30,
+        "lon": -77.28,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "lexington-city",
+        "name": "Lexington",
+        "type": "city",
+        "lat": 37.78,
+        "lon": -79.44,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "lynchburg-city",
+        "name": "Lynchburg",
+        "type": "city",
+        "lat": 37.41,
+        "lon": -79.14,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "manassas-city",
+        "name": "Manassas",
+        "type": "city",
+        "lat": 38.75,
+        "lon": -77.47,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "manassas-park-city",
+        "name": "Manassas Park",
+        "type": "city",
+        "lat": 38.77,
+        "lon": -77.44,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "martinsville-city",
+        "name": "Martinsville",
+        "type": "city",
+        "lat": 36.69,
+        "lon": -79.87,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "newport-news-city",
+        "name": "Newport News",
+        "type": "city",
+        "lat": 37.08,
+        "lon": -76.49,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "norfolk-city",
+        "name": "Norfolk",
+        "type": "city",
+        "lat": 36.85,
+        "lon": -76.28,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "norton-city",
+        "name": "Norton",
+        "type": "city",
+        "lat": 36.93,
+        "lon": -82.62,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "petersburg-city",
+        "name": "Petersburg",
+        "type": "city",
+        "lat": 37.22,
+        "lon": -77.40,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "poquoson-city",
+        "name": "Poquoson",
+        "type": "city",
+        "lat": 37.12,
+        "lon": -76.34,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "portsmouth-city",
+        "name": "Portsmouth",
+        "type": "city",
+        "lat": 36.83,
+        "lon": -76.29,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "radford-city",
+        "name": "Radford",
+        "type": "city",
+        "lat": 37.13,
+        "lon": -80.54,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "richmond-city",
+        "name": "Richmond",
+        "type": "city",
+        "lat": 37.54,
+        "lon": -77.43,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "roanoke-city",
+        "name": "Roanoke",
+        "type": "city",
+        "lat": 37.27,
+        "lon": -79.94,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "salem-city",
+        "name": "Salem",
+        "type": "city",
+        "lat": 37.29,
+        "lon": -80.05,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "staunton-city",
+        "name": "Staunton",
+        "type": "city",
+        "lat": 38.15,
+        "lon": -79.07,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "suffolk-city",
+        "name": "Suffolk",
+        "type": "city",
+        "lat": 36.72,
+        "lon": -76.58,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "virginia-beach-city",
+        "name": "Virginia Beach",
+        "type": "city",
+        "lat": 36.85,
+        "lon": -75.97,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "waynesboro-city",
+        "name": "Waynesboro",
+        "type": "city",
+        "lat": 38.07,
+        "lon": -78.88,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "williamsburg-city",
+        "name": "Williamsburg",
+        "type": "city",
+        "lat": 37.27,
+        "lon": -76.70,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "winchester-city",
+        "name": "Winchester",
+        "type": "city",
+        "lat": 39.18,
+        "lon": -78.16,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "accomack-county",
+        "name": "Accomack",
+        "type": "county",
+        "lat": 37.71,
+        "lon": -75.66,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "albemarle-county",
+        "name": "Albemarle",
+        "type": "county",
+        "lat": 38.03,
+        "lon": -78.48,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "alleghany-county",
+        "name": "Alleghany",
+        "type": "county",
+        "lat": 37.78,
+        "lon": -79.99,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "amelia-county",
+        "name": "Amelia",
+        "type": "county",
+        "lat": 37.34,
+        "lon": -77.98,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "amherst-county",
+        "name": "Amherst",
+        "type": "county",
+        "lat": 37.58,
+        "lon": -79.15,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "appomattox-county",
+        "name": "Appomattox",
+        "type": "county",
+        "lat": 37.35,
+        "lon": -78.82,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "arlington-county",
+        "name": "Arlington",
+        "type": "county",
+        "lat": 38.88,
+        "lon": -77.10,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "augusta-county",
+        "name": "Augusta",
+        "type": "county",
+        "lat": 38.25,
+        "lon": -79.11,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "bath-county",
+        "name": "Bath",
+        "type": "county",
+        "lat": 38.08,
+        "lon": -79.68,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "bedford-county",
+        "name": "Bedford",
+        "type": "county",
+        "lat": 37.33,
+        "lon": -79.52,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "bland-county",
+        "name": "Bland",
+        "type": "county",
+        "lat": 37.10,
+        "lon": -81.12,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "botetourt-county",
+        "name": "Botetourt",
+        "type": "county",
+        "lat": 37.55,
+        "lon": -79.80,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "brunswick-county",
+        "name": "Brunswick",
+        "type": "county",
+        "lat": 36.75,
+        "lon": -77.85,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "buchanan-county",
+        "name": "Buchanan",
+        "type": "county",
+        "lat": 37.28,
+        "lon": -82.08,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "buckingham-county",
+        "name": "Buckingham",
+        "type": "county",
+        "lat": 37.55,
+        "lon": -78.55,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "campbell-county",
+        "name": "Campbell",
+        "type": "county",
+        "lat": 37.21,
+        "lon": -79.16,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "caroline-county",
+        "name": "Caroline",
+        "type": "county",
+        "lat": 38.03,
+        "lon": -77.35,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "carroll-county",
+        "name": "Carroll",
+        "type": "county",
+        "lat": 36.75,
+        "lon": -80.75,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "charles-city-county",
+        "name": "Charles City",
+        "type": "county",
+        "lat": 37.35,
+        "lon": -77.07,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "charlotte-county",
+        "name": "Charlotte",
+        "type": "county",
+        "lat": 37.05,
+        "lon": -78.65,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "chesterfield-county",
+        "name": "Chesterfield",
+        "type": "county",
+        "lat": 37.37,
+        "lon": -77.51,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "clarke-county",
+        "name": "Clarke",
+        "type": "county",
+        "lat": 39.11,
+        "lon": -77.98,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "craig-county",
+        "name": "Craig",
+        "type": "county",
+        "lat": 37.47,
+        "lon": -80.18,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "culpeper-county",
+        "name": "Culpeper",
+        "type": "county",
+        "lat": 38.47,
+        "lon": -77.99,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "cumberland-county",
+        "name": "Cumberland",
+        "type": "county",
+        "lat": 37.51,
+        "lon": -78.24,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "dickenson-county",
+        "name": "Dickenson",
+        "type": "county",
+        "lat": 37.16,
+        "lon": -82.35,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "dinwiddie-county",
+        "name": "Dinwiddie",
+        "type": "county",
+        "lat": 37.08,
+        "lon": -77.58,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "essex-county",
+        "name": "Essex",
+        "type": "county",
+        "lat": 37.93,
+        "lon": -76.93,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "fairfax-county",
+        "name": "Fairfax",
+        "type": "county",
+        "lat": 38.83,
+        "lon": -77.30,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "fauquier-county",
+        "name": "Fauquier",
+        "type": "county",
+        "lat": 38.71,
+        "lon": -77.80,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "floyd-county",
+        "name": "Floyd",
+        "type": "county",
+        "lat": 36.91,
+        "lon": -80.31,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "fluvanna-county",
+        "name": "Fluvanna",
+        "type": "county",
+        "lat": 37.85,
+        "lon": -78.27,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "franklin-county",
+        "name": "Franklin",
+        "type": "county",
+        "lat": 36.99,
+        "lon": -79.89,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "frederick-county",
+        "name": "Frederick",
+        "type": "county",
+        "lat": 39.18,
+        "lon": -78.25,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "giles-county",
+        "name": "Giles",
+        "type": "county",
+        "lat": 37.32,
+        "lon": -80.73,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "gloucester-county",
+        "name": "Gloucester",
+        "type": "county",
+        "lat": 37.40,
+        "lon": -76.51,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "goochland-county",
+        "name": "Goochland",
+        "type": "county",
+        "lat": 37.69,
+        "lon": -77.89,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "grayson-county",
+        "name": "Grayson",
+        "type": "county",
+        "lat": 36.65,
+        "lon": -81.23,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "greene-county",
+        "name": "Greene",
+        "type": "county",
+        "lat": 38.29,
+        "lon": -78.46,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "greensville-county",
+        "name": "Greensville",
+        "type": "county",
+        "lat": 36.67,
+        "lon": -77.55,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "halifax-county",
+        "name": "Halifax",
+        "type": "county",
+        "lat": 36.76,
+        "lon": -78.93,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "hanover-county",
+        "name": "Hanover",
+        "type": "county",
+        "lat": 37.76,
+        "lon": -77.47,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "henrico-county",
+        "name": "Henrico",
+        "type": "county",
+        "lat": 37.55,
+        "lon": -77.39,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "henry-county",
+        "name": "Henry",
+        "type": "county",
+        "lat": 36.65,
+        "lon": -79.91,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "highland-county",
+        "name": "Highland",
+        "type": "county",
+        "lat": 38.38,
+        "lon": -79.56,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "isle-of-wight-county",
+        "name": "Isle of Wight",
+        "type": "county",
+        "lat": 36.90,
+        "lon": -76.71,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "james-city-county",
+        "name": "James City",
+        "type": "county",
+        "lat": 37.27,
+        "lon": -76.78,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "king-and-queen-county",
+        "name": "King and Queen",
+        "type": "county",
+        "lat": 37.70,
+        "lon": -76.92,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "king-george-county",
+        "name": "King George",
+        "type": "county",
+        "lat": 38.26,
+        "lon": -77.16,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "king-william-county",
+        "name": "King William",
+        "type": "county",
+        "lat": 37.72,
+        "lon": -77.10,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "lancaster-county",
+        "name": "Lancaster",
+        "type": "county",
+        "lat": 37.71,
+        "lon": -76.45,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "lee-county",
+        "name": "Lee",
+        "type": "county",
+        "lat": 36.70,
+        "lon": -83.13,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "loudoun-county",
+        "name": "Loudoun",
+        "type": "county",
+        "lat": 39.09,
+        "lon": -77.64,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "louisa-county",
+        "name": "Louisa",
+        "type": "county",
+        "lat": 38.02,
+        "lon": -77.96,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "lunenburg-county",
+        "name": "Lunenburg",
+        "type": "county",
+        "lat": 36.96,
+        "lon": -78.26,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "madison-county",
+        "name": "Madison",
+        "type": "county",
+        "lat": 38.37,
+        "lon": -78.26,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "mathews-county",
+        "name": "Mathews",
+        "type": "county",
+        "lat": 37.43,
+        "lon": -76.32,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "mecklenburg-county",
+        "name": "Mecklenburg",
+        "type": "county",
+        "lat": 36.67,
+        "lon": -78.36,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "middlesex-county",
+        "name": "Middlesex",
+        "type": "county",
+        "lat": 37.61,
+        "lon": -76.57,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "montgomery-county",
+        "name": "Montgomery",
+        "type": "county",
+        "lat": 37.23,
+        "lon": -80.41,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "nelson-county",
+        "name": "Nelson",
+        "type": "county",
+        "lat": 37.79,
+        "lon": -78.88,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "new-kent-county",
+        "name": "New Kent",
+        "type": "county",
+        "lat": 37.51,
+        "lon": -76.99,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "northampton-county",
+        "name": "Northampton",
+        "type": "county",
+        "lat": 37.29,
+        "lon": -75.91,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "northumberland-county",
+        "name": "Northumberland",
+        "type": "county",
+        "lat": 37.87,
+        "lon": -76.50,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "nottoway-county",
+        "name": "Nottoway",
+        "type": "county",
+        "lat": 37.13,
+        "lon": -78.07,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "orange-county",
+        "name": "Orange",
+        "type": "county",
+        "lat": 38.24,
+        "lon": -78.11,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "page-county",
+        "name": "Page",
+        "type": "county",
+        "lat": 38.65,
+        "lon": -78.46,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "patrick-county",
+        "name": "Patrick",
+        "type": "county",
+        "lat": 36.65,
+        "lon": -80.30,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "pittsylvania-county",
+        "name": "Pittsylvania",
+        "type": "county",
+        "lat": 36.83,
+        "lon": -79.39,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "powhatan-county",
+        "name": "Powhatan",
+        "type": "county",
+        "lat": 37.54,
+        "lon": -77.91,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "prince-edward-county",
+        "name": "Prince Edward",
+        "type": "county",
+        "lat": 37.22,
+        "lon": -78.45,
+        "region_tag": "Southside"
+      },
+      {
+        "slug": "prince-george-county",
+        "name": "Prince George",
+        "type": "county",
+        "lat": 37.21,
+        "lon": -77.28,
+        "region_tag": "Central Virginia"
+      },
+      {
+        "slug": "prince-william-county",
+        "name": "Prince William",
+        "type": "county",
+        "lat": 38.71,
+        "lon": -77.48,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "pulaski-county",
+        "name": "Pulaski",
+        "type": "county",
+        "lat": 37.05,
+        "lon": -80.77,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "rappahannock-county",
+        "name": "Rappahannock",
+        "type": "county",
+        "lat": 38.71,
+        "lon": -78.17,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "richmond-county",
+        "name": "Richmond",
+        "type": "county",
+        "lat": 37.93,
+        "lon": -76.78,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "roanoke-county",
+        "name": "Roanoke",
+        "type": "county",
+        "lat": 37.27,
+        "lon": -80.06,
+        "region_tag": "Western Virginia"
+      },
+      {
+        "slug": "rockbridge-county",
+        "name": "Rockbridge",
+        "type": "county",
+        "lat": 37.83,
+        "lon": -79.43,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "rockingham-county",
+        "name": "Rockingham",
+        "type": "county",
+        "lat": 38.51,
+        "lon": -78.93,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "russell-county",
+        "name": "Russell",
+        "type": "county",
+        "lat": 36.96,
+        "lon": -82.09,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "scott-county",
+        "name": "Scott",
+        "type": "county",
+        "lat": 36.71,
+        "lon": -82.60,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "shenandoah-county",
+        "name": "Shenandoah",
+        "type": "county",
+        "lat": 38.88,
+        "lon": -78.51,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "smyth-county",
+        "name": "Smyth",
+        "type": "county",
+        "lat": 36.85,
+        "lon": -81.51,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "southampton-county",
+        "name": "Southampton",
+        "type": "county",
+        "lat": 36.71,
+        "lon": -77.09,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "spotsylvania-county",
+        "name": "Spotsylvania",
+        "type": "county",
+        "lat": 38.20,
+        "lon": -77.58,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "stafford-county",
+        "name": "Stafford",
+        "type": "county",
+        "lat": 38.43,
+        "lon": -77.40,
+        "region_tag": "Northern Virginia"
+      },
+      {
+        "slug": "surry-county",
+        "name": "Surry",
+        "type": "county",
+        "lat": 37.13,
+        "lon": -76.83,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "sussex-county",
+        "name": "Sussex",
+        "type": "county",
+        "lat": 36.91,
+        "lon": -77.28,
+        "region_tag": "Tidewater"
+      },
+      {
+        "slug": "tazewell-county",
+        "name": "Tazewell",
+        "type": "county",
+        "lat": 37.13,
+        "lon": -81.51,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "warren-county",
+        "name": "Warren",
+        "type": "county",
+        "lat": 38.91,
+        "lon": -78.19,
+        "region_tag": "Valley"
+      },
+      {
+        "slug": "washington-county",
+        "name": "Washington",
+        "type": "county",
+        "lat": 36.71,
+        "lon": -81.95,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "westmoreland-county",
+        "name": "Westmoreland",
+        "type": "county",
+        "lat": 38.16,
+        "lon": -76.86,
+        "region_tag": "Northern Neck"
+      },
+      {
+        "slug": "wise-county",
+        "name": "Wise",
+        "type": "county",
+        "lat": 37.16,
+        "lon": -82.62,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "wythe-county",
+        "name": "Wythe",
+        "type": "county",
+        "lat": 36.95,
+        "lon": -81.08,
+        "region_tag": "Southwest"
+      },
+      {
+        "slug": "york-county",
+        "name": "York",
+        "type": "county",
+        "lat": 37.23,
+        "lon": -76.50,
+        "region_tag": "Tidewater"
+      }
+    ]
+  }
