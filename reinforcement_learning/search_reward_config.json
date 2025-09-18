@@ -13,7 +13,7 @@
           "center_lon": "float",
           "radius_miles": "float (0.5–100)",
           "corridor": "string (e.g., I-95 NB, US-29 SW)",
-          "region_tag": "string (NoVA, Tidewater, Shenandoah, Appalachia, Piedmont)",
+          "region_tag": "string ( Central Virginia, Tidewater, Northern Neck, Northern Virginia, Valley, Western Virginia, Southwest, Southside)",
           "priority": "float (0.0–1.0; agent-assigned)",
           "in_state": "boolean",
           "out_of_state_penalty": "float (applied if in_state=false; default -1.0)"
