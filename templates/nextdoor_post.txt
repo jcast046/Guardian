@@ -1,0 +1,6 @@
+ Missing Child — {neighborhood}, {city_or_county}
+Please keep an eye out for {child.name}, {child.age}. Last seen {time_friendly(last_seen.date_time_local)} near {last_seen.place_text} wearing {clothing.top}, {clothing.bottom}, {clothing.shoes}.
+
+{#vehicle_section?}A {vehicle.color} {vehicle.make} {vehicle.model}{#vehicle.plate?} (plate {vehicle.plate}){/vehicle.plate?} was seen {movement_cues.direction} on {movement_cues.corridor}.{#vehicle.notes?} {vehicle.notes}{/vehicle.notes?}{/vehicle_section?}
+
+If you have Ring/CCTV footage between {video_window_start}–{video_window_end}, please share with {pd_name} at {pd_tipline}. Be safe checking, and don’t engage anyone directly.

@@ -1,0 +1,8 @@
+MISSING CHILD — PLEASE SHARE
+Name: {child.name} ({child.age})
+Last seen: {time_friendly(last_seen.date_time_local)} near {last_seen.place_text}
+Clothing: {clothing.top}, {clothing.bottom}, {clothing.shoes}
+Description: {physical.height_in}" / {physical.weight_lb} lbs, {physical.hair} hair, {physical.eyes} eyes
+{#vehicle_section?}Vehicle: {vehicle.color} {vehicle.make} {vehicle.model}{#vehicle.plate?} / Plate {vehicle.plate}{/vehicle.plate?}{/vehicle_section?}
+
+If you have info, call {pd_phone} or {pd_tipline}. Screenshot and share widely. #AMBER #Virginia

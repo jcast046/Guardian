@@ -1,0 +1,22 @@
+{
+    "case_id": "",
+    "style_tag": "news_report",
+    "sources": [],
+    "child": {"name": "", "age": null, "gender": "unknown", "race": null},
+    "physical": {"height_in": null, "weight_lb": null, "hair": null, "eyes": null, "marks": null},
+    "clothing": {"top": null, "bottom": null, "shoes": null, "accessories": null, "raw": null},
+    "last_seen": {"date_time_local": null, "place_text": "", "geo": null},
+    "report_time_local": null,
+    "report_gap_hours": null,
+    "vehicle": {"make": null, "model": null, "year": null, "color": null, "plate": null, "notes": null, "raw": null},
+    "suspect": {"name": null, "age": null, "gender": null, "race": null, "height_in": null, "weight_lb": null, "clothing": null, "marks": null},
+    "witness": {"type": null, "medium": null, "quote": null},
+    "behaviors": {"abduction_method": null, "suspect_behavior": null},
+    "movement_cues": {"direction": "unknown", "corridor": null, "landmarks": []},
+    "alert_status": {"type": "none", "issued_at": null, "canceled_at": null},
+    "outcome": {"status": "ongoing", "resolved_at": null, "notes": null},
+    "quotes": [],
+    "evidence": {},
+    "source_text": ""
+  }
+  
