@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/gazetteer.schema.json",
+  "title": "Virginia Gazetteer",
+  "description": "Schema for Virginia geographic gazetteer data",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Version of the gazetteer data"
+    },
+    "crs": {
+      "type": "string",
+      "description": "Coordinate reference system",
+      "enum": ["WGS84", "EPSG:4326"]
+    },
+    "entries": {
+      "type": "array",
+      "description": "Array of geographic entries",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the location"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of geographic feature",
+            "enum": ["city", "county", "town", "village", "unincorporated", "neighborhood", "district"]
+          },
+          "lat": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90,
+            "description": "Latitude in decimal degrees"
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180,
+            "description": "Longitude in decimal degrees"
+          },
+          "region_tag": {
+            "type": "string",
+            "description": "Regional classification",
+            "enum": ["Northern Virginia", "Central Virginia", "Tidewater", "Southwest", "Valley", "Western Virginia", "Northern Neck", "Southside", "Unknown"]
+          },
+          "county": {
+            "type": ["string", "null"],
+            "description": "County name if applicable"
+          },
+          "population": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "description": "Population count if available"
+          },
+          "fips_code": {
+            "type": ["string", "null"],
+            "description": "FIPS code if available"
+          }
+        },
+        "required": ["slug", "name", "type", "lat", "lon", "region_tag"]
+      }
+    }
+  },
+  "required": ["version", "crs", "entries"]
+}

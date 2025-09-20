@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/case_templates.schema.json",
+  "title": "Guardian Case Templates",
+  "description": "Schema for synthetic case generation templates",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "synthetic_case_templates": {
+      "type": "object",
+      "description": "Collection of case generation templates",
+      "patternProperties": {
+        "^[A-Za-z_]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "template": {
+              "type": "string",
+              "description": "Template string with placeholders"
+            },
+            "fields": {
+              "type": "object",
+              "description": "Field definitions for template placeholders",
+              "additionalProperties": {
+                "type": "string",
+                "description": "Field type and constraints"
+              }
+            },
+            "zone_schema": {
+              "type": "object",
+              "description": "Optional zone schema for search hypothesis templates",
+              "additionalProperties": false,
+              "properties": {
+                "center_lat": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "center_lon": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "radius_miles": {
+                  "type": ["number", "string"],
+                  "description": "Field type description or example value"
+                },
+                "corridor": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "region_tag": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "confidence": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "justification": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "in_state": {
+                  "type": "string",
+                  "description": "Field type description"
+                },
+                "out_of_state_penalty": {
+                  "type": "string",
+                  "description": "Field type description"
+                }
+              }
+            }
+          },
+          "required": ["template", "fields"]
+        }
+      }
+    }
+  },
+  "required": ["synthetic_case_templates"]
+}
