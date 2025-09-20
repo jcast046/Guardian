@@ -11,7 +11,7 @@
         "zone_schema": {
           "center_lat": "float",
           "center_lon": "float",
-          "radius_miles": "float (0.5–100)",
+          "radius_miles": "float (5–50)",
           "corridor": "string (e.g., I-95 NB, US-29 SW)",
           "region_tag": "string ( Central Virginia, Tidewater, Northern Neck, Northern Virginia, Valley, Western Virginia, Southwest, Southside)",
           "priority": "float (0.0–1.0; agent-assigned)",
@@ -44,7 +44,7 @@
             "parameters": {
               "alpha": 0.7,
               "beta": 0.3,
-              "inside_threshold": 0.95,
+              "inside_threshold": 0.85,
               "inside_bonus": 0.1,
               "corridor_bonus": 0.05
             }
@@ -71,7 +71,7 @@
             "wasted_zone": {
               "description": "Zone never gets within inside_threshold during the window and is > threshold_to_true miles away on average.",
               "penalty_value": -0.2,
-              "parameters": { "threshold_to_true": 30 }
+              "parameters": { "threshold_to_true_by_window": { "0-24": 15, "24-48": 25, "48-72": 40 } }
             },
             "overlap_penalty": {
               "description": "Discourage redundant overlapping zones.",
