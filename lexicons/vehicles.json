@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "fields": [
+    "make",
+    "model",
+    "year",
+    "color",
+    "license",
+    "notes"
+  ],
+  "inventory": [
+    {
+      "make": "Honda",
+      "model": "Passport",
+      "year": 2024,
+      "color": "black",
+      "license": "partial VA tag ???-1234",
+      "notes": "tinted windows"
+    },
+    {
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "year": 2016,
+      "color": "white",
+      "license": "unknown",
+      "notes": "referred to as 'white Jeep'"
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2012,
+      "color": "dark blue",
+      "license": "VA U**-****",
+      "notes": "dent on rear bumper"
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2019,
+      "color": "white",
+      "license": "unknown",
+      "notes": "single cab, scratches on passenger side"
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2018,
+      "color": "silver",
+      "license": "temporary paper tag",
+      "notes": "aftermarket rims"
+    }
+  ],
+  "sample_sentence_patterns": [
+    "Suspect vehicle: {color} {year} {make} {model} ({license}).",
+    "Seen leaving the area in a {color} {make} {model}; {notes}.",
+    "Possibly traveling in a {color} {year} {make} {model} with {notes}."
+  ]
+}

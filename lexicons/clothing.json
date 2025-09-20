@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "categories": {
+    "tops": [
+      "gray jacket",
+      "red hoodie",
+      "plaid shirt",
+      "white hoodie",
+      "long-sleeve black shirt",
+      "blue windbreaker",
+      "navy sweatshirt with white logo",
+      "greenish-colored hoodie",
+      "black t-shirt with writing",
+      "denim jacket"
+    ],
+    "bottoms": [
+      "blue jeans",
+      "denim pants",
+      "gray shorts",
+      "black leggings",
+      "navy sweatpants",
+      "khaki shorts",
+      "black joggers",
+      "blue athletic shorts"
+    ],
+    "shoes": [
+      "red Crocs",
+      "Spider-Man flip-flops",
+      "black sneakers",
+      "white sneakers",
+      "brown sandals",
+      "black boots"
+    ],
+    "accessories": [
+      "black and silver baseball cap with 'Rocky' on it",
+      "ski mask",
+      "black backpack",
+      "blue backpack",
+      "silver necklace",
+      "smartwatch",
+      "rope bracelet"
+    ]
+  },
+  "sample_sentence_patterns": [
+    "Last seen wearing a {tops}, {bottoms}, and {shoes}.",
+    "Witness reported a {tops} and {bottoms}; {accessories} noted.",
+    "Clothing at time of disappearance: {tops}, {bottoms}; footwear: {shoes}."
+  ]
+}

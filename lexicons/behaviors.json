@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "abduction_methods": [
+    "lure with promise ('come see what's in the back of the car')",
+    "physical grab from sidewalk/play area",
+    "custody-related pickup against court order",
+    "online grooming leading to meetup",
+    "coercion with implied weapon"
+  ],
+  "suspect_behaviors": [
+    "circling the block multiple times",
+    "following into a store and exiting with the child",
+    "backing up vehicle to block driveway",
+    "asking the child questions and offering a ride",
+    "switching vehicles after leaving the scene"
+  ],
+  "movement_cues": [
+    "left on foot toward nearby woods",
+    "entered vehicle and headed northbound on I-95",
+    "walked through mall corridor into adjacent store",
+    "turned onto US-58 east toward Suffolk",
+    "merged onto I-64 west toward Richmond"
+  ],
+  "sample_sentence_patterns": [
+    "Witnesses reported the suspect {suspect_behaviors} before {abduction_methods}.",
+    "After the incident, the pair {movement_cues}."
+  ]
+}

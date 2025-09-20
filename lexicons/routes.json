@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "highways": [
+    {
+      "name": "I-64",
+      "segments": [
+        "Virginia Beach",
+        "Norfolk",
+        "Newport News",
+        "Richmond",
+        "Charlottesville"
+      ]
+    },
+    {
+      "name": "I-95",
+      "segments": [
+        "Emporia",
+        "Petersburg",
+        "Richmond",
+        "Fredericksburg",
+        "Fairfax"
+      ]
+    },
+    {
+      "name": "I-81",
+      "segments": [
+        "Bristol",
+        "Roanoke",
+        "New River Valley",
+        "Winchester"
+      ]
+    },
+    {
+      "name": "I-264",
+      "segments": [
+        "Virginia Beach",
+        "Norfolk"
+      ]
+    },
+    {
+      "name": "US-58",
+      "segments": [
+        "Virginia Beach",
+        "Suffolk",
+        "South Hill",
+        "Danville"
+      ]
+    },
+    {
+      "name": "VA-168",
+      "segments": [
+        "Chesapeake",
+        "Outer Banks connector"
+      ]
+    },
+    {
+      "name": "US-29",
+      "segments": [
+        "Danville",
+        "Lynchburg",
+        "Charlottesville",
+        "Culpeper"
+      ]
+    }
+  ],
+  "sample_sentence_patterns": [
+    "Vehicle last seen traveling {direction} on {highway} toward {destination}.",
+    "Possible route includes {highway} through {segments}.",
+    "Search expanded along {highway} between {origin} and {destination}."
+  ]
+}

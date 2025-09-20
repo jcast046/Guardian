@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "patterns": [
+    {
+      "label": "same_day_hours",
+      "description": "reported same day",
+      "examples": [
+        "Last seen at 9:00 a.m.; reported missing at 3:15 p.m. (\u22486 hours).",
+        "Seen around 11:45 a.m.; AMBER Alert issued at 4:30 p.m."
+      ]
+    },
+    {
+      "label": "overnight_12h",
+      "description": "\u224812 hour delay",
+      "examples": [
+        "Last seen at 9:00 a.m.; reported at 9:00 p.m.",
+        "Left the park at noon; family called 911 at midnight."
+      ]
+    },
+    {
+      "label": "full_day_24h",
+      "description": "\u224824 hours missing",
+      "examples": [
+        "Missing nearly 24 hours before being located.",
+        "Disappeared Friday evening; found Saturday around 6:00 p.m."
+      ]
+    }
+  ],
+  "sample_sentence_patterns": [
+    "The child was last seen at {last_seen_time} and reported missing at {report_time} (\u2248{gap_hours} hours).",
+    "An alert was issued {gap_hours} hours after the last confirmed sighting."
+  ]
+}

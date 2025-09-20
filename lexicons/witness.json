@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "types": [
+    {
+      "type": "neighbor",
+      "capture": "Ring/surveillance video",
+      "sample_quote": "I saw them on my Ring camera around {time} and sent the clip to police."
+    },
+    {
+      "type": "parent",
+      "capture": "present at scene",
+      "sample_quote": "I turned and she was gone; we called 911 immediately."
+    },
+    {
+      "type": "passerby",
+      "capture": "phone tip",
+      "sample_quote": "I saw a {vehicle} headed {direction} and called it in."
+    },
+    {
+      "type": "school_staff",
+      "capture": "attendance/campus cam",
+      "sample_quote": "She left campus at {time} wearing a {tops} and {bottoms}."
+    },
+    {
+      "type": "store_employee",
+      "capture": "mall CCTV",
+      "sample_quote": "Security pulled video showing a {suspect_desc} exiting with the child."
+    }
+  ],
+  "sample_sentence_patterns": [
+    "A {type} provided {capture}, timestamped {time}.",
+    "According to a {type}, the child was seen {activity} near {location}."
+  ]
+}
