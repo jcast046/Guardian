@@ -1,0 +1,229 @@
+{
+  "case_id": "GRD-2025-738083",
+  "demographic": {
+    "gender": "female",
+    "age_years": 12,
+    "name": "Child_2646",
+    "distinctive_features": "brown eyes"
+  },
+  "spatial": {
+    "last_seen_lat": 38.47,
+    "last_seen_lon": -77.99,
+    "last_seen_location": "Culpeper, Virginia",
+    "last_seen_city": "Culpeper",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-95"
+    ],
+    "nearby_transit_hubs": [],
+    "nearby_pois": []
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-20T22:56:41.055814+00:00",
+    "reported_missing_ts": "2025-09-21T04:56:41.064195+00:00",
+    "elapsed_report_minutes": 213,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-21T05:21:24.777549+00:00",
+        "lat": 38.8642717,
+        "lon": -77.279483,
+        "event_type": "search_action",
+        "reporter_type": "unknown",
+        "confidence": 0.7674951845212843,
+        "note": "Witness reported seeing child wearing greenish-colored hoodie and gray shorts"
+      },
+      {
+        "ts": "2025-09-21T11:52:14.423319+00:00",
+        "lat": 38.02,
+        "lon": -77.96,
+        "event_type": "camera_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.7525745355239958,
+        "note": "Witness reported seeing child wearing white hoodie and black leggings"
+      },
+      {
+        "ts": "2025-09-22T23:59:32.189986+00:00",
+        "lat": 38.71,
+        "lon": -78.17,
+        "event_type": "search_action",
+        "reporter_type": "public",
+        "confidence": 0.5826860335639252,
+        "note": "Witness reported seeing child wearing plaid shirt and blue athletic shorts"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 12-year-old female was last seen at Culpeper at 2025-09-20T22:56:41.055814+00:00. The child was reported missing by neighbor after failing to return home.",
+    "behavioral_patterns": [
+      "walked through mall corridor into adjacent store"
+    ],
+    "movement_cues_text": "Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Culpeper, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-20T22:56:41.055814+00:00",
+      "Reported missing 1 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 9 hours later, a school_staff reported someone matching the description (12-year-old female, wearing denim jacket, gray shorts, red Crocs) near King William.",
+        "clothing": "denim jacket, gray shorts, red Crocs",
+        "vehicle": "Nissan Altima",
+        "behavior": "backing up vehicle to block driveway"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing female child reported in Culpeper",
+        "excerpt": "Authorities are searching for a 12-year-old female last seen in Culpeper, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "NamUs",
+        "text": "Please help find missing child in Culpeper area. Last seen wearing denim jacket, gray shorts, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "family",
+        "age_estimate": 52,
+        "vehicle": {
+          "make": "Nissan",
+          "model": "Altima",
+          "color": "silver",
+          "plate_partial": "temporary paper tag"
+        },
+        "note": "following into a store and exiting with the child"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {},
+    "_fulltext": "A 12-year-old female was last seen at Culpeper at 2025-09-20T22:56:41.055814+00:00. The child was reported missing by neighbor after failing to return home. Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Culpeper, Virginia. Around 9 hours later, a school_staff reported someone matching the description (12-year-old female, wearing denim jacket, gray shorts, red Crocs) near King William.",
+    "search_zones": [
+      {
+        "center_lat": 38.29,
+        "center_lon": -78.46,
+        "radius_miles": 5.004582300265932,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.8218201880173293,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.2,
+        "center_lon": -77.58,
+        "radius_miles": 4.199423395483957,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.30920855874915637,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.29,
+        "center_lon": -78.46,
+        "radius_miles": 4.819957239492728,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.3448969489462253,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.43,
+        "center_lon": -77.4,
+        "radius_miles": 23.753629044593737,
+        "corridor": "US-29 SW",
+        "region_tag": "NoVA",
+        "priority": 0.6739556403131989,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.47,
+        "center_lon": -77.99,
+        "radius_miles": 21.19869322063418,
+        "corridor": "US-29 SW",
+        "region_tag": "Unknown",
+        "priority": 0.8114048019395359,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.27,
+        "center_lon": -76.78,
+        "radius_miles": 19.04007518018124,
+        "corridor": "US-29 SW",
+        "region_tag": "Tidewater",
+        "priority": 0.6760795074047927,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.91,
+        "center_lon": -78.19,
+        "radius_miles": 40.21336224357951,
+        "corridor": "I-95 NB",
+        "region_tag": "Shenandoah",
+        "priority": 0.6704756769616339,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 38.47,
+        "center_lon": -77.99,
+        "radius_miles": 36.836254235964965,
+        "corridor": "US-29 SW",
+        "region_tag": "Unknown",
+        "priority": 0.8984555537737293,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 36.85,
+        "center_lon": -76.28,
+        "radius_miles": 34.07560060692376,
+        "corridor": "I-95 NB",
+        "region_tag": "Tidewater",
+        "priority": 0.7562218157965592,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}

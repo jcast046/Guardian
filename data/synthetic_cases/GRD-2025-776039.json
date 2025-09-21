@@ -1,0 +1,238 @@
+{
+  "case_id": "GRD-2025-776039",
+  "demographic": {
+    "gender": "male",
+    "age_years": 7,
+    "name": "Child_2625",
+    "distinctive_features": "glasses"
+  },
+  "spatial": {
+    "last_seen_lat": 37.34,
+    "last_seen_lon": -77.98,
+    "last_seen_location": "Amelia, Virginia",
+    "last_seen_city": "Amelia",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "VA-168"
+    ],
+    "nearby_transit_hubs": [],
+    "nearby_pois": []
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-20T22:56:41.028209+00:00",
+    "reported_missing_ts": "2025-09-21T00:56:41.043253+00:00",
+    "elapsed_report_minutes": 195,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-21T15:32:51.446882+00:00",
+        "lat": 36.96,
+        "lon": -78.26,
+        "event_type": "camera_hit",
+        "reporter_type": "family",
+        "confidence": 0.6738040901322073,
+        "note": "Witness reported seeing child wearing navy sweatshirt with white logo and khaki shorts"
+      },
+      {
+        "ts": "2025-09-22T09:50:04.629181+00:00",
+        "lat": 37.55,
+        "lon": -78.55,
+        "event_type": "transit_tap",
+        "reporter_type": "officer",
+        "confidence": 0.5041311769504611,
+        "note": "Transit system report: Child seen at transit station wearing black t-shirt with writing and gray shorts"
+      },
+      {
+        "ts": "2025-09-22T04:08:16.673210+00:00",
+        "lat": 36.91,
+        "lon": -77.28,
+        "event_type": "cell_ping",
+        "reporter_type": "officer",
+        "confidence": 0.5979173811921581,
+        "note": "Witness reported seeing child wearing long-sleeve black shirt and denim pants"
+      },
+      {
+        "ts": "2025-09-23T04:24:15.587645+00:00",
+        "lat": 37.5348933,
+        "lon": -77.4188328,
+        "event_type": "transit_tap",
+        "reporter_type": "officer",
+        "confidence": 0.5416036971422062,
+        "note": "Transit system report: Child seen at transit station wearing gray jacket and navy sweatpants"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "not_found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 7-year-old male was last seen at Amelia at 2025-09-20T22:56:41.028209+00:00. The child was reported missing by neighbor after failing to arrive at school.",
+    "behavioral_patterns": [
+      "entered vehicle and headed northbound on I-95"
+    ],
+    "movement_cues_text": "Within 12 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel east toward Tidewater along VA-168. A white 2016 Jeep Grand Cherokee was observed departing near Amelia, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-20T22:56:41.028209+00:00",
+      "Reported missing 2 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 3 hours later, a passerby reported someone matching the description (7-year-old male, wearing greenish-colored hoodie, blue athletic shorts, red Crocs) near Charles City.",
+        "clothing": "greenish-colored hoodie, blue athletic shorts, red Crocs",
+        "vehicle": "Jeep Grand Cherokee",
+        "behavior": "following into a store and exiting with the child"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Amelia",
+        "excerpt": "Authorities are searching for a 7-year-old male last seen in Amelia, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "other",
+        "text": "Please help find missing child in Amelia area. Last seen wearing greenish-colored hoodie, blue athletic shorts, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "suspect",
+        "age_estimate": 35,
+        "vehicle": {
+          "make": "Jeep",
+          "model": "Grand Cherokee",
+          "color": "white",
+          "plate_partial": "unknown"
+        },
+        "note": "circling the block multiple times"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {},
+    "_fulltext": "A 7-year-old male was last seen at Amelia at 2025-09-20T22:56:41.028209+00:00. The child was reported missing by neighbor after failing to arrive at school. Within 12 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel east toward Tidewater along VA-168. A white 2016 Jeep Grand Cherokee was observed departing near Amelia, Virginia. Around 3 hours later, a passerby reported someone matching the description (7-year-old male, wearing greenish-colored hoodie, blue athletic shorts, red Crocs) near Charles City.",
+    "search_zones": [
+      {
+        "center_lat": 37.22,
+        "center_lon": -78.45,
+        "radius_miles": 4.205175293575522,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.6444385317757995,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 37.22,
+        "center_lon": -78.45,
+        "radius_miles": 4.957428417212796,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.41061820223404905,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 37.34,
+        "center_lon": -77.98,
+        "radius_miles": 4.504956780985945,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.3684522844349547,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.84,
+        "center_lon": -77.3,
+        "radius_miles": 19.205659538015517,
+        "corridor": "I-95 NB",
+        "region_tag": "NoVA",
+        "priority": 0.6462126938824909,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.23,
+        "center_lon": -80.41,
+        "radius_miles": 16.428872594340266,
+        "corridor": "I-64 EB",
+        "region_tag": "Appalachia",
+        "priority": 0.7866852457650286,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.34,
+        "center_lon": -77.98,
+        "radius_miles": 16.68144726716984,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.37107093732687696,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.54,
+        "center_lon": -77.91,
+        "radius_miles": 36.48844711740148,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.7654161238189304,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 37.79,
+        "center_lon": -78.88,
+        "radius_miles": 34.30720250844256,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.4784118795104324,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 38.71,
+        "center_lon": -77.48,
+        "radius_miles": 32.27532342047105,
+        "corridor": "I-95 NB",
+        "region_tag": "NoVA",
+        "priority": 0.6657785473470783,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "case_id": "GRD-2025-974146",
+  "demographic": {
+    "gender": "female",
+    "age_years": 7,
+    "name": "Child_2188",
+    "distinctive_features": "birthmark on left arm"
+  },
+  "spatial": {
+    "last_seen_lat": 38.03,
+    "last_seen_lon": -77.35,
+    "last_seen_location": "Caroline, Virginia",
+    "last_seen_city": "Caroline",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-264"
+    ],
+    "nearby_transit_hubs": [],
+    "nearby_pois": []
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-20T22:56:40.983814+00:00",
+    "reported_missing_ts": "2025-09-21T03:56:40.988402+00:00",
+    "elapsed_report_minutes": 348,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-21T22:59:47.212217+00:00",
+        "lat": 37.51,
+        "lon": -76.99,
+        "event_type": "search_action",
+        "reporter_type": "officer",
+        "confidence": 0.537049845789384,
+        "note": "Witness reported seeing child wearing black t-shirt with writing and blue athletic shorts"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 7-year-old female was last seen at Caroline at 2025-09-20T22:56:40.983814+00:00. The child was reported missing by parent after failing to return home.",
+    "behavioral_patterns": [
+      "merged onto I-64 west toward Richmond"
+    ],
+    "movement_cues_text": "Within 2 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel southbound along I-95. A black 2024 Honda Passport was observed departing near Caroline, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-20T22:56:40.983814+00:00",
+      "Reported missing 2 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 7 hours later, a school_staff reported someone matching the description (7-year-old female, wearing navy sweatshirt with white logo, blue athletic shorts, white sneakers) near Harrisonburg.",
+        "clothing": "navy sweatshirt with white logo, blue athletic shorts, white sneakers",
+        "vehicle": "Honda Passport",
+        "behavior": "switching vehicles after leaving the scene"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing female child reported in Caroline",
+        "excerpt": "Authorities are searching for a 7-year-old female last seen in Caroline, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "NamUs",
+        "text": "Please help find missing child in Caroline area. Last seen wearing navy sweatshirt with white logo, blue athletic shorts, white sneakers"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 47,
+        "vehicle": {
+          "make": "Honda",
+          "model": "Passport",
+          "color": "black",
+          "plate_partial": "partial VA tag ???-1234"
+        },
+        "note": "circling the block multiple times"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {},
+    "_fulltext": "A 7-year-old female was last seen at Caroline at 2025-09-20T22:56:40.983814+00:00. The child was reported missing by parent after failing to return home. Within 2 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel southbound along I-95. A black 2024 Honda Passport was observed departing near Caroline, Virginia. Around 7 hours later, a school_staff reported someone matching the description (7-year-old female, wearing navy sweatshirt with white logo, blue athletic shorts, white sneakers) near Harrisonburg.",
+    "search_zones": [
+      {
+        "center_lat": 38.26,
+        "center_lon": -77.16,
+        "radius_miles": 4.43540179682835,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.6475081744897537,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.16,
+        "center_lon": -76.86,
+        "radius_miles": 4.121915142953032,
+        "corridor": "US-29 SW",
+        "region_tag": "Tidewater",
+        "priority": 0.33429916374448987,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.43,
+        "center_lon": -77.4,
+        "radius_miles": 5.005700765839027,
+        "corridor": "I-64 EB",
+        "region_tag": "NoVA",
+        "priority": 0.3341277478372107,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 36.9,
+        "center_lon": -76.71,
+        "radius_miles": 16.640891721924696,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.3411127996222754,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.88,
+        "center_lon": -77.17,
+        "radius_miles": 21.401700428832722,
+        "corridor": "I-64 EB",
+        "region_tag": "NoVA",
+        "priority": 0.5422653307909665,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.02,
+        "center_lon": -77.96,
+        "radius_miles": 17.969722782309,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.671628906199262,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 36.75,
+        "center_lon": -80.75,
+        "radius_miles": 37.20322430261531,
+        "corridor": "US-29 SW",
+        "region_tag": "Appalachia",
+        "priority": 0.8608237546418565,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 37.13,
+        "center_lon": -80.54,
+        "radius_miles": 37.37616364677761,
+        "corridor": "US-29 SW",
+        "region_tag": "Appalachia",
+        "priority": 0.44321157156950763,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 37.55,
+        "center_lon": -78.55,
+        "radius_miles": 29.832295949784392,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.5743347435422712,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}

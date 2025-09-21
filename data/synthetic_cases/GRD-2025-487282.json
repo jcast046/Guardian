@@ -1,0 +1,212 @@
+{
+  "case_id": "GRD-2025-487282",
+  "demographic": {
+    "gender": "male",
+    "age_years": 9,
+    "name": "Child_7209",
+    "distinctive_features": "blonde hair"
+  },
+  "spatial": {
+    "last_seen_lat": 38.03,
+    "last_seen_lon": -78.48,
+    "last_seen_location": "Albemarle, Virginia",
+    "last_seen_city": "Albemarle",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-64"
+    ],
+    "nearby_transit_hubs": [],
+    "nearby_pois": []
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-20T22:56:41.022589+00:00",
+    "reported_missing_ts": "2025-09-21T02:56:41.027014+00:00",
+    "elapsed_report_minutes": 226,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-22T01:32:20.758102+00:00",
+        "lat": 38.02,
+        "lon": -78.47,
+        "event_type": "cell_ping",
+        "reporter_type": "officer",
+        "confidence": 0.6657774336814243,
+        "note": "Witness reported seeing child wearing navy sweatshirt with white logo and black joggers"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 9-year-old male was last seen at Albemarle at 2025-09-20T22:56:41.022589+00:00. The child was reported missing by neighbor after failing to meet a friend.",
+    "behavioral_patterns": [
+      "entered vehicle and headed northbound on I-95",
+      "walked through mall corridor into adjacent store"
+    ],
+    "movement_cues_text": "Within 4 hours of disappearance, movement cues left on foot toward nearby woods suggest travel east toward Tidewater along VA-168. A silver 2018 Nissan Altima was observed departing near Albemarle, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-20T22:56:41.022589+00:00",
+      "Reported missing 3 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 20 hours later, a store_employee reported someone matching the description (9-year-old male, wearing long-sleeve black shirt, khaki shorts, Spider-Man flip-flops) near Richmond.",
+        "clothing": "long-sleeve black shirt, khaki shorts, Spider-Man flip-flops",
+        "vehicle": "Nissan Altima",
+        "behavior": "backing up vehicle to block driveway"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Albemarle",
+        "excerpt": "Authorities are searching for a 9-year-old male last seen in Albemarle, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "NamUs",
+        "text": "Please help find missing child in Albemarle area. Last seen wearing long-sleeve black shirt, khaki shorts, Spider-Man flip-flops"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "family",
+        "age_estimate": 60,
+        "vehicle": {
+          "make": "Nissan",
+          "model": "Altima",
+          "color": "silver",
+          "plate_partial": "temporary paper tag"
+        },
+        "note": "circling the block multiple times"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {},
+    "_fulltext": "A 9-year-old male was last seen at Albemarle at 2025-09-20T22:56:41.022589+00:00. The child was reported missing by neighbor after failing to meet a friend. Within 4 hours of disappearance, movement cues left on foot toward nearby woods suggest travel east toward Tidewater along VA-168. A silver 2018 Nissan Altima was observed departing near Albemarle, Virginia. Around 20 hours later, a store_employee reported someone matching the description (9-year-old male, wearing long-sleeve black shirt, khaki shorts, Spider-Man flip-flops) near Richmond.",
+    "search_zones": [
+      {
+        "center_lat": 37.85,
+        "center_lon": -78.27,
+        "radius_miles": 4.2038026108919535,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.8101759434532778,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.07,
+        "center_lon": -78.88,
+        "radius_miles": 5.592454433200424,
+        "corridor": "I-95 NB",
+        "region_tag": "Shenandoah",
+        "priority": 0.5083222591850693,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.37,
+        "center_lon": -78.26,
+        "radius_miles": 5.323042681374712,
+        "corridor": "I-95 NB",
+        "region_tag": "Shenandoah",
+        "priority": 0.6035764738062468,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 36.75,
+        "center_lon": -77.85,
+        "radius_miles": 16.101217201326826,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.7933985508540349,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.3,
+        "center_lon": -77.28,
+        "radius_miles": 19.468187210606786,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.6813510636608676,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 36.71,
+        "center_lon": -77.09,
+        "radius_miles": 19.67791478081397,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.5612922870046062,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.85,
+        "center_lon": -78.27,
+        "radius_miles": 36.622772956749714,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.5789242629807048,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 36.91,
+        "center_lon": -80.31,
+        "radius_miles": 32.51226416173566,
+        "corridor": "I-64 EB",
+        "region_tag": "Appalachia",
+        "priority": 0.7984386113343621,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 37.08,
+        "center_lon": -76.49,
+        "radius_miles": 31.90499548869458,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.4463180635145736,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}

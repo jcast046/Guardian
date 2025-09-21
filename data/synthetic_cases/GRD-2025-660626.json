@@ -1,0 +1,239 @@
+{
+  "case_id": "GRD-2025-660626",
+  "demographic": {
+    "gender": "male",
+    "age_years": 10,
+    "name": "Child_4920",
+    "distinctive_features": "glasses"
+  },
+  "spatial": {
+    "last_seen_lat": 36.71,
+    "last_seen_lon": -77.09,
+    "last_seen_location": "Southampton, Virginia",
+    "last_seen_city": "Southampton",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-81"
+    ],
+    "nearby_transit_hubs": [],
+    "nearby_pois": []
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-20T22:56:41.044777+00:00",
+    "reported_missing_ts": "2025-09-21T03:56:41.054573+00:00",
+    "elapsed_report_minutes": 67,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-21T02:31:13.732590+00:00",
+        "lat": 36.962701,
+        "lon": -76.2657223,
+        "event_type": "camera_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.6142819673711628,
+        "note": "Transit system report: Child seen at transit station wearing denim jacket and navy sweatpants"
+      },
+      {
+        "ts": "2025-09-21T01:55:45.206163+00:00",
+        "lat": 37.23,
+        "lon": -76.5,
+        "event_type": "sighting",
+        "reporter_type": "public",
+        "confidence": 0.680501703832561,
+        "note": "Transit system report: Child seen at transit station wearing greenish-colored hoodie and blue athletic shorts"
+      },
+      {
+        "ts": "2025-09-21T23:54:05.023670+00:00",
+        "lat": 36.72,
+        "lon": -76.58,
+        "event_type": "transit_tap",
+        "reporter_type": "family",
+        "confidence": 0.6007427281891821,
+        "note": "Transit system report: Child seen at transit station wearing denim jacket and blue jeans"
+      },
+      {
+        "ts": "2025-09-22T12:46:28.793140+00:00",
+        "lat": 37.3,
+        "lon": -77.28,
+        "event_type": "camera_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.5741001646503266,
+        "note": "Witness reported seeing child wearing plaid shirt and black joggers"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "not_found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 10-year-old male was last seen at Southampton at 2025-09-20T22:56:41.044777+00:00. The child was reported missing by teacher after failing to arrive at school.",
+    "behavioral_patterns": [
+      "left on foot toward nearby woods",
+      "entered vehicle and headed northbound on I-95"
+    ],
+    "movement_cues_text": "Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-81. A white 2019 Ford F-150 was observed departing near Southampton, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-20T22:56:41.044777+00:00",
+      "Reported missing 1 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 4 hours later, a store_employee reported someone matching the description (10-year-old male, wearing denim jacket, black leggings, white sneakers) near Charlotte.",
+        "clothing": "denim jacket, black leggings, white sneakers",
+        "vehicle": "Ford F-150",
+        "behavior": "asking the child questions and offering a ride"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Southampton",
+        "excerpt": "Authorities are searching for a 10-year-old male last seen in Southampton, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "nextdoor",
+        "text": "Please help find missing child in Southampton area. Last seen wearing denim jacket, black leggings, white sneakers"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 56,
+        "vehicle": {
+          "make": "Ford",
+          "model": "F-150",
+          "color": "white",
+          "plate_partial": "unknown"
+        },
+        "note": "backing up vehicle to block driveway"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {},
+    "_fulltext": "A 10-year-old male was last seen at Southampton at 2025-09-20T22:56:41.044777+00:00. The child was reported missing by teacher after failing to arrive at school. Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-81. A white 2019 Ford F-150 was observed departing near Southampton, Virginia. Around 4 hours later, a store_employee reported someone matching the description (10-year-old male, wearing denim jacket, black leggings, white sneakers) near Charlotte.",
+    "search_zones": [
+      {
+        "center_lat": 36.67,
+        "center_lon": -77.55,
+        "radius_miles": 4.695922112589301,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.49263495357394294,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 36.69,
+        "center_lon": -77.54,
+        "radius_miles": 5.715466188800705,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.5469870538726762,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 36.67,
+        "center_lon": -77.55,
+        "radius_miles": 4.5764355907229115,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.7881396208427837,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 37.87,
+        "center_lon": -76.5,
+        "radius_miles": 16.293577042509668,
+        "corridor": "I-95 NB",
+        "region_tag": "Tidewater",
+        "priority": 0.4887102943021008,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.47,
+        "center_lon": -77.99,
+        "radius_miles": 16.92737281144766,
+        "corridor": "I-81 SB",
+        "region_tag": "Unknown",
+        "priority": 0.8189463504311274,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.8,
+        "center_lon": -77.04,
+        "radius_miles": 21.26128309186503,
+        "corridor": "I-81 SB",
+        "region_tag": "NoVA",
+        "priority": 0.5479485424795929,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.12,
+        "center_lon": -76.34,
+        "radius_miles": 35.2581514944502,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.6752452452870055,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 37.13,
+        "center_lon": -78.07,
+        "radius_miles": 28.722564852608855,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.6295317834511991,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 36.91,
+        "center_lon": -77.28,
+        "radius_miles": 32.0324080298366,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.3728556500175719,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}
