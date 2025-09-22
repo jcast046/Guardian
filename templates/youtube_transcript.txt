@@ -1,9 +1,0 @@
-ANCHOR: We’re back with new surveillance video tied to the search for {child.name}. Watch closely—{child.pronoun} exits the {location_type}, and a {suspect_desc} follows {child.object_pronoun} toward {adjacent_area}. From “last seen” to contact, just {calc_seconds_gap}s.
-
-ANCHOR: Chief {chief_lastname}, why release this now?
-CHIEF: We want families to see how quickly this can happen. In this case, we made an arrest the same day, but the suspect could have gone {movement_cues.direction} toward {movement_cues.corridor}.
-
-ANCHOR: Cameras helped track a {vehicle.color} {vehicle.make} {vehicle.model}. What else should parents know?
-CHIEF: Most attempts involve a vehicle. Teach kids that “no” is a complete sentence—and to get loud.
-
-ANCHOR: If you recognize the {suspect_desc} or that vehicle, call {pd_tipline}.

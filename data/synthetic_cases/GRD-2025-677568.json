@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:40.967894+00:00",
-    "reported_missing_ts": "2025-09-21T04:56:40.982165+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.265257+00:00",
+    "reported_missing_ts": "2025-09-21T07:18:54.279196+00:00",
     "elapsed_report_minutes": 233,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-21T22:51:05.859301+00:00",
+        "ts": "2025-09-22T01:13:19.156499+00:00",
         "lat": 36.67,
         "lon": -78.36,
         "event_type": "sighting",
@@ -35,7 +35,7 @@
         "note": "Transit system report: Child seen at transit station wearing red hoodie and navy sweatpants"
       },
       {
-        "ts": "2025-09-21T01:37:19.081714+00:00",
+        "ts": "2025-09-21T03:59:32.378913+00:00",
         "lat": 36.67,
         "lon": -77.55,
         "event_type": "search_action",
@@ -44,7 +44,7 @@
         "note": "Witness reported seeing child wearing long-sleeve black shirt and gray shorts"
       },
       {
-        "ts": "2025-09-22T06:06:26.605756+00:00",
+        "ts": "2025-09-22T08:28:39.902928+00:00",
         "lat": 37.54,
         "lon": -77.91,
         "event_type": "lead",
@@ -53,7 +53,7 @@
         "note": "Witness reported seeing child wearing black t-shirt with writing and blue jeans"
       },
       {
-        "ts": "2025-09-22T10:40:16.510823+00:00",
+        "ts": "2025-09-22T13:02:29.807947+00:00",
         "lat": 37.5145385,
         "lon": -77.3964138,
         "event_type": "camera_hit",
@@ -62,7 +62,7 @@
         "note": "Witness reported seeing child wearing white hoodie and blue jeans"
       },
       {
-        "ts": "2025-09-23T21:40:17.411590+00:00",
+        "ts": "2025-09-24T00:02:30.708709+00:00",
         "lat": 37.5214056,
         "lon": -77.4892351,
         "event_type": "cell_ping",
@@ -71,7 +71,7 @@
         "note": "Witness reported seeing child wearing plaid shirt and gray shorts"
       },
       {
-        "ts": "2025-09-23T21:40:08.707252+00:00",
+        "ts": "2025-09-24T00:02:22.004314+00:00",
         "lat": 37.548138,
         "lon": -77.4231652,
         "event_type": "search_action",
@@ -93,13 +93,13 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 11-year-old male was last seen at Nottoway at 2025-09-20T22:56:40.967894+00:00. The child was reported missing by teacher after failing to meet a friend.",
+    "incident_summary": "A 11-year-old male was last seen at Nottoway at 2025-09-21T01:18:54.265257+00:00. The child was reported missing by teacher after failing to meet a friend.",
     "behavioral_patterns": [
       "entered vehicle and headed northbound on I-95"
     ],
     "movement_cues_text": "Within 1 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel northbound along I-95. A black 2024 Honda Passport was observed departing near Nottoway, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:40.967894+00:00",
+      "Last seen at 2025-09-21T01:18:54.265257+00:00",
       "Reported missing 2 hours later"
     ],
     "witness_accounts": [
@@ -141,7 +141,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 11-year-old male was last seen at Nottoway at 2025-09-20T22:56:40.967894+00:00. The child was reported missing by teacher after failing to meet a friend. Within 1 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel northbound along I-95. A black 2024 Honda Passport was observed departing near Nottoway, Virginia. Around 3 hours later, a school_staff reported someone matching the description (11-year-old male, wearing plaid shirt, black joggers, brown sandals) near Montgomery.",
+    "_fulltext": "A 11-year-old male was last seen at Nottoway at 2025-09-21T01:18:54.265257+00:00. The child was reported missing by teacher after failing to meet a friend. Within 1 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel northbound along I-95. A black 2024 Honda Passport was observed departing near Nottoway, Virginia. Around 3 hours later, a school_staff reported someone matching the description (11-year-old male, wearing plaid shirt, black joggers, brown sandals) near Montgomery.",
     "search_zones": [
       {
         "center_lat": 37.13,

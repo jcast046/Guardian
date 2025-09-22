@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:40.953684+00:00",
-    "reported_missing_ts": "2025-09-21T02:56:40.966302+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.254238+00:00",
+    "reported_missing_ts": "2025-09-21T05:18:54.263761+00:00",
     "elapsed_report_minutes": 262,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-21T13:23:35.376726+00:00",
+        "ts": "2025-09-21T15:45:48.676339+00:00",
         "lat": 37.51,
         "lon": -76.99,
         "event_type": "lead",
@@ -35,7 +35,7 @@
         "note": "Witness reported seeing child wearing greenish-colored hoodie and navy sweatpants"
       },
       {
-        "ts": "2025-09-21T17:09:21.917106+00:00",
+        "ts": "2025-09-21T19:31:35.216642+00:00",
         "lat": 37.548138,
         "lon": -77.4231652,
         "event_type": "camera_hit",
@@ -44,7 +44,7 @@
         "note": "Transit system report: Child seen at transit station wearing red hoodie and denim pants"
       },
       {
-        "ts": "2025-09-23T19:17:04.477968+00:00",
+        "ts": "2025-09-23T21:39:17.775897+00:00",
         "lat": 37.21,
         "lon": -77.28,
         "event_type": "sighting",
@@ -66,14 +66,14 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 17-year-old female was last seen at Colonial Heights at 2025-09-20T22:56:40.953684+00:00. The child was reported missing by teacher after failing to return home.",
+    "incident_summary": "A 17-year-old female was last seen at Colonial Heights at 2025-09-21T01:18:54.254238+00:00. The child was reported missing by teacher after failing to return home.",
     "behavioral_patterns": [
       "entered vehicle and headed northbound on I-95",
       "walked through mall corridor into adjacent store"
     ],
     "movement_cues_text": "Within 11 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along US-58. A black 2024 Honda Passport was observed departing near Colonial Heights, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:40.953684+00:00",
+      "Last seen at 2025-09-21T01:18:54.254238+00:00",
       "Reported missing 2 hours later"
     ],
     "witness_accounts": [
@@ -115,7 +115,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 17-year-old female was last seen at Colonial Heights at 2025-09-20T22:56:40.953684+00:00. The child was reported missing by teacher after failing to return home. Within 11 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along US-58. A black 2024 Honda Passport was observed departing near Colonial Heights, Virginia. Around 3 hours later, a parent reported someone matching the description (17-year-old female, wearing navy sweatshirt with white logo, blue jeans, red Crocs) near Clarke.",
+    "_fulltext": "A 17-year-old female was last seen at Colonial Heights at 2025-09-21T01:18:54.254238+00:00. The child was reported missing by teacher after failing to return home. Within 11 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along US-58. A black 2024 Honda Passport was observed departing near Colonial Heights, Virginia. Around 3 hours later, a parent reported someone matching the description (17-year-old female, wearing navy sweatshirt with white logo, blue jeans, red Crocs) near Clarke.",
     "search_zones": [
       {
         "center_lat": 36.91,

@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:41.013124+00:00",
-    "reported_missing_ts": "2025-09-20T23:56:41.021115+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.305111+00:00",
+    "reported_missing_ts": "2025-09-21T02:18:54.314615+00:00",
     "elapsed_report_minutes": 300,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-22T05:48:07.928902+00:00",
+        "ts": "2025-09-22T08:10:21.221099+00:00",
         "lat": 37.29,
         "lon": -80.05,
         "event_type": "cell_ping",
@@ -35,7 +35,7 @@
         "note": "Witness reported seeing child wearing red hoodie and gray shorts"
       },
       {
-        "ts": "2025-09-22T04:29:42.010334+00:00",
+        "ts": "2025-09-22T06:51:55.303925+00:00",
         "lat": 36.83,
         "lon": -79.39,
         "event_type": "lead",
@@ -44,7 +44,7 @@
         "note": "Witness reported seeing child wearing red hoodie and black joggers"
       },
       {
-        "ts": "2025-09-23T11:58:02.622775+00:00",
+        "ts": "2025-09-23T14:20:15.916326+00:00",
         "lat": 36.91,
         "lon": -80.31,
         "event_type": "lpr_hit",
@@ -66,7 +66,7 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 13-year-old female was last seen at Henry at 2025-09-20T22:56:41.013124+00:00. The child was reported missing by neighbor after failing to return home.",
+    "incident_summary": "A 13-year-old female was last seen at Henry at 2025-09-21T01:18:54.305111+00:00. The child was reported missing by neighbor after failing to return home.",
     "behavioral_patterns": [
       "merged onto I-64 west toward Richmond",
       "left on foot toward nearby woods",
@@ -74,7 +74,7 @@
     ],
     "movement_cues_text": "Within 5 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-29. A white 2019 Ford F-150 was observed departing near Henry, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:41.013124+00:00",
+      "Last seen at 2025-09-21T01:18:54.305111+00:00",
       "Reported missing 2 hours later"
     ],
     "witness_accounts": [
@@ -116,7 +116,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 13-year-old female was last seen at Henry at 2025-09-20T22:56:41.013124+00:00. The child was reported missing by neighbor after failing to return home. Within 5 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-29. A white 2019 Ford F-150 was observed departing near Henry, Virginia. Around 8 hours later, a passerby reported someone matching the description (13-year-old female, wearing long-sleeve black shirt, blue athletic shorts, black boots) near Rappahannock.",
+    "_fulltext": "A 13-year-old female was last seen at Henry at 2025-09-21T01:18:54.305111+00:00. The child was reported missing by neighbor after failing to return home. Within 5 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-29. A white 2019 Ford F-150 was observed departing near Henry, Virginia. Around 8 hours later, a passerby reported someone matching the description (13-year-old female, wearing long-sleeve black shirt, blue athletic shorts, black boots) near Rappahannock.",
     "search_zones": [
       {
         "center_lat": 36.99,

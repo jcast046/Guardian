@@ -1,9 +1,0 @@
-{last_seen.place_text} — The disappearance of {child.name}, {child.age}, has shaken {city_or_county}.
-Police say {child.pronoun} was last seen around {time_friendly(last_seen.date_time_local)} near {last_seen.place_text}, wearing {clothing.top}, {clothing.bottom}, and {clothing.shoes}. {#witness.quote?}A {witness.type} told investigators, “{witness.quote}”.{/witness.quote?}
-
-Investigators described {child.name} as {physical.height_in}" / {physical.weight_lb} lbs with {physical.hair} hair and {physical.eyes} eyes. The report was filed at {report_time_local} (≈{report_gap_hours} hours after last seen).
-
-{#vehicle.raw?}Detectives are looking into a vehicle described as {vehicle.raw}.{else}{#vehicle.make?}Detectives are looking for a {vehicle.color} {vehicle.year} {vehicle.make} {vehicle.model}{#vehicle.plate?} (plate {vehicle.plate}){/vehicle.plate?}.{#vehicle.notes?} {vehicle.notes}{/vehicle.notes?}{/vehicle.make?}{/vehicle.raw?}
-{#movement_cues.corridor?}Search teams expanded along {movement_cues.corridor}, heading {movement_cues.direction}.{#movement_cues.landmarks?.0?} Landmarks include {list_csv(movement_cues.landmarks)}.{/movement_cues.landmarks?.0?}{/movement_cues.corridor?}
-
-Authorities encourage anyone with information to contact {pd_name} at {pd_phone}. The investigation is ongoing.

@@ -103,6 +103,7 @@ Guardian/
 │   │   ├── amber_alert.txt
 │   │   ├── case_templates.json
 │   │   ├── facebook_post.txt
+│   │   ├── guardian_case.blank.json
 │   │   ├── news_report.txt
 │   │   ├── nextdoor_post.txt
 │   │   ├── police_presser.txt
@@ -121,14 +122,6 @@ Guardian/
 │   └── transit_stop.schema.json
 ├── reinforcement_learning/      # RL configuration
 │   └── search_reward_config.json
-├── templates/                  # Additional template files
-│   ├── amber_alert.txt
-│   ├── facebook_post.txt
-│   ├── guardian_case.blank.json
-│   ├── news_report.txt
-│   ├── nextdoor_post.txt
-│   ├── police_presser.txt
-│   └── youtube_transcript.txt
 ├── build.py                    # Main validation script
 ├── generate_cases.py           # Synthetic case generator
 ├── LICENSE

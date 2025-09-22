@@ -92,13 +92,16 @@ def detect_schema_type(file_path, json_data):
     # Path-based detection
     if 'synthetic_samples' in str(file_path) or 'synthetic_cases' in str(file_path):
         return 'guardian'
+    elif 'templates' in str(file_path) and 'guardian_case.blank.json' in str(file_path):
+        # Skip the blank template file
+        return None
     elif 'templates' in str(file_path):
         return 'templates'
     elif 'geo' in str(file_path) and 'gazetteer' in str(file_path):
         return 'gazetteer'
     
     # Content-based detection
-    if 'style_tag' in json_data and 'child' in json_data:
+    if 'style_tag' in json_data and 'child' in json_data and 'demographic' not in json_data:
         # This is a different format (blank template), skip it
         return None
     elif 'case_id' in json_data and 'demographic' in json_data:

@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:41.001542+00:00",
-    "reported_missing_ts": "2025-09-21T00:56:41.011916+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.293781+00:00",
+    "reported_missing_ts": "2025-09-21T03:18:54.303673+00:00",
     "elapsed_report_minutes": 325,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-21T22:02:43.970197+00:00",
+        "ts": "2025-09-22T00:24:57.262147+00:00",
         "lat": 37.5416933,
         "lon": -77.4017577,
         "event_type": "camera_hit",
@@ -35,7 +35,7 @@
         "note": "Witness reported seeing child wearing navy sweatshirt with white logo and denim pants"
       },
       {
-        "ts": "2025-09-21T20:31:58.216308+00:00",
+        "ts": "2025-09-21T22:54:11.508045+00:00",
         "lat": 37.5326918,
         "lon": -77.4115144,
         "event_type": "sighting",
@@ -44,7 +44,7 @@
         "note": "Transit system report: Child seen at transit station wearing white hoodie and khaki shorts"
       },
       {
-        "ts": "2025-09-23T21:02:35.611175+00:00",
+        "ts": "2025-09-23T23:24:48.902996+00:00",
         "lat": 37.22,
         "lon": -78.45,
         "event_type": "camera_hit",
@@ -53,7 +53,7 @@
         "note": "Witness reported seeing child wearing black t-shirt with writing and navy sweatpants"
       },
       {
-        "ts": "2025-09-23T06:46:23.214047+00:00",
+        "ts": "2025-09-23T09:08:36.505793+00:00",
         "lat": 38.02,
         "lon": -77.96,
         "event_type": "lpr_hit",
@@ -75,13 +75,13 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 12-year-old female was last seen at Amelia at 2025-09-20T22:56:41.001542+00:00. The child was reported missing by friend after failing to return home.",
+    "incident_summary": "A 12-year-old female was last seen at Amelia at 2025-09-21T01:18:54.293781+00:00. The child was reported missing by friend after failing to return home.",
     "behavioral_patterns": [
       "merged onto I-64 west toward Richmond"
     ],
     "movement_cues_text": "Within 11 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel east toward Tidewater along VA-168. A dark blue 2012 Toyota Camry was observed departing near Amelia, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:41.001542+00:00",
+      "Last seen at 2025-09-21T01:18:54.293781+00:00",
       "Reported missing 2 hours later"
     ],
     "witness_accounts": [
@@ -123,7 +123,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 12-year-old female was last seen at Amelia at 2025-09-20T22:56:41.001542+00:00. The child was reported missing by friend after failing to return home. Within 11 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel east toward Tidewater along VA-168. A dark blue 2012 Toyota Camry was observed departing near Amelia, Virginia. Around 4 hours later, a passerby reported someone matching the description (12-year-old female, wearing black t-shirt with writing, khaki shorts, red Crocs) near Augusta.",
+    "_fulltext": "A 12-year-old female was last seen at Amelia at 2025-09-21T01:18:54.293781+00:00. The child was reported missing by friend after failing to return home. Within 11 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel east toward Tidewater along VA-168. A dark blue 2012 Toyota Camry was observed departing near Amelia, Virginia. Around 4 hours later, a passerby reported someone matching the description (12-year-old female, wearing black t-shirt with writing, khaki shorts, red Crocs) near Augusta.",
     "search_zones": [
       {
         "center_lat": 37.34,

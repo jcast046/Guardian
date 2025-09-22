@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:41.044777+00:00",
-    "reported_missing_ts": "2025-09-21T03:56:41.054573+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.335558+00:00",
+    "reported_missing_ts": "2025-09-21T06:18:54.347752+00:00",
     "elapsed_report_minutes": 67,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-21T02:31:13.732590+00:00",
+        "ts": "2025-09-21T04:53:27.023679+00:00",
         "lat": 36.962701,
         "lon": -76.2657223,
         "event_type": "camera_hit",
@@ -35,7 +35,7 @@
         "note": "Transit system report: Child seen at transit station wearing denim jacket and navy sweatpants"
       },
       {
-        "ts": "2025-09-21T01:55:45.206163+00:00",
+        "ts": "2025-09-21T04:17:58.497287+00:00",
         "lat": 37.23,
         "lon": -76.5,
         "event_type": "sighting",
@@ -44,7 +44,7 @@
         "note": "Transit system report: Child seen at transit station wearing greenish-colored hoodie and blue athletic shorts"
       },
       {
-        "ts": "2025-09-21T23:54:05.023670+00:00",
+        "ts": "2025-09-22T02:16:18.316783+00:00",
         "lat": 36.72,
         "lon": -76.58,
         "event_type": "transit_tap",
@@ -53,7 +53,7 @@
         "note": "Transit system report: Child seen at transit station wearing denim jacket and blue jeans"
       },
       {
-        "ts": "2025-09-22T12:46:28.793140+00:00",
+        "ts": "2025-09-22T15:08:42.086171+00:00",
         "lat": 37.3,
         "lon": -77.28,
         "event_type": "camera_hit",
@@ -75,14 +75,14 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 10-year-old male was last seen at Southampton at 2025-09-20T22:56:41.044777+00:00. The child was reported missing by teacher after failing to arrive at school.",
+    "incident_summary": "A 10-year-old male was last seen at Southampton at 2025-09-21T01:18:54.335558+00:00. The child was reported missing by teacher after failing to arrive at school.",
     "behavioral_patterns": [
       "left on foot toward nearby woods",
       "entered vehicle and headed northbound on I-95"
     ],
     "movement_cues_text": "Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-81. A white 2019 Ford F-150 was observed departing near Southampton, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:41.044777+00:00",
+      "Last seen at 2025-09-21T01:18:54.335558+00:00",
       "Reported missing 1 hours later"
     ],
     "witness_accounts": [
@@ -124,7 +124,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 10-year-old male was last seen at Southampton at 2025-09-20T22:56:41.044777+00:00. The child was reported missing by teacher after failing to arrive at school. Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-81. A white 2019 Ford F-150 was observed departing near Southampton, Virginia. Around 4 hours later, a store_employee reported someone matching the description (10-year-old male, wearing denim jacket, black leggings, white sneakers) near Charlotte.",
+    "_fulltext": "A 10-year-old male was last seen at Southampton at 2025-09-21T01:18:54.335558+00:00. The child was reported missing by teacher after failing to arrive at school. Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-81. A white 2019 Ford F-150 was observed departing near Southampton, Virginia. Around 4 hours later, a store_employee reported someone matching the description (10-year-old male, wearing denim jacket, black leggings, white sneakers) near Charlotte.",
     "search_zones": [
       {
         "center_lat": 36.67,

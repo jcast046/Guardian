@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:41.055814+00:00",
-    "reported_missing_ts": "2025-09-21T04:56:41.064195+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.349452+00:00",
+    "reported_missing_ts": "2025-09-21T07:18:54.357579+00:00",
     "elapsed_report_minutes": 213,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-21T05:21:24.777549+00:00",
+        "ts": "2025-09-21T07:43:38.071200+00:00",
         "lat": 38.8642717,
         "lon": -77.279483,
         "event_type": "search_action",
@@ -35,7 +35,7 @@
         "note": "Witness reported seeing child wearing greenish-colored hoodie and gray shorts"
       },
       {
-        "ts": "2025-09-21T11:52:14.423319+00:00",
+        "ts": "2025-09-21T14:14:27.716917+00:00",
         "lat": 38.02,
         "lon": -77.96,
         "event_type": "camera_hit",
@@ -44,7 +44,7 @@
         "note": "Witness reported seeing child wearing white hoodie and black leggings"
       },
       {
-        "ts": "2025-09-22T23:59:32.189986+00:00",
+        "ts": "2025-09-23T02:21:45.483414+00:00",
         "lat": 38.71,
         "lon": -78.17,
         "event_type": "search_action",
@@ -66,13 +66,13 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 12-year-old female was last seen at Culpeper at 2025-09-20T22:56:41.055814+00:00. The child was reported missing by neighbor after failing to return home.",
+    "incident_summary": "A 12-year-old female was last seen at Culpeper at 2025-09-21T01:18:54.349452+00:00. The child was reported missing by neighbor after failing to return home.",
     "behavioral_patterns": [
       "walked through mall corridor into adjacent store"
     ],
     "movement_cues_text": "Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Culpeper, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:41.055814+00:00",
+      "Last seen at 2025-09-21T01:18:54.349452+00:00",
       "Reported missing 1 hours later"
     ],
     "witness_accounts": [
@@ -114,7 +114,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 12-year-old female was last seen at Culpeper at 2025-09-20T22:56:41.055814+00:00. The child was reported missing by neighbor after failing to return home. Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Culpeper, Virginia. Around 9 hours later, a school_staff reported someone matching the description (12-year-old female, wearing denim jacket, gray shorts, red Crocs) near King William.",
+    "_fulltext": "A 12-year-old female was last seen at Culpeper at 2025-09-21T01:18:54.349452+00:00. The child was reported missing by neighbor after failing to return home. Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Culpeper, Virginia. Around 9 hours later, a school_staff reported someone matching the description (12-year-old female, wearing denim jacket, gray shorts, red Crocs) near King William.",
     "search_zones": [
       {
         "center_lat": 38.29,

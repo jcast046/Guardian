@@ -21,12 +21,12 @@
   },
   "temporal": {
     "timezone": "America/New_York",
-    "last_seen_ts": "2025-09-20T22:56:41.022589+00:00",
-    "reported_missing_ts": "2025-09-21T02:56:41.027014+00:00",
+    "last_seen_ts": "2025-09-21T01:18:54.318433+00:00",
+    "reported_missing_ts": "2025-09-21T05:18:54.322672+00:00",
     "elapsed_report_minutes": 226,
     "follow_up_sightings": [
       {
-        "ts": "2025-09-22T01:32:20.758102+00:00",
+        "ts": "2025-09-22T03:54:34.053850+00:00",
         "lat": 38.02,
         "lon": -78.47,
         "event_type": "cell_ping",
@@ -48,14 +48,14 @@
     "recovery_condition": null
   },
   "narrative_osint": {
-    "incident_summary": "A 9-year-old male was last seen at Albemarle at 2025-09-20T22:56:41.022589+00:00. The child was reported missing by neighbor after failing to meet a friend.",
+    "incident_summary": "A 9-year-old male was last seen at Albemarle at 2025-09-21T01:18:54.318433+00:00. The child was reported missing by neighbor after failing to meet a friend.",
     "behavioral_patterns": [
       "entered vehicle and headed northbound on I-95",
       "walked through mall corridor into adjacent store"
     ],
     "movement_cues_text": "Within 4 hours of disappearance, movement cues left on foot toward nearby woods suggest travel east toward Tidewater along VA-168. A silver 2018 Nissan Altima was observed departing near Albemarle, Virginia.",
     "temporal_markers": [
-      "Last seen at 2025-09-20T22:56:41.022589+00:00",
+      "Last seen at 2025-09-21T01:18:54.318433+00:00",
       "Reported missing 3 hours later"
     ],
     "witness_accounts": [
@@ -97,7 +97,7 @@
       "synthetic_generator"
     ],
     "original_fields": {},
-    "_fulltext": "A 9-year-old male was last seen at Albemarle at 2025-09-20T22:56:41.022589+00:00. The child was reported missing by neighbor after failing to meet a friend. Within 4 hours of disappearance, movement cues left on foot toward nearby woods suggest travel east toward Tidewater along VA-168. A silver 2018 Nissan Altima was observed departing near Albemarle, Virginia. Around 20 hours later, a store_employee reported someone matching the description (9-year-old male, wearing long-sleeve black shirt, khaki shorts, Spider-Man flip-flops) near Richmond.",
+    "_fulltext": "A 9-year-old male was last seen at Albemarle at 2025-09-21T01:18:54.318433+00:00. The child was reported missing by neighbor after failing to meet a friend. Within 4 hours of disappearance, movement cues left on foot toward nearby woods suggest travel east toward Tidewater along VA-168. A silver 2018 Nissan Altima was observed departing near Albemarle, Virginia. Around 20 hours later, a store_employee reported someone matching the description (9-year-old male, wearing long-sleeve black shirt, khaki shorts, Spider-Man flip-flops) near Richmond.",
     "search_zones": [
       {
         "center_lat": 37.85,
