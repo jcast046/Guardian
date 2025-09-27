@@ -106,10 +106,11 @@ Models are configured in `guardian.config.json` and versions are pinned in `mode
 {
   "models": {
     "extractor": ".\\models\\Qwen2-7B-Instruct",
-    "summarizer_instruct": ".\\models\\Llama3_1-8B-Instruct", 
-    "summarizer_base": ".\\models\\Llama3_1-8B",
+    "summarizer_instruct": ".\\models\\Llama3_1-8B-Instruct",
     "weak_labeler": ".\\models\\Mistral-7B-Instruct-v0_2"
-  }
+  },
+  "use_summarizer": "instruct",
+  "use_llama_as_extractor": false
 }
 ```
 
