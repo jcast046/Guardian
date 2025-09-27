@@ -1,0 +1,10 @@
+{
+  "models": {
+    "extractor": ".\\models\\Qwen2-7B-Instruct",
+    "summarizer_instruct": ".\\models\\Llama3_1-8B-Instruct",
+    "weak_labeler": ".\\models\\Mistral-7B-Instruct-v0_2"
+  },
+  "use_summarizer": "instruct",
+  "use_llama_as_extractor": false
+}
+

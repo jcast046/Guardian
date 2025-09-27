@@ -8,7 +8,7 @@ levels to support investigative workflows and case prioritization.
 The weak labeler is designed to provide consistent, automated labeling that can be
 used for case categorization, risk assessment, and workflow optimization.
 
-Author: Guardian AI System
+Author: Joshua Castillo
 
 
 Functions:
@@ -24,34 +24,28 @@ Example:
     >>> labels = label_case("Case narrative...")
 """
 import json, torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from pathlib import Path
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from .prompts import MOVEMENT_CLASSIFICATION_PROMPT, RISK_ASSESSMENT_PROMPT
+
+# Enable TF32 for RTX 40xx speedup
+torch.set_float32_matmul_precision("high")
 
 # Load configuration from guardian.config.json
 CFG = json.load(open("guardian.config.json", "r"))
 DIR_WEAK_LABELER = CFG["models"]["weak_labeler"]
 
-def _load_weak_labeler():
-    """
-    Load the Mistral-7B-Instruct-v0.2 model and tokenizer for weak labeling.
-    
-    Returns:
-        tuple: (tokenizer, model) - The loaded tokenizer and model objects
-        
-    Note:
-        This function is called internally by _ensure_loaded() and caches the
-        model in global variables for efficiency.
-    """
-    tok = AutoTokenizer.from_pretrained(DIR_WEAK_LABELER, use_fast=True)
-    model = AutoModelForCausalLM.from_pretrained(
-        DIR_WEAK_LABELER,
-        device_map="auto" if torch.cuda.is_available() else None,
-        torch_dtype=torch.bfloat16 if torch.cuda.is_available() else None
-    )
-    return tok, model
-
 # Global model cache variables
 _tok = _mdl = None
+
+def unload_model(model, tokenizer):
+    """Explicitly unload model and clear GPU memory"""
+    del model, tokenizer
+    import gc, torch
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
 
 def _ensure_loaded():
     """
@@ -59,11 +53,60 @@ def _ensure_loaded():
     
     This function implements lazy loading - the model is only loaded when
     first needed, and then cached for subsequent calls to avoid reloading.
+    Uses GPU optimization with offloading for memory safety.
     """
     global _tok, _mdl
     if _mdl is not None: 
         return
-    _tok, _mdl = _load_weak_labeler()
+    
+    _tok = AutoTokenizer.from_pretrained(DIR_WEAK_LABELER, use_fast=True)
+    if _tok.pad_token_id is None and _tok.eos_token_id is not None:
+        _tok.pad_token = _tok.eos_token
+
+    # Use 4-bit quantization for Mistral (drops VRAM ~40-50% more than 8-bit)
+    if torch.cuda.is_available():
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.float16
+        )
+        try:
+            _mdl = AutoModelForCausalLM.from_pretrained(
+                DIR_WEAK_LABELER,
+                device_map="cuda:0",
+                quantization_config=bnb_config,
+                attn_implementation="sdpa",
+            )
+        except RuntimeError as e:
+            if "out of memory" in str(e).lower():
+                # Fallback to auto device mapping with small CPU spill
+                _mdl = AutoModelForCausalLM.from_pretrained(
+                    DIR_WEAK_LABELER,
+                    device_map="auto",
+                    quantization_config=bnb_config,
+                    attn_implementation="sdpa",
+                    max_memory={0: "7.6GiB", "cpu": "18GiB"},
+                    offload_state_dict=True,
+                    offload_folder="offload",
+                )
+            else:
+                raise e
+    else:
+        # Fallback to CPU with offloading
+        max_mem = {"cpu": "28GiB"}
+        Path("offload").mkdir(exist_ok=True)
+        _mdl = AutoModelForCausalLM.from_pretrained(
+            DIR_WEAK_LABELER,
+            device_map="auto",
+            dtype=torch.float32,
+            low_cpu_mem_usage=True,
+            max_memory=max_mem,
+            offload_state_dict=True,
+            offload_folder="offload",
+            attn_implementation="sdpa",
+        )
+    _mdl.eval()  # Set to evaluation mode
 
 def classify_movement(narrative: str) -> str:
     """
@@ -96,19 +139,27 @@ def classify_movement(narrative: str) -> str:
     """
     _ensure_loaded()
     
+    # Pre-trim narrative to last 400-600 tokens (keep most recent info)
+    if len(narrative) > 2000:  # Rough estimate: trim if very long
+        words = narrative.split()
+        narrative = " ".join(words[-400:])  # Keep last 400 words
+    
     prompt = MOVEMENT_CLASSIFICATION_PROMPT.format(narrative=narrative)
-    ids = _tok(prompt, return_tensors="pt").input_ids
+    enc = _tok(prompt, return_tensors="pt")
+    ids, mask = enc["input_ids"], enc["attention_mask"]
     
     if torch.cuda.is_available(): 
-        ids = ids.to(_mdl.device)
+        ids, mask = ids.to(_mdl.device), mask.to(_mdl.device)
     
-    out = _mdl.generate(
-        ids, 
-        max_new_tokens=50, 
-        temperature=0.3, 
-        do_sample=True,
-        pad_token_id=_tok.eos_token_id
-    )
+    with torch.inference_mode():
+        out = _mdl.generate(
+            input_ids=ids,
+            attention_mask=mask,
+            max_new_tokens=24, 
+            do_sample=False,
+            pad_token_id=_tok.eos_token_id,
+            eos_token_id=_tok.eos_token_id
+        )
     
     response = _tok.decode(out[0], skip_special_tokens=True)
     response = response.split("Movement Classification:")[-1].strip()
@@ -149,19 +200,27 @@ def assess_risk(narrative: str) -> str:
     """
     _ensure_loaded()
     
+    # Pre-trim narrative to last 400-600 tokens (keep most recent info)
+    if len(narrative) > 2000:  # Rough estimate: trim if very long
+        words = narrative.split()
+        narrative = " ".join(words[-400:])  # Keep last 400 words
+    
     prompt = RISK_ASSESSMENT_PROMPT.format(narrative=narrative)
-    ids = _tok(prompt, return_tensors="pt").input_ids
+    enc = _tok(prompt, return_tensors="pt")
+    ids, mask = enc["input_ids"], enc["attention_mask"]
     
     if torch.cuda.is_available(): 
-        ids = ids.to(_mdl.device)
+        ids, mask = ids.to(_mdl.device), mask.to(_mdl.device)
     
-    out = _mdl.generate(
-        ids, 
-        max_new_tokens=50, 
-        temperature=0.3, 
-        do_sample=True,
-        pad_token_id=_tok.eos_token_id
-    )
+    with torch.inference_mode():
+        out = _mdl.generate(
+            input_ids=ids,
+            attention_mask=mask,
+            max_new_tokens=24, 
+            do_sample=False,
+            pad_token_id=_tok.eos_token_id,
+            eos_token_id=_tok.eos_token_id
+        )
     
     response = _tok.decode(out[0], skip_special_tokens=True)
     response = response.split("Risk Assessment:")[-1].strip()
