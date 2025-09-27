@@ -1,0 +1,8 @@
+# Hugging Face & local models
+/models/
+/.cache/
+/.huggingface/
+/huggingface/
+/**/*.safetensors
+/**/*.bin
+/**/*.pt
