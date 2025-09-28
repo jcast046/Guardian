@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Weak labeling using Mistral-7B for movement classification and risk assessment.
 
@@ -521,4 +520,3 @@ def batch_label_cases(narratives: list) -> list:
         consider implementing parallel processing for better performance.
     """
     return [label_case(narrative) for narrative in narratives]
->>>>>>> 78fde9e6dbb2933c5cff903bda29caec00f2c6a3
