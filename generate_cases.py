@@ -137,35 +137,7 @@ The system implements comprehensive error handling:
 ## Author
 
 **Joshua Castillo** - Lead Developer, Guardian Project
-- Email: [contact information]
-- GitHub: [repository link]
-- Documentation: [docs link]
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
-
-## Changelog
-
-### Version 2.0.0
-- Added graph-based road finding algorithms
-- Implemented comprehensive geographic validation
-- Enhanced schema compliance and error handling
-- Improved performance with caching strategies
-
-### Version 1.0.0
-- Initial release with basic case generation
-- Virginia geographic data integration
-- Schema validation implementation
 """
 
 import json
