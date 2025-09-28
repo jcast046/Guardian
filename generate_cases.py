@@ -1584,14 +1584,14 @@ def main() -> None:
         $ python generate_cases.py --n 5 --seed 123 --out data/test_cases
         Loading data sources...
         Validating input data...
-        ✓ Input data validation passed
+        [OK] Input data validation passed
         Found 133 Virginia locations
         Found 247 road segments
         Found 2359 transit stations
         Generating 5 synthetic cases...
-        ✓ Case 1/5: GRD-2025-123456 - Valid
+        [OK] Case 1/5: GRD-2025-123456 - Valid
         ...
-        ✓ Generated 5 synthetic cases in data/test_cases
+        [OK] Generated 5 synthetic cases in data/test_cases
         All cases validated against Guardian schema
         
     Performance:
@@ -1646,7 +1646,7 @@ def main() -> None:
     print("Validating input data...")
     validate(gaz, schm_gaz)
     validate(tmpl, schm_tmpl)
-    print("✓ Input data validation passed")
+    print("[OK] Input data validation passed")
 
     # Filter places to cities and counties
     places = [e for e in gaz["entries"] if e["type"] in ("city", "county")]
@@ -1859,11 +1859,11 @@ def main() -> None:
                 elapsed_time = time.time() - start_time
                 avg_time_per_case = elapsed_time / (i + 1)
                 estimated_remaining = avg_time_per_case * (args.n - i - 1)
-                print(f"✓ Case {i+1}/{args.n}: {case['case_id']} - Valid ({((i+1)/args.n)*100:.1f}% complete, ETA: {estimated_remaining/60:.1f}min)")
+                print(f"[OK] Case {i+1}/{args.n}: {case['case_id']} - Valid ({((i+1)/args.n)*100:.1f}% complete, ETA: {estimated_remaining/60:.1f}min)")
             elif i == args.n - 1:  # Always show the last case
-                print(f"✓ Case {i+1}/{args.n}: {case['case_id']} - Valid (100% complete)")
+                print(f"[OK] Case {i+1}/{args.n}: {case['case_id']} - Valid (100% complete)")
         except AssertionError as e:
-            print(f"✗ Case {i+1}/{args.n}: {case['case_id']} - Validation failed: {e}")
+            print(f"[ERROR] Case {i+1}/{args.n}: {case['case_id']} - Validation failed: {e}")
             continue
 
         # Write to file
@@ -1878,7 +1878,7 @@ def main() -> None:
             gc.collect()
 
     total_time = time.time() - start_time
-    print(f"\n✓ Generated {args.n} synthetic cases in {args.out}")
+    print(f"\n[OK] Generated {args.n} synthetic cases in {args.out}")
     print(f"All cases validated against Guardian schema")
     print(f"Total generation time: {total_time/60:.1f} minutes ({total_time/args.n:.2f} seconds per case)")
 

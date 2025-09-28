@@ -1,0 +1,293 @@
+{
+  "case_id": "GRD-2025-949401",
+  "demographic": {
+    "gender": "female",
+    "age_years": 14,
+    "name": "Child_1514",
+    "distinctive_features": "blonde hair"
+  },
+  "spatial": {
+    "last_seen_lat": 38.71,
+    "last_seen_lon": -77.48,
+    "last_seen_location": "Prince William, Virginia",
+    "last_seen_city": "Unknown",
+    "last_seen_county": "Prince William",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-395",
+      "I-495",
+      "I-66",
+      "I-95",
+      "US-1",
+      "US-15",
+      "US-17",
+      "US-211",
+      "US-29",
+      "US-50",
+      "VA-267",
+      "Browns",
+      "Butts Station",
+      "Capitol",
+      "Chester"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8373, lon: -77.3119, distance: 12.62mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8385, lon: -77.3116, distance: 12.69mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8371, lon: -77.3089, distance: 12.73mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8376, lon: -77.3090, distance: 12.75mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8399, lon: -77.3105, distance: 12.80mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8523, lon: -77.3262, distance: 12.86mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8444, lon: -77.3144, distance: 12.87mi, type: bus_stop)",
+      "Transit Stop at Fairfax, Virginia, USA (lat: 38.8436, lon: -77.3117, distance: 12.94mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Manassas city center (lat: 38.7500, lon: -77.4700, distance: 2.82mi, type: city_center)",
+      "Manassas Park city center (lat: 38.7700, lon: -77.4400, distance: 4.67mi, type: city_center)",
+      "Prince William city center (lat: 38.7100, lon: -77.4800, distance: 0.00mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-09-28T01:06:25.587387+00:00",
+    "reported_missing_ts": "2025-09-28T02:06:25.805669+00:00",
+    "elapsed_report_minutes": 323,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-09-28T11:14:20.420435+00:00",
+        "lat": 38.8616128,
+        "lon": -77.2971659,
+        "event_type": "camera_hit",
+        "reporter_type": "public",
+        "confidence": 0.7191776856722256,
+        "note": "Witness reported seeing child wearing black t-shirt with writing and blue jeans"
+      },
+      {
+        "ts": "2025-09-28T17:28:05.577077+00:00",
+        "lat": 38.03,
+        "lon": -77.35,
+        "event_type": "camera_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.7537197465314891,
+        "note": "Witness reported seeing child wearing navy sweatshirt with white logo and gray shorts"
+      },
+      {
+        "ts": "2025-09-30T22:07:39.497055+00:00",
+        "lat": 38.8641219,
+        "lon": -77.2785564,
+        "event_type": "sighting",
+        "reporter_type": "officer",
+        "confidence": 0.552392439810413,
+        "note": "Witness reported seeing child wearing long-sleeve black shirt and black leggings"
+      },
+      {
+        "ts": "2025-09-30T10:04:51.961734+00:00",
+        "lat": 38.8616366,
+        "lon": -77.3269061,
+        "event_type": "lpr_hit",
+        "reporter_type": "family",
+        "confidence": 0.5836986988791405,
+        "note": "Witness reported seeing child wearing gray jacket and denim pants"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 14-year-old female was last seen at Prince William at 2025-09-28T01:06:25.587387+00:00. The child was reported missing by neighbor after failing to meet a friend.",
+    "behavioral_patterns": [
+      "turned onto US-58 east toward Suffolk",
+      "entered vehicle and headed northbound on I-95"
+    ],
+    "movement_cues_text": "Within 4 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-58. A dark blue 2012 Toyota Camry was observed departing near Prince William, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-09-28T01:06:25.587387+00:00",
+      "Reported missing 5 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 4 hours later, a parent reported someone matching the description (14-year-old female, wearing greenish-colored hoodie, denim pants, red Crocs) near Alleghany.",
+        "clothing": "greenish-colored hoodie, denim pants, red Crocs",
+        "vehicle": "Toyota Camry",
+        "behavior": "following into a store and exiting with the child"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing female child reported in Prince William",
+        "excerpt": "Authorities are searching for a 14-year-old female last seen in Prince William, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "other",
+        "text": "Please help find missing child in Prince William area. Last seen wearing greenish-colored hoodie, denim pants, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "unknown",
+        "age_estimate": 40,
+        "vehicle": {
+          "make": "Toyota",
+          "model": "Camry",
+          "color": "dark blue",
+          "plate_partial": "VA U**-****"
+        },
+        "note": "asking the child questions and offering a ride"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Prince William",
+        "type": "county",
+        "coordinates": [
+          38.71,
+          -77.48
+        ],
+        "region": "NoVA"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 8,
+        "nearby_pois_count": 3
+      },
+      "generation_metadata": {
+        "child_age": 14,
+        "child_gender": "female",
+        "vehicle_make": "Toyota",
+        "vehicle_model": "Camry",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 4
+      }
+    },
+    "_fulltext": "A 14-year-old female was last seen at Prince William at 2025-09-28T01:06:25.587387+00:00. The child was reported missing by neighbor after failing to meet a friend. Within 4 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-58. A dark blue 2012 Toyota Camry was observed departing near Prince William, Virginia. Around 4 hours later, a parent reported someone matching the description (14-year-old female, wearing greenish-colored hoodie, denim pants, red Crocs) near Alleghany.",
+    "search_zones": [
+      {
+        "center_lat": 38.75,
+        "center_lon": -77.47,
+        "radius_miles": 4.478904620676118,
+        "corridor": "I-64 EB",
+        "region_tag": "NoVA",
+        "priority": 0.8268057595224243,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.84,
+        "center_lon": -77.3,
+        "radius_miles": 4.171306904135758,
+        "corridor": "I-81 SB",
+        "region_tag": "NoVA",
+        "priority": 0.7896139520520532,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 38.71,
+        "center_lon": -77.8,
+        "radius_miles": 5.531668858613975,
+        "corridor": "I-64 EB",
+        "region_tag": "Unknown",
+        "priority": 0.6958504936484204,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0
+      },
+      {
+        "center_lat": 37.43,
+        "center_lon": -76.32,
+        "radius_miles": 17.32101567179302,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.8786177436044733,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 38.37,
+        "center_lon": -78.26,
+        "radius_miles": 22.042121573086444,
+        "corridor": "I-64 EB",
+        "region_tag": "Shenandoah",
+        "priority": 0.7277693836914731,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.85,
+        "center_lon": -78.27,
+        "radius_miles": 23.961194853287157,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.5628600503487025,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7
+      },
+      {
+        "center_lat": 37.85,
+        "center_lon": -78.27,
+        "radius_miles": 34.320805979475814,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.4348184022189344,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 38.25,
+        "center_lon": -79.11,
+        "radius_miles": 28.294479640098825,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.6530640686462107,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      },
+      {
+        "center_lat": 38.8,
+        "center_lon": -77.04,
+        "radius_miles": 28.993903204126454,
+        "corridor": "I-95 NB",
+        "region_tag": "NoVA",
+        "priority": 0.43736507028669264,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5
+      }
+    ]
+  }
+}
