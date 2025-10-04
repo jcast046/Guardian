@@ -1,0 +1,313 @@
+{
+  "case_id": "GRD-2025-980143",
+  "demographic": {
+    "gender": "male",
+    "age_years": 16,
+    "name": "Child_4694",
+    "distinctive_features": "blonde hair"
+  },
+  "spatial": {
+    "last_seen_lat": 37.58,
+    "last_seen_lon": -79.15,
+    "last_seen_location": "Amherst, Virginia",
+    "last_seen_city": "Unknown",
+    "last_seen_county": "Amherst",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-64",
+      "I-95",
+      "US-250",
+      "US-301",
+      "US-33",
+      "US-360",
+      "US-522",
+      "US-60",
+      "Britton",
+      "CrittendenNorview",
+      "Duncan Rd",
+      "FORESTHarborView",
+      "Guinea",
+      "Hicks Rd",
+      "Hillsdale"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Lynchburg, Virginia, USA (lat: 37.4155, lon: -79.2049, distance: 11.76mi, type: bus_stop)",
+      "Transit Stop at Lynchburg, Virginia, USA (lat: 37.4145, lon: -79.2083, distance: 11.88mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Amherst city center (lat: 37.5800, lon: -79.1500, distance: 0.00mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:56:28.780330+00:00",
+    "reported_missing_ts": "2025-10-04T02:56:28.796583+00:00",
+    "elapsed_report_minutes": 205,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T06:43:59.567296+00:00",
+        "lat": 37.05,
+        "lon": -78.65,
+        "event_type": "camera_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.6064770647959333,
+        "note": "Transit system report: Child seen at transit station wearing blue windbreaker and khaki shorts"
+      },
+      {
+        "ts": "2025-10-04T16:15:19.287304+00:00",
+        "lat": 37.55,
+        "lon": -78.55,
+        "event_type": "camera_hit",
+        "reporter_type": "public",
+        "confidence": 0.6733899897307665,
+        "note": "Witness reported seeing child wearing white hoodie and denim pants"
+      },
+      {
+        "ts": "2025-10-05T02:24:23.342131+00:00",
+        "lat": 37.21,
+        "lon": -79.16,
+        "event_type": "search_action",
+        "reporter_type": "family",
+        "confidence": 0.503552199098135,
+        "note": "Witness reported seeing child wearing greenish-colored hoodie and black leggings"
+      },
+      {
+        "ts": "2025-10-05T14:35:48.719721+00:00",
+        "lat": 38.15,
+        "lon": -79.07,
+        "event_type": "lpr_hit",
+        "reporter_type": "public",
+        "confidence": 0.5045274843807941,
+        "note": "Witness reported seeing child wearing plaid shirt and blue athletic shorts"
+      },
+      {
+        "ts": "2025-10-06T21:09:46.084832+00:00",
+        "lat": 37.83,
+        "lon": -79.43,
+        "event_type": "sighting",
+        "reporter_type": "officer",
+        "confidence": 0.4694850589477129,
+        "note": "Transit system report: Child seen at transit station wearing long-sleeve black shirt and navy sweatpants"
+      },
+      {
+        "ts": "2025-10-06T15:01:29.102383+00:00",
+        "lat": 37.22,
+        "lon": -78.45,
+        "event_type": "lead",
+        "reporter_type": "officer",
+        "confidence": 0.43481820194974,
+        "note": "Witness reported seeing child wearing red hoodie and black leggings"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 16-year-old male was last seen at Amherst at 2025-10-03T21:56:28.780330+00:00. The child was reported missing by parent after failing to meet a friend.",
+    "behavioral_patterns": [
+      "entered vehicle and headed northbound on I-95",
+      "walked through mall corridor into adjacent store"
+    ],
+    "movement_cues_text": "Within 9 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along I-64. A dark blue 2012 Toyota Camry was observed departing near Amherst, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:56:28.780330+00:00",
+      "Reported missing 2 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 5 hours later, a neighbor reported someone matching the description (16-year-old male, wearing plaid shirt, blue athletic shorts, red Crocs) near Craig.",
+        "clothing": "plaid shirt, blue athletic shorts, red Crocs",
+        "vehicle": "Toyota Camry",
+        "behavior": "backing up vehicle to block driveway"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Amherst",
+        "excerpt": "Authorities are searching for a 16-year-old male last seen in Amherst, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "other",
+        "text": "Please help find missing child in Amherst area. Last seen wearing plaid shirt, blue athletic shorts, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "suspect",
+        "age_estimate": 57,
+        "vehicle": {
+          "make": "Toyota",
+          "model": "Camry",
+          "color": "dark blue",
+          "plate_partial": "VA U**-****"
+        },
+        "note": "following into a store and exiting with the child"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Amherst",
+        "type": "county",
+        "coordinates": [
+          37.58,
+          -79.15
+        ],
+        "region": "Piedmont"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 2,
+        "nearby_pois_count": 1
+      },
+      "generation_metadata": {
+        "child_age": 16,
+        "child_gender": "male",
+        "vehicle_make": "Toyota",
+        "vehicle_model": "Camry",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 6
+      }
+    },
+    "_fulltext": "A 16-year-old male was last seen at Amherst at 2025-10-03T21:56:28.780330+00:00. The child was reported missing by parent after failing to meet a friend. Within 9 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along I-64. A dark blue 2012 Toyota Camry was observed departing near Amherst, Virginia. Around 5 hours later, a neighbor reported someone matching the description (16-year-old male, wearing plaid shirt, blue athletic shorts, red Crocs) near Craig.",
+    "search_zones": [
+      {
+        "center_lat": 37.58,
+        "center_lon": -79.15,
+        "radius_miles": 5.5807461216154985,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.5165379146666293,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_1_804"
+      },
+      {
+        "center_lat": 37.33,
+        "center_lon": -79.52,
+        "radius_miles": 4.934811678583349,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.6671690175723126,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_914"
+      },
+      {
+        "center_lat": 37.78,
+        "center_lon": -79.44,
+        "radius_miles": 4.131496210534732,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.8997570263606323,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_8038"
+      },
+      {
+        "center_lat": 37.22,
+        "center_lon": -78.45,
+        "radius_miles": 19.829320879322033,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.7614987302248188,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_374"
+      },
+      {
+        "center_lat": 38.43,
+        "center_lon": -77.4,
+        "radius_miles": 20.599204067811414,
+        "corridor": "I-64 EB",
+        "region_tag": "NoVA",
+        "priority": 0.8834278389082597,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_5_845"
+      },
+      {
+        "center_lat": 37.23,
+        "center_lon": -80.41,
+        "radius_miles": 16.59332015812245,
+        "corridor": "I-81 SB",
+        "region_tag": "Appalachia",
+        "priority": 0.7080653943897486,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6_660"
+      },
+      {
+        "center_lat": 37.71,
+        "center_lon": -76.45,
+        "radius_miles": 29.796684550430193,
+        "corridor": "I-64 EB",
+        "region_tag": "Unknown",
+        "priority": 0.760668982414594,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_7_651"
+      },
+      {
+        "center_lat": 36.72,
+        "center_lon": -76.58,
+        "radius_miles": 34.056656010747645,
+        "corridor": "I-95 NB",
+        "region_tag": "Tidewater",
+        "priority": 0.7988344838805249,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_692"
+      },
+      {
+        "center_lat": 37.23,
+        "center_lon": -76.5,
+        "radius_miles": 30.142216535342808,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.3971801757335398,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_779"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_8038"
+}

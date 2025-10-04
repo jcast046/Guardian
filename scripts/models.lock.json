@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "latest",
+      "local_dir": "models/Qwen2.5-3B-Instruct",
+      "role": "extractor"
+    },
+    {
+      "repo_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "latest",
+      "local_dir": "models/Llama3_2-3B-Instruct",
+      "role": "summarizer"
+    },
+    {
+      "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "latest",
+      "local_dir": "models/Qwen2.5-3B-Instruct",
+      "role": "weak_labeler"
+    }
+  ]
+}

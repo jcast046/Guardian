@@ -1,11 +1,11 @@
 # llm/__init__.py
 
 # === Runtime (no heavy deps) ===
-from .summarizer import summarize
+from .summarizer import summarize, batch_summarize
 from .extractor import (
     extract_entities, extract_persons, extract_vehicles, extract_locations
 )
-from .weak_labeler import classify_movement, assess_risk, label_case
+from .weak_labeler import classify_movement, assess_risk, label_case, label_batch
 
 # === Optional: fine-tuning (requires peft); safe if missing ===
 try:

@@ -1,0 +1,302 @@
+{
+  "case_id": "GRD-2025-973211",
+  "demographic": {
+    "gender": "male",
+    "age_years": 16,
+    "name": "Child_1849",
+    "distinctive_features": "brown eyes"
+  },
+  "spatial": {
+    "last_seen_lat": 38.8,
+    "last_seen_lon": -77.04,
+    "last_seen_location": "Alexandria, Virginia",
+    "last_seen_city": "Alexandria",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-395",
+      "I-495",
+      "I-66",
+      "I-95",
+      "US-1",
+      "US-15",
+      "US-17",
+      "US-211",
+      "US-29",
+      "US-50",
+      "VA-267",
+      "Browns",
+      "Butts Station",
+      "Capitol",
+      "Chester"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Alexandria, Virginia, USA (lat: 38.8039, lon: -77.0572, distance: 0.96mi, type: bus_stop)",
+      "Transit Stop at Alexandria, Virginia, USA (lat: 38.8137, lon: -77.0539, distance: 1.21mi, type: transit_station)",
+      "Transit Stop at Alexandria, Virginia, USA (lat: 38.8063, lon: -77.0613, distance: 1.23mi, type: transit_station)",
+      "Transit Stop at Alexandria, Virginia, USA (lat: 38.8328, lon: -77.0474, distance: 2.30mi, type: transit_station)",
+      "Transit Stop at Alexandria, Virginia, USA (lat: 38.8349, lon: -77.0472, distance: 2.44mi, type: transit_station)",
+      "Transit Stop at Arlington, Virginia, USA (lat: 38.8533, lon: -77.0441, distance: 3.69mi, type: transit_station)",
+      "Transit Stop at Arlington, Virginia, USA (lat: 38.8483, lon: -77.0775, distance: 3.90mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Alexandria city center (lat: 38.8000, lon: -77.0400, distance: 0.00mi, type: city_center)",
+      "Falls Church city center (lat: 38.8800, lon: -77.1700, distance: 8.92mi, type: city_center)",
+      "Arlington city center (lat: 38.8800, lon: -77.1000, distance: 6.40mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:57:05.225455+00:00",
+    "reported_missing_ts": "2025-10-03T23:57:05.386127+00:00",
+    "elapsed_report_minutes": 81,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T04:34:03.877145+00:00",
+        "lat": 38.8,
+        "lon": -77.04,
+        "event_type": "lead",
+        "reporter_type": "public",
+        "confidence": 0.6685820447847386,
+        "note": "Witness reported seeing child wearing plaid shirt and denim pants"
+      },
+      {
+        "ts": "2025-10-04T12:12:26.947174+00:00",
+        "lat": 38.75,
+        "lon": -77.47,
+        "event_type": "search_action",
+        "reporter_type": "public",
+        "confidence": 0.7988389990550604,
+        "note": "Witness reported seeing child wearing plaid shirt and gray shorts"
+      },
+      {
+        "ts": "2025-10-05T03:22:22.304701+00:00",
+        "lat": 39.09,
+        "lon": -77.64,
+        "event_type": "camera_hit",
+        "reporter_type": "family",
+        "confidence": 0.4814020852387678,
+        "note": "Witness reported seeing child wearing blue windbreaker and navy sweatpants"
+      },
+      {
+        "ts": "2025-10-06T15:23:07.166162+00:00",
+        "lat": 38.8,
+        "lon": -77.04,
+        "event_type": "search_action",
+        "reporter_type": "public",
+        "confidence": 0.5727086417851188,
+        "note": "Witness reported seeing child wearing plaid shirt and black leggings"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 16-year-old male was last seen at Alexandria at 2025-10-03T21:57:05.225455+00:00. The child was reported missing by parent after failing to meet a friend.",
+    "behavioral_patterns": [
+      "entered vehicle and headed northbound on I-95",
+      "turned onto US-58 east toward Suffolk"
+    ],
+    "movement_cues_text": "Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel northbound along I-95. A white 2016 Jeep Grand Cherokee was observed departing near Alexandria, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:57:05.225455+00:00",
+      "Reported missing 1 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 4 hours later, a neighbor reported someone matching the description (16-year-old male, wearing plaid shirt, black joggers, white sneakers) near King and Queen.",
+        "clothing": "plaid shirt, black joggers, white sneakers",
+        "vehicle": "Jeep Grand Cherokee",
+        "behavior": "backing up vehicle to block driveway"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Alexandria",
+        "excerpt": "Authorities are searching for a 16-year-old male last seen in Alexandria, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "nextdoor",
+        "text": "Please help find missing child in Alexandria area. Last seen wearing plaid shirt, black joggers, white sneakers"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 58,
+        "vehicle": {
+          "make": "Jeep",
+          "model": "Grand Cherokee",
+          "color": "white",
+          "plate_partial": "unknown"
+        },
+        "note": "circling the block multiple times"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Alexandria",
+        "type": "city",
+        "coordinates": [
+          38.8,
+          -77.04
+        ],
+        "region": "NoVA"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 7,
+        "nearby_pois_count": 3
+      },
+      "generation_metadata": {
+        "child_age": 16,
+        "child_gender": "male",
+        "vehicle_make": "Jeep",
+        "vehicle_model": "Grand Cherokee",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 4
+      }
+    },
+    "_fulltext": "A 16-year-old male was last seen at Alexandria at 2025-10-03T21:57:05.225455+00:00. The child was reported missing by parent after failing to meet a friend. Within 2 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel northbound along I-95. A white 2016 Jeep Grand Cherokee was observed departing near Alexandria, Virginia. Around 4 hours later, a neighbor reported someone matching the description (16-year-old male, wearing plaid shirt, black joggers, white sneakers) near King and Queen.",
+    "search_zones": [
+      {
+        "center_lat": 38.71,
+        "center_lon": -77.48,
+        "radius_miles": 5.501430050485185,
+        "corridor": "US-29 SW",
+        "region_tag": "NoVA",
+        "priority": 0.5342409062947236,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_1_867"
+      },
+      {
+        "center_lat": 38.84,
+        "center_lon": -77.3,
+        "radius_miles": 5.645748535060683,
+        "corridor": "US-29 SW",
+        "region_tag": "NoVA",
+        "priority": 0.7375167991692462,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_387"
+      },
+      {
+        "center_lat": 38.77,
+        "center_lon": -77.44,
+        "radius_miles": 4.8424490969836596,
+        "corridor": "I-81 SB",
+        "region_tag": "NoVA",
+        "priority": 0.7823438974655537,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_3_836"
+      },
+      {
+        "center_lat": 38.29,
+        "center_lon": -78.46,
+        "radius_miles": 17.058164171742177,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.40788118801205087,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_740"
+      },
+      {
+        "center_lat": 39.11,
+        "center_lon": -77.98,
+        "radius_miles": 21.624984071191797,
+        "corridor": "I-81 SB",
+        "region_tag": "Unknown",
+        "priority": 0.8537094533567551,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_7716"
+      },
+      {
+        "center_lat": 38.83,
+        "center_lon": -77.3,
+        "radius_miles": 17.85671323396105,
+        "corridor": "I-95 NB",
+        "region_tag": "NoVA",
+        "priority": 0.382720737527491,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6_584"
+      },
+      {
+        "center_lat": 37.55,
+        "center_lon": -78.55,
+        "radius_miles": 29.031414183661965,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.3098663276273304,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_7_155"
+      },
+      {
+        "center_lat": 37.55,
+        "center_lon": -79.8,
+        "radius_miles": 34.80626536444845,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.3035625959161601,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_401"
+      },
+      {
+        "center_lat": 36.91,
+        "center_lon": -77.28,
+        "radius_miles": 33.43566257683271,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.32905121295442025,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_100"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_7716"
+}

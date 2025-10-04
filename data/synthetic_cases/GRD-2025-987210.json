@@ -1,0 +1,295 @@
+{
+  "case_id": "GRD-2025-987210",
+  "demographic": {
+    "gender": "female",
+    "age_years": 12,
+    "name": "Child_8800",
+    "distinctive_features": "birthmark on left arm"
+  },
+  "spatial": {
+    "last_seen_lat": 37.21,
+    "last_seen_lon": -77.28,
+    "last_seen_location": "Prince George, Virginia",
+    "last_seen_city": "Unknown",
+    "last_seen_county": "Prince George",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-64",
+      "I-95",
+      "US-250",
+      "US-301",
+      "US-33",
+      "US-360",
+      "US-522",
+      "US-60",
+      "Britton",
+      "CrittendenNorview",
+      "Duncan Rd",
+      "FORESTHarborView",
+      "Guinea",
+      "Hicks Rd",
+      "Hillsdale"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5148, lon: -77.3952, distance: 21.99mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5145, lon: -77.3964, distance: 21.99mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5151, lon: -77.3953, distance: 22.01mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5154, lon: -77.3947, distance: 22.02mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5146, lon: -77.3983, distance: 22.02mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5146, lon: -77.3999, distance: 22.05mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5146, lon: -77.4018, distance: 22.09mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Colonial Heights city center (lat: 37.2600, lon: -77.4000, distance: 7.45mi, type: city_center)",
+      "Hopewell city center (lat: 37.3000, lon: -77.2800, distance: 6.22mi, type: city_center)",
+      "Petersburg city center (lat: 37.2200, lon: -77.4000, distance: 6.64mi, type: city_center)",
+      "Prince George city center (lat: 37.2100, lon: -77.2800, distance: 0.00mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:56:39.656445+00:00",
+    "reported_missing_ts": "2025-10-04T03:56:40.030236+00:00",
+    "elapsed_report_minutes": 257,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T09:35:20.817930+00:00",
+        "lat": 37.26,
+        "lon": -77.4,
+        "event_type": "sighting",
+        "reporter_type": "public",
+        "confidence": 0.6122112933785926,
+        "note": "Witness reported seeing child wearing denim jacket and blue jeans"
+      },
+      {
+        "ts": "2025-10-06T16:56:50.384433+00:00",
+        "lat": 37.76,
+        "lon": -77.47,
+        "event_type": "lpr_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.5973793684870867,
+        "note": "Witness reported seeing child wearing greenish-colored hoodie and khaki shorts"
+      },
+      {
+        "ts": "2025-10-06T06:01:17.966842+00:00",
+        "lat": 37.35,
+        "lon": -77.07,
+        "event_type": "camera_hit",
+        "reporter_type": "public",
+        "confidence": 0.5998890270519611,
+        "note": "Witness reported seeing child wearing navy sweatshirt with white logo and black joggers"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 12-year-old female was last seen at Prince George at 2025-10-03T21:56:39.656445+00:00. The child was reported missing by parent after failing to meet a friend.",
+    "behavioral_patterns": [
+      "entered vehicle and headed northbound on I-95",
+      "merged onto I-64 west toward Richmond",
+      "walked through mall corridor into adjacent store"
+    ],
+    "movement_cues_text": "Within 5 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along I-264. A black 2024 Honda Passport was observed departing near Prince George, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:56:39.656445+00:00",
+      "Reported missing 5 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 11 hours later, a neighbor reported someone matching the description (12-year-old female, wearing red hoodie, navy sweatpants, red Crocs) near Craig.",
+        "clothing": "red hoodie, navy sweatpants, red Crocs",
+        "vehicle": "Honda Passport",
+        "behavior": "switching vehicles after leaving the scene"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing female child reported in Prince George",
+        "excerpt": "Authorities are searching for a 12-year-old female last seen in Prince George, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "nextdoor",
+        "text": "Please help find missing child in Prince George area. Last seen wearing red hoodie, navy sweatpants, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 56,
+        "vehicle": {
+          "make": "Honda",
+          "model": "Passport",
+          "color": "black",
+          "plate_partial": "partial VA tag ???-1234"
+        },
+        "note": "circling the block multiple times"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Prince George",
+        "type": "county",
+        "coordinates": [
+          37.21,
+          -77.28
+        ],
+        "region": "Piedmont"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 7,
+        "nearby_pois_count": 4
+      },
+      "generation_metadata": {
+        "child_age": 12,
+        "child_gender": "female",
+        "vehicle_make": "Honda",
+        "vehicle_model": "Passport",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 3
+      }
+    },
+    "_fulltext": "A 12-year-old female was last seen at Prince George at 2025-10-03T21:56:39.656445+00:00. The child was reported missing by parent after failing to meet a friend. Within 5 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along I-264. A black 2024 Honda Passport was observed departing near Prince George, Virginia. Around 11 hours later, a neighbor reported someone matching the description (12-year-old female, wearing red hoodie, navy sweatpants, red Crocs) near Craig.",
+    "search_zones": [
+      {
+        "center_lat": 37.37,
+        "center_lon": -77.51,
+        "radius_miles": 5.746154864583243,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.3018507977884378,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_1_233"
+      },
+      {
+        "center_lat": 37.13,
+        "center_lon": -76.83,
+        "radius_miles": 4.803616713363233,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.3154082563604825,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_736"
+      },
+      {
+        "center_lat": 37.3,
+        "center_lon": -77.28,
+        "radius_miles": 5.738010563412746,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.8706371636655836,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_5532"
+      },
+      {
+        "center_lat": 38.88,
+        "center_lon": -78.51,
+        "radius_miles": 22.520414069207767,
+        "corridor": "US-29 SW",
+        "region_tag": "Shenandoah",
+        "priority": 0.5711508465633617,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_165"
+      },
+      {
+        "center_lat": 36.83,
+        "center_lon": -79.39,
+        "radius_miles": 21.27100884138662,
+        "corridor": "I-81 SB",
+        "region_tag": "Unknown",
+        "priority": 0.6089484009733495,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_5_156"
+      },
+      {
+        "center_lat": 37.13,
+        "center_lon": -78.07,
+        "radius_miles": 17.50347948092992,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.3099781824668227,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6_637"
+      },
+      {
+        "center_lat": 37.1,
+        "center_lon": -81.12,
+        "radius_miles": 40.228082885150314,
+        "corridor": "US-29 SW",
+        "region_tag": "Appalachia",
+        "priority": 0.7067576517655231,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_7_943"
+      },
+      {
+        "center_lat": 37.29,
+        "center_lon": -80.05,
+        "radius_miles": 36.49468222844233,
+        "corridor": "I-81 SB",
+        "region_tag": "Appalachia",
+        "priority": 0.7435227808919207,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_530"
+      },
+      {
+        "center_lat": 36.65,
+        "center_lon": -80.3,
+        "radius_miles": 29.13916923758891,
+        "corridor": "I-81 SB",
+        "region_tag": "Appalachia",
+        "priority": 0.8634508517301833,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_755"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_5532"
+}

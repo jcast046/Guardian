@@ -10,7 +10,6 @@ tasks while maintaining efficiency through quantization and low-rank adaptation.
 
 Author: Joshua Castillo
 
-
 Classes:
     GuardianFineTuner: Main fine-tuning class with QLoRA support
 
@@ -20,7 +19,7 @@ Functions:
     fine_tune_weak_labeler(): Fine-tune weak labeler model
 
 Example:
-    >>> from llm import fine_tune_summarizer
+    >>> from guardian_llm import fine_tune_summarizer
     >>> trainer = fine_tune_summarizer(train_data, eval_data)
     >>> # Model is saved to ./finetuned_summarizer/
 """
@@ -81,6 +80,10 @@ class GuardianFineTuner:
         configuring them appropriately for fine-tuning. It handles device placement
         and data type optimization based on available hardware.
         
+        Raises:
+            FileNotFoundError: If model path is not found
+            RuntimeError: If model loading fails
+            
         Note:
             Must be called before setup_lora() and train().
         """
@@ -107,6 +110,9 @@ class GuardianFineTuner:
                      Default: 16 (good balance of performance and efficiency)
             lora_alpha (int): LoRA scaling parameter. Default: 32
             lora_dropout (float): Dropout rate for LoRA layers. Default: 0.1
+            
+        Raises:
+            RuntimeError: If model is not loaded (call load_model() first)
             
         Note:
             Must be called after load_model() and before train().
@@ -139,6 +145,9 @@ class GuardianFineTuner:
         
         Returns:
             Dataset: Hugging Face Dataset object ready for training
+            
+        Raises:
+            ValueError: If task_type is not recognized
         """
         if self.task_type == "summarizer":
             texts = [FINE_TUNE_SUMMARY_PROMPT.format(narrative=d["narrative"], summary=d["summary"]) for d in data]
@@ -186,6 +195,7 @@ class GuardianFineTuner:
             
         Raises:
             ValueError: If LoRA not setup (call setup_lora() first)
+            RuntimeError: If training fails
         """
         if not self.peft_model:
             raise ValueError("LoRA not setup. Call setup_lora() first.")
@@ -255,6 +265,10 @@ def fine_tune_summarizer(train_data: list, eval_data: list = None,
     Returns:
         Trainer: Hugging Face Trainer object
         
+    Raises:
+        FileNotFoundError: If guardian.config.json is not found
+        ValueError: If model_path is invalid
+        
     Example:
         >>> train_data = [{"narrative": "Case text...", "summary": "Summary..."}]
         >>> trainer = fine_tune_summarizer(train_data)
@@ -286,6 +300,10 @@ def fine_tune_extractor(train_data: list, eval_data: list = None,
     Returns:
         Trainer: Hugging Face Trainer object
         
+    Raises:
+        FileNotFoundError: If guardian.config.json is not found
+        ValueError: If model_path is invalid
+        
     Example:
         >>> train_data = [{"narrative": "Case text...", "extraction": "JSON entities..."}]
         >>> trainer = fine_tune_extractor(train_data)
@@ -316,6 +334,10 @@ def fine_tune_weak_labeler(train_data: list, eval_data: list = None,
         
     Returns:
         Trainer: Hugging Face Trainer object
+        
+    Raises:
+        FileNotFoundError: If guardian.config.json is not found
+        ValueError: If model_path is invalid
         
     Example:
         >>> train_data = [{"narrative": "Case text...", "movement": "Local", "risk": "High"}]

@@ -1,0 +1,274 @@
+{
+  "case_id": "GRD-2025-975719",
+  "demographic": {
+    "gender": "female",
+    "age_years": 14,
+    "name": "Child_2113",
+    "distinctive_features": "brown eyes"
+  },
+  "spatial": {
+    "last_seen_lat": 37.54,
+    "last_seen_lon": -77.43,
+    "last_seen_location": "Richmond, Virginia",
+    "last_seen_city": "Richmond",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-64",
+      "I-95",
+      "US-250",
+      "US-301",
+      "US-33",
+      "US-360",
+      "US-522",
+      "US-60",
+      "Britton",
+      "CrittendenNorview",
+      "Duncan Rd",
+      "FORESTHarborView",
+      "Guinea",
+      "Hicks Rd",
+      "Hillsdale"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5396, lon: -77.4349, distance: 0.27mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5413, lon: -77.4242, distance: 0.33mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5330, lon: -77.4276, distance: 0.50mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5342, lon: -77.4221, distance: 0.59mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5348, lon: -77.4209, distance: 0.62mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5353, lon: -77.4203, distance: 0.62mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5342, lon: -77.4208, distance: 0.64mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Richmond city center (lat: 37.5400, lon: -77.4300, distance: 0.00mi, type: city_center)",
+      "Henrico city center (lat: 37.5500, lon: -77.3900, distance: 2.30mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:57:00.728756+00:00",
+    "reported_missing_ts": "2025-10-03T23:57:01.076713+00:00",
+    "elapsed_report_minutes": 133,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T01:14:11.570299+00:00",
+        "lat": 37.93,
+        "lon": -76.78,
+        "event_type": "lead",
+        "reporter_type": "family",
+        "confidence": 0.6356520864132594,
+        "note": "Witness reported seeing child wearing red hoodie and blue jeans"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "not_found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 14-year-old female was last seen at Richmond at 2025-10-03T21:57:00.728756+00:00. The child was reported missing by friend after failing to return home.",
+    "behavioral_patterns": [
+      "turned onto US-58 east toward Suffolk",
+      "entered vehicle and headed northbound on I-95"
+    ],
+    "movement_cues_text": "Within 7 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-29. A black 2024 Honda Passport was observed departing near Richmond, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:57:00.728756+00:00",
+      "Reported missing 4 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 12 hours later, a store_employee reported someone matching the description (14-year-old female, wearing plaid shirt, denim pants, black sneakers) near Pulaski.",
+        "clothing": "plaid shirt, denim pants, black sneakers",
+        "vehicle": "Honda Passport",
+        "behavior": "backing up vehicle to block driveway"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing female child reported in Richmond",
+        "excerpt": "Authorities are searching for a 14-year-old female last seen in Richmond, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "other",
+        "text": "Please help find missing child in Richmond area. Last seen wearing plaid shirt, denim pants, black sneakers"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 64,
+        "vehicle": {
+          "make": "Honda",
+          "model": "Passport",
+          "color": "black",
+          "plate_partial": "partial VA tag ???-1234"
+        },
+        "note": "backing up vehicle to block driveway"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Richmond",
+        "type": "city",
+        "coordinates": [
+          37.54,
+          -77.43
+        ],
+        "region": "Piedmont"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 7,
+        "nearby_pois_count": 2
+      },
+      "generation_metadata": {
+        "child_age": 14,
+        "child_gender": "female",
+        "vehicle_make": "Honda",
+        "vehicle_model": "Passport",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 1
+      }
+    },
+    "_fulltext": "A 14-year-old female was last seen at Richmond at 2025-10-03T21:57:00.728756+00:00. The child was reported missing by friend after failing to return home. Within 7 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-29. A black 2024 Honda Passport was observed departing near Richmond, Virginia. Around 12 hours later, a store_employee reported someone matching the description (14-year-old female, wearing plaid shirt, denim pants, black sneakers) near Pulaski.",
+    "search_zones": [
+      {
+        "center_lat": 37.51,
+        "center_lon": -76.99,
+        "radius_miles": 5.295032585559882,
+        "corridor": "US-29 SW",
+        "region_tag": "Tidewater",
+        "priority": 0.5637460952690014,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_1_428"
+      },
+      {
+        "center_lat": 37.26,
+        "center_lon": -77.4,
+        "radius_miles": 4.517239592953085,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.5882401894067224,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_954"
+      },
+      {
+        "center_lat": 37.69,
+        "center_lon": -77.89,
+        "radius_miles": 4.607147984820363,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.7108405789083274,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_3_691"
+      },
+      {
+        "center_lat": 38.25,
+        "center_lon": -79.11,
+        "radius_miles": 18.978923356371386,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.6604693626034561,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_882"
+      },
+      {
+        "center_lat": 38.25,
+        "center_lon": -79.11,
+        "radius_miles": 17.36577964403563,
+        "corridor": "I-64 EB",
+        "region_tag": "Piedmont",
+        "priority": 0.620626532548178,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_5_832"
+      },
+      {
+        "center_lat": 38.88,
+        "center_lon": -77.1,
+        "radius_miles": 16.048853128498727,
+        "corridor": "I-95 NB",
+        "region_tag": "NoVA",
+        "priority": 0.8816694936328229,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6063"
+      },
+      {
+        "center_lat": 36.65,
+        "center_lon": -81.23,
+        "radius_miles": 32.66223712415366,
+        "corridor": "US-29 SW",
+        "region_tag": "Appalachia",
+        "priority": 0.43089681611192543,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_7_641"
+      },
+      {
+        "center_lat": 37.35,
+        "center_lon": -78.82,
+        "radius_miles": 37.82123496833885,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.30199458334306917,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_753"
+      },
+      {
+        "center_lat": 37.93,
+        "center_lon": -76.93,
+        "radius_miles": 33.52141028484822,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.8679029126081075,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_321"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_6063"
+}

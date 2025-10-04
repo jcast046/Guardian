@@ -1,0 +1,281 @@
+{
+  "case_id": "GRD-2025-991991",
+  "demographic": {
+    "gender": "male",
+    "age_years": 6,
+    "name": "Child_7020",
+    "distinctive_features": "brown eyes"
+  },
+  "spatial": {
+    "last_seen_lat": 37.35,
+    "last_seen_lon": -77.07,
+    "last_seen_location": "Charles City, Virginia",
+    "last_seen_city": "Unknown",
+    "last_seen_county": "Charles City",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-64",
+      "I-95",
+      "US-250",
+      "US-301",
+      "US-33",
+      "US-360",
+      "US-522",
+      "US-60",
+      "Britton",
+      "CrittendenNorview",
+      "Duncan Rd",
+      "FORESTHarborView",
+      "Guinea",
+      "Hicks Rd",
+      "Hillsdale"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5184, lon: -77.3915, distance: 21.13mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5154, lon: -77.3947, distance: 21.17mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5148, lon: -77.3952, distance: 21.17mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5151, lon: -77.3953, distance: 21.18mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5174, lon: -77.3937, distance: 21.19mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5145, lon: -77.3964, distance: 21.21mi, type: bus_stop)",
+      "Transit Stop at Richmond, Virginia, USA (lat: 37.5163, lon: -77.3952, distance: 21.22mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Charles City city center (lat: 37.3500, lon: -77.0700, distance: 0.00mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:57:11.466404+00:00",
+    "reported_missing_ts": "2025-10-04T03:57:11.821888+00:00",
+    "elapsed_report_minutes": 313,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T03:32:35.636258+00:00",
+        "lat": 37.5478512,
+        "lon": -77.4019955,
+        "event_type": "transit_tap",
+        "reporter_type": "public",
+        "confidence": 0.7179301190319314,
+        "note": "Transit system report: Child seen at transit station wearing plaid shirt and khaki shorts"
+      },
+      {
+        "ts": "2025-10-03T23:29:04.819960+00:00",
+        "lat": 37.02,
+        "lon": -76.34,
+        "event_type": "transit_tap",
+        "reporter_type": "officer",
+        "confidence": 0.6986815218258455,
+        "note": "Transit system report: Child seen at transit station wearing navy sweatshirt with white logo and khaki shorts"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "found",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 6-year-old male was last seen at Charles City at 2025-10-03T21:57:11.466404+00:00. The child was reported missing by teacher after failing to arrive at school.",
+    "behavioral_patterns": [
+      "turned onto US-58 east toward Suffolk"
+    ],
+    "movement_cues_text": "Within 12 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-58. A silver 2018 Nissan Altima was observed departing near Charles City, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:57:11.466404+00:00",
+      "Reported missing 5 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 21 hours later, a school_staff reported someone matching the description (6-year-old male, wearing greenish-colored hoodie, blue athletic shorts, black sneakers) near Fredericksburg.",
+        "clothing": "greenish-colored hoodie, blue athletic shorts, black sneakers",
+        "vehicle": "Nissan Altima",
+        "behavior": "asking the child questions and offering a ride"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Charles City",
+        "excerpt": "Authorities are searching for a 6-year-old male last seen in Charles City, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "NCMEC",
+        "text": "Please help find missing child in Charles City area. Last seen wearing greenish-colored hoodie, blue athletic shorts, black sneakers"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "family",
+        "age_estimate": 44,
+        "vehicle": {
+          "make": "Nissan",
+          "model": "Altima",
+          "color": "silver",
+          "plate_partial": "temporary paper tag"
+        },
+        "note": "backing up vehicle to block driveway"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Charles City",
+        "type": "county",
+        "coordinates": [
+          37.35,
+          -77.07
+        ],
+        "region": "Piedmont"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 7,
+        "nearby_pois_count": 1
+      },
+      "generation_metadata": {
+        "child_age": 6,
+        "child_gender": "male",
+        "vehicle_make": "Nissan",
+        "vehicle_model": "Altima",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 2
+      }
+    },
+    "_fulltext": "A 6-year-old male was last seen at Charles City at 2025-10-03T21:57:11.466404+00:00. The child was reported missing by teacher after failing to arrive at school. Within 12 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-58. A silver 2018 Nissan Altima was observed departing near Charles City, Virginia. Around 21 hours later, a school_staff reported someone matching the description (6-year-old male, wearing greenish-colored hoodie, blue athletic shorts, black sneakers) near Fredericksburg.",
+    "search_zones": [
+      {
+        "center_lat": 37.54,
+        "center_lon": -77.43,
+        "radius_miles": 5.701964142755159,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.6628368625528542,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_1_201"
+      },
+      {
+        "center_lat": 37.13,
+        "center_lon": -76.83,
+        "radius_miles": 4.238132456451474,
+        "corridor": "I-95 NB",
+        "region_tag": "Tidewater",
+        "priority": 0.5306650675899454,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_385"
+      },
+      {
+        "center_lat": 37.26,
+        "center_lon": -77.4,
+        "radius_miles": 4.027280163503573,
+        "corridor": "I-81 SB",
+        "region_tag": "Piedmont",
+        "priority": 0.6833631911675584,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_3_668"
+      },
+      {
+        "center_lat": 38.02,
+        "center_lon": -78.47,
+        "radius_miles": 23.523361273771613,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.7712978177045036,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_601"
+      },
+      {
+        "center_lat": 37.93,
+        "center_lon": -76.93,
+        "radius_miles": 21.2096661156765,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.3833356943408952,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_5_341"
+      },
+      {
+        "center_lat": 38.51,
+        "center_lon": -78.93,
+        "radius_miles": 22.439441536320313,
+        "corridor": "I-81 SB",
+        "region_tag": "Shenandoah",
+        "priority": 0.5180880244339318,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6_697"
+      },
+      {
+        "center_lat": 37.08,
+        "center_lon": -77.58,
+        "radius_miles": 41.232669853392764,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.8964853943506597,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_5972"
+      },
+      {
+        "center_lat": 37.43,
+        "center_lon": -76.32,
+        "radius_miles": 39.32561441192658,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.830477749326354,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_532"
+      },
+      {
+        "center_lat": 38.37,
+        "center_lon": -78.26,
+        "radius_miles": 29.288303727616626,
+        "corridor": "US-29 SW",
+        "region_tag": "Shenandoah",
+        "priority": 0.4830453174905252,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_574"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_5972"
+}

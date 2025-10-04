@@ -1,0 +1,5500 @@
+{
+  "case_id": "GRD-2025-000487",
+  "age": 12,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:56:54.485737Z"
+}
+{
+  "case_id": "GRD-2025-003614",
+  "age": 14,
+  "gender": "F",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-03T22:57:16.008661Z"
+}
+{
+  "case_id": "GRD-2025-003704",
+  "age": 12,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:56:33.939493Z"
+}
+{
+  "case_id": "GRD-2025-005140",
+  "age": 15,
+  "gender": "M",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T03:57:19.278763Z"
+}
+{
+  "case_id": "GRD-2025-005969",
+  "age": 7,
+  "gender": "F",
+  "county": "Hampton",
+  "state": "VA",
+  "city": "Hampton",
+  "lat": 37.02,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T01:56:50.415137Z"
+}
+{
+  "case_id": "GRD-2025-011277",
+  "age": 14,
+  "gender": "M",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T00:57:46.581396Z"
+}
+{
+  "case_id": "GRD-2025-011662",
+  "age": 6,
+  "gender": "F",
+  "county": "Appomattox",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -78.82,
+  "date_reported": "2025-10-03T23:57:14.355310Z"
+}
+{
+  "case_id": "GRD-2025-014428",
+  "age": 13,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:52.504974Z"
+}
+{
+  "case_id": "GRD-2025-014668",
+  "age": 13,
+  "gender": "F",
+  "county": "Appomattox",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -78.82,
+  "date_reported": "2025-10-03T23:57:01.963105Z"
+}
+{
+  "case_id": "GRD-2025-015810",
+  "age": 7,
+  "gender": "F",
+  "county": "Prince George",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T00:57:32.760512Z"
+}
+{
+  "case_id": "GRD-2025-021414",
+  "age": 10,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:12.924942Z"
+}
+{
+  "case_id": "GRD-2025-022232",
+  "age": 8,
+  "gender": "F",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T03:57:16.926852Z"
+}
+{
+  "case_id": "GRD-2025-026372",
+  "age": 9,
+  "gender": "F",
+  "county": "Colonial Heights",
+  "state": "VA",
+  "city": "Colonial Heights",
+  "lat": 37.26,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T03:57:24.748018Z"
+}
+{
+  "case_id": "GRD-2025-028090",
+  "age": 6,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:59.024745Z"
+}
+{
+  "case_id": "GRD-2025-028211",
+  "age": 14,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:57:12.239100Z"
+}
+{
+  "case_id": "GRD-2025-028868",
+  "age": 11,
+  "gender": "F",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-03T22:57:08.529810Z"
+}
+{
+  "case_id": "GRD-2025-029442",
+  "age": 7,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T00:56:55.770087Z"
+}
+{
+  "case_id": "GRD-2025-030237",
+  "age": 15,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:56:46.312858Z"
+}
+{
+  "case_id": "GRD-2025-031824",
+  "age": 13,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:57:41.267359Z"
+}
+{
+  "case_id": "GRD-2025-033659",
+  "age": 6,
+  "gender": "F",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-04T00:56:26.092141Z"
+}
+{
+  "case_id": "GRD-2025-040024",
+  "age": 6,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:46.997320Z"
+}
+{
+  "case_id": "GRD-2025-040833",
+  "age": 17,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T02:56:51.746275Z"
+}
+{
+  "case_id": "GRD-2025-043860",
+  "age": 6,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:56:26.566138Z"
+}
+{
+  "case_id": "GRD-2025-044512",
+  "age": 17,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-03T22:56:56.567908Z"
+}
+{
+  "case_id": "GRD-2025-046906",
+  "age": 11,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:56:45.428157Z"
+}
+{
+  "case_id": "GRD-2025-055718",
+  "age": 9,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T00:56:44.017123Z"
+}
+{
+  "case_id": "GRD-2025-056406",
+  "age": 17,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:02.117213Z"
+}
+{
+  "case_id": "GRD-2025-056590",
+  "age": 13,
+  "gender": "F",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-04T00:57:25.864880Z"
+}
+{
+  "case_id": "GRD-2025-057559",
+  "age": 13,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:57:04.369103Z"
+}
+{
+  "case_id": "GRD-2025-060220",
+  "age": 15,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:38.375538Z"
+}
+{
+  "case_id": "GRD-2025-064161",
+  "age": 11,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T00:57:36.936157Z"
+}
+{
+  "case_id": "GRD-2025-065896",
+  "age": 12,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:38.543501Z"
+}
+{
+  "case_id": "GRD-2025-067348",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:27.125950Z"
+}
+{
+  "case_id": "GRD-2025-068542",
+  "age": 16,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:18.935896Z"
+}
+{
+  "case_id": "GRD-2025-071356",
+  "age": 10,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:28.948346Z"
+}
+{
+  "case_id": "GRD-2025-075310",
+  "age": 8,
+  "gender": "M",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-03T23:57:19.289905Z"
+}
+{
+  "case_id": "GRD-2025-078730",
+  "age": 17,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T01:57:09.382939Z"
+}
+{
+  "case_id": "GRD-2025-079316",
+  "age": 7,
+  "gender": "M",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T03:57:37.912746Z"
+}
+{
+  "case_id": "GRD-2025-082976",
+  "age": 12,
+  "gender": "F",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T02:56:57.343339Z"
+}
+{
+  "case_id": "GRD-2025-083958",
+  "age": 14,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:28.777646Z"
+}
+{
+  "case_id": "GRD-2025-084046",
+  "age": 8,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:57:04.357916Z"
+}
+{
+  "case_id": "GRD-2025-084592",
+  "age": 12,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:29.082922Z"
+}
+{
+  "case_id": "GRD-2025-086023",
+  "age": 12,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T01:56:30.035851Z"
+}
+{
+  "case_id": "GRD-2025-087649",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:35.740703Z"
+}
+{
+  "case_id": "GRD-2025-088857",
+  "age": 13,
+  "gender": "F",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T02:57:20.702688Z"
+}
+{
+  "case_id": "GRD-2025-095446",
+  "age": 8,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T02:56:38.252540Z"
+}
+{
+  "case_id": "GRD-2025-097527",
+  "age": 7,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-03T22:56:32.178873Z"
+}
+{
+  "case_id": "GRD-2025-100943",
+  "age": 17,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:28.083461Z"
+}
+{
+  "case_id": "GRD-2025-103896",
+  "age": 11,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:28.626133Z"
+}
+{
+  "case_id": "GRD-2025-105805",
+  "age": 13,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:56:37.773633Z"
+}
+{
+  "case_id": "GRD-2025-114987",
+  "age": 11,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:32.230462Z"
+}
+{
+  "case_id": "GRD-2025-115484",
+  "age": 16,
+  "gender": "F",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T02:57:38.797351Z"
+}
+{
+  "case_id": "GRD-2025-116556",
+  "age": 12,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:47.360687Z"
+}
+{
+  "case_id": "GRD-2025-118304",
+  "age": 12,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:10.674045Z"
+}
+{
+  "case_id": "GRD-2025-120020",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:34.317956Z"
+}
+{
+  "case_id": "GRD-2025-121839",
+  "age": 7,
+  "gender": "M",
+  "county": "Lynchburg",
+  "state": "VA",
+  "city": "Lynchburg",
+  "lat": 37.41,
+  "lon": -79.14,
+  "date_reported": "2025-10-04T03:57:02.287959Z"
+}
+{
+  "case_id": "GRD-2025-124007",
+  "age": 9,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:22.143106Z"
+}
+{
+  "case_id": "GRD-2025-125805",
+  "age": 8,
+  "gender": "M",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-03T22:56:55.263343Z"
+}
+{
+  "case_id": "GRD-2025-126389",
+  "age": 13,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:13.063604Z"
+}
+{
+  "case_id": "GRD-2025-129301",
+  "age": 9,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:42.572421Z"
+}
+{
+  "case_id": "GRD-2025-129502",
+  "age": 7,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:56:40.297517Z"
+}
+{
+  "case_id": "GRD-2025-131223",
+  "age": 6,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T23:57:22.770466Z"
+}
+{
+  "case_id": "GRD-2025-135022",
+  "age": 15,
+  "gender": "M",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T02:57:06.738361Z"
+}
+{
+  "case_id": "GRD-2025-135048",
+  "age": 12,
+  "gender": "F",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T02:57:28.809128Z"
+}
+{
+  "case_id": "GRD-2025-135254",
+  "age": 11,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:28.411421Z"
+}
+{
+  "case_id": "GRD-2025-136906",
+  "age": 14,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:57:37.154256Z"
+}
+{
+  "case_id": "GRD-2025-138834",
+  "age": 15,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T00:56:59.941985Z"
+}
+{
+  "case_id": "GRD-2025-141275",
+  "age": 6,
+  "gender": "F",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-03T23:57:37.171383Z"
+}
+{
+  "case_id": "GRD-2025-145830",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:11.463884Z"
+}
+{
+  "case_id": "GRD-2025-146319",
+  "age": 12,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:00.574111Z"
+}
+{
+  "case_id": "GRD-2025-147321",
+  "age": 12,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:23.513063Z"
+}
+{
+  "case_id": "GRD-2025-147414",
+  "age": 16,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:56:44.183650Z"
+}
+{
+  "case_id": "GRD-2025-147679",
+  "age": 17,
+  "gender": "M",
+  "county": "Appomattox",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -78.82,
+  "date_reported": "2025-10-03T23:57:09.673612Z"
+}
+{
+  "case_id": "GRD-2025-148411",
+  "age": 14,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:56:58.012076Z"
+}
+{
+  "case_id": "GRD-2025-149253",
+  "age": 13,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T02:56:56.950574Z"
+}
+{
+  "case_id": "GRD-2025-151589",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:15.613801Z"
+}
+{
+  "case_id": "GRD-2025-152546",
+  "age": 15,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:57:42.966754Z"
+}
+{
+  "case_id": "GRD-2025-154638",
+  "age": 9,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:20.548368Z"
+}
+{
+  "case_id": "GRD-2025-160617",
+  "age": 9,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:15.372484Z"
+}
+{
+  "case_id": "GRD-2025-160952",
+  "age": 15,
+  "gender": "M",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-03T23:56:39.097082Z"
+}
+{
+  "case_id": "GRD-2025-161794",
+  "age": 15,
+  "gender": "F",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-03T22:57:29.896360Z"
+}
+{
+  "case_id": "GRD-2025-163864",
+  "age": 6,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:03.594614Z"
+}
+{
+  "case_id": "GRD-2025-164144",
+  "age": 16,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T03:57:03.127530Z"
+}
+{
+  "case_id": "GRD-2025-168910",
+  "age": 6,
+  "gender": "M",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-04T03:57:48.256425Z"
+}
+{
+  "case_id": "GRD-2025-171305",
+  "age": 12,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:59.932702Z"
+}
+{
+  "case_id": "GRD-2025-179720",
+  "age": 17,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T22:57:29.344624Z"
+}
+{
+  "case_id": "GRD-2025-183188",
+  "age": 7,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:31.476024Z"
+}
+{
+  "case_id": "GRD-2025-184453",
+  "age": 9,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:57:12.589380Z"
+}
+{
+  "case_id": "GRD-2025-185219",
+  "age": 9,
+  "gender": "F",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-03T22:57:44.016655Z"
+}
+{
+  "case_id": "GRD-2025-186063",
+  "age": 7,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:26.899406Z"
+}
+{
+  "case_id": "GRD-2025-186288",
+  "age": 11,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-03T23:57:36.528269Z"
+}
+{
+  "case_id": "GRD-2025-188656",
+  "age": 14,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-03T22:56:34.747309Z"
+}
+{
+  "case_id": "GRD-2025-189776",
+  "age": 14,
+  "gender": "M",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-03T22:57:25.083290Z"
+}
+{
+  "case_id": "GRD-2025-190537",
+  "age": 14,
+  "gender": "M",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-03T23:57:01.812530Z"
+}
+{
+  "case_id": "GRD-2025-193807",
+  "age": 10,
+  "gender": "F",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-03T22:56:53.501066Z"
+}
+{
+  "case_id": "GRD-2025-196256",
+  "age": 8,
+  "gender": "F",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-03T23:57:07.774316Z"
+}
+{
+  "case_id": "GRD-2025-197208",
+  "age": 11,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T00:57:41.872010Z"
+}
+{
+  "case_id": "GRD-2025-200160",
+  "age": 12,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T00:56:47.537277Z"
+}
+{
+  "case_id": "GRD-2025-208837",
+  "age": 15,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:00.123570Z"
+}
+{
+  "case_id": "GRD-2025-209340",
+  "age": 6,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T01:56:49.578408Z"
+}
+{
+  "case_id": "GRD-2025-209579",
+  "age": 14,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:33.822758Z"
+}
+{
+  "case_id": "GRD-2025-211968",
+  "age": 6,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:56:48.360669Z"
+}
+{
+  "case_id": "GRD-2025-212129",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:57.877553Z"
+}
+{
+  "case_id": "GRD-2025-212484",
+  "age": 11,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T03:56:34.894204Z"
+}
+{
+  "case_id": "GRD-2025-213463",
+  "age": 7,
+  "gender": "F",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T01:57:03.337897Z"
+}
+{
+  "case_id": "GRD-2025-215064",
+  "age": 17,
+  "gender": "F",
+  "county": "King William",
+  "state": "VA",
+  "city": null,
+  "lat": 37.72,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:57:39.998338Z"
+}
+{
+  "case_id": "GRD-2025-215378",
+  "age": 11,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T03:56:36.087299Z"
+}
+{
+  "case_id": "GRD-2025-218381",
+  "age": 10,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:01.951097Z"
+}
+{
+  "case_id": "GRD-2025-221965",
+  "age": 12,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-03T23:57:27.047175Z"
+}
+{
+  "case_id": "GRD-2025-225451",
+  "age": 7,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:22.495996Z"
+}
+{
+  "case_id": "GRD-2025-226868",
+  "age": 8,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:52.994337Z"
+}
+{
+  "case_id": "GRD-2025-227496",
+  "age": 16,
+  "gender": "F",
+  "county": "Petersburg",
+  "state": "VA",
+  "city": "Petersburg",
+  "lat": 37.22,
+  "lon": -77.4,
+  "date_reported": "2025-10-03T23:56:43.223333Z"
+}
+{
+  "case_id": "GRD-2025-228981",
+  "age": 15,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T03:56:48.829868Z"
+}
+{
+  "case_id": "GRD-2025-237188",
+  "age": 11,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:57:47.284386Z"
+}
+{
+  "case_id": "GRD-2025-238016",
+  "age": 15,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:25.442842Z"
+}
+{
+  "case_id": "GRD-2025-238030",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:58.154674Z"
+}
+{
+  "case_id": "GRD-2025-240068",
+  "age": 15,
+  "gender": "M",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T03:56:30.096566Z"
+}
+{
+  "case_id": "GRD-2025-240582",
+  "age": 17,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T00:56:57.487099Z"
+}
+{
+  "case_id": "GRD-2025-241656",
+  "age": 10,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:02.264585Z"
+}
+{
+  "case_id": "GRD-2025-242818",
+  "age": 16,
+  "gender": "F",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T03:56:42.174984Z"
+}
+{
+  "case_id": "GRD-2025-243118",
+  "age": 17,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:30.060771Z"
+}
+{
+  "case_id": "GRD-2025-246024",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:57:40.309256Z"
+}
+{
+  "case_id": "GRD-2025-247774",
+  "age": 17,
+  "gender": "M",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T02:57:20.541020Z"
+}
+{
+  "case_id": "GRD-2025-248255",
+  "age": 16,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:26.626306Z"
+}
+{
+  "case_id": "GRD-2025-248455",
+  "age": 9,
+  "gender": "F",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-04T03:56:30.077809Z"
+}
+{
+  "case_id": "GRD-2025-254367",
+  "age": 14,
+  "gender": "M",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T02:56:30.131561Z"
+}
+{
+  "case_id": "GRD-2025-258027",
+  "age": 11,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T23:57:09.970003Z"
+}
+{
+  "case_id": "GRD-2025-259781",
+  "age": 12,
+  "gender": "F",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-03T23:56:40.478877Z"
+}
+{
+  "case_id": "GRD-2025-260659",
+  "age": 10,
+  "gender": "F",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T02:57:17.754569Z"
+}
+{
+  "case_id": "GRD-2025-261576",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:14.343742Z"
+}
+{
+  "case_id": "GRD-2025-262443",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:57:20.858899Z"
+}
+{
+  "case_id": "GRD-2025-266673",
+  "age": 14,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:32.367516Z"
+}
+{
+  "case_id": "GRD-2025-267861",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:56:48.033151Z"
+}
+{
+  "case_id": "GRD-2025-269136",
+  "age": 15,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:41.279841Z"
+}
+{
+  "case_id": "GRD-2025-269671",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:31.382247Z"
+}
+{
+  "case_id": "GRD-2025-272642",
+  "age": 17,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:57:06.882283Z"
+}
+{
+  "case_id": "GRD-2025-273407",
+  "age": 8,
+  "gender": "M",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T03:56:58.757532Z"
+}
+{
+  "case_id": "GRD-2025-276049",
+  "age": 14,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:56:49.587973Z"
+}
+{
+  "case_id": "GRD-2025-278533",
+  "age": 6,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:55.554065Z"
+}
+{
+  "case_id": "GRD-2025-281222",
+  "age": 7,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:33.422939Z"
+}
+{
+  "case_id": "GRD-2025-284813",
+  "age": 8,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:56:59.282321Z"
+}
+{
+  "case_id": "GRD-2025-289346",
+  "age": 17,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:35.502145Z"
+}
+{
+  "case_id": "GRD-2025-289523",
+  "age": 13,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:56:58.731632Z"
+}
+{
+  "case_id": "GRD-2025-290121",
+  "age": 12,
+  "gender": "F",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-03T22:57:14.080241Z"
+}
+{
+  "case_id": "GRD-2025-293985",
+  "age": 9,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:07.128162Z"
+}
+{
+  "case_id": "GRD-2025-295244",
+  "age": 14,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T03:57:33.690684Z"
+}
+{
+  "case_id": "GRD-2025-296458",
+  "age": 12,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:57:06.728579Z"
+}
+{
+  "case_id": "GRD-2025-299986",
+  "age": 6,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T03:56:44.785175Z"
+}
+{
+  "case_id": "GRD-2025-300943",
+  "age": 14,
+  "gender": "M",
+  "county": "Petersburg",
+  "state": "VA",
+  "city": "Petersburg",
+  "lat": 37.22,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T01:57:34.251547Z"
+}
+{
+  "case_id": "GRD-2025-302620",
+  "age": 8,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:28.944129Z"
+}
+{
+  "case_id": "GRD-2025-305628",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:44.912311Z"
+}
+{
+  "case_id": "GRD-2025-309778",
+  "age": 8,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T03:57:24.344531Z"
+}
+{
+  "case_id": "GRD-2025-312086",
+  "age": 9,
+  "gender": "F",
+  "county": "Appomattox",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -78.82,
+  "date_reported": "2025-10-04T02:56:56.579567Z"
+}
+{
+  "case_id": "GRD-2025-312836",
+  "age": 7,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-03T22:57:04.561165Z"
+}
+{
+  "case_id": "GRD-2025-313136",
+  "age": 11,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-03T23:57:07.911335Z"
+}
+{
+  "case_id": "GRD-2025-317283",
+  "age": 14,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:48.246748Z"
+}
+{
+  "case_id": "GRD-2025-320711",
+  "age": 15,
+  "gender": "F",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T02:57:13.078454Z"
+}
+{
+  "case_id": "GRD-2025-321447",
+  "age": 13,
+  "gender": "M",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-04T00:56:50.398167Z"
+}
+{
+  "case_id": "GRD-2025-322677",
+  "age": 16,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:56:53.489949Z"
+}
+{
+  "case_id": "GRD-2025-323993",
+  "age": 14,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:56:28.332839Z"
+}
+{
+  "case_id": "GRD-2025-324079",
+  "age": 17,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:30.957322Z"
+}
+{
+  "case_id": "GRD-2025-328576",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:27.744562Z"
+}
+{
+  "case_id": "GRD-2025-329749",
+  "age": 7,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:39.158937Z"
+}
+{
+  "case_id": "GRD-2025-330198",
+  "age": 7,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T02:57:10.304796Z"
+}
+{
+  "case_id": "GRD-2025-333821",
+  "age": 13,
+  "gender": "F",
+  "county": "Petersburg",
+  "state": "VA",
+  "city": "Petersburg",
+  "lat": 37.22,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T00:56:46.870226Z"
+}
+{
+  "case_id": "GRD-2025-334042",
+  "age": 6,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T01:57:35.812436Z"
+}
+{
+  "case_id": "GRD-2025-336454",
+  "age": 7,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:56:30.924095Z"
+}
+{
+  "case_id": "GRD-2025-342394",
+  "age": 16,
+  "gender": "F",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T03:56:51.411446Z"
+}
+{
+  "case_id": "GRD-2025-345328",
+  "age": 16,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:37.308141Z"
+}
+{
+  "case_id": "GRD-2025-346784",
+  "age": 17,
+  "gender": "F",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-04T00:57:22.157993Z"
+}
+{
+  "case_id": "GRD-2025-348206",
+  "age": 7,
+  "gender": "M",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-03T23:56:53.209022Z"
+}
+{
+  "case_id": "GRD-2025-353185",
+  "age": 7,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:57:18.588673Z"
+}
+{
+  "case_id": "GRD-2025-359298",
+  "age": 7,
+  "gender": "M",
+  "county": "King William",
+  "state": "VA",
+  "city": null,
+  "lat": 37.72,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:46.190322Z"
+}
+{
+  "case_id": "GRD-2025-360840",
+  "age": 17,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:44.445717Z"
+}
+{
+  "case_id": "GRD-2025-360874",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:12.219708Z"
+}
+{
+  "case_id": "GRD-2025-364663",
+  "age": 11,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:56:29.530593Z"
+}
+{
+  "case_id": "GRD-2025-369409",
+  "age": 13,
+  "gender": "M",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T00:57:25.846094Z"
+}
+{
+  "case_id": "GRD-2025-375128",
+  "age": 6,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:41.029893Z"
+}
+{
+  "case_id": "GRD-2025-376621",
+  "age": 12,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:58.536697Z"
+}
+{
+  "case_id": "GRD-2025-377466",
+  "age": 7,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:24.209193Z"
+}
+{
+  "case_id": "GRD-2025-377909",
+  "age": 17,
+  "gender": "F",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T01:57:42.721292Z"
+}
+{
+  "case_id": "GRD-2025-379332",
+  "age": 12,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T01:56:35.946900Z"
+}
+{
+  "case_id": "GRD-2025-380458",
+  "age": 12,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:57:34.780536Z"
+}
+{
+  "case_id": "GRD-2025-385503",
+  "age": 7,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T00:57:26.346121Z"
+}
+{
+  "case_id": "GRD-2025-386140",
+  "age": 16,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T02:57:36.922033Z"
+}
+{
+  "case_id": "GRD-2025-387682",
+  "age": 9,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:04.518682Z"
+}
+{
+  "case_id": "GRD-2025-388362",
+  "age": 12,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T03:57:27.948400Z"
+}
+{
+  "case_id": "GRD-2025-390188",
+  "age": 12,
+  "gender": "F",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T03:56:59.974344Z"
+}
+{
+  "case_id": "GRD-2025-392850",
+  "age": 11,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:56:39.653938Z"
+}
+{
+  "case_id": "GRD-2025-392906",
+  "age": 7,
+  "gender": "M",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-04T02:56:36.822834Z"
+}
+{
+  "case_id": "GRD-2025-393557",
+  "age": 17,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:56:53.343173Z"
+}
+{
+  "case_id": "GRD-2025-394853",
+  "age": 7,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:56:50.684604Z"
+}
+{
+  "case_id": "GRD-2025-396487",
+  "age": 15,
+  "gender": "F",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-04T02:56:58.742078Z"
+}
+{
+  "case_id": "GRD-2025-401122",
+  "age": 9,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T02:57:16.700237Z"
+}
+{
+  "case_id": "GRD-2025-401172",
+  "age": 6,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:56:45.292824Z"
+}
+{
+  "case_id": "GRD-2025-403348",
+  "age": 7,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T03:56:31.621264Z"
+}
+{
+  "case_id": "GRD-2025-407678",
+  "age": 10,
+  "gender": "M",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-03T23:57:35.981984Z"
+}
+{
+  "case_id": "GRD-2025-408187",
+  "age": 13,
+  "gender": "M",
+  "county": "Suffolk",
+  "state": "VA",
+  "city": "Suffolk",
+  "lat": 36.72,
+  "lon": -76.58,
+  "date_reported": "2025-10-04T02:56:52.026949Z"
+}
+{
+  "case_id": "GRD-2025-408937",
+  "age": 12,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T02:56:37.985205Z"
+}
+{
+  "case_id": "GRD-2025-411967",
+  "age": 14,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:56:33.279772Z"
+}
+{
+  "case_id": "GRD-2025-414839",
+  "age": 6,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T01:57:27.378076Z"
+}
+{
+  "case_id": "GRD-2025-417426",
+  "age": 17,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T01:56:45.591444Z"
+}
+{
+  "case_id": "GRD-2025-418036",
+  "age": 15,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:54.136667Z"
+}
+{
+  "case_id": "GRD-2025-420286",
+  "age": 8,
+  "gender": "M",
+  "county": "Suffolk",
+  "state": "VA",
+  "city": "Suffolk",
+  "lat": 36.72,
+  "lon": -76.58,
+  "date_reported": "2025-10-04T02:56:34.336059Z"
+}
+{
+  "case_id": "GRD-2025-421020",
+  "age": 12,
+  "gender": "M",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-03T22:57:47.676866Z"
+}
+{
+  "case_id": "GRD-2025-424035",
+  "age": 11,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T03:56:30.143122Z"
+}
+{
+  "case_id": "GRD-2025-426023",
+  "age": 17,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:57:40.155661Z"
+}
+{
+  "case_id": "GRD-2025-427030",
+  "age": 17,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:53.738638Z"
+}
+{
+  "case_id": "GRD-2025-428178",
+  "age": 9,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:41.131260Z"
+}
+{
+  "case_id": "GRD-2025-428468",
+  "age": 14,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:56:38.121289Z"
+}
+{
+  "case_id": "GRD-2025-429396",
+  "age": 6,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:14.689176Z"
+}
+{
+  "case_id": "GRD-2025-430487",
+  "age": 6,
+  "gender": "M",
+  "county": "Petersburg",
+  "state": "VA",
+  "city": "Petersburg",
+  "lat": 37.22,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T03:57:21.427224Z"
+}
+{
+  "case_id": "GRD-2025-431452",
+  "age": 11,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T02:57:35.060016Z"
+}
+{
+  "case_id": "GRD-2025-434106",
+  "age": 10,
+  "gender": "F",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-04T02:57:44.309722Z"
+}
+{
+  "case_id": "GRD-2025-434272",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:57:30.345271Z"
+}
+{
+  "case_id": "GRD-2025-434631",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:56:37.084039Z"
+}
+{
+  "case_id": "GRD-2025-436247",
+  "age": 8,
+  "gender": "F",
+  "county": "Hampton",
+  "state": "VA",
+  "city": "Hampton",
+  "lat": 37.02,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T01:57:33.019215Z"
+}
+{
+  "case_id": "GRD-2025-436790",
+  "age": 8,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:08.767785Z"
+}
+{
+  "case_id": "GRD-2025-443846",
+  "age": 8,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:45.045852Z"
+}
+{
+  "case_id": "GRD-2025-444787",
+  "age": 12,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T03:56:45.937257Z"
+}
+{
+  "case_id": "GRD-2025-444956",
+  "age": 10,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:57:35.398822Z"
+}
+{
+  "case_id": "GRD-2025-445192",
+  "age": 12,
+  "gender": "F",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T01:57:30.551640Z"
+}
+{
+  "case_id": "GRD-2025-449221",
+  "age": 10,
+  "gender": "F",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-03T22:57:12.454358Z"
+}
+{
+  "case_id": "GRD-2025-449567",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:42.247547Z"
+}
+{
+  "case_id": "GRD-2025-454789",
+  "age": 14,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T00:57:34.791939Z"
+}
+{
+  "case_id": "GRD-2025-455238",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:56:47.672369Z"
+}
+{
+  "case_id": "GRD-2025-456587",
+  "age": 7,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:40.148171Z"
+}
+{
+  "case_id": "GRD-2025-457711",
+  "age": 11,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:21.578403Z"
+}
+{
+  "case_id": "GRD-2025-463174",
+  "age": 12,
+  "gender": "M",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T00:57:33.834340Z"
+}
+{
+  "case_id": "GRD-2025-464039",
+  "age": 12,
+  "gender": "M",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T02:57:23.366382Z"
+}
+{
+  "case_id": "GRD-2025-464143",
+  "age": 8,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:47.512413Z"
+}
+{
+  "case_id": "GRD-2025-465108",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:28.008112Z"
+}
+{
+  "case_id": "GRD-2025-465707",
+  "age": 13,
+  "gender": "M",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T03:56:51.112917Z"
+}
+{
+  "case_id": "GRD-2025-468238",
+  "age": 11,
+  "gender": "M",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-04T00:56:27.298037Z"
+}
+{
+  "case_id": "GRD-2025-469750",
+  "age": 6,
+  "gender": "M",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T02:56:50.381486Z"
+}
+{
+  "case_id": "GRD-2025-470267",
+  "age": 15,
+  "gender": "M",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-03T22:56:40.822987Z"
+}
+{
+  "case_id": "GRD-2025-470708",
+  "age": 11,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:37.441020Z"
+}
+{
+  "case_id": "GRD-2025-471008",
+  "age": 11,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:19.705670Z"
+}
+{
+  "case_id": "GRD-2025-473431",
+  "age": 10,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:47.348678Z"
+}
+{
+  "case_id": "GRD-2025-474405",
+  "age": 14,
+  "gender": "M",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-03T23:57:37.660090Z"
+}
+{
+  "case_id": "GRD-2025-476136",
+  "age": 6,
+  "gender": "M",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T01:56:32.862490Z"
+}
+{
+  "case_id": "GRD-2025-476263",
+  "age": 12,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T02:57:18.800135Z"
+}
+{
+  "case_id": "GRD-2025-483091",
+  "age": 12,
+  "gender": "F",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-04T02:57:20.713534Z"
+}
+{
+  "case_id": "GRD-2025-487194",
+  "age": 12,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:56:59.959776Z"
+}
+{
+  "case_id": "GRD-2025-487339",
+  "age": 11,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:47.008406Z"
+}
+{
+  "case_id": "GRD-2025-488983",
+  "age": 14,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:31.869152Z"
+}
+{
+  "case_id": "GRD-2025-489002",
+  "age": 8,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:51.396229Z"
+}
+{
+  "case_id": "GRD-2025-491022",
+  "age": 7,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:36.393929Z"
+}
+{
+  "case_id": "GRD-2025-491475",
+  "age": 8,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:06.095713Z"
+}
+{
+  "case_id": "GRD-2025-492757",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:23.091470Z"
+}
+{
+  "case_id": "GRD-2025-493091",
+  "age": 12,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:51.244815Z"
+}
+{
+  "case_id": "GRD-2025-497350",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:01.801381Z"
+}
+{
+  "case_id": "GRD-2025-502028",
+  "age": 15,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T03:56:45.154728Z"
+}
+{
+  "case_id": "GRD-2025-502381",
+  "age": 6,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:56:34.077376Z"
+}
+{
+  "case_id": "GRD-2025-503762",
+  "age": 14,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:56:41.259209Z"
+}
+{
+  "case_id": "GRD-2025-510363",
+  "age": 11,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:44.297195Z"
+}
+{
+  "case_id": "GRD-2025-510454",
+  "age": 16,
+  "gender": "F",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-04T03:57:15.628395Z"
+}
+{
+  "case_id": "GRD-2025-514232",
+  "age": 9,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T23:57:02.997152Z"
+}
+{
+  "case_id": "GRD-2025-514688",
+  "age": 14,
+  "gender": "F",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T03:56:37.307841Z"
+}
+{
+  "case_id": "GRD-2025-516910",
+  "age": 6,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T01:56:44.463836Z"
+}
+{
+  "case_id": "GRD-2025-517033",
+  "age": 15,
+  "gender": "M",
+  "county": "Charles City",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -77.07,
+  "date_reported": "2025-10-04T02:56:30.776522Z"
+}
+{
+  "case_id": "GRD-2025-522332",
+  "age": 14,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:56:36.234138Z"
+}
+{
+  "case_id": "GRD-2025-523954",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:19.554887Z"
+}
+{
+  "case_id": "GRD-2025-524970",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:33.526014Z"
+}
+{
+  "case_id": "GRD-2025-525436",
+  "age": 17,
+  "gender": "M",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T00:56:47.374069Z"
+}
+{
+  "case_id": "GRD-2025-529873",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:39.398661Z"
+}
+{
+  "case_id": "GRD-2025-539737",
+  "age": 8,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-03T23:56:47.684896Z"
+}
+{
+  "case_id": "GRD-2025-540310",
+  "age": 10,
+  "gender": "M",
+  "county": "Colonial Heights",
+  "state": "VA",
+  "city": "Colonial Heights",
+  "lat": 37.26,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T01:56:29.515866Z"
+}
+{
+  "case_id": "GRD-2025-541426",
+  "age": 17,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T01:57:13.891752Z"
+}
+{
+  "case_id": "GRD-2025-544172",
+  "age": 9,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-03T23:56:42.758721Z"
+}
+{
+  "case_id": "GRD-2025-546196",
+  "age": 7,
+  "gender": "M",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T00:56:45.460311Z"
+}
+{
+  "case_id": "GRD-2025-546833",
+  "age": 14,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T03:56:41.727933Z"
+}
+{
+  "case_id": "GRD-2025-547379",
+  "age": 10,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:56:57.632586Z"
+}
+{
+  "case_id": "GRD-2025-547579",
+  "age": 8,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T02:56:53.983506Z"
+}
+{
+  "case_id": "GRD-2025-547872",
+  "age": 17,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T02:57:48.584346Z"
+}
+{
+  "case_id": "GRD-2025-556189",
+  "age": 17,
+  "gender": "M",
+  "county": "Manassas",
+  "state": "VA",
+  "city": "Manassas",
+  "lat": 38.75,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T00:56:37.291342Z"
+}
+{
+  "case_id": "GRD-2025-559380",
+  "age": 13,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:56:43.535678Z"
+}
+{
+  "case_id": "GRD-2025-559835",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:56:33.147320Z"
+}
+{
+  "case_id": "GRD-2025-560057",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:45.631136Z"
+}
+{
+  "case_id": "GRD-2025-560842",
+  "age": 10,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T03:57:08.182674Z"
+}
+{
+  "case_id": "GRD-2025-565347",
+  "age": 10,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:56:47.341597Z"
+}
+{
+  "case_id": "GRD-2025-567871",
+  "age": 10,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:34.396078Z"
+}
+{
+  "case_id": "GRD-2025-570811",
+  "age": 7,
+  "gender": "F",
+  "county": "Lynchburg",
+  "state": "VA",
+  "city": "Lynchburg",
+  "lat": 37.41,
+  "lon": -79.14,
+  "date_reported": "2025-10-03T22:57:10.837241Z"
+}
+{
+  "case_id": "GRD-2025-571072",
+  "age": 6,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:57:42.709386Z"
+}
+{
+  "case_id": "GRD-2025-577236",
+  "age": 17,
+  "gender": "M",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-03T23:56:31.487938Z"
+}
+{
+  "case_id": "GRD-2025-579190",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:52.017331Z"
+}
+{
+  "case_id": "GRD-2025-583864",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:01.321100Z"
+}
+{
+  "case_id": "GRD-2025-591040",
+  "age": 10,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:46.166181Z"
+}
+{
+  "case_id": "GRD-2025-591370",
+  "age": 12,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:57:45.774073Z"
+}
+{
+  "case_id": "GRD-2025-593067",
+  "age": 6,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:58.720731Z"
+}
+{
+  "case_id": "GRD-2025-598443",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:23.747210Z"
+}
+{
+  "case_id": "GRD-2025-600200",
+  "age": 6,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:59.549945Z"
+}
+{
+  "case_id": "GRD-2025-602504",
+  "age": 7,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:56:54.834738Z"
+}
+{
+  "case_id": "GRD-2025-603003",
+  "age": 12,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T01:56:49.443675Z"
+}
+{
+  "case_id": "GRD-2025-603456",
+  "age": 9,
+  "gender": "F",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-04T00:57:43.431014Z"
+}
+{
+  "case_id": "GRD-2025-606435",
+  "age": 7,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-03T22:57:09.247277Z"
+}
+{
+  "case_id": "GRD-2025-607081",
+  "age": 10,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:56:48.492309Z"
+}
+{
+  "case_id": "GRD-2025-607615",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:35.238954Z"
+}
+{
+  "case_id": "GRD-2025-607667",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:40.791288Z"
+}
+{
+  "case_id": "GRD-2025-612554",
+  "age": 7,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T02:56:26.435252Z"
+}
+{
+  "case_id": "GRD-2025-612923",
+  "age": 6,
+  "gender": "M",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-03T23:57:11.226483Z"
+}
+{
+  "case_id": "GRD-2025-613455",
+  "age": 15,
+  "gender": "M",
+  "county": "Colonial Heights",
+  "state": "VA",
+  "city": "Colonial Heights",
+  "lat": 37.26,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T02:56:39.505809Z"
+}
+{
+  "case_id": "GRD-2025-615841",
+  "age": 14,
+  "gender": "M",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-03T22:57:04.551768Z"
+}
+{
+  "case_id": "GRD-2025-616767",
+  "age": 16,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:56:45.604234Z"
+}
+{
+  "case_id": "GRD-2025-617100",
+  "age": 11,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:47.818429Z"
+}
+{
+  "case_id": "GRD-2025-617476",
+  "age": 8,
+  "gender": "F",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-03T22:56:28.344729Z"
+}
+{
+  "case_id": "GRD-2025-618831",
+  "age": 11,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T03:56:34.597803Z"
+}
+{
+  "case_id": "GRD-2025-618956",
+  "age": 15,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T03:57:40.014746Z"
+}
+{
+  "case_id": "GRD-2025-619511",
+  "age": 17,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:56.362831Z"
+}
+{
+  "case_id": "GRD-2025-621717",
+  "age": 15,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T02:57:34.409810Z"
+}
+{
+  "case_id": "GRD-2025-622615",
+  "age": 10,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:31.065121Z"
+}
+{
+  "case_id": "GRD-2025-623427",
+  "age": 14,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:57.196442Z"
+}
+{
+  "case_id": "GRD-2025-626123",
+  "age": 10,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:05.745313Z"
+}
+{
+  "case_id": "GRD-2025-628635",
+  "age": 8,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:56:38.266847Z"
+}
+{
+  "case_id": "GRD-2025-629838",
+  "age": 6,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T23:57:46.859489Z"
+}
+{
+  "case_id": "GRD-2025-632636",
+  "age": 7,
+  "gender": "F",
+  "county": "Suffolk",
+  "state": "VA",
+  "city": "Suffolk",
+  "lat": 36.72,
+  "lon": -76.58,
+  "date_reported": "2025-10-04T00:56:38.554927Z"
+}
+{
+  "case_id": "GRD-2025-632795",
+  "age": 9,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:56:59.682145Z"
+}
+{
+  "case_id": "GRD-2025-633375",
+  "age": 7,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:38.940708Z"
+}
+{
+  "case_id": "GRD-2025-633719",
+  "age": 12,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T01:57:30.105006Z"
+}
+{
+  "case_id": "GRD-2025-633727",
+  "age": 16,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:42.421267Z"
+}
+{
+  "case_id": "GRD-2025-634285",
+  "age": 9,
+  "gender": "F",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-04T00:57:05.199688Z"
+}
+{
+  "case_id": "GRD-2025-635761",
+  "age": 12,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:10.823007Z"
+}
+{
+  "case_id": "GRD-2025-635894",
+  "age": 8,
+  "gender": "M",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T01:56:50.553371Z"
+}
+{
+  "case_id": "GRD-2025-636166",
+  "age": 10,
+  "gender": "M",
+  "county": "King William",
+  "state": "VA",
+  "city": null,
+  "lat": 37.72,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:07.737726Z"
+}
+{
+  "case_id": "GRD-2025-637849",
+  "age": 14,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T03:57:05.186427Z"
+}
+{
+  "case_id": "GRD-2025-638951",
+  "age": 12,
+  "gender": "F",
+  "county": "Charles City",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -77.07,
+  "date_reported": "2025-10-04T02:57:06.453500Z"
+}
+{
+  "case_id": "GRD-2025-638988",
+  "age": 14,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:49.911098Z"
+}
+{
+  "case_id": "GRD-2025-641636",
+  "age": 7,
+  "gender": "F",
+  "county": "King William",
+  "state": "VA",
+  "city": null,
+  "lat": 37.72,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:36.254513Z"
+}
+{
+  "case_id": "GRD-2025-642940",
+  "age": 14,
+  "gender": "F",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-03T23:57:07.755055Z"
+}
+{
+  "case_id": "GRD-2025-643251",
+  "age": 7,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T02:57:21.007256Z"
+}
+{
+  "case_id": "GRD-2025-646781",
+  "age": 7,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-03T22:56:35.107870Z"
+}
+{
+  "case_id": "GRD-2025-648127",
+  "age": 14,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T03:56:32.464836Z"
+}
+{
+  "case_id": "GRD-2025-649641",
+  "age": 13,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:56:27.862108Z"
+}
+{
+  "case_id": "GRD-2025-654067",
+  "age": 17,
+  "gender": "M",
+  "county": "Chesterfield",
+  "state": "VA",
+  "city": null,
+  "lat": 37.37,
+  "lon": -77.51,
+  "date_reported": "2025-10-03T22:57:10.855448Z"
+}
+{
+  "case_id": "GRD-2025-655520",
+  "age": 14,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:56:36.571662Z"
+}
+{
+  "case_id": "GRD-2025-657562",
+  "age": 7,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:23.879276Z"
+}
+{
+  "case_id": "GRD-2025-660109",
+  "age": 7,
+  "gender": "F",
+  "county": "King William",
+  "state": "VA",
+  "city": null,
+  "lat": 37.72,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:17.353823Z"
+}
+{
+  "case_id": "GRD-2025-660830",
+  "age": 8,
+  "gender": "M",
+  "county": "Suffolk",
+  "state": "VA",
+  "city": "Suffolk",
+  "lat": 36.72,
+  "lon": -76.58,
+  "date_reported": "2025-10-04T00:56:31.882514Z"
+}
+{
+  "case_id": "GRD-2025-662647",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:42.109755Z"
+}
+{
+  "case_id": "GRD-2025-668914",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:56:36.811324Z"
+}
+{
+  "case_id": "GRD-2025-673773",
+  "age": 13,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:43.564602Z"
+}
+{
+  "case_id": "GRD-2025-678104",
+  "age": 12,
+  "gender": "M",
+  "county": "Charles City",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -77.07,
+  "date_reported": "2025-10-04T00:57:45.390848Z"
+}
+{
+  "case_id": "GRD-2025-679089",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:17.896614Z"
+}
+{
+  "case_id": "GRD-2025-682837",
+  "age": 11,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-03T22:57:26.075619Z"
+}
+{
+  "case_id": "GRD-2025-683359",
+  "age": 11,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:11.007761Z"
+}
+{
+  "case_id": "GRD-2025-684046",
+  "age": 15,
+  "gender": "M",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-03T23:57:25.099372Z"
+}
+{
+  "case_id": "GRD-2025-688115",
+  "age": 10,
+  "gender": "M",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-04T01:57:03.351361Z"
+}
+{
+  "case_id": "GRD-2025-688402",
+  "age": 15,
+  "gender": "F",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T03:57:02.718629Z"
+}
+{
+  "case_id": "GRD-2025-689857",
+  "age": 11,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T01:56:52.361215Z"
+}
+{
+  "case_id": "GRD-2025-691308",
+  "age": 14,
+  "gender": "F",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-04T01:56:32.162167Z"
+}
+{
+  "case_id": "GRD-2025-697670",
+  "age": 14,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:40.262232Z"
+}
+{
+  "case_id": "GRD-2025-698438",
+  "age": 17,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:56:58.294548Z"
+}
+{
+  "case_id": "GRD-2025-699081",
+  "age": 17,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T23:57:33.286712Z"
+}
+{
+  "case_id": "GRD-2025-700217",
+  "age": 9,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:57:04.214026Z"
+}
+{
+  "case_id": "GRD-2025-700759",
+  "age": 14,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:57:16.022761Z"
+}
+{
+  "case_id": "GRD-2025-700917",
+  "age": 16,
+  "gender": "F",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-04T03:56:52.848703Z"
+}
+{
+  "case_id": "GRD-2025-701200",
+  "age": 13,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:22.910493Z"
+}
+{
+  "case_id": "GRD-2025-701440",
+  "age": 11,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:42.956550Z"
+}
+{
+  "case_id": "GRD-2025-704672",
+  "age": 6,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:45.926039Z"
+}
+{
+  "case_id": "GRD-2025-704938",
+  "age": 15,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:56:27.284430Z"
+}
+{
+  "case_id": "GRD-2025-709369",
+  "age": 7,
+  "gender": "M",
+  "county": "Appomattox",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -78.82,
+  "date_reported": "2025-10-03T22:57:35.967538Z"
+}
+{
+  "case_id": "GRD-2025-709633",
+  "age": 15,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:57:20.524414Z"
+}
+{
+  "case_id": "GRD-2025-710360",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:38.697876Z"
+}
+{
+  "case_id": "GRD-2025-711160",
+  "age": 10,
+  "gender": "F",
+  "county": "Campbell",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -79.16,
+  "date_reported": "2025-10-03T22:57:20.557832Z"
+}
+{
+  "case_id": "GRD-2025-711609",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:33.002990Z"
+}
+{
+  "case_id": "GRD-2025-711875",
+  "age": 11,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T22:56:28.609697Z"
+}
+{
+  "case_id": "GRD-2025-712307",
+  "age": 11,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T03:57:07.459344Z"
+}
+{
+  "case_id": "GRD-2025-713633",
+  "age": 16,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-03T23:56:47.894614Z"
+}
+{
+  "case_id": "GRD-2025-714276",
+  "age": 11,
+  "gender": "M",
+  "county": "Colonial Heights",
+  "state": "VA",
+  "city": "Colonial Heights",
+  "lat": 37.26,
+  "lon": -77.4,
+  "date_reported": "2025-10-03T22:57:22.127377Z"
+}
+{
+  "case_id": "GRD-2025-718102",
+  "age": 17,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:39.080794Z"
+}
+{
+  "case_id": "GRD-2025-721222",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:41.416842Z"
+}
+{
+  "case_id": "GRD-2025-721349",
+  "age": 6,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:00.726171Z"
+}
+{
+  "case_id": "GRD-2025-724534",
+  "age": 16,
+  "gender": "F",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T02:57:43.388673Z"
+}
+{
+  "case_id": "GRD-2025-727877",
+  "age": 7,
+  "gender": "M",
+  "county": "Petersburg",
+  "state": "VA",
+  "city": "Petersburg",
+  "lat": 37.22,
+  "lon": -77.4,
+  "date_reported": "2025-10-04T03:57:15.113834Z"
+}
+{
+  "case_id": "GRD-2025-733640",
+  "age": 17,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:56:46.455394Z"
+}
+{
+  "case_id": "GRD-2025-734781",
+  "age": 8,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:56:40.281408Z"
+}
+{
+  "case_id": "GRD-2025-735058",
+  "age": 14,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:57:47.974308Z"
+}
+{
+  "case_id": "GRD-2025-735928",
+  "age": 13,
+  "gender": "M",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-03T22:56:44.035743Z"
+}
+{
+  "case_id": "GRD-2025-736643",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T03:57:20.395138Z"
+}
+{
+  "case_id": "GRD-2025-736674",
+  "age": 14,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T01:57:34.623894Z"
+}
+{
+  "case_id": "GRD-2025-737956",
+  "age": 13,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:36.787386Z"
+}
+{
+  "case_id": "GRD-2025-739142",
+  "age": 9,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:29.094881Z"
+}
+{
+  "case_id": "GRD-2025-742287",
+  "age": 15,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-03T23:56:30.121104Z"
+}
+{
+  "case_id": "GRD-2025-743345",
+  "age": 12,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:57:39.667812Z"
+}
+{
+  "case_id": "GRD-2025-743920",
+  "age": 15,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T00:57:44.154687Z"
+}
+{
+  "case_id": "GRD-2025-745492",
+  "age": 15,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:57:23.375775Z"
+}
+{
+  "case_id": "GRD-2025-749756",
+  "age": 7,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T02:56:49.099065Z"
+}
+{
+  "case_id": "GRD-2025-757371",
+  "age": 15,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:56:42.551542Z"
+}
+{
+  "case_id": "GRD-2025-762343",
+  "age": 8,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:57:27.513512Z"
+}
+{
+  "case_id": "GRD-2025-763336",
+  "age": 10,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:56:32.145506Z"
+}
+{
+  "case_id": "GRD-2025-765891",
+  "age": 8,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:19.067421Z"
+}
+{
+  "case_id": "GRD-2025-766463",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:56.816062Z"
+}
+{
+  "case_id": "GRD-2025-768147",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T01:57:40.647832Z"
+}
+{
+  "case_id": "GRD-2025-770780",
+  "age": 16,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T01:57:35.954861Z"
+}
+{
+  "case_id": "GRD-2025-773048",
+  "age": 11,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:57:04.712829Z"
+}
+{
+  "case_id": "GRD-2025-775167",
+  "age": 7,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:56:48.959673Z"
+}
+{
+  "case_id": "GRD-2025-776431",
+  "age": 12,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:15.649225Z"
+}
+{
+  "case_id": "GRD-2025-776538",
+  "age": 11,
+  "gender": "M",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-03T23:57:35.073579Z"
+}
+{
+  "case_id": "GRD-2025-777935",
+  "age": 7,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:01.654301Z"
+}
+{
+  "case_id": "GRD-2025-781484",
+  "age": 10,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T02:56:51.880909Z"
+}
+{
+  "case_id": "GRD-2025-782458",
+  "age": 12,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:57:41.737537Z"
+}
+{
+  "case_id": "GRD-2025-793238",
+  "age": 13,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:50.154796Z"
+}
+{
+  "case_id": "GRD-2025-793612",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:31.317498Z"
+}
+{
+  "case_id": "GRD-2025-793627",
+  "age": 9,
+  "gender": "M",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T01:57:02.300800Z"
+}
+{
+  "case_id": "GRD-2025-793634",
+  "age": 10,
+  "gender": "F",
+  "county": "Prince George",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T02:57:16.426765Z"
+}
+{
+  "case_id": "GRD-2025-795655",
+  "age": 10,
+  "gender": "M",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-03T23:57:32.092726Z"
+}
+{
+  "case_id": "GRD-2025-796883",
+  "age": 13,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:57:30.684048Z"
+}
+{
+  "case_id": "GRD-2025-797359",
+  "age": 16,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:09.515949Z"
+}
+{
+  "case_id": "GRD-2025-799061",
+  "age": 13,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:56:59.269798Z"
+}
+{
+  "case_id": "GRD-2025-799743",
+  "age": 14,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:56:47.521700Z"
+}
+{
+  "case_id": "GRD-2025-799958",
+  "age": 14,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:37.894798Z"
+}
+{
+  "case_id": "GRD-2025-801677",
+  "age": 11,
+  "gender": "F",
+  "county": "Henrico",
+  "state": "VA",
+  "city": null,
+  "lat": 37.55,
+  "lon": -77.39,
+  "date_reported": "2025-10-04T01:56:33.803707Z"
+}
+{
+  "case_id": "GRD-2025-808847",
+  "age": 14,
+  "gender": "F",
+  "county": "New Kent",
+  "state": "VA",
+  "city": null,
+  "lat": 37.51,
+  "lon": -76.99,
+  "date_reported": "2025-10-03T22:56:56.119922Z"
+}
+{
+  "case_id": "GRD-2025-809947",
+  "age": 6,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:57:29.751240Z"
+}
+{
+  "case_id": "GRD-2025-810004",
+  "age": 10,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:56:27.138387Z"
+}
+{
+  "case_id": "GRD-2025-810828",
+  "age": 12,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:57:09.104807Z"
+}
+{
+  "case_id": "GRD-2025-813185",
+  "age": 9,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:56:29.808342Z"
+}
+{
+  "case_id": "GRD-2025-813331",
+  "age": 6,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T02:56:32.649010Z"
+}
+{
+  "case_id": "GRD-2025-816615",
+  "age": 17,
+  "gender": "M",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-04T03:56:59.691357Z"
+}
+{
+  "case_id": "GRD-2025-819798",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:38.050267Z"
+}
+{
+  "case_id": "GRD-2025-819959",
+  "age": 8,
+  "gender": "M",
+  "county": "Lynchburg",
+  "state": "VA",
+  "city": "Lynchburg",
+  "lat": 37.41,
+  "lon": -79.14,
+  "date_reported": "2025-10-04T01:56:30.046449Z"
+}
+{
+  "case_id": "GRD-2025-824071",
+  "age": 10,
+  "gender": "F",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T01:57:43.405690Z"
+}
+{
+  "case_id": "GRD-2025-827940",
+  "age": 10,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:14.049371Z"
+}
+{
+  "case_id": "GRD-2025-835298",
+  "age": 9,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T00:56:55.275772Z"
+}
+{
+  "case_id": "GRD-2025-836959",
+  "age": 15,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T23:57:11.975433Z"
+}
+{
+  "case_id": "GRD-2025-838202",
+  "age": 11,
+  "gender": "M",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T00:57:47.010507Z"
+}
+{
+  "case_id": "GRD-2025-844212",
+  "age": 10,
+  "gender": "M",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-03T22:57:15.638917Z"
+}
+{
+  "case_id": "GRD-2025-845208",
+  "age": 8,
+  "gender": "F",
+  "county": "Hopewell",
+  "state": "VA",
+  "city": "Hopewell",
+  "lat": 37.3,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T02:57:20.115881Z"
+}
+{
+  "case_id": "GRD-2025-849927",
+  "age": 16,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:17.074108Z"
+}
+{
+  "case_id": "GRD-2025-855937",
+  "age": 12,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T02:56:30.412691Z"
+}
+{
+  "case_id": "GRD-2025-861304",
+  "age": 10,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:56:41.515787Z"
+}
+{
+  "case_id": "GRD-2025-861729",
+  "age": 9,
+  "gender": "F",
+  "county": "Hanover",
+  "state": "VA",
+  "city": null,
+  "lat": 37.76,
+  "lon": -77.47,
+  "date_reported": "2025-10-04T03:57:13.527401Z"
+}
+{
+  "case_id": "GRD-2025-861840",
+  "age": 12,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:20.691110Z"
+}
+{
+  "case_id": "GRD-2025-862696",
+  "age": 11,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:11.830644Z"
+}
+{
+  "case_id": "GRD-2025-864608",
+  "age": 10,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:57:25.834913Z"
+}
+{
+  "case_id": "GRD-2025-868925",
+  "age": 11,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:43.419758Z"
+}
+{
+  "case_id": "GRD-2025-873074",
+  "age": 12,
+  "gender": "F",
+  "county": "Lynchburg",
+  "state": "VA",
+  "city": "Lynchburg",
+  "lat": 37.41,
+  "lon": -79.14,
+  "date_reported": "2025-10-03T23:56:27.149872Z"
+}
+{
+  "case_id": "GRD-2025-874224",
+  "age": 6,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:56:26.894211Z"
+}
+{
+  "case_id": "GRD-2025-874735",
+  "age": 9,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:57:09.682689Z"
+}
+{
+  "case_id": "GRD-2025-879024",
+  "age": 10,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T02:57:14.093515Z"
+}
+{
+  "case_id": "GRD-2025-880081",
+  "age": 9,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:57:14.061962Z"
+}
+{
+  "case_id": "GRD-2025-885007",
+  "age": 12,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T01:57:26.767408Z"
+}
+{
+  "case_id": "GRD-2025-885049",
+  "age": 9,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:34.760003Z"
+}
+{
+  "case_id": "GRD-2025-893701",
+  "age": 17,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T03:57:37.646840Z"
+}
+{
+  "case_id": "GRD-2025-894116",
+  "age": 11,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:57:35.672855Z"
+}
+{
+  "case_id": "GRD-2025-895420",
+  "age": 7,
+  "gender": "M",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T02:56:30.790473Z"
+}
+{
+  "case_id": "GRD-2025-898719",
+  "age": 15,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T03:57:39.026201Z"
+}
+{
+  "case_id": "GRD-2025-898765",
+  "age": 6,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:57:31.664596Z"
+}
+{
+  "case_id": "GRD-2025-898951",
+  "age": 6,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T02:57:05.043998Z"
+}
+{
+  "case_id": "GRD-2025-899476",
+  "age": 11,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:31.677054Z"
+}
+{
+  "case_id": "GRD-2025-899876",
+  "age": 7,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T22:56:37.643803Z"
+}
+{
+  "case_id": "GRD-2025-900426",
+  "age": 10,
+  "gender": "F",
+  "county": "Newport News",
+  "state": "VA",
+  "city": "Newport News",
+  "lat": 37.08,
+  "lon": -76.49,
+  "date_reported": "2025-10-03T23:56:31.900526Z"
+}
+{
+  "case_id": "GRD-2025-901193",
+  "age": 17,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T02:57:22.364576Z"
+}
+{
+  "case_id": "GRD-2025-904965",
+  "age": 14,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-03T22:57:25.682884Z"
+}
+{
+  "case_id": "GRD-2025-908696",
+  "age": 10,
+  "gender": "F",
+  "county": "Bedford",
+  "state": "VA",
+  "city": null,
+  "lat": 37.33,
+  "lon": -79.52,
+  "date_reported": "2025-10-04T01:57:02.272833Z"
+}
+{
+  "case_id": "GRD-2025-908980",
+  "age": 6,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:57:25.698521Z"
+}
+{
+  "case_id": "GRD-2025-912354",
+  "age": 10,
+  "gender": "F",
+  "county": "York",
+  "state": "VA",
+  "city": null,
+  "lat": 37.23,
+  "lon": -76.5,
+  "date_reported": "2025-10-03T23:57:31.242964Z"
+}
+{
+  "case_id": "GRD-2025-913176",
+  "age": 11,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T01:57:26.494089Z"
+}
+{
+  "case_id": "GRD-2025-915272",
+  "age": 11,
+  "gender": "F",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": null,
+  "lat": 38.83,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T03:56:43.790430Z"
+}
+{
+  "case_id": "GRD-2025-916028",
+  "age": 16,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:44.584263Z"
+}
+{
+  "case_id": "GRD-2025-916701",
+  "age": 7,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T02:56:50.167387Z"
+}
+{
+  "case_id": "GRD-2025-918977",
+  "age": 8,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T23:56:45.442250Z"
+}
+{
+  "case_id": "GRD-2025-919017",
+  "age": 6,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-03T22:57:25.311521Z"
+}
+{
+  "case_id": "GRD-2025-923004",
+  "age": 13,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T03:57:29.617025Z"
+}
+{
+  "case_id": "GRD-2025-927713",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T00:57:03.938413Z"
+}
+{
+  "case_id": "GRD-2025-933779",
+  "age": 6,
+  "gender": "F",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-04T02:57:20.873168Z"
+}
+{
+  "case_id": "GRD-2025-935815",
+  "age": 7,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T01:56:57.334996Z"
+}
+{
+  "case_id": "GRD-2025-936604",
+  "age": 14,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T01:57:18.305461Z"
+}
+{
+  "case_id": "GRD-2025-940415",
+  "age": 12,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T23:57:26.481838Z"
+}
+{
+  "case_id": "GRD-2025-940845",
+  "age": 11,
+  "gender": "F",
+  "county": "Virginia Beach",
+  "state": "VA",
+  "city": "Virginia Beach",
+  "lat": 36.85,
+  "lon": -75.97,
+  "date_reported": "2025-10-03T22:56:58.768963Z"
+}
+{
+  "case_id": "GRD-2025-941139",
+  "age": 15,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:34.764732Z"
+}
+{
+  "case_id": "GRD-2025-941379",
+  "age": 7,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-04T00:57:31.228543Z"
+}
+{
+  "case_id": "GRD-2025-942226",
+  "age": 13,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T02:56:49.433997Z"
+}
+{
+  "case_id": "GRD-2025-942573",
+  "age": 17,
+  "gender": "F",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T03:56:27.506655Z"
+}
+{
+  "case_id": "GRD-2025-949401",
+  "age": 14,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-03T22:56:26.308833Z"
+}
+{
+  "case_id": "GRD-2025-949433",
+  "age": 10,
+  "gender": "M",
+  "county": "Manassas Park",
+  "state": "VA",
+  "city": "Manassas Park",
+  "lat": 38.77,
+  "lon": -77.44,
+  "date_reported": "2025-10-04T01:57:37.141696Z"
+}
+{
+  "case_id": "GRD-2025-953651",
+  "age": 15,
+  "gender": "F",
+  "county": "Poquoson",
+  "state": "VA",
+  "city": "Poquoson",
+  "lat": 37.12,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T01:57:04.576156Z"
+}
+{
+  "case_id": "GRD-2025-953966",
+  "age": 11,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:56:29.817328Z"
+}
+{
+  "case_id": "GRD-2025-954239",
+  "age": 12,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T00:57:09.654996Z"
+}
+{
+  "case_id": "GRD-2025-959286",
+  "age": 6,
+  "gender": "F",
+  "county": "Chesapeake",
+  "state": "VA",
+  "city": "Chesapeake",
+  "lat": 36.71,
+  "lon": -76.25,
+  "date_reported": "2025-10-04T02:57:04.534743Z"
+}
+{
+  "case_id": "GRD-2025-962824",
+  "age": 8,
+  "gender": "F",
+  "county": "Prince William",
+  "state": "VA",
+  "city": null,
+  "lat": 38.71,
+  "lon": -77.48,
+  "date_reported": "2025-10-04T00:57:00.330658Z"
+}
+{
+  "case_id": "GRD-2025-963492",
+  "age": 9,
+  "gender": "M",
+  "county": "Fairfax",
+  "state": "VA",
+  "city": "Fairfax",
+  "lat": 38.84,
+  "lon": -77.3,
+  "date_reported": "2025-10-04T00:57:29.883631Z"
+}
+{
+  "case_id": "GRD-2025-963598",
+  "age": 15,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T22:57:30.816876Z"
+}
+{
+  "case_id": "GRD-2025-966296",
+  "age": 6,
+  "gender": "M",
+  "county": "Hampton",
+  "state": "VA",
+  "city": "Hampton",
+  "lat": 37.02,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T02:56:39.520256Z"
+}
+{
+  "case_id": "GRD-2025-967693",
+  "age": 12,
+  "gender": "M",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-04T00:56:34.608768Z"
+}
+{
+  "case_id": "GRD-2025-969562",
+  "age": 10,
+  "gender": "M",
+  "county": "Richmond",
+  "state": "VA",
+  "city": null,
+  "lat": 37.93,
+  "lon": -76.78,
+  "date_reported": "2025-10-03T22:57:29.605934Z"
+}
+{
+  "case_id": "GRD-2025-970740",
+  "age": 11,
+  "gender": "M",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-03T22:57:21.722452Z"
+}
+{
+  "case_id": "GRD-2025-970983",
+  "age": 11,
+  "gender": "F",
+  "county": "Hampton",
+  "state": "VA",
+  "city": "Hampton",
+  "lat": 37.02,
+  "lon": -76.34,
+  "date_reported": "2025-10-04T02:57:21.443903Z"
+}
+{
+  "case_id": "GRD-2025-971763",
+  "age": 6,
+  "gender": "F",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-04T03:57:14.545064Z"
+}
+{
+  "case_id": "GRD-2025-972140",
+  "age": 7,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-04T01:56:54.820645Z"
+}
+{
+  "case_id": "GRD-2025-973211",
+  "age": 16,
+  "gender": "M",
+  "county": "Alexandria",
+  "state": "VA",
+  "city": "Alexandria",
+  "lat": 38.8,
+  "lon": -77.04,
+  "date_reported": "2025-10-03T23:57:05.386127Z"
+}
+{
+  "case_id": "GRD-2025-974241",
+  "age": 11,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T01:56:40.456814Z"
+}
+{
+  "case_id": "GRD-2025-975719",
+  "age": 14,
+  "gender": "F",
+  "county": "Richmond",
+  "state": "VA",
+  "city": "Richmond",
+  "lat": 37.54,
+  "lon": -77.43,
+  "date_reported": "2025-10-03T23:57:01.076713Z"
+}
+{
+  "case_id": "GRD-2025-976922",
+  "age": 7,
+  "gender": "F",
+  "county": "Falls Church",
+  "state": "VA",
+  "city": "Falls Church",
+  "lat": 38.88,
+  "lon": -77.17,
+  "date_reported": "2025-10-04T02:57:48.113835Z"
+}
+{
+  "case_id": "GRD-2025-977109",
+  "age": 9,
+  "gender": "M",
+  "county": "Portsmouth",
+  "state": "VA",
+  "city": "Portsmouth",
+  "lat": 36.83,
+  "lon": -76.29,
+  "date_reported": "2025-10-03T22:56:32.195381Z"
+}
+{
+  "case_id": "GRD-2025-978606",
+  "age": 6,
+  "gender": "F",
+  "county": "Arlington",
+  "state": "VA",
+  "city": null,
+  "lat": 38.88,
+  "lon": -77.1,
+  "date_reported": "2025-10-04T03:57:18.030401Z"
+}
+{
+  "case_id": "GRD-2025-980143",
+  "age": 16,
+  "gender": "M",
+  "county": "Amherst",
+  "state": "VA",
+  "city": null,
+  "lat": 37.58,
+  "lon": -79.15,
+  "date_reported": "2025-10-04T02:56:28.796583Z"
+}
+{
+  "case_id": "GRD-2025-987210",
+  "age": 12,
+  "gender": "F",
+  "county": "Prince George",
+  "state": "VA",
+  "city": null,
+  "lat": 37.21,
+  "lon": -77.28,
+  "date_reported": "2025-10-04T03:56:40.030236Z"
+}
+{
+  "case_id": "GRD-2025-991991",
+  "age": 6,
+  "gender": "M",
+  "county": "Charles City",
+  "state": "VA",
+  "city": null,
+  "lat": 37.35,
+  "lon": -77.07,
+  "date_reported": "2025-10-04T03:57:11.821888Z"
+}
+{
+  "case_id": "GRD-2025-991997",
+  "age": 15,
+  "gender": "F",
+  "county": "Norfolk",
+  "state": "VA",
+  "city": "Norfolk",
+  "lat": 36.85,
+  "lon": -76.28,
+  "date_reported": "2025-10-03T22:56:49.598409Z"
+}

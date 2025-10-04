@@ -1,0 +1,311 @@
+{
+  "case_id": "GRD-2025-977109",
+  "demographic": {
+    "gender": "male",
+    "age_years": 9,
+    "name": "Child_5222",
+    "distinctive_features": "blonde hair"
+  },
+  "spatial": {
+    "last_seen_lat": 36.83,
+    "last_seen_lon": -76.29,
+    "last_seen_location": "Portsmouth, Virginia",
+    "last_seen_city": "Portsmouth",
+    "last_seen_county": "Unknown",
+    "last_seen_state": "Virginia",
+    "nearby_roads": [
+      "I-264",
+      "I-564",
+      "I-64",
+      "US-13",
+      "US-17",
+      "US-258",
+      "US-460",
+      "US-58",
+      "US-60",
+      "Benning Rd",
+      "Campbell",
+      "Elko",
+      "Gallion",
+      "Goodyear Blvd",
+      "IvyMill"
+    ],
+    "nearby_transit_hubs": [
+      "Transit Stop at Norfolk, Virginia, USA (lat: 36.8980, lon: -76.2799, distance: 4.73mi, type: bus_stop)",
+      "Transit Stop at Chesapeake, Virginia, USA (lat: 36.7466, lon: -76.2450, distance: 6.28mi, type: bus_stop)",
+      "Transit Stop at Chesapeake, Virginia, USA (lat: 36.7458, lon: -76.2445, distance: 6.34mi, type: bus_stop)",
+      "Transit Stop at Norfolk, Virginia, USA (lat: 36.9627, lon: -76.2657, distance: 9.27mi, type: bus_stop)",
+      "Transit Stop at Norfolk, Virginia, USA (lat: 36.9661, lon: -76.2754, distance: 9.44mi, type: bus_stop)",
+      "Transit Stop at Norfolk, Virginia, USA (lat: 36.9671, lon: -76.2864, distance: 9.47mi, type: bus_stop)",
+      "Transit Stop at Norfolk, Virginia, USA (lat: 36.9668, lon: -76.2781, distance: 9.48mi, type: bus_stop)"
+    ],
+    "nearby_pois": [
+      "Chesapeake city center (lat: 36.7100, lon: -76.2500, distance: 8.58mi, type: city_center)",
+      "Norfolk city center (lat: 36.8500, lon: -76.2800, distance: 1.49mi, type: city_center)",
+      "Portsmouth city center (lat: 36.8300, lon: -76.2900, distance: 0.00mi, type: city_center)"
+    ]
+  },
+  "temporal": {
+    "timezone": "America/New_York",
+    "last_seen_ts": "2025-10-03T21:56:32.181577+00:00",
+    "reported_missing_ts": "2025-10-03T22:56:32.195381+00:00",
+    "elapsed_report_minutes": 270,
+    "follow_up_sightings": [
+      {
+        "ts": "2025-10-04T20:56:02.790820+00:00",
+        "lat": 36.9,
+        "lon": -76.71,
+        "event_type": "cell_ping",
+        "reporter_type": "officer",
+        "confidence": 0.7241334949663533,
+        "note": "Witness reported seeing child wearing long-sleeve black shirt and blue athletic shorts"
+      },
+      {
+        "ts": "2025-10-04T21:34:03.890103+00:00",
+        "lat": 36.85,
+        "lon": -75.97,
+        "event_type": "lead",
+        "reporter_type": "unknown",
+        "confidence": 0.6795758995742988,
+        "note": "Witness reported seeing child wearing gray jacket and black joggers"
+      },
+      {
+        "ts": "2025-10-04T22:43:25.603926+00:00",
+        "lat": 37.12,
+        "lon": -76.34,
+        "event_type": "sighting",
+        "reporter_type": "public",
+        "confidence": 0.5714392068632054,
+        "note": "Transit system report: Child seen at transit station wearing greenish-colored hoodie and khaki shorts"
+      },
+      {
+        "ts": "2025-10-04T22:13:33.439067+00:00",
+        "lat": 36.7466079,
+        "lon": -76.2450005,
+        "event_type": "camera_hit",
+        "reporter_type": "officer",
+        "confidence": 0.5001495652279797,
+        "note": "Witness reported seeing child wearing plaid shirt and navy sweatpants"
+      },
+      {
+        "ts": "2025-10-06T09:15:16.434149+00:00",
+        "lat": 36.9,
+        "lon": -76.71,
+        "event_type": "lpr_hit",
+        "reporter_type": "unknown",
+        "confidence": 0.4367827348392755,
+        "note": "Witness reported seeing child wearing blue windbreaker and khaki shorts"
+      }
+    ]
+  },
+  "outcome": {
+    "case_status": "ongoing",
+    "recovery_ts": null,
+    "recovery_location": null,
+    "recovery_state": null,
+    "recovery_lat": null,
+    "recovery_lon": null,
+    "recovery_time_hours": null,
+    "recovery_distance_mi": null,
+    "recovery_condition": null
+  },
+  "narrative_osint": {
+    "incident_summary": "A 9-year-old male was last seen at Portsmouth at 2025-10-03T21:56:32.181577+00:00. The child was reported missing by friend after failing to return home.",
+    "behavioral_patterns": [
+      "merged onto I-64 west toward Richmond",
+      "entered vehicle and headed northbound on I-95"
+    ],
+    "movement_cues_text": "Within 4 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel west toward Blue Ridge along I-95. A white 2016 Jeep Grand Cherokee was observed departing near Portsmouth, Virginia.",
+    "temporal_markers": [
+      "Last seen at 2025-10-03T21:56:32.181577+00:00",
+      "Reported missing 5 hours later"
+    ],
+    "witness_accounts": [
+      {
+        "description": "Around 22 hours later, a school_staff reported someone matching the description (9-year-old male, wearing red hoodie, denim pants, red Crocs) near Bristol.",
+        "clothing": "red hoodie, denim pants, red Crocs",
+        "vehicle": "Jeep Grand Cherokee",
+        "behavior": "switching vehicles after leaving the scene"
+      }
+    ],
+    "news": [
+      {
+        "title": "Missing male child reported in Portsmouth",
+        "excerpt": "Authorities are searching for a 9-year-old male last seen in Portsmouth, Virginia."
+      }
+    ],
+    "social_media": [
+      {
+        "platform": "other",
+        "text": "Please help find missing child in Portsmouth area. Last seen wearing red hoodie, denim pants, red Crocs"
+      }
+    ],
+    "persons_of_interest": [
+      {
+        "role": "companion",
+        "age_estimate": 43,
+        "vehicle": {
+          "make": "Jeep",
+          "model": "Grand Cherokee",
+          "color": "white",
+          "plate_partial": "unknown"
+        },
+        "note": "backing up vehicle to block driveway"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": [
+      "synthetic_generator"
+    ],
+    "original_fields": {
+      "location_source": {
+        "name": "Portsmouth",
+        "type": "city",
+        "coordinates": [
+          36.83,
+          -76.29
+        ],
+        "region": "Tidewater"
+      },
+      "data_sources": {
+        "gazetteer_entries": 133,
+        "road_segments": 247,
+        "transit_stations": 2359,
+        "nearby_roads_count": 15,
+        "nearby_transit_count": 7,
+        "nearby_pois_count": 3
+      },
+      "generation_metadata": {
+        "child_age": 9,
+        "child_gender": "male",
+        "vehicle_make": "Jeep",
+        "vehicle_model": "Grand Cherokee",
+        "outfit_components": 3,
+        "search_zones_count": 9,
+        "follow_up_sightings_count": 5
+      }
+    },
+    "_fulltext": "A 9-year-old male was last seen at Portsmouth at 2025-10-03T21:56:32.181577+00:00. The child was reported missing by friend after failing to return home. Within 4 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel west toward Blue Ridge along I-95. A white 2016 Jeep Grand Cherokee was observed departing near Portsmouth, Virginia. Around 22 hours later, a school_staff reported someone matching the description (9-year-old male, wearing red hoodie, denim pants, red Crocs) near Bristol.",
+    "search_zones": [
+      {
+        "center_lat": 37.12,
+        "center_lon": -76.34,
+        "radius_miles": 4.901457982955712,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.8875634710903142,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2620"
+      },
+      {
+        "center_lat": 36.85,
+        "center_lon": -76.28,
+        "radius_miles": 5.628381328282799,
+        "corridor": "US-29 SW",
+        "region_tag": "Tidewater",
+        "priority": 0.7824525486043328,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_2_168"
+      },
+      {
+        "center_lat": 36.9,
+        "center_lon": -76.71,
+        "radius_miles": 4.864437503461669,
+        "corridor": "I-81 SB",
+        "region_tag": "Tidewater",
+        "priority": 0.41763792848219156,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "0-24",
+        "weight": 1.0,
+        "zone_id": "zone_3_496"
+      },
+      {
+        "center_lat": 36.72,
+        "center_lon": -76.58,
+        "radius_miles": 19.78389619622638,
+        "corridor": "I-95 NB",
+        "region_tag": "Tidewater",
+        "priority": 0.4059643659957677,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_4_342"
+      },
+      {
+        "center_lat": 37.21,
+        "center_lon": -77.28,
+        "radius_miles": 17.075773477289783,
+        "corridor": "US-29 SW",
+        "region_tag": "Piedmont",
+        "priority": 0.7711997620163271,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_5_658"
+      },
+      {
+        "center_lat": 37.85,
+        "center_lon": -78.27,
+        "radius_miles": 18.00779226792684,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.5390411411179965,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "24-48",
+        "weight": 0.7,
+        "zone_id": "zone_6_952"
+      },
+      {
+        "center_lat": 37.43,
+        "center_lon": -76.32,
+        "radius_miles": 30.2867863240876,
+        "corridor": "I-64 EB",
+        "region_tag": "Tidewater",
+        "priority": 0.7882908415241079,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_7_684"
+      },
+      {
+        "center_lat": 37.08,
+        "center_lon": -77.58,
+        "radius_miles": 39.74560392512434,
+        "corridor": "I-95 NB",
+        "region_tag": "Piedmont",
+        "priority": 0.5699128914382752,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_8_904"
+      },
+      {
+        "center_lat": 38.88,
+        "center_lon": -77.1,
+        "radius_miles": 31.63676770816347,
+        "corridor": "US-29 SW",
+        "region_tag": "NoVA",
+        "priority": 0.6362100208885587,
+        "in_state": true,
+        "out_of_state_penalty": 0.0,
+        "time_window": "48-72",
+        "weight": 0.5,
+        "zone_id": "zone_9_769"
+      }
+    ]
+  },
+  "ground_truth_zone_id": "zone_2620"
+}

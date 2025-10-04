@@ -6,11 +6,20 @@ system, including entity extraction, summarization, weak labeling, and fine-tuni
 All prompts are designed to work with the specific models configured in guardian.config.json.
 
 Author: Joshua Castillo
+
+Constants:
+    EXTRACTION_PROMPT: Template for entity extraction tasks
+    SUMMARY_PROMPT: Template for case summarization tasks
+    MOVEMENT_CLASSIFICATION_PROMPT: Template for movement pattern classification
+    RISK_ASSESSMENT_PROMPT: Template for risk level assessment
+    FINE_TUNE_SUMMARY_PROMPT: Template for fine-tuning summarizer models
+    FINE_TUNE_EXTRACTION_PROMPT: Template for fine-tuning extractor models
+    FINE_TUNE_LABELING_PROMPT: Template for fine-tuning weak labeler models
 """
 
 # Entity Extraction Prompts
 # Template for extracting structured entities from case narratives
-# Used by Qwen2-7B-Instruct model for JSON entity extraction
+# Used by Qwen2.5-3B-Instruct model for JSON entity extraction
 EXTRACTION_PROMPT = """Extract entities from the following case narrative in JSON format. Focus on:
 - Persons (names, descriptions, roles)
 - Vehicles (make, model, color, license plates)
@@ -42,7 +51,7 @@ Summary:"""
 
 # Weak Labeling Prompts
 # Template for classifying movement patterns in case narratives
-# Used by Mistral-7B-Instruct-v0.2 for movement classification
+# Used by Qwen2.5-3B-Instruct for movement classification
 MOVEMENT_CLASSIFICATION_PROMPT = """Classify the movement pattern described in this case narrative. Choose the most appropriate category:
 
 Categories:
@@ -59,7 +68,7 @@ Case Narrative:
 Movement Classification:"""
 
 # Template for assessing risk levels in case narratives
-# Used by Mistral-7B-Instruct-v0.2 for risk assessment
+# Used by Qwen2.5-3B-Instruct for risk assessment
 RISK_ASSESSMENT_PROMPT = """Assess the risk level of this case narrative. Consider factors like:
 - Violence indicators
 - Weapon involvement

@@ -85,11 +85,10 @@ python build.py
 
 ### Model Management
 
-Guardian uses three specialized LLM models optimized for RTX 4060 (8GB VRAM):
+Guardian uses two specialized LLM models optimized for RTX 4060 (8GB VRAM):
 
-- **Qwen2-7B-Instruct**: Entity extraction with 8-bit quantization (GPU)
-- **Llama-3.1-8B-Instruct**: Case summarization with smart offloading (GPU+CPU)
-- **Mistral-7B-Instruct-v0.2**: Movement classification with 4-bit quantization (GPU)
+- **Qwen2.5-3B-Instruct**: Entity extraction and movement classification with 8-bit quantization (GPU)
+- **Llama-3.2-3B-Instruct**: Case summarization with smart offloading (GPU+CPU)
 
 #### Performance Optimizations
 
@@ -105,9 +104,9 @@ Models are configured in `guardian.config.json` and versions are pinned in `mode
 ```json
 {
   "models": {
-    "extractor": ".\\models\\Qwen2-7B-Instruct",
-    "summarizer_instruct": ".\\models\\Llama3_1-8B-Instruct",
-    "weak_labeler": ".\\models\\Mistral-7B-Instruct-v0_2"
+    "extractor": ".\\models\\Qwen2.5-3B-Instruct",
+    "summarizer_instruct": ".\\models\\Llama3_2-3B-Instruct",
+    "weak_labeler": ".\\models\\Qwen2.5-3B-Instruct"
   },
   "use_summarizer": "instruct",
   "use_llama_as_extractor": false
@@ -201,9 +200,9 @@ python generate_cases.py --n 1000 --out data/production_cases
 - **Performance Metrics**: Shows total time and per-case generation speed
 - **Optimized Algorithms**: Cached transit networks and efficient geographic processing
 - **LLM Optimizations**: Advanced memory management and inference optimizations
-  - **4-bit Quantization**: Mistral-7B for efficient classification
-  - **8-bit Quantization**: Qwen2-7B for full GPU extraction
-  - **Smart Offloading**: Llama-3.1-8B with GPU+CPU memory management
+  - **4-bit Quantization**: Qwen2.5-3B for efficient classification
+  - **8-bit Quantization**: Qwen2.5-3B for full GPU extraction
+  - **Smart Offloading**: Llama-3.2-3B with GPU+CPU memory management
   - **TF32 Acceleration**: RTX 40xx GPU optimization
   - **SDPA Attention**: Fast attention implementation
   - **Clean Output**: Token-level decoding without prompt echo
@@ -221,7 +220,7 @@ pip install jsonschema
 
 ```
 Guardian/
-├── data/
+├── data/                       # Data storage and templates
 │   ├── geo/                    # Geographic data
 │   │   ├── va_gazetteer.json   # Virginia locations
 │   │   └── va_rl_regions.geojson # Regional boundaries
@@ -247,24 +246,31 @@ Guardian/
 │       ├── va_road_segments.json
 │       ├── va_transit.json
 │       └── va_transportation_summary.json
-├── llm/                        # LLM modules and AI components
+├── eda_out/                    # Exploratory Data Analysis outputs
+│   ├── age_hist.png            # Age distribution histogram
+│   ├── county_topN_bar.png     # County analysis charts
+│   ├── distribution_summary.png # Distribution summaries
+│   ├── eda_cases_min.jsonl      # Minimal case data for EDA
+│   ├── eda_counts.json          # Statistical counts
+│   ├── gender_bar.png           # Gender distribution
+│   ├── kde_age_*.png           # Kernel density plots by age
+│   ├── validation_report.json   # Data validation results
+│   ├── zones_review.jsonl       # Zone review data
+│   └── zones_reweighted.jsonl   # Reweighted zone data
+├── guardian_llm/               # LLM modules and AI components
 │   ├── __init__.py
-│   ├── extractor.py            # Entity extraction with Qwen2-7B
-│   ├── summarizer.py           # Case summarization with Llama-3.1-8B
-│   ├── weak_labeler.py         # Movement classification with Mistral-7B
+│   ├── extractor.py            # Entity extraction with Qwen2.5-3B
+│   ├── summarizer.py           # Case summarization with Llama-3.2-3B
+│   ├── weak_labeler.py         # Movement classification with Qwen2.5-3B
 │   ├── finetune_qlora.py       # QLoRA fine-tuning system
-│   └── prompts.py              # Standardized prompt templates
+│   ├── prompts.py              # Standardized prompt templates
+│   └── guardian.config.json    # LLM-specific configuration
 ├── models/                     # Local model storage (gitignored)
-│   ├── Qwen2-7B-Instruct/      # Entity extraction model
-│   ├── Llama3_1-8B-Instruct/  # Summarization model
-│   └── Mistral-7B-Instruct-v0_2/ # Classification model
-├── scripts/                    # Utility scripts
-│   ├── download_models.ps1     # PowerShell model downloader
-│   └── freeze_lock.py          # Pin model revisions to commits
-├── src/                        # Core Guardian modules
-│   ├── guardian_modules.py     # Main Guardian functionality
-│   ├── geography/              # Geographic processing
-│   └── transportation/         # Transportation analysis
+│   ├── Qwen2.5-3B-Instruct/   # Entity extraction and classification model
+│   └── Llama3_2-3B-Instruct/  # Summarization model
+├── reinforcement_learning/     # RL configuration and data
+│   ├── ground_truth.json       # Ground truth data for RL
+│   └── search_reward_config.json # RL reward configuration
 ├── schemas/                    # JSON Schema definitions
 │   ├── case_templates.schema.json
 │   ├── gazetteer.schema.json
@@ -273,16 +279,82 @@ Guardian/
 │   ├── road_segment.schema.json
 │   ├── transit_line.schema.json
 │   └── transit_stop.schema.json
-├── reinforcement_learning/      # RL configuration
-│   └── search_reward_config.json
+├── scripts/                    # Utility scripts
+│   ├── download_models.ps1     # PowerShell model downloader
+│   ├── freeze_lock.py          # Pin model revisions to commits
+│   └── models.lock.json        # Pinned model versions
+├── src/                        # Core Guardian modules
+│   ├── geography/              # Geographic processing modules
+│   │   ├── __init__.py
+│   │   ├── distance.py         # Distance calculations
+│   │   ├── regions.py          # Regional analysis
+│   │   └── validation.py       # Geographic validation
+│   ├── transportation/         # Transportation analysis modules
+│   │   ├── __init__.py
+│   │   └── networks.py         # Network analysis
+│   └── guardian_modules.py     # Main Guardian functionality
 ├── .gitignore                  # Git ignore patterns for models
 ├── build.py                    # Main validation script
+├
+├── eda_hotspot.py             # Exploratory data analysis
 ├── generate_cases.py           # Synthetic case generator
 ├── generate_cases_organized.py # Organized case generation
-├── guardian.config.json        # Model configuration
-├── models.lock.json            # Pinned model versions
-└── README.md
+├── guardian.config.json        # Main model configuration
+├── README.md                   # This file
+├── requirements.txt            # Python dependencies
+├── run_all_llms.py            # LLM testing and evaluation
+└── zone_qa.py                  # Zone quality assurance
 ```
+
+## Key Scripts
+
+### `run_all_llms.py` - LLM Analysis and EDA Data Preparation
+Comprehensive LLM analysis script that processes synthetic cases through all Guardian LLM models:
+
+- **Purpose**: Runs summarizer, extractor, and weak labeler models on synthetic cases
+- **Outputs**: 
+  - `eda_out/eda_cases_min.jsonl` - Normalized case data for EDA
+  - `eda_out/eda_counts.json` - Statistical counts and demographics
+  - `eda_out/validation_report.json` - Data quality validation results
+- **Features**: 
+  - Minimal mode for Phase 1.4 (deterministic baseline)
+  - Comprehensive case processing with progress tracking
+  - Data normalization and validation
+  - Memory-optimized processing for large datasets
+
+### `eda_hotspot.py` - Exploratory Data Analysis and KDE Hotspotting
+Advanced visualization and hotspot analysis for case data:
+
+- **Purpose**: Creates demographic charts and KDE (Kernel Density Estimation) hotspot maps
+- **Outputs**:
+  - `distribution_summary.png` - Combined age, gender, and county charts
+  - `age_hist.png`, `gender_bar.png`, `county_topN_bar.png` - Individual demographic charts
+  - `kde_all.png`, `kde_age_le12.png`, `kde_age_13_17.png` - KDE hotspot maps
+  - `eda_hotspot_report.md` - Markdown report with embedded visualizations
+- **Features**:
+  - Age-band specific hotspot analysis (≤12, 13-17)
+  - Fixed geographic extent and shared color scales for comparison
+  - Web Mercator projection for accurate distance calculations
+  - Optional basemap integration with contextily
+
+### `zone_qa.py` - LLM-Enhanced Zone Plausibility Analysis
+LLM-powered search zone evaluation and prioritization:
+
+- **Purpose**: Enhances search zone prioritization using LLM-based plausibility scoring
+- **Workflow**:
+  1. Reads case JSON files with search zones and narratives
+  2. Uses weak labeler LLM to score plausibility (0-1) for each zone
+  3. Reweights priorities based on LLM plausibility + RL configuration
+  4. Generates evaluation metrics (Geo-hit@K) comparing baseline vs LLM-enhanced
+- **Outputs**:
+  - `zones_review.jsonl` - Per-case zone plausibility scores and rationale
+  - `zones_reweighted.jsonl` - LLM-enhanced zones with priority_llm field
+  - `zone_qa_metrics.json` - Evaluation metrics (Geo-hit@K baseline vs LLM)
+  - `zone_evaluation_results.json` - Detailed Geo-hit@K evaluation results
+- **Features**:
+  - Sidecar architecture (doesn't modify core synthetic cases)
+  - LLM-enhanced zone analysis for evaluation
+  - Comprehensive metrics for search effectiveness
 
 ### Core Algorithms
 
