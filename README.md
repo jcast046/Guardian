@@ -171,14 +171,6 @@ classification = label_case("Blue Corolla left via I-395 toward Alexandria; last
 print(classification)
 ```
 
-#### LLM Performance
-
-- **Summarizer**: ~22s load + generation, clean bullet points
-- **Extractor**: ~20s load + generation, structured JSON with backfill
-- **Weak Labeler**: ~28s load + generation, 4-bit quantization
-- **Memory**: Optimized for RTX 4060 (8GB VRAM)
-- **Output**: Clean, professional results without prompt echo
-
 ### Large-Scale Generation
 
 ```bash
@@ -317,7 +309,7 @@ Comprehensive LLM analysis script that processes synthetic cases through all Gua
   - `eda_out/eda_counts.json` - Statistical counts and demographics
   - `eda_out/validation_report.json` - Data quality validation results
 - **Features**: 
-  - Minimal mode for Phase 1.4 (deterministic baseline)
+  - Minimal mode (deterministic baseline)
   - Comprehensive case processing with progress tracking
   - Data normalization and validation
   - Memory-optimized processing for large datasets
@@ -355,6 +347,135 @@ LLM-powered search zone evaluation and prioritization:
   - Sidecar architecture (doesn't modify core synthetic cases)
   - LLM-enhanced zone analysis for evaluation
   - Comprehensive metrics for search effectiveness
+
+### `generate_cases.py` - Synthetic Case Generator
+Comprehensive synthetic missing-child case generation system:
+
+- **Purpose**: Generates realistic, schema-valid synthetic missing-child cases for Virginia
+- **Features**:
+  - **Geographic Accuracy**: Uses Virginia gazetteer, regional boundaries, and real coordinates
+  - **Transportation Integration**: Dijkstra's algorithm for network-based road finding
+  - **RL Integration**: Incorporates reinforcement learning search patterns and time windows
+  - **Large-scale Generation**: Optimized for 500+ cases with progress tracking and memory management
+  - **Schema Validation**: All generated cases conform to Guardian JSON schema
+- **Outputs**:
+  - `data/synthetic_cases/GRD-*.json` - Individual case files with unique identifiers
+  - Progress tracking with completion percentage and ETA calculations
+  - Performance metrics (total time, per-case generation speed)
+- **Algorithm Details**:
+  - **Haversine Distance**: Great-circle distance calculations for geographic accuracy
+  - **Bounded Dijkstra**: Network-based road finding with early termination
+  - **Geographic Filtering**: Multi-layer validation for spatial accuracy
+  - **Transit Network Analysis**: Graph-based station connectivity analysis
+
+## Reinforcement Learning Configuration
+
+### `search_reward_config.json` - RL Search Reward Configuration
+Comprehensive reinforcement learning configuration for search zone optimization:
+
+- **Purpose**: Defines reward structures, time windows, and action spaces for RL-based search zone generation
+- **Time Windows**: 
+  - 0-24 hours (weight: 1.0) - Critical early search period
+  - 24-48 hours (weight: 0.7) - Extended search phase
+  - 48-72 hours (weight: 0.5) - Long-term search operations
+- **Action Space**:
+  - 3 zones per time window
+  - Zone schema with geographic coordinates, radius, corridors, and priority scoring
+  - State boundary enforcement (Virginia only)
+- **Reward Structures**:
+  - **Distance-based**: Geographic accuracy rewards using Haversine distance
+  - **Time-based**: Earlier coverage rewards within time windows
+  - **Hybrid**: Balanced scoring with alpha/beta weighting
+  - **Regularizers**: Radius penalties and out-of-state penalties
+- **Profiles**: Baseline, high-LLM, and risk-heavy configurations for different search strategies
+
+### `ground_truth.json` - Ground Truth Zone Labels
+Reference data for RL training and evaluation:
+
+- **Purpose**: Maps case IDs to ground truth zone labels (z01, z02, z03) for RL training
+- **Format**: JSON mapping of GRD case IDs to zone identifiers
+- **Usage**: Used by `zone_qa.py` for Geo-hit@K evaluation metrics
+- **Coverage**: 20+ cases with validated ground truth zone assignments
+
+## Guardian LLM Modules
+
+The `guardian_llm/` directory contains the core LLM functionality for the Guardian system, providing entity extraction, summarization, weak labeling, and fine-tuning capabilities.
+
+### `__init__.py` - LLM Module Interface
+Main interface for Guardian LLM functionality:
+
+- **Purpose**: Provides clean API for all LLM operations with optional fine-tuning support
+- **Runtime Functions**: `summarize`, `extract_entities`, `classify_movement`, `assess_risk`
+- **Fine-tuning Functions**: Optional PEFT fine-tuning capabilities (requires peft library)
+- **Safe Imports**: Graceful handling of missing optional dependencies
+
+### `extractor.py` - Entity Extraction Module
+Structured entity extraction using Qwen2.5-3B-Instruct:
+
+- **Purpose**: Extracts persons, vehicles, locations, timeline, and evidence from case narratives
+- **Key Functions**:
+  - `extract_entities()` - Complete entity extraction with JSON output
+  - `extract_persons()`, `extract_vehicles()`, `extract_locations()` - Specific entity types
+  - `batch_extract_json()` - Batch processing for multiple cases
+  - `minimal_entities_from_case()` - Lightweight extraction for EDA
+- **Features**: Deterministic scaffolding with LLM backfill, regex validation, memory optimization
+- **Output**: Structured JSON with validated entity data
+
+### `summarizer.py` - Case Summarization Module
+Investigator-focused case summarization using Llama-3.2-3B-Instruct:
+
+- **Purpose**: Generates concise, factual bullet-point summaries for investigators
+- **Key Functions**:
+  - `summarize()` - Single case summarization
+  - `batch_summarize()` - Batch processing with memory management
+  - `release()` - GPU memory cleanup
+- **Features**: TF32 acceleration, SDPA attention, early stopping, clean token decoding
+- **Output**: 5-bullet point investigator summaries
+
+### `weak_labeler.py` - Movement Classification and Risk Assessment
+Automated labeling using Qwen2.5-3B-Instruct:
+
+- **Purpose**: Classifies movement patterns and assesses risk levels for case prioritization
+- **Key Functions**:
+  - `classify_movement()` - Movement pattern classification
+  - `assess_risk()` - Risk level assessment with rule-based overlay
+  - `label_case()` - Combined movement and risk labeling
+  - `batch_label_cases()` - Batch processing with optimization
+- **Features**: Rule-based risk calibration, LLM+rule hybrid scoring, memory management
+- **Output**: Movement classifications and risk assessments for case prioritization
+
+### `prompts.py` - Standardized Prompt Templates
+Centralized prompt management for all LLM tasks:
+
+- **Purpose**: Provides consistent, optimized prompts for all Guardian LLM operations
+- **Templates**:
+  - `EXTRACTION_PROMPT` - Entity extraction with JSON structure
+  - `SUMMARY_PROMPT` - Case summarization for investigators
+  - `MOVEMENT_CLASSIFICATION_PROMPT` - Movement pattern analysis
+  - `RISK_ASSESSMENT_PROMPT` - Risk level evaluation
+  - Fine-tuning prompts for model training
+- **Features**: Model-specific optimization, structured output formatting
+
+### `finetune_qlora.py` - QLoRA Fine-tuning System
+Parameter-Efficient Fine-Tuning using QLoRA:
+
+- **Purpose**: Fine-tune Guardian models on synthetic case data using QLoRA
+- **Key Functions**:
+  - `fine_tune_summarizer()` - Fine-tune summarization model
+  - `fine_tune_extractor()` - Fine-tune entity extraction model
+  - `fine_tune_weak_labeler()` - Fine-tune classification model
+- **Features**: 4-bit quantization, low-rank adaptation, memory-efficient training
+- **Output**: Fine-tuned models saved to `./finetuned_*/` directories
+
+### `guardian.config.json` - LLM Configuration
+Model configuration and path management:
+
+- **Purpose**: Centralized configuration for all Guardian LLM models
+- **Configuration**:
+  - Model paths for extractor, weak_labeler, and summarizer
+  - Model selection flags (use_llama_as_extractor)
+  - Runtime behavior settings
+- **Integration**: Used by all LLM modules for consistent model loading
 
 ### Core Algorithms
 
