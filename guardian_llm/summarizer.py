@@ -34,9 +34,15 @@ torch.backends.cudnn.allow_tf32 = True
 try:
     with open("guardian.config.json", "r") as f:
         config = json.load(f)
+    
+    # Optional: force single-model override (keeps behavior identical if env not set)
+    _single = os.getenv("GUARDIAN_SINGLE_MODEL_DIR")
+    if _single:
+        config["models"]["summarizer_instruct"] = _single
+    
     MODEL_ID = config["models"]["summarizer_instruct"]
 except:
-    MODEL_ID = os.getenv("GUARDIAN_SUMM_MODEL", "./models/Llama3_2-3B-Instruct")
+    MODEL_ID = os.getenv("GUARDIAN_SUMM_MODEL", r"C:\Users\N0Cir\CS698\Guardian\models\Llama3_2-3B-Instruct")
 
 # Global model state (lazy loading)
 _tok: Optional[AutoTokenizer] = None
@@ -92,6 +98,23 @@ def release():
         torch.cuda.empty_cache()
         torch.cuda.ipc_collect()
 
+def _assert_model_dir(path_str):
+    """
+    Validate that the model directory exists and contains config.json.
+    
+    Args:
+        path_str (str): Path to the model directory
+        
+    Raises:
+        FileNotFoundError: If model directory is missing or lacks config.json
+    """
+    p = Path(path_str)
+    if not p.exists() or not (p / "config.json").exists():
+        raise FileNotFoundError(
+            f"Model dir '{p}' is missing or lacks config.json. "
+            "Point to the exact directory that contains the model files."
+        )
+
 def _ensure_loaded():
     """
     Load model once, cache globally for speed.
@@ -108,10 +131,13 @@ def _ensure_loaded():
     if _mdl is not None:
         return
 
-    # Log which model path is being used
+    # Validate model directory exists
+    _assert_model_dir(MODEL_ID)
+    
+    # Log which model is being used
     print(f"[INIT] Using model dir: {Path(MODEL_ID).resolve()}")
 
-    _tok = AutoTokenizer.from_pretrained(MODEL_ID, use_fast=True)
+    _tok = AutoTokenizer.from_pretrained(MODEL_ID, use_fast=True, local_files_only=True)
     print(f"[CHK]  Tokenizer path: {_tok.name_or_path}")
     if _tok.pad_token_id is None and _tok.eos_token_id is not None:
         _tok.pad_token = _tok.eos_token  # stops the "Setting pad_token_id..." spam
@@ -130,17 +156,23 @@ def _ensure_loaded():
             device_map="auto",
             torch_dtype=torch.bfloat16,
             quantization_config=bnb,
-            attn_implementation="flash_attention_2" if torch.cuda.is_available() else "sdpa",
+            attn_implementation="eager",  # Use eager attention for Windows compatibility
             use_cache=True,               # KV cache = big speedup
-            trust_remote_code=True
+            trust_remote_code=True,
+            local_files_only=True
         )
+        
+        # Disable FlashAttention 2 on Windows
+        if hasattr(_mdl.config, "use_flash_attention_2"):
+            _mdl.config.use_flash_attention_2 = False
     except Exception as e:
         print(f"[WARN] Quantized model failed, falling back to CPU: {e}")
         _mdl = AutoModelForCausalLM.from_pretrained(
             MODEL_ID,
             device_map="cpu",
             torch_dtype=torch.float32,
-            use_cache=True
+            use_cache=True,
+            local_files_only=True
         )
     
     print(f"[CHK]  Model name_or_path: {getattr(_mdl.config, '_name_or_path', 'unknown')}")
@@ -186,7 +218,7 @@ def summarize(sum_text: str) -> str:
     if _mdl.device.type == "cuda":
         enc = {k: v.to(_mdl.device) for k, v in enc.items()}
 
-    # Clamp generation to keep it snappy
+    # Clamp generation 
     gen_kwargs = dict(
         max_new_tokens=96,
         do_sample=False,

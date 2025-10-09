@@ -16,6 +16,8 @@ Functions:
     label_case(narrative: str) -> dict: Combined movement and risk labeling
     label_batch(narratives: list) -> list: Batch process multiple cases
     batch_label_cases(narratives: list, batch_size: int = 2) -> list: Batch process with optimized settings
+    load_weak_labeler(model_id_or_dir: str, device_map: str = "auto"): Load model once for batch processing
+    weak_label_batch(pipe, texts: List[str]) -> List[Dict[str, str]]: Batch label multiple texts
     _risk_by_rules(text: str) -> str: Rule-based risk scoring
     apply_risk_overlay(llm_risk: str, entities: dict, narrative: str) -> str: Apply rule overlay to LLM risk
     rule_risk(entities: dict) -> str: Rule-based risk calibration
@@ -30,7 +32,8 @@ Example:
 """
 import json, re, torch, os
 from pathlib import Path
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
+from typing import List, Dict
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig, pipeline
 try:
     from .prompts import MOVEMENT_CLASSIFICATION_PROMPT, RISK_ASSESSMENT_PROMPT
 except ImportError:
@@ -40,11 +43,221 @@ except ImportError:
 
 # Risk keywords for rule-based scoring
 _RISK_KEYWORDS = {
-    "Critical": [r'\babduct', r'\bweapon\b', r'\bgun\b', r'\bknife\b', r'\bbrandish', r'\bstrangle', r'\bimmediate danger'],
-    "High":     [r'\blure|\bgroom|\bcoax|\bentice', r'\bthreat', r'\bassault', r'\bviolence', r'\bcoercion', r'\bforce(d)? (into|into a|into an) vehicle']
+    "Critical": [r'\babduct(ed|ion)\b', r'\bkidnap(ped|ping)?\b', r'\bweapon\b', r'\bgun\b', r'\bknife\b', r'\bbrandish', r'\bstrangle', r'\bimmediate danger', r'\bthreat(en(ed|ing)?)?\b', r'\bcoerc(ion|ed|ive)\b'],
+    "High":     [r'\blure|\bgroom(ing|ed)\b|\bcoax|\bentice', r'\bthreat', r'\bassault', r'\bviolence', r'\bcoercion', r'\bforce(d)? (into|into a|into an) vehicle', r'\btraffick(ing|er|ed)\b', r'\bnon-?custodial\b', r'\brestraining order\b', r'\b(interstate|out of state|cross(-|\s)state)\b']
 }
 
+# Add/confirm HIGH-impact signals:
+HIGH_SIGNS = [
+    r"\babduct(ed|ion)\b", r"\bkidnap(ped|ping)?\b",
+    r"\bweapon\b", r"\bgun\b", r"\bknife\b",
+    r"\bthreat(en(ed|ing)?)?\b", r"\bcoerc(ion|ed|ive)\b",
+    r"\bgroom(ing|ed)\b", r"\btraffick(ing|er|ed)\b",
+    r"\bnon-?custodial\b", r"\brestraining order\b",
+    r"\b(interstate|out of state|cross(-|\s)state)\b",
+]
+
 INTERSTATE = re.compile(r'\bI-\d{1,3}\b', re.I)
+
+# =============================================================================
+# BATCH API FUNCTIONS
+# =============================================================================
+
+def load_weak_labeler(model_id_or_dir: str, device_map: str = "auto"):
+    """
+    Load Qwen2.5-3B-Instruct once.
+    Return a callable/pipe used for repeated inference.
+    
+    Args:
+        model_id_or_dir (str): Model path or HuggingFace model ID
+        device_map (str): Device mapping for model loading
+        
+    Returns:
+        pipeline: HuggingFace pipeline for text generation
+    """
+    from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+    
+    # Load tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_id_or_dir, trust_remote_code=True)
+    
+    # Load model with quantization if available
+    if torch.cuda.is_available():
+        try:
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype=torch.bfloat16
+            )
+            model = AutoModelForCausalLM.from_pretrained(
+                model_id_or_dir,
+                torch_dtype="auto",
+                device_map=device_map,
+                quantization_config=bnb_config,
+                trust_remote_code=True
+            )
+        except Exception as e:
+            print(f"[WARN] 4-bit quantization failed, trying without: {e}")
+            model = AutoModelForCausalLM.from_pretrained(
+                model_id_or_dir,
+                torch_dtype="auto",
+                device_map=device_map,
+                trust_remote_code=True
+            )
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id_or_dir,
+            torch_dtype="auto",
+            device_map=device_map,
+            trust_remote_code=True
+        )
+    
+    # Create pipeline for text generation with sampling enabled
+    pipe = pipeline(
+        task="text-generation",
+        model=model,
+        tokenizer=tokenizer,
+        max_new_tokens=64,
+        do_sample=True,  # Enable sampling for diversity
+        temperature=0.9,
+        top_p=0.95,
+        top_k=50,
+        return_full_text=False
+    )
+    return pipe
+
+def _prompt_for_labeling(text: str) -> str:
+    """
+    Build prompt for weak labeling using the existing prompt format.
+    
+    Args:
+        text (str): Case narrative text
+        
+    Returns:
+        str: Formatted prompt for the model
+    """
+    # Trim narrative to fit within token limits
+    trimmed_narrative = _trim_to_tokens(text, _TOKENIZER, max_input_tokens=1000) if _TOKENIZER else text
+    
+    return f"""<|im_start|>system
+You are a concise risk assessor. Return JSON with keys: movement, risk in {{Low,Medium,High,Critical}}.
+<|im_end|>
+<|im_start|>user
+Narrative:
+{trimmed_narrative}
+
+Return JSON only in this exact format:
+{{"movement": "Stationary", "risk": "Medium"}}
+<|im_end|>
+<|im_start|>assistant
+"""
+
+def _parse_labeler_json(s: str) -> Dict[str, str]:
+    """
+    Parse JSON output from the weak labeler model.
+    
+    Args:
+        s (str): Model output text
+        
+    Returns:
+        Dict[str, str]: Parsed movement and risk labels
+    """
+    import json, re
+    
+    # Clean up the text first - remove newlines and fix common issues
+    cleaned = s.replace('\n', ' ').replace('\r', ' ')
+    
+    # Try to extract JSON object from the model output robustly
+    m = re.search(r"\{.*\}", cleaned, flags=re.S)
+    if not m:
+        # Try to extract movement and risk using regex patterns
+        movement_match = re.search(r'"movement":\s*"([^"]*)"', cleaned)
+        risk_match = re.search(r'"risk":\s*"([^"]*)"', cleaned)
+        
+        movement = movement_match.group(1) if movement_match else "Unknown"
+        risk = risk_match.group(1) if risk_match else "Unknown"
+        
+        return {"movement": movement, "risk": risk}
+    
+    # Try to fix common JSON issues before parsing
+    json_text = m.group(0)
+    
+    # Fix missing quotes and values
+    json_text = re.sub(r'"movement":\s*,', '"movement": "Unknown",', json_text)
+    json_text = re.sub(r'"movement":\s*$', '"movement": "Unknown"', json_text)
+    json_text = re.sub(r'"movement":\s*"([^"]*)$', r'"movement": "\1"', json_text)
+    
+    # Try to parse the fixed JSON
+    try:
+        obj = json.loads(json_text)
+        movement = obj.get("movement", "Unknown")
+        risk = obj.get("risk", "Unknown")
+        
+        return {"movement": str(movement), "risk": str(risk)}
+    except:
+        # Fall back to regex extraction
+        movement_match = re.search(r'"movement":\s*"([^"]*)"', cleaned)
+        risk_match = re.search(r'"risk":\s*"([^"]*)"', cleaned)
+        
+        movement = movement_match.group(1) if movement_match else "Unknown"
+        risk = risk_match.group(1) if risk_match else "Unknown"
+        
+        return {"movement": movement, "risk": risk}
+
+def weak_label_batch(pipe, texts: List[str]) -> List[Dict[str, str]]:
+    """
+    Batch process multiple case narratives for movement and risk labeling.
+    
+    Args:
+        pipe: HuggingFace pipeline loaded with load_weak_labeler
+        texts (List[str]): List of case narrative texts
+        
+    Returns:
+        List[Dict[str, str]]: List of dicts like {"movement": "...", "risk": "...", "time": float}
+    """
+    import time
+    
+    prompts = [_prompt_for_labeling(t) for t in texts]
+    
+    # Track processing time for the batch
+    start_time = time.time()
+    
+    try:
+        # Batch the pipeline call (Transformers supports list inputs)
+        outs = pipe(prompts)
+        
+        batch_time = time.time() - start_time
+        per_case_time = batch_time / len(texts) if texts else 0.0
+        
+        # Parse results
+        results = []
+        for i, out in enumerate(outs):
+            # typical structure: out[0]["generated_text"]
+            gen = out[0]["generated_text"] if isinstance(out, list) else out["generated_text"]
+            parsed = _parse_labeler_json(gen)
+            
+            # Apply rule overlays after LLM parsing
+            original_narrative = texts[i] if i < len(texts) else ""
+            movement = parsed.get("movement", "Unknown")
+            risk = parsed.get("risk", "Unknown")
+            
+            # Apply movement rule overlay
+            movement = _rule_adjust_movement(original_narrative, movement)
+            
+            # Apply risk rule overlay (create dummy entities dict for compatibility)
+            entities = {"age": None, "risk_factors": []}
+            risk = apply_risk_overlay(risk, entities, original_narrative)
+            
+            # Update parsed results with rule overlays
+            parsed["movement"] = movement
+            parsed["risk"] = risk
+            parsed["time"] = per_case_time
+            results.append(parsed)
+        
+        return results
+        
+    except Exception as e:
+        print(f"[ERROR] weak_label_batch failed: {e}")
+        # Return fallback results
+        return [{"movement": "Unknown", "risk": "Unknown", "time": 0.0} for _ in texts]
 
 # Load model once at import time for maximum efficiency
 _MODEL_DIR = None
@@ -71,19 +284,22 @@ def _ensure_loaded():
     if _MODEL is not None:
         return _TOKENIZER, _MODEL
     
-    # Get model path from config or environment
-    try:
-        with open("guardian.config.json", "r") as f:
-            config = json.load(f)
-        _MODEL_DIR = config["models"]["weak_labeler"]
-    except:
-        _MODEL_DIR = os.getenv("GUARDIAN_LABELER_MODEL", "./models/Qwen2.5-3B-Instruct")
+    # Use local model directory
+    _MODEL_DIR = DIR_WEAK_LABELER
+    
+    # Validate model directory exists
+    p = Path(_MODEL_DIR)
+    if not p.exists() or not (p / "config.json").exists():
+        raise FileNotFoundError(
+            f"Model dir '{p}' is missing or lacks config.json. "
+            "Point to the exact directory that contains the model files."
+        )
     
     print(f"[INIT] Using model dir: {Path(_MODEL_DIR).resolve()}")
     
     # Load tokenizer with optimized padding for batch generation
     try:
-        _TOKENIZER = AutoTokenizer.from_pretrained(_MODEL_DIR, use_fast=True, padding_side="left")
+        _TOKENIZER = AutoTokenizer.from_pretrained(_MODEL_DIR, use_fast=True, padding_side="left", local_files_only=True)
         print(f"[CHK]  Tokenizer path: {_TOKENIZER.name_or_path}")
         # Set proper pad token for decoder-only models
         _TOKENIZER.pad_token = _TOKENIZER.eos_token if _TOKENIZER.pad_token is None else _TOKENIZER.pad_token
@@ -108,9 +324,14 @@ def _ensure_loaded():
                 device_map="auto",
                 torch_dtype=torch.bfloat16,
                 quantization_config=bnb,
-                attn_implementation="flash_attention_2",
-                trust_remote_code=True
+                attn_implementation="eager",  # Use eager attention for Windows compatibility
+                trust_remote_code=True,
+                local_files_only=True
             )
+            
+            # Disable FlashAttention 2 on Windows
+            if hasattr(_MODEL.config, "use_flash_attention_2"):
+                _MODEL.config.use_flash_attention_2 = False
         except Exception as e:
             print(f"[WARN] 4-bit quantization failed, trying without quantization: {e}")
             try:
@@ -119,9 +340,14 @@ def _ensure_loaded():
                     _MODEL_DIR,
                     device_map="auto",
                     torch_dtype=torch.bfloat16,
-                    attn_implementation="sdpa",
-                    trust_remote_code=True
+                    attn_implementation="eager",  # Use eager attention for Windows compatibility
+                    trust_remote_code=True,
+                    local_files_only=True
                 )
+                
+                # Disable FlashAttention 2 on Windows
+                if hasattr(_MODEL.config, "use_flash_attention_2"):
+                    _MODEL.config.use_flash_attention_2 = False
             except Exception as e2:
                 print(f"[WARN] GPU loading failed, falling back to CPU: {e2}")
                 # Final fallback to CPU
@@ -129,7 +355,8 @@ def _ensure_loaded():
                     _MODEL_DIR,
                     device_map="cpu",
                     torch_dtype=torch.float32,
-                    trust_remote_code=True
+                    trust_remote_code=True,
+                    local_files_only=True
                 )
     else:
         # CPU fallback
@@ -137,7 +364,8 @@ def _ensure_loaded():
             _MODEL_DIR,
             device_map="cpu",
             torch_dtype=torch.float32,
-            trust_remote_code=True
+            trust_remote_code=True,
+            local_files_only=True
         )
     
     print(f"[CHK]  Model name_or_path: {getattr(_MODEL.config, '_name_or_path', 'unknown')}")
@@ -169,7 +397,10 @@ def _build_prompt(narr: str) -> str:
     Returns:
         str: Formatted prompt with system and user messages
     """
-    return f"<|im_start|>system\n{_SYSTEM}<|im_end|>\n<|im_start|>user\n{_PROMPT.format(narr=narr)}<|im_end|>\n<|im_start|>assistant\n"
+    # Trim narrative to fit within token limits
+    trimmed_narrative = _trim_to_tokens(narr, _TOKENIZER, max_input_tokens=1000) if _TOKENIZER else narr
+    
+    return f"<|im_start|>system\n{_SYSTEM}<|im_end|>\n<|im_start|>user\nNarrative:\n{trimmed_narrative}\n\nReturn JSON only in this exact format:\n{{\"movement\": \"Stationary\", \"risk\": \"Medium\"}}<|im_end|>\n<|im_start|>assistant\n"
 
 def label_case(narrative: str) -> dict:
     """
@@ -216,6 +447,10 @@ def label_batch(narratives: list[str], batch_size: int = 64, max_new_tokens: int
         for i in range(0, len(narratives), batch_size):
             chunk = narratives[i:i+batch_size]
             prompts = [_build_prompt(n) for n in chunk]
+            
+            # Add small randomness seed difference per batch for diversity
+            import random
+            torch.manual_seed(random.randint(1, 10000))
 
             # Tokenize with optimized padding for batch processing
             toks = tokenizer(
@@ -227,12 +462,12 @@ def label_batch(narratives: list[str], batch_size: int = 64, max_new_tokens: int
             )
             toks = {k: v.to(model.device) for k, v in toks.items()}
 
-            # Generate with optimized settings for speed
+            # Generate with optimized settings for speed and diversity
             gen_cfg = GenerationConfig(
-                max_new_tokens=min(max_new_tokens, 48),  # Tight generation budget
+                max_new_tokens=min(max_new_tokens, 64),  # Increased for better responses
                 do_sample=True,        # Enable sampling for temperature/top_p to work
-                temperature=0.3,       # Slight randomness for better quality
-                top_p=0.9,             # Nucleus sampling
+                temperature=0.9,       # Higher variety for better diversity
+                top_p=0.95,            # Nucleus sampling with higher threshold
                 top_k=50,              # Top-k sampling
                 num_beams=1,           # No beam search for speed
                 eos_token_id=tokenizer.eos_token_id,
@@ -246,19 +481,30 @@ def label_batch(narratives: list[str], batch_size: int = 64, max_new_tokens: int
             texts = tokenizer.batch_decode(out_ids, skip_special_tokens=True)
 
             # Parse results with fallback and convert to expected format
-            for t in texts:
+            for i, t in enumerate(texts):
                 result = _parse_json(t)
                 if not result:  # Fallback if JSON parsing fails
                     result = _fallback_parse(t)
                 
+                # Apply rule overlays after LLM parsing
+                original_narrative = chunk[i] if i < len(chunk) else ""
+                movement = result.get("movement", "Unknown")
+                risk = result.get("risk", "Unknown")
+                
+                # Apply movement rule overlay
+                movement = _rule_adjust_movement(original_narrative, movement)
+                
+                # Apply risk rule overlay (create dummy entities dict for compatibility)
+                entities = {"age": None, "risk_factors": []}
+                risk = apply_risk_overlay(risk, entities, original_narrative)
+                
                 # Convert to expected format for zone_qa.py
-                risk = result.get("risk", "Medium")
                 risk2pl = {"Critical": 0.9, "High": 0.7, "Medium": 0.5, "Low": 0.3}
                 plausibility = risk2pl.get(risk, 0.5)
                 
                 out.append({
                     "plausibility": plausibility,
-                    "rationale": f"LLM assessment: {risk} risk, movement: {result.get('movement', 'Unknown')}",
+                    "rationale": f"LLM assessment: {risk} risk, movement: {movement}",
                     "__labeler_source__": "real"
                 })
         
@@ -322,7 +568,7 @@ def _fallback_parse(text: str) -> dict:
     
     return {"movement": movement, "risk": risk}
 
-def _risk_by_rules(text: str) -> str:
+def _risk_by_rules(text: str) -> int:
     """
     Rule-based risk scoring with decisive escalation for high-risk scenarios.
     
@@ -334,7 +580,7 @@ def _risk_by_rules(text: str) -> str:
         text (str): Case narrative text to score
         
     Returns:
-        str: Risk level ("Low", "Medium", "High", "Critical")
+        int: Risk score (0+ points, use with _risk_from_score helper)
     """
     score = 0
     # victim age
@@ -344,11 +590,16 @@ def _risk_by_rules(text: str) -> str:
         if age <= 8:  score += 3  # was 2
         elif age <= 12: score += 2
 
-    # explicit danger words
+    # explicit danger words - give higher scores for high-impact signals
     for lvl, pats in _RISK_KEYWORDS.items():
         for p in pats:
             if re.search(p, text, re.I):
                 score += 4 if lvl == "Critical" else 3
+    
+    # Additional high-impact signals that should add 2+ points each
+    for pattern in HIGH_SIGNS:
+        if re.search(pattern, text, re.I):
+            score += 2
 
     # unknown adult + vehicle lure style phrasing
     if re.search(r'unknown adult|offered? a ride|offering a ride|into (a|an) vehicle', text, re.I):
@@ -382,10 +633,18 @@ def _risk_by_rules(text: str) -> str:
     if INTERSTATE.search(text):
         score += 1
 
-    # map to final level (tighter bands)
-    if score >= 7: return "Critical"
-    if score >= 4: return "High"
-    if score >= 2: return "Medium"
+    # return score for use with _risk_from_score helper
+    return score
+
+def _risk_from_score(score: int) -> str:
+   
+    # 0 -> Low, 1 -> Medium, 2-3 -> High, 4+ -> Critical
+    if score >= 4:
+        return "Critical"
+    if score >= 2:
+        return "High"
+    if score >= 1:
+        return "Medium"
     return "Low"
 
 def rule_risk(entities: dict) -> str:
@@ -454,14 +713,18 @@ def apply_risk_overlay(llm_risk: str, entities: dict, narrative: str) -> str:
     
     return llm_risk
 
-# Enable TF32 for RTX 40xx speedup and advanced optimizations
+# Enable TF32 for RTX 40xx speedup and optimizations
 torch.set_float32_matmul_precision("high")
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 
 # Load configuration from guardian.config.json
-CFG = json.load(open("guardian.config.json", "r"))
-DIR_WEAK_LABELER = CFG["models"]["weak_labeler"]
+try:
+    with open("guardian.config.json", "r") as f:
+        config = json.load(f)
+    DIR_WEAK_LABELER = config["models"]["weak_labeler"]
+except:
+    DIR_WEAK_LABELER = r"C:\Users\N0Cir\CS698\Guardian\models\Qwen2.5-3B-Instruct"
 
 # Global model cache variables
 _tok = _mdl = None
@@ -575,9 +838,11 @@ def classify_movement(narrative: str) -> str:
     # Trim input to ~800 tokens for faster processing
     trimmed_narrative = _trim_to_tokens(narrative, _tok, max_input_tokens=800)
     
-    # Simplified and more direct prompt
-    improved_prompt = f"""Based on this case, pick one:
-Stationary, Local, Regional, Interstate, International, Unknown
+    # Improved prompt with actual narrative
+    improved_prompt = f"""Classify the movement in the following missing-person narrative. 
+Choose one: Stationary, Local, Regional, Interstate, International, Unknown.
+
+Narrative: {trimmed_narrative}
 
 Movement:"""
     enc = _tok(improved_prompt, return_tensors="pt")
@@ -590,8 +855,8 @@ Movement:"""
         gen_cfg = GenerationConfig(
             max_new_tokens=96,
             do_sample=True,
-            temperature=0.6,
-            top_p=0.9,
+            temperature=0.9,
+            top_p=0.95,
             top_k=50,
             pad_token_id=_tok.eos_token_id,
             eos_token_id=_tok.eos_token_id
@@ -618,89 +883,97 @@ Movement:"""
 
 def assess_risk(narrative: str) -> str:
     """
-    Assess risk level of case narrative.
-    
-    This function analyzes a case narrative and assesses the risk level based on
-    various factors including violence indicators, weapon involvement, suspect behavior,
-    victim vulnerability, and evidence quality.
-    
-    Args:
-        narrative (str): The case narrative text to assess
-        
-    Returns:
-        str: Risk level from the following categories:
-            - "Low": Minimal threat indicators
-            - "Medium": Some concerning factors present
-            - "High": Multiple threat indicators
-            - "Critical": Immediate danger indicators
-            
-    Raises:
-        RuntimeError: If model is not loaded or generation fails
-        
-    Example:
-        >>> narrative = "Armed robbery with weapon, suspect threatened victim..."
-        >>> risk = assess_risk(narrative)
-        >>> print(risk)  # "High"
-        
-    Note:
-        If no clear risk level is found, returns "Medium" as default.
-        Uses temperature 0.6 for consistent risk assessment.
+    Assess the risk level of a missing person case.
+
+    Returns exactly one of:
+      "Low", "Medium", "High", "Critical", or "Unknown" (if unsure)
+
+    Strategy:
+      1) Query LLM with few-shot prompt that includes all 4 classes.
+      2) Parse STRICTLY one of the allowed labels.
+      3) Compute a rules score.
+      4) Combine by taking the higher severity; if neither fires, return "Unknown".
     """
     _ensure_loaded()
-    
-    # Trim input to ~800 tokens for faster processing
-    trimmed_narrative = _trim_to_tokens(narrative, _tok, max_input_tokens=800)
-    
-    # Improved prompt for comprehensive missing person case data
-    improved_prompt = f"""Assess the risk level of this missing person case. Consider:
-- Victim age and vulnerability
-- Circumstances of disappearance  
-- Suspect behavior and intentions
-- Evidence of coercion or violence
-- Time elapsed since disappearance
-- Witness reports and credibility
 
+    trimmed = _trim_to_tokens(narrative, _tok, max_input_tokens=800)
+
+   
+    prompt = f"""
+You are labeling risk for a missing-person case.
 Answer with exactly one word from this set: Low, Medium, High, Critical
-Risk:"""
-    enc = _tok(improved_prompt, return_tensors="pt")
+
+Guidance:
+- Low: minimal indicators of coercion/violence; likely voluntary/short-term absence
+- Medium: some concerning context but no concrete threats or coercion
+- High: clear indicators of coercion, grooming, trafficking intent, or credible threats
+- Critical: immediate danger (weapons, explicit violent threats, abduction, medical crisis), or ongoing interstate transport
+
+Examples:
+Case A: "Wandered from home; returned next morning; no threats; safe contact." → Low
+Case B: "Left with friends; phone off; rumors of party; no threats." → Medium
+Case C: "Non-custodial adult coerced teen online; threats to harm family." → High
+Case D: "Abducted at gunpoint; suspect driving out of state; active threats." → Critical
+
+Case Narrative:
+{trimmed}
+
+Answer with one word only:
+Risk:
+""".strip()
+
+    enc = _tok(prompt, return_tensors="pt")
     ids, mask = enc["input_ids"], enc["attention_mask"]
-    
-    if torch.cuda.is_available(): 
+    if torch.cuda.is_available():
         ids, mask = ids.to(_mdl.device), mask.to(_mdl.device)
-    
+
+    allowed = {"Low", "Medium", "High", "Critical"}
     with torch.inference_mode():
-        gen_cfg = GenerationConfig(
-            max_new_tokens=96,
-            do_sample=True,
-            temperature=0.6,
-            top_p=0.9,
-            top_k=50,
-            pad_token_id=_tok.eos_token_id,
-            eos_token_id=_tok.eos_token_id
-        )
         out = _mdl.generate(
             input_ids=ids,
             attention_mask=mask,
-            generation_config=gen_cfg
+            max_new_tokens=16,
+            do_sample=True,
+            temperature=0.7,
+            top_p=0.9,
+            repetition_penalty=1.05,
+            eos_token_id=_tok.eos_token_id,
         )
-    
-    response = _tok.decode(out[0], skip_special_tokens=True)
-    response = response.split("Risk Assessment:")[-1].strip()
-    
-    # Extract risk level from response
-    for level in ["Low", "Medium", "High", "Critical"]:
-        if level.lower() in response.lower():
-            llm_level = level
-            break
-    else:
-        llm_level = "Medium"
-    
-    # Apply rule-based scoring and choose higher severity
-    rule_level = _risk_by_rules(narrative)
-    
-    # choose the higher severity
-    order = {"Low":0, "Medium":1, "High":2, "Critical":3}
-    return max([llm_level, rule_level], key=lambda k: order[k])
+    text = _tok.decode(out[0], skip_special_tokens=True)
+
+    # Strict parse: pick the FIRST allowed label that can be found; else "Unknown"
+    m = re.search(r"\b(Low|Medium|High|Critical)\b", text, flags=re.IGNORECASE)
+    llm_risk = m.group(1).title() if m else "Unknown"
+
+    # Rules overlay 
+    score = _risk_by_rules(narrative)
+    rule_risk = _risk_from_score(score)
+
+    # Combine: take the maximum severity; if both Unknown/Low signal, return the non-Unknown one
+    def rank(x: str) -> int:
+        order = {"Unknown": -1, "Low": 0, "Medium": 1, "High": 2, "Critical": 3}
+        return order.get(x, -1)
+
+    final = llm_risk if rank(llm_risk) >= rank(rule_risk) else rule_risk
+
+    # Optional: tie movement to a floor for risk when LLM is uncertain
+    try:
+        mv = classify_movement(narrative)  # or however you fetch movement for this case
+    except Exception:
+        mv = None
+
+    if final in {"Unknown", "Low"} and mv:
+        floor = {"Stationary": "Low", "Local": "Medium", "Regional": "High", "Interstate": "High"}
+        floored = floor.get(mv, final)
+        if rank(floored) > rank(final):
+            final = floored
+
+    # If both are Unknown (or both Low with zero signal), return Unknown, not Medium.
+    if final == "Low" and score == 0 and llm_risk in {"Unknown", "Low"}:
+        return "Low"
+    if final == "Unknown":
+        return "Unknown"
+    return final
 
 
 def batch_label_cases(narratives: list, batch_size: int = 2) -> list:
@@ -740,8 +1013,10 @@ def batch_label_cases(narratives: list, batch_size: int = 2) -> list:
         movement_prompts = []
         for narrative in batch:
             trimmed_narrative = _trim_to_tokens(narrative, _tok, max_input_tokens=800)
-            prompt = f"""Based on this case, pick one:
-Stationary, Local, Regional, Interstate, International, Unknown
+            prompt = f"""Classify the movement in the following missing-person narrative. 
+Choose one: Stationary, Local, Regional, Interstate, International, Unknown.
+
+Narrative: {trimmed_narrative}
 
 Movement:"""
             movement_prompts.append(prompt)
@@ -757,8 +1032,8 @@ Movement:"""
             gen_cfg = GenerationConfig(
                 max_new_tokens=96,
                 do_sample=True,
-                temperature=0.6,
-                top_p=0.9,
+            temperature=0.9,
+            top_p=0.95,
                 top_k=50,
                 pad_token_id=_tok.eos_token_id,
                 eos_token_id=_tok.eos_token_id
@@ -788,15 +1063,10 @@ Movement:"""
         risk_prompts = []
         for narrative in batch:
             trimmed_narrative = _trim_to_tokens(narrative, _tok, max_input_tokens=800)
-            prompt = f"""Assess the risk level of this missing person case. Consider:
-- Victim age and vulnerability
-- Circumstances of disappearance  
-- Suspect behavior and intentions
-- Evidence of coercion or violence
-- Time elapsed since disappearance
-- Witness reports and credibility
+            prompt = f"""Assess the risk level (Low, Medium, High, Critical) for this case.
 
-Answer with exactly one word from this set: Low, Medium, High, Critical
+Narrative: {trimmed_narrative}
+
 Risk:"""
             risk_prompts.append(prompt)
         
@@ -811,8 +1081,8 @@ Risk:"""
             gen_cfg = GenerationConfig(
                 max_new_tokens=96,
                 do_sample=True,
-                temperature=0.6,
-                top_p=0.9,
+            temperature=0.9,
+            top_p=0.95,
                 top_k=50,
                 pad_token_id=_tok.eos_token_id,
                 eos_token_id=_tok.eos_token_id

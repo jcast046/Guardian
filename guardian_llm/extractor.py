@@ -94,7 +94,7 @@ def minimal_entities_from_case(case: dict) -> dict:
     }
 # --- minimal helpers for EDA ---
 
-# -------- fast patterns tuned to your synthetic format --------
+# -------- fast patterns tuned to the synthetic format --------
 RE_COORDS     = re.compile(r'Coordinates:\s*([+-]?\d{1,2}\.\d+)\s*,\s*([+-]?\d{1,3}\.\d+)', re.I)
 RE_LAST_SEEN  = re.compile(r'Last Seen:\s*([^,]+),\s*([^,]+),\s*([A-Za-z]{2,})', re.I)
 RE_AGE        = re.compile(r'\b(\d{1,2})-year-old\b', re.I)
@@ -165,7 +165,7 @@ def scaffold_from_narrative(text: str) -> dict:
         risks.append("weapon_mentioned")
     if re.search(r"\babduction|forced\b", text, re.I):
         risks.append("abduction_cue")
-    # new signals commonly present in your synthetic cases
+    # new signals commonly present in synthetic cases
     if late_min is not None and late_min >= 120:
         risks.append("late_report_2h_plus")
     elif late_min is not None and late_min >= 60:
@@ -265,7 +265,7 @@ def _generate_json_strict(prompt: str, max_new_tokens: int = 192) -> str:
     if torch.cuda.is_available():
         ids, mask = ids.to(_mdl.device), mask.to(_mdl.device)
 
-    # Clamp generation to keep it snappy
+    # Clamp generation 
     gen_kwargs = dict(
         max_new_tokens=max_new_tokens,
         do_sample=False,
@@ -290,9 +290,14 @@ torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 
 # Load configuration from guardian.config.json
-CFG = json.load(open("guardian.config.json", "r"))
-DIR_EXTRACTOR = CFG["models"]["extractor"]
-USE_LLAMA = CFG.get("use_llama_as_extractor", False)
+try:
+    with open("guardian.config.json", "r") as f:
+        config = json.load(f)
+    DIR_EXTRACTOR = config["models"]["extractor"]
+    USE_LLAMA = config.get("use_llama_as_extractor", False)
+except:
+    DIR_EXTRACTOR = r"C:\Users\N0Cir\CS698\Guardian\models\Qwen2.5-3B-Instruct"
+    USE_LLAMA = False
 
 # Global model cache variables
 _tok = _mdl = None
@@ -458,6 +463,23 @@ def release():
         torch.cuda.empty_cache()
         torch.cuda.ipc_collect()
 
+def _assert_model_dir(path_str):
+    """
+    Validate that the model directory exists and contains config.json.
+    
+    Args:
+        path_str (str): Path to the model directory
+        
+    Raises:
+        FileNotFoundError: If model directory is missing or lacks config.json
+    """
+    p = Path(path_str)
+    if not p.exists() or not (p / "config.json").exists():
+        raise FileNotFoundError(
+            f"Model dir '{p}' is missing or lacks config.json. "
+            "Point to the exact directory that contains the model files."
+        )
+
 def _ensure_loaded():
     """
     Ensure the model and tokenizer are loaded and cached globally.
@@ -474,9 +496,12 @@ def _ensure_loaded():
     if _mdl is not None: 
         return
     
+    # Validate model directory exists
+    _assert_model_dir(DIR_EXTRACTOR)
+    
     print(f"[INIT] Using model dir: {Path(DIR_EXTRACTOR).resolve()}")
     
-    _tok = AutoTokenizer.from_pretrained(DIR_EXTRACTOR, use_fast=True)
+    _tok = AutoTokenizer.from_pretrained(DIR_EXTRACTOR, use_fast=True, local_files_only=True)
     print(f"[CHK]  Tokenizer path: {_tok.name_or_path}")
     if _tok.pad_token_id is None and _tok.eos_token_id is not None:
         _tok.pad_token = _tok.eos_token
@@ -493,10 +518,15 @@ def _ensure_loaded():
             DIR_EXTRACTOR,
             device_map="cuda:0",          # force onto GPU
             quantization_config=bnb_config,
-            attn_implementation="sdpa",
+            attn_implementation="eager",  # Use eager attention for Windows compatibility
             torch_dtype=torch.float16,
             use_cache=True,  # Enable KV cache for faster inference
+            local_files_only=True
         )
+        
+        # Disable FlashAttention 2 on Windows
+        if hasattr(_mdl.config, "use_flash_attention_2"):
+            _mdl.config.use_flash_attention_2 = False
     else:
         # Fallback to CPU with offloading
         max_mem = {"cpu": "28GiB"}
@@ -509,8 +539,13 @@ def _ensure_loaded():
             max_memory=max_mem,
             offload_state_dict=True,
             offload_folder="offload",
-            attn_implementation="sdpa",
+            attn_implementation="eager",  # Use eager attention for Windows compatibility
+            local_files_only=True
         )
+        
+        # Disable FlashAttention 2 on Windows
+        if hasattr(_mdl.config, "use_flash_attention_2"):
+            _mdl.config.use_flash_attention_2 = False
     
     print(f"[CHK]  Model name_or_path: {getattr(_mdl.config, '_name_or_path', 'unknown')}")
     print(f"[CHK]  4-bit loaded: {getattr(_mdl, 'is_loaded_in_4bit', False)}")
@@ -867,8 +902,7 @@ Case Narrative:
 
 JSON:"""
 
-    gen = _generate_json_strict(prompt, max_new_tokens=96)  # Minimal schema needs fewer tokens
-    
+    gen = _generate_json_strict(prompt, max_new_tokens=96)  
     # 3) Parse LLM JSON
     m = re.search(r'\{.*\}', gen, flags=re.S)
     if not m:  # try to repair quotes/trailing commas

@@ -43,15 +43,15 @@ import traceback
 # These flags control the behavior of the Guardian analysis pipeline,
 # allowing for different operational modes based on project phase and requirements.
 
-# -------- MINIMAL MODE SWITCHES --------
+# -------- LLM PROCESSING SWITCHES --------
 # Core phase control - determines whether to use LLM processing or deterministic methods
-PHASE_MINIMAL = True       
+PHASE_MINIMAL = False      
 
 # Individual component switches for fine-grained control
-USE_SUMMARIZER = False     # bullet summary not needed for EDA/KDE
-USE_LABELER   = False     # movement/risk not needed for EDA/KDE
-USE_LLM_EXTRACTOR = False  # rely on structured synthetic JSON + gazetteer
-WRITE_VERBOSE_NARRATIVE = False  # control narrative verbosity level
+USE_SUMMARIZER = True      # enable bullet point summaries for richer analysis
+USE_LABELER   = True      # enable movement/risk assessment for case analysis
+USE_LLM_EXTRACTOR = True   # enable LLM-based entity extraction for enhanced data
+WRITE_VERBOSE_NARRATIVE = True  # enable verbose narrative generation
 
 # =============================================================================
 # CONDITIONAL IMPORTS AND MODULE INITIALIZATION
@@ -72,6 +72,12 @@ if not PHASE_MINIMAL:
     from guardian_llm.summarizer import release as release_sum  # Model cleanup
     from guardian_llm.extractor import release as release_ext   # Model cleanup
     from guardian_llm.weak_labeler import release as release_lbl  # Model cleanup
+    
+    
+    try:
+        from guardian_llm.extractor import batch_extract_json
+    except ImportError:
+        batch_extract_json = None
 else:
     # Minimal mode - use no-op stubs to avoid LLM dependencies
     summarize = None
@@ -347,7 +353,7 @@ def _load_gazetteer_unified(path="va_gazetteer.json"):
     return lut
 
 # Global gazetteer lookup table - initialized once for performance
-_GAZ = _load_gazetteer_unified()  # <<— use ONLY this
+_GAZ = _load_gazetteer_unified()  
 
 def _geocode_from_gaz(city: str | None, county: str | None):
     """
@@ -486,7 +492,7 @@ def to_min_record(case, gaz_lut):
     county = _norm_county(sp.get("last_seen_county"))
     state  = "VA"  # keep canonical
 
-    # NEW: if county is missing but city is an independent city, use city as county
+    # if county is missing but city is an independent city, use city as county
     if not county and city in _INDEP_CITIES:
         county = city
 
@@ -701,13 +707,13 @@ def build_clean_narrative(case: dict) -> dict:
     import re
     highways = re.findall(r'\b(I-\d{1,3}|US-\d{1,3}|VA-\d{1,3})\b', cues_text)[:2]
 
-    # First witness details (feeds short summary)
+    # First witness details 
     w0 = witnesses[0] if witnesses else {}
     w_clothing = w0.get("clothing")
     w_vehicle  = w0.get("vehicle")
     w_behavior = w0.get("behavior")
 
-    # One-line short summary (stable, UI-friendly)
+    # One-line short summary 
     short_bits = [f"{name} ({gender_str}{(',' if age is None else f', {age}y')})",
                   f"last seen {city}, {state}"]
     if last_seen_local: short_bits.append(f"@ {last_seen_local}")
@@ -1002,7 +1008,7 @@ def build_narrative(case: dict) -> dict:
     if len(short) > 220:
         short = short[:217] + "..."
 
-    # Markdown narrative (sectioned & de-duplicated)
+    # Markdown narrative 
     lines = []
     lines += [f"### Case {cid}", SECTION]
     lines += [f"**Subject**: {name} — {age} years old, {gender_str}",
@@ -1118,7 +1124,7 @@ def backfill_entities(entities: dict, case: dict) -> dict:
         if corridors:
             out["search_corridors"] = corridors[:5]  # Limit to first 5
 
-    # Risk factors (enhanced with more data sources)
+    # Risk factors 
     rf = set(out.get("risk_factors") or [])
     fulltext = " ".join([
         n.get("incident_summary",""), 
@@ -1225,7 +1231,7 @@ def build_narratives(case: dict) -> tuple[str, str]:
         if vehicle:  parts.append(f"Vehicle: {vehicle}")
         if behavior: parts.append(f"Behavior: {behavior}")
 
-    # Final rich string for extractor + labeler (increased limit)
+    # Final rich string for extractor + labeler 
     ext_text = "\n".join(parts)
     if len(ext_text) > 2000:  # Increased from 1600
         ext_text = ext_text[:2000] + "..."
@@ -1258,13 +1264,13 @@ def build_narratives(case: dict) -> tuple[str, str]:
             sum_parts.append(f"Witness: {'; '.join(witness_parts)}")
     
     sum_text = "\n".join(sum_parts)
-    if len(sum_text) > 800:  # Increased from 600
+    if len(sum_text) > 800:  
         sum_text = sum_text[:800] + "..."
 
     return sum_text, ext_text
 
 # Speed optimization flags
-DO_SUMMARY = True  # summaries are needed for UI and analysis
+DO_SUMMARY = True  # summaries needed for UI and analysis
 
 def run_llm_analysis_stage_by_stage(cases: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
@@ -1363,10 +1369,97 @@ def run_llm_analysis_stage_by_stage(cases: List[Dict[str, Any]]) -> List[Dict[st
               f"loc={m['location']['city']}, {m['location']['county']}, {m['location']['state']} "
               f"lat/lon={m['lat']},{m['lon']} date_reported={bool(m['date_reported'])}")
     
-    # 4. Skip weak labeler entirely 
-    print(f"\n4. Skipping Weak Labeler ")
-    lbl_results = {cid: {"data": {"movement": "Unknown", "risk": "Unknown"}, "processing_time": 0.0}
-                   for cid, *_ in trimmed}
+    # LLM JSON extraction (Qwen) in batch — fills richer entities
+    print(f"\n3b. Running LLM JSON extractor (Qwen2.5-3B-Instruct) on all cases...")
+    llm_ext_results = {}
+    try:
+        # Prefer batch if available; else fall back to per-item
+        texts_for_ext = [ext_text for (_cid, _sum, ext_text, _short) in trimmed]
+
+        # Build per-case hints 
+        hints_list = [make_hints(c) for c in cases]
+
+        start_ex = time.time()
+        if batch_extract_json:
+            extracted = batch_extract_json(texts_for_ext, hints_list=hints_list)
+        else:
+            extracted = []
+            for t, h in zip(texts_for_ext, hints_list):
+                try:
+                    extracted.append(extract_json(t, hints=h))
+                except Exception:
+                    extracted.append({})
+
+        # Backfill with deterministic extras and count fields
+        for (cid, _sum, _ext_t, _short), case, data in zip(trimmed, cases, extracted):
+            merged = backfill_entities(data or {}, case)
+            field_count = sum(1 for v in merged.values() if v not in (None, "", [], {}))
+            llm_ext_results[cid] = {
+                "data": merged,
+                "processing_time": (time.time() - start_ex) / max(1, len(extracted)),
+                "field_count": field_count
+            }
+        # Release extractor model memory
+        release_ext()
+        print(f"   Extracted entities for {len(llm_ext_results)} cases")
+    except Exception as e:
+        print(f"   LLM extractor failed: {e}")
+        # Fall back: wrap the minimal entities already built
+        for cid, payload in ext_results.items():
+            llm_ext_results[cid] = payload
+
+    # 4. Run weak labeler in batch mode
+    print(f"\n4. Running Weak Labeler (Qwen2.5-3B-Instruct) in batch mode...")
+    try:
+        from guardian_llm.weak_labeler import load_weak_labeler, weak_label_batch
+        
+        # Load configuration
+        try:
+            with open("guardian.config.json", "r") as f:
+                config = json.load(f)
+            wl_model_id = config["models"]["weak_labeler"]
+            device_map = config.get("inference", {}).get("device_map", "auto")
+        except:
+            wl_model_id = "C:/Users/N0Cir/CS698/Guardian/models/Qwen2.5-3B-Instruct"
+            device_map = "auto"
+        
+        # Load the weak labeler model once
+        wl_pipe = load_weak_labeler(wl_model_id, device_map=device_map)
+        
+        # Prepare texts for labeling (use summary text preferred, fallback to narrative)
+        case_ids = []
+        texts_for_lbl = []
+        for case_id, summary_text, ext_text, short_fallback in trimmed:
+            case_ids.append(case_id)
+            txt = (summary_text or short_fallback or ext_text or "").strip()
+            texts_for_lbl.append(txt)
+        
+        # Batch size from config  (defaults to 16)
+        bs = config.get("batching", {}).get("weak_labeler_bs", 16)
+        
+        # Run labeling in batches and collect results
+        lbl_results = {}
+        for i in range(0, len(texts_for_lbl), bs):
+            chunk_ids = case_ids[i:i+bs]
+            chunk_txt = texts_for_lbl[i:i+bs]
+            labels = weak_label_batch(wl_pipe, chunk_txt)
+            for cid, lab in zip(chunk_ids, labels):
+                lbl_results[cid] = {
+                    "data": {
+                        "movement": lab["movement"], 
+                        "risk": lab["risk"]
+                    }, 
+                    "processing_time": lab.get("time", 0.0)
+                }
+            print(f"   Processed batch {i//bs + 1}: {len(chunk_ids)} cases")
+        
+        print(f"   Completed weak labeling for {len(lbl_results)} cases")
+        
+    except Exception as e:
+        print(f"   Weak Labeler failed: {e}")
+        # Fallback to default values
+        lbl_results = {cid: {"data": {"movement": "Unknown", "risk": "Unknown"}, "processing_time": 0.0}
+                       for cid, *_ in trimmed}
     
     # 5. Assemble final results
     print(f"\n5. Assembling final results...")
@@ -1377,7 +1470,7 @@ def run_llm_analysis_stage_by_stage(cases: List[Dict[str, Any]]) -> List[Dict[st
             "narrative_short": short_fallback,   # always present
             "llm_results": {
                 "summary": sum_results.get(case_id, {"error": "Not processed"}),
-                "entities": ext_results.get(case_id, {"error": "Not processed"}),
+                "entities": llm_ext_results.get(case_id, {"error": "Not processed"}),
                 "labels": lbl_results.get(case_id, {"error": "Not processed"})
             }
         }
@@ -1600,10 +1693,10 @@ def print_summary(all_results: List[Dict[str, Any]]):
     
     # Fix movement and risk counting
     valid_moves = {"Stationary","Local","Regional","Interstate","International","Unknown"}
-    valid_risks = {"Low","Medium","High","Critical"}
+    valid_risks = {"Low","Medium","High","Critical","Unknown"}
     
-    successful_movements = sum(1 for r in all_results if "labels" in r["llm_results"] and "error" not in r["llm_results"]["labels"] and r["llm_results"]["labels"].get("data", {}).get("movement") in valid_moves)
-    successful_risks = sum(1 for r in all_results if "labels" in r["llm_results"] and "error" not in r["llm_results"]["labels"] and r["llm_results"]["labels"].get("data", {}).get("risk") in valid_risks)
+    successful_movements = sum(1 for r in all_results if "labels" in r["llm_results"] and "error" not in r["llm_results"]["labels"] and str(r["llm_results"]["labels"].get("data", {}).get("movement", "")) in valid_moves)
+    successful_risks = sum(1 for r in all_results if "labels" in r["llm_results"] and "error" not in r["llm_results"]["labels"] and str(r["llm_results"]["labels"].get("data", {}).get("risk", "")) in valid_risks)
     
     print(f"Successful summaries: {successful_summaries}/{len(all_results)}")
     print(f"Successful entity extractions: {successful_entities}/{len(all_results)}")
@@ -1617,8 +1710,8 @@ def print_summary(all_results: List[Dict[str, Any]]):
     for result in all_results:
         if "labels" in result["llm_results"] and "error" not in result["llm_results"]["labels"]:
             labels = result["llm_results"]["labels"].get("data", {})
-            movement = labels.get("movement")
-            risk = labels.get("risk")
+            movement = str(labels.get("movement", ""))
+            risk = str(labels.get("risk", ""))
             
             if movement in valid_moves:
                 movements[movement] = movements.get(movement, 0) + 1

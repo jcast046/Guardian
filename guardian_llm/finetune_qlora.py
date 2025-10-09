@@ -31,7 +31,10 @@ from transformers import (
 )
 from peft import LoraConfig, get_peft_model, TaskType
 from datasets import Dataset
-from .prompts import FINE_TUNE_SUMMARY_PROMPT, FINE_TUNE_EXTRACTION_PROMPT, FINE_TUNE_LABELING_PROMPT
+try:
+    from guardian_llm.prompts import FINE_TUNE_SUMMARY_PROMPT, FINE_TUNE_EXTRACTION_PROMPT, FINE_TUNE_LABELING_PROMPT
+except ImportError:
+    from prompts import FINE_TUNE_SUMMARY_PROMPT, FINE_TUNE_EXTRACTION_PROMPT, FINE_TUNE_LABELING_PROMPT
 
 class GuardianFineTuner:
     """
