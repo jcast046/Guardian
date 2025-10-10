@@ -90,11 +90,11 @@ if _real_label_case is not None:
         }
         
         # Extract plausibility score from risk level
-        plausibility = risk_to_plausibility.get(real_result.get("risk", "Medium"), 0.5)
+        plausibility = risk_to_plausibility.get(real_result.get("risk", "Unknown"), 0.5)
         
         return {
             "plausibility": plausibility,
-            "rationale": f"Real LLM analysis: {real_result.get('movement', 'Unknown movement')} pattern with {real_result.get('risk', 'Medium')} risk level.",
+            "rationale": f"Real LLM analysis: {real_result.get('movement', 'Unknown movement')} pattern with {real_result.get('risk', 'Unknown')} risk level.",
             "__labeler_source__": "real"
         }
 

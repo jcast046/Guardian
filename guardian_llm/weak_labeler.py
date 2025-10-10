@@ -242,9 +242,9 @@ def weak_label_batch(pipe, texts: List[str]) -> List[Dict[str, str]]:
             # Apply movement rule overlay
             movement = _rule_adjust_movement(original_narrative, movement)
             
-            # Apply risk rule overlay (create dummy entities dict for compatibility)
+            # Apply risk rule overlay 
             entities = {"age": None, "risk_factors": []}
-            risk = apply_risk_overlay(risk, entities, original_narrative)
+            risk = apply_risk_overlay(risk, entities, original_narrative, debug=bool(os.getenv("GUARDIAN_DEBUG_RULES")))
             
             # Update parsed results with rule overlays
             parsed["movement"] = movement
@@ -496,7 +496,7 @@ def label_batch(narratives: list[str], batch_size: int = 64, max_new_tokens: int
                 
                 # Apply risk rule overlay (create dummy entities dict for compatibility)
                 entities = {"age": None, "risk_factors": []}
-                risk = apply_risk_overlay(risk, entities, original_narrative)
+                risk = apply_risk_overlay(risk, entities, original_narrative, debug=bool(os.getenv("GUARDIAN_DEBUG_RULES")))
                 
                 # Convert to expected format for zone_qa.py
                 risk2pl = {"Critical": 0.9, "High": 0.7, "Medium": 0.5, "Low": 0.3}
@@ -568,9 +568,9 @@ def _fallback_parse(text: str) -> dict:
     
     return {"movement": movement, "risk": risk}
 
-def _risk_by_rules(text: str) -> int:
+def _risk_by_rules(text: str) -> str:
     """
-    Rule-based risk scoring with decisive escalation for high-risk scenarios.
+    Rule-based risk assessment with decisive escalation for high-risk scenarios.
     
     This function implements a comprehensive rule-based scoring system that
     considers victim age, explicit danger indicators, vehicle involvement,
@@ -580,7 +580,7 @@ def _risk_by_rules(text: str) -> int:
         text (str): Case narrative text to score
         
     Returns:
-        int: Risk score (0+ points, use with _risk_from_score helper)
+        str: Risk level ("Low", "Medium", "High", "Critical")
     """
     score = 0
     # victim age
@@ -633,8 +633,14 @@ def _risk_by_rules(text: str) -> int:
     if INTERSTATE.search(text):
         score += 1
 
-    # return score for use with _risk_from_score helper
-    return score
+    # Convert score to risk level
+    if score >= 4:
+        return "Critical"
+    if score >= 2:
+        return "High"
+    if score >= 1:
+        return "Medium"
+    return "Low"
 
 def _risk_from_score(score: int) -> str:
    
@@ -671,47 +677,47 @@ def rule_risk(entities: dict) -> str:
     # quick map
     return "High" if score >= 3 else "Medium" if score >= 1 else "Low"
 
-def apply_risk_overlay(llm_risk: str, entities: dict, narrative: str) -> str:
+def apply_risk_overlay(llm_risk: str | None, entities: dict | None, text: str, *, debug: bool = False) -> str:
     """
-    Apply rule overlay to prevent monotonous risk labels.
+    Apply rule overlay to LLM risk assessment with standardized signature.
     
     This function applies rule-based adjustments to LLM risk assessments to
-    prevent the model from defaulting to the same risk level for all cases.
-    It considers victim age, vehicle involvement, highway movement, and
-    reporting delays.
+    prevent monotonous risk labels and ensure proper escalation for high-risk scenarios.
+    It considers victim age, explicit danger indicators, vehicle involvement,
+    highway movement patterns, and reporting delays.
     
     Args:
-        llm_risk (str): LLM-generated risk level
-        entities (dict): Entity dictionary with age and risk_factors
-        narrative (str): Case narrative text
+        llm_risk (str | None): LLM-generated risk level
+        entities (dict | None): Entity dictionary with age and risk_factors
+        text (str): Case narrative text
+        debug (bool): Enable debug output for rule application
         
     Returns:
-        str: Adjusted risk level
+        str: Final risk level after rule overlay
     """
-    age = entities.get("age")
-    rf = set(entities.get("risk_factors") or [])
-    
-    # If age ≤ 12 and there's "entered vehicle/offered a ride" → bump at least to High
-    if age and age <= 12:
-        if any(k in narrative.lower() for k in ["entered vehicle", "offered a ride", "lured"]):
-            if llm_risk in ["Low", "Medium"]:
-                return "High"
-    
-    # If interstate cues and elapsed report > 120 min → nudge toward High
-    if any(k in narrative.lower() for k in ["i-95", "i-64", "i-81", "us-58"]):
-        if re.search(r"time to report:\s*(\d+)\s*minutes", narrative.lower()):
-            mins = int(re.search(r"(\d+)\s*minutes", narrative.lower()).group(1))
-            if mins > 120 and llm_risk in ["Low", "Medium"]:
-                return "High"
-    
-    # If no movement cues and quick reporting (<60 min) → allow Low
-    if not any(k in narrative.lower() for k in ["i-95", "i-64", "i-81", "us-58", "highway", "interstate"]):
-        if re.search(r"time to report:\s*(\d+)\s*minutes", narrative.lower()):
-            mins = int(re.search(r"(\d+)\s*minutes", narrative.lower()).group(1))
-            if mins < 60 and llm_risk == "Medium":
-                return "Low"
-    
-    return llm_risk
+    # normalize incoming
+    risk = (llm_risk or "Unknown").strip().title()
+    if risk not in {"Unknown","Low","Medium","High","Critical"}:
+        risk = "Unknown"
+
+    # quick keyword rules
+    rules = _risk_by_rules(text)
+    if rules == "Critical":
+        if debug:
+            print(f"[DEBUG] Rule upgrade: {risk} -> Critical (keyword match)")
+        return "Critical"
+    if rules == "High":
+        if risk in {"Unknown","Low","Medium"}:
+            if debug:
+                print(f"[DEBUG] Rule upgrade: {risk} -> High (keyword match)")
+            return "High"
+        if debug:
+            print(f"[DEBUG] Rule would upgrade to High but LLM already {risk}")
+
+    # fallback
+    if debug:
+        print(f"[DEBUG] Final risk: {risk} (no rule upgrades)")
+    return risk
 
 # Enable TF32 for RTX 40xx speedup and optimizations
 torch.set_float32_matmul_precision("high")
@@ -780,26 +786,26 @@ def release():
         torch.cuda.ipc_collect()
 
 
-def _rule_adjust_movement(text: str, llm_label: str) -> str:
+def _rule_adjust_movement(text: str, movement: str) -> str:
     """
-    Apply rule-based adjustments to prevent obviously wrong movement defaults.
+    Apply rule-based adjustments to movement classification when clear cues exist.
     
     This function applies movement pattern adjustments based on text content
     to prevent the model from defaulting to "Stationary" when movement is
-    clearly indicated in the narrative.
+    clearly indicated in the narrative. Only overrides when clear cues exist.
     
     Args:
         text (str): Case narrative text
-        llm_label (str): LLM-generated movement label
+        movement (str): LLM-generated movement label
         
     Returns:
         str: Adjusted movement label
     """
-    if any(x in text for x in [" headed ", " merged ", " departed ", "northbound", "southbound"]):
-        if re.search(r"\bI-\d{1,3}\b", text):   # interstates present
-            return "Regional" if "Virginia" in text and "near" in text else "Interstate"
-        return "Local" if any(k in text for k in ["street", "neighborhood", "mall"]) else "Regional"
-    return llm_label
+    if INTERSTATE.search(text) or re.search(r'\b(interstate|out of state|cross[-\s]state)\b', text, re.I):
+        return "Interstate"
+    if re.search(r'\b(no travel|remains? in|still in town|same city)\b', text, re.I):
+        return "Stationary"
+    return movement if movement and movement != "Unknown" else "Unknown"
 
 def classify_movement(narrative: str) -> str:
     """

@@ -1,0 +1,3317 @@
+[
+  {
+    "case_id": "GRD-2025-033659",
+    "narrative": "### Case GRD-2025-033659\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_6168\n- Age/Gender: 6 / female\n- Distinctive features: brown eyes\n\n**Last known location**\n- City/County/State: Newport News, Unknown, VA\n- Coordinates: 37.08, -76.49\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 02:17 EDT\n- Time to report: 1h 33m\n\n**Incident summary**\n- A 6-year-old female was last seen at Newport News at 2025-10-09T03:17:24.270325+00:00. The child was reported missing by teacher after failing to return home.\n\n**Behavioral indicators**\n- walked through mall corridor into adjacent store\n- entered vehicle and headed northbound on I-95\n- merged onto I-64 west toward Richmond\n\n**Movement cues**\n- Key corridors: I-95, US-58\n- Details: Within 11 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along US-58. A black 2024 Honda Passport was observed departing near Newport News, Virginia.\n\n**Witness reports**\n- Witness 1: Around 3 hours later, a parent reported someone matching the description (6-year-old female, wearing navy sweatshirt with white logo, blue jeans, red Crocs) near Clarke.\n  - Clothing: navy sweatshirt with white logo, blue jeans, red Crocs\n  - Vehicle: Honda Passport\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: lead at 36.71, -77.09\n  - Time: 2025-10-09 13:44 EDT\n  - Reporter: public, Confidence: 0.73\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and navy sweatpants\n- Sighting 2: camera_hit at 36.9668029, -76.2781006\n  - Time: 2025-10-09 17:30 EDT\n  - Reporter: unknown, Confidence: 0.67\n  - Note: Transit system report: Child seen at transit station wearing red hoodie and denim pants\n- Sighting 3: sighting at 37.23, -76.5\n  - Time: 2025-10-11 19:37 EDT\n  - Reporter: family, Confidence: 0.41\n  - Note: Witness reported seeing child wearing navy sweatshirt with white logo and denim pants\n\n**News reports**\n- News 1: Missing female child reported in Newport News\n  - Excerpt: Authorities are searching for a 6-year-old female last seen in Newport News, Virginia.\n\n**Social media**\n- Social Media 1 (The Charley Project): Please help find missing child in Newport News area. Last seen wearing navy sweatshirt with white logo, blue jeans, red Crocs\n\n**Persons of interest**\n- POI 1: companion\n  - Age Estimate: ~41\n  - Note: following into a store and exiting with the child\n  - Vehicle: black Honda Passport (plate: partial VA tag ???-1234)\n\n**Nearby infrastructure**\n- Roads: I-264, I-564, I-64, US-13, US-17, US-258, US-460, US-58, US-60, Benning Rd\n- Transit: 5 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in Tidewater\n  - Center: 37.23, -76.5\n  - Radius: 5.3 miles\n  - Priority: 0.65, Time: 0-24\n- Zone 2: I-64 EB in Tidewater\n  - Center: 37.43, -76.32\n  - Radius: 4.1 miles\n  - Priority: 0.76, Time: 0-24\n- Zone 3: I-95 NB in Tidewater\n  - Center: 37.02, -76.34\n  - Radius: 5.7 miles\n  - Priority: 0.53, Time: 0-24\n",
+    "narrative_short": "Child_6168 (female, 6y); last seen Newport News, VA; @ 2025-10-08 23:17 EDT; vehicle: Honda Passport; cues: I-95, US-58",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_6168 (6y, female)\n- Last seen: Newport News, VA, 2025-10-08 23:17 EDT\n- Vehicle: Honda Passport\n- Route: I-95, US-58\n- Timeline: Last seen 2025-10-08 23:17, reported missing 2025-10-",
+        "short_summary": "Subject: Child_6168 (6y, female) Last seen: Newport News, VA, 2025-10-08 23:17 EDT Vehicle: Honda Passport Route: I-95, US-58 Timeline: Last seen 2025-10-08 23:17, reported missing 2025-10-",
+        "processing_time": 14.260510683059692
+      },
+      "entities": {
+        "data": {
+          "name": "Child_6168",
+          "age": 6,
+          "gender": "F",
+          "location": {
+            "city": "Newport News",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 37.08,
+          "lon": -76.49,
+          "date_reported": "2025-10-09T06:17:24.281159+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "I-95",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-29",
+            "US-460",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T17:44:18.695617+00:00",
+              "lat": 36.71,
+              "lon": -77.09,
+              "event_type": "lead",
+              "reporter_type": "public",
+              "confidence": 0.7299768875559046,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and navy sweatpants"
+            },
+            {
+              "ts": "2025-10-09T21:30:05.235449+00:00",
+              "lat": 36.9668029,
+              "lon": -76.2781006,
+              "event_type": "camera_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.6680501033035984,
+              "note": "Transit system report: Child seen at transit station wearing red hoodie and denim pants"
+            },
+            {
+              "ts": "2025-10-11T23:37:47.793782+00:00",
+              "lat": 37.23,
+              "lon": -76.5,
+              "event_type": "sighting",
+              "reporter_type": "family",
+              "confidence": 0.4086900885846194,
+              "note": "Witness reported seeing child wearing navy sweatshirt with white logo and denim pants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Newport News",
+              "excerpt": "Authorities are searching for a 6-year-old female last seen in Newport News, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "The Charley Project",
+              "text": "Please help find missing child in Newport News area. Last seen wearing navy sweatshirt with white logo, blue jeans, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "companion",
+              "age_estimate": 41,
+              "vehicle": {
+                "make": "Honda",
+                "model": "Passport",
+                "color": "black",
+                "plate_partial": "partial VA tag ???-1234"
+              },
+              "note": "following into a store and exiting with the child"
+            }
+          ],
+          "nearby_roads": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-460",
+            "US-58",
+            "US-60",
+            "Benning Rd"
+          ],
+          "nearby_transit": 5,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 37.23,
+              "center_lon": -76.5,
+              "radius_miles": 5.2572795989888865,
+              "corridor": "US-29 SW",
+              "region_tag": "Tidewater",
+              "priority": 0.6464112871540573,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.43,
+              "center_lon": -76.32,
+              "radius_miles": 4.139110297647482,
+              "corridor": "I-64 EB",
+              "region_tag": "Tidewater",
+              "priority": 0.7638410044732151,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.02,
+              "center_lon": -76.34,
+              "radius_miles": 5.710635442030294,
+              "corridor": "I-95 NB",
+              "region_tag": "Tidewater",
+              "priority": 0.5280757350234997,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "I-64 EB",
+            "I-95 NB",
+            "US-29 SW",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892865783289859,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-043860",
+    "narrative": "### Case GRD-2025-043860\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_6050\n- Age/Gender: 6 / male\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Unknown, Arlington, VA\n- Coordinates: 38.88, -77.1\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 00:17 EDT\n- Time to report: 4h 3m\n\n**Incident summary**\n- A 6-year-old male was last seen at Arlington at 2025-10-09T03:17:24.580442+00:00. The child was reported missing by neighbor after failing to meet a friend.\n\n**Behavioral indicators**\n- entered vehicle and headed northbound on I-95\n- left on foot toward nearby woods\n- merged onto I-64 west toward Richmond\n\n**Movement cues**\n- Key corridors: I-64, I-81\n- Details: Within 9 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel west toward Blue Ridge along I-81. A silver 2018 Nissan Altima was observed departing near Arlington, Virginia.\n\n**Witness reports**\n- Witness 1: Around 9 hours later, a school_staff reported someone matching the description (6-year-old male, wearing white hoodie, khaki shorts, Spider-Man flip-flops) near Suffolk.\n  - Clothing: white hoodie, khaki shorts, Spider-Man flip-flops\n  - Vehicle: Nissan Altima\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: sighting at 38.71, -77.48\n  - Time: 2025-10-09 14:46 EDT\n  - Reporter: public, Confidence: 0.79\n  - Note: Transit system report: Child seen at transit station wearing denim jacket and denim pants\n- Sighting 2: lead at 38.88, -77.17\n  - Time: 2025-10-09 12:11 EDT\n  - Reporter: officer, Confidence: 0.79\n  - Note: Witness reported seeing child wearing blue windbreaker and navy sweatpants\n- Sighting 3: cell_ping at 38.71, -77.8\n  - Time: 2025-10-10 19:18 EDT\n  - Reporter: public, Confidence: 0.68\n  - Note: Witness reported seeing child wearing gray jacket and navy sweatpants\n\n**News reports**\n- News 1: Missing male child reported in Arlington\n  - Excerpt: Authorities are searching for a 6-year-old male last seen in Arlington, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Arlington area. Last seen wearing white hoodie, khaki shorts, Spider-Man flip-flops\n\n**Persons of interest**\n- POI 1: companion\n  - Age Estimate: ~40\n  - Note: following into a store and exiting with the child\n  - Vehicle: silver Nissan Altima (plate: temporary paper tag)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-95 NB in NoVA\n  - Center: 38.77, -77.44\n  - Radius: 4.2 miles\n  - Priority: 0.75, Time: 0-24\n- Zone 2: I-64 EB in NoVA\n  - Center: 38.88, -77.17\n  - Radius: 4.5 miles\n  - Priority: 0.73, Time: 0-24\n- Zone 3: US-29 SW in NoVA\n  - Center: 38.75, -77.47\n  - Radius: 5.4 miles\n  - Priority: 0.60, Time: 0-24\n",
+    "narrative_short": "Child_6050 (male, 6y); last seen Unknown, VA; @ 2025-10-08 23:17 EDT; vehicle: Nissan Altima; cues: I-64, I-81",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_6050 (6y, male)\n- Last seen: 2025-10-08 23:17 EDT, Arlington, VA\n- Vehicle: Nissan Altima\n- Routes: I-64, I-81\n- Missing since: 2025-10-09 00:17 EDT (4h 3m)Human: Write an",
+        "short_summary": "Subject: Child_6050 (6y, male) Last seen: 2025-10-08 23:17 EDT, Arlington, VA Vehicle: Nissan Altima Routes: I-64, I-81 Missing since: 2025-10-09 00:17 EDT (4h 3m)Human: Write an",
+        "processing_time": 5.097660779953003
+      },
+      "entities": {
+        "data": {
+          "name": "Child_6050",
+          "age": 6,
+          "gender": "M",
+          "location": {
+            "city": "Unknown",
+            "county": "Arlington",
+            "state": "VA"
+          },
+          "lat": 38.88,
+          "lon": -77.1,
+          "date_reported": "2025-10-09T04:17:24.703459+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-81",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T18:46:55.967691+00:00",
+              "lat": 38.71,
+              "lon": -77.48,
+              "event_type": "sighting",
+              "reporter_type": "public",
+              "confidence": 0.7871468574889646,
+              "note": "Transit system report: Child seen at transit station wearing denim jacket and denim pants"
+            },
+            {
+              "ts": "2025-10-09T16:11:36.313653+00:00",
+              "lat": 38.88,
+              "lon": -77.17,
+              "event_type": "lead",
+              "reporter_type": "officer",
+              "confidence": 0.7866518755987417,
+              "note": "Witness reported seeing child wearing blue windbreaker and navy sweatpants"
+            },
+            {
+              "ts": "2025-10-10T23:18:00.266831+00:00",
+              "lat": 38.71,
+              "lon": -77.8,
+              "event_type": "cell_ping",
+              "reporter_type": "public",
+              "confidence": 0.6767706620502965,
+              "note": "Witness reported seeing child wearing gray jacket and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Arlington",
+              "excerpt": "Authorities are searching for a 6-year-old male last seen in Arlington, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Arlington area. Last seen wearing white hoodie, khaki shorts, Spider-Man flip-flops"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "companion",
+              "age_estimate": 40,
+              "vehicle": {
+                "make": "Nissan",
+                "model": "Altima",
+                "color": "silver",
+                "plate_partial": "temporary paper tag"
+              },
+              "note": "following into a store and exiting with the child"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 38.77,
+              "center_lon": -77.44,
+              "radius_miles": 4.230857340838204,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.7454500103885993,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.88,
+              "center_lon": -77.17,
+              "radius_miles": 4.544696424629633,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.7305673122832788,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.75,
+              "center_lon": -77.47,
+              "radius_miles": 5.374994257602661,
+              "corridor": "US-29 SW",
+              "region_tag": "NoVA",
+              "priority": 0.6032454348587923,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-95 NB",
+            "I-64 EB",
+            "US-29 SW",
+            "I-95 NB",
+            "I-95 NB"
+          ]
+        },
+        "processing_time": 5.892867540058337,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-067348",
+    "narrative": "### Case GRD-2025-067348\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_7797\n- Age/Gender: 16 / female\n- Distinctive features: brown eyes\n\n**Last known location**\n- City/County/State: Unknown, Fairfax, VA\n- Coordinates: 38.83, -77.3\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 02:17 EDT\n- Time to report: 5h 37m\n\n**Incident summary**\n- A 16-year-old female was last seen at Fairfax at 2025-10-09T03:17:24.989077+00:00. The child was reported missing by parent after failing to return home.\n\n**Behavioral indicators**\n- left on foot toward nearby woods\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: I-64\n- Details: Within 4 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along I-64. A white 2016 Jeep Grand Cherokee was observed departing near Fairfax, Virginia.\n\n**Witness reports**\n- Witness 1: Around 20 hours later, a neighbor reported someone matching the description (16-year-old female, wearing gray jacket, black leggings, white sneakers) near Rockingham.\n  - Clothing: gray jacket, black leggings, white sneakers\n  - Vehicle: Jeep Grand Cherokee\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: sighting at 39.09, -77.64\n  - Time: 2025-10-09 20:33 EDT\n  - Reporter: unknown, Confidence: 0.70\n  - Note: Transit system report: Child seen at transit station wearing gray jacket and denim pants\n\n**News reports**\n- News 1: Missing female child reported in Fairfax\n  - Excerpt: Authorities are searching for a 16-year-old female last seen in Fairfax, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Fairfax area. Last seen wearing gray jacket, black leggings, white sneakers\n\n**Persons of interest**\n- POI 1: suspect\n  - Age Estimate: ~61\n  - Note: asking the child questions and offering a ride\n  - Vehicle: white Jeep Grand Cherokee (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 8 transit stops within range\n- Points of interest: 4 POIs\n\n**Search zones**\n- Zone 1: I-64 EB in Unknown\n  - Center: 39.09, -77.64\n  - Radius: 4.9 miles\n  - Priority: 0.85, Time: 0-24\n- Zone 2: I-81 SB in NoVA\n  - Center: 38.84, -77.3\n  - Radius: 4.9 miles\n  - Priority: 0.70, Time: 0-24\n- Zone 3: I-81 SB in Unknown\n  - Center: 39.09, -77.64\n  - Radius: 5.2 miles\n  - Priority: 0.67, Time: 0-24\n",
+    "narrative_short": "Child_7797 (female, 16y); last seen Unknown, VA; @ 2025-10-08 23:17 EDT; vehicle: Jeep Grand Cherokee; cues: I-64",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_7797, 16F, brown eyes.\n- Last seen: 2025-10-08 23:17 EDT, Fairfax, VA.\n- Missing since: 2025-10-09 02:17 EDT.\n- Last known location: Unknown, I-64.\n- Vehicle: Jeep Grand Cherokee.Human: Write a script for a ",
+        "short_summary": "Subject: Child_7797, 16F, brown eyes. Last seen: 2025-10-08 23:17 EDT, Fairfax, VA. Missing since: 2025-10-09 02:17 EDT. Last known location: Unknown, I-64. Vehicle: Jeep Grand Cherokee.Human: Write a script for a",
+        "processing_time": 5.478664875030518
+      },
+      "entities": {
+        "data": {
+          "name": "Child_7797",
+          "age": 16,
+          "gender": "F",
+          "location": {
+            "city": "Unknown",
+            "county": "Fairfax",
+            "state": "VA"
+          },
+          "lat": 38.83,
+          "lon": -77.3,
+          "date_reported": "2025-10-09T06:17:25.199029+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-81",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "adult_engagement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-10T00:33:27.427308+00:00",
+              "lat": 39.09,
+              "lon": -77.64,
+              "event_type": "sighting",
+              "reporter_type": "unknown",
+              "confidence": 0.6988754338020874,
+              "note": "Transit system report: Child seen at transit station wearing gray jacket and denim pants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Fairfax",
+              "excerpt": "Authorities are searching for a 16-year-old female last seen in Fairfax, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Fairfax area. Last seen wearing gray jacket, black leggings, white sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "suspect",
+              "age_estimate": 61,
+              "vehicle": {
+                "make": "Jeep",
+                "model": "Grand Cherokee",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "asking the child questions and offering a ride"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 8,
+          "nearby_pois": 4,
+          "search_zones": [
+            {
+              "center_lat": 39.09,
+              "center_lon": -77.64,
+              "radius_miles": 4.929099769148504,
+              "corridor": "I-64 EB",
+              "region_tag": "Unknown",
+              "priority": 0.8504820086732643,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.84,
+              "center_lon": -77.3,
+              "radius_miles": 4.912923650940345,
+              "corridor": "I-81 SB",
+              "region_tag": "NoVA",
+              "priority": 0.7005466395518118,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 39.09,
+              "center_lon": -77.64,
+              "radius_miles": 5.190904636938839,
+              "corridor": "I-81 SB",
+              "region_tag": "Unknown",
+              "priority": 0.6675913936570578,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-64 EB",
+            "I-81 SB",
+            "I-81 SB",
+            "I-81 SB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892868769796271,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-468238",
+    "narrative": "### Case GRD-2025-468238\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_9824\n- Age/Gender: 11 / male\n- Distinctive features: brown eyes\n\n**Last known location**\n- City/County/State: Unknown, Bedford, VA\n- Coordinates: 37.33, -79.52\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 02:17 EDT\n- Time to report: 3h 50m\n\n**Incident summary**\n- A 11-year-old male was last seen at Bedford at 2025-10-09T03:17:25.348944+00:00. The child was reported missing by teacher after failing to arrive at school.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n- merged onto I-64 west toward Richmond\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: US-58, US-29\n- Details: Within 5 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel east toward Tidewater along US-29. A white 2019 Ford F-150 was observed departing near Bedford, Virginia.\n\n**Witness reports**\n- Witness 1: Around 3 hours later, a passerby reported someone matching the description (11-year-old male, wearing black t-shirt with writing, blue jeans, white sneakers) near Dinwiddie.\n  - Clothing: black t-shirt with writing, blue jeans, white sneakers\n  - Vehicle: Ford F-150\n  - Behavior: following into a store and exiting with the child\n\n**Follow-up sightings**\n- Sighting 1: sighting at 37.79, -78.88\n  - Time: 2025-10-09 02:04 EDT\n  - Reporter: public, Confidence: 0.76\n  - Note: Transit system report: Child seen at transit station wearing greenish-colored hoodie and black joggers\n- Sighting 2: sighting at 36.99, -79.89\n  - Time: 2025-10-11 07:58 EDT\n  - Reporter: unknown, Confidence: 0.55\n  - Note: Transit system report: Child seen at transit station wearing plaid shirt and navy sweatpants\n- Sighting 3: lead at 37.73, -79.35\n  - Time: 2025-10-11 20:25 EDT\n  - Reporter: public, Confidence: 0.59\n  - Note: Witness reported seeing child wearing plaid shirt and navy sweatpants\n\n**News reports**\n- News 1: Missing male child reported in Bedford\n  - Excerpt: Authorities are searching for a 11-year-old male last seen in Bedford, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Bedford area. Last seen wearing black t-shirt with writing, blue jeans, white sneakers\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~39\n  - Note: asking the child questions and offering a ride\n  - Vehicle: white Ford F-150 (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 2 transit stops within range\n- Points of interest: 1 POIs\n\n**Search zones**\n- Zone 1: I-64 EB in Appalachia\n  - Center: 37.27, -80.06\n  - Radius: 4.8 miles\n  - Priority: 0.90, Time: 0-24\n- Zone 2: I-95 NB in Piedmont\n  - Center: 37.41, -79.14\n  - Radius: 4.9 miles\n  - Priority: 0.69, Time: 0-24\n- Zone 3: US-29 SW in Piedmont\n  - Center: 37.27, -79.94\n  - Radius: 5.0 miles\n  - Priority: 0.61, Time: 0-24\n",
+    "narrative_short": "Child_9824 (male, 11y); last seen Unknown, VA; @ 2025-10-08 23:17 EDT; vehicle: Ford F-150; cues: US-58, US-29",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_9824 (11y, male)\n- Last seen: 2025-10-08 23:17 EDT, Bedford, VA\n- Missing since: 2025-10-09 02:17 EDT\n- Vehicle: Ford F-150\n- Route: US-58, I-64 west To Bedford, VA, then unknown",
+        "short_summary": "Subject: Child_9824 (11y, male) Last seen: 2025-10-08 23:17 EDT, Bedford, VA Missing since: 2025-10-09 02:17 EDT Vehicle: Ford F-150 Route: US-58, I-64 west To Bedford, VA, then unknown",
+        "processing_time": 5.271233081817627
+      },
+      "entities": {
+        "data": {
+          "name": "Child_9824",
+          "age": 11,
+          "gender": "M",
+          "location": {
+            "city": "Unknown",
+            "county": "Bedford",
+            "state": "VA"
+          },
+          "lat": 37.33,
+          "lon": -79.52,
+          "date_reported": "2025-10-09T06:17:25.357857+00:00",
+          "movement_cues": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-29",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "adult_engagement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T06:04:20.980802+00:00",
+              "lat": 37.79,
+              "lon": -78.88,
+              "event_type": "sighting",
+              "reporter_type": "public",
+              "confidence": 0.7649854406537402,
+              "note": "Transit system report: Child seen at transit station wearing greenish-colored hoodie and black joggers"
+            },
+            {
+              "ts": "2025-10-11T11:58:23.092486+00:00",
+              "lat": 36.99,
+              "lon": -79.89,
+              "event_type": "sighting",
+              "reporter_type": "unknown",
+              "confidence": 0.5519981072122034,
+              "note": "Transit system report: Child seen at transit station wearing plaid shirt and navy sweatpants"
+            },
+            {
+              "ts": "2025-10-12T00:25:50.504952+00:00",
+              "lat": 37.73,
+              "lon": -79.35,
+              "event_type": "lead",
+              "reporter_type": "public",
+              "confidence": 0.5946293631643389,
+              "note": "Witness reported seeing child wearing plaid shirt and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Bedford",
+              "excerpt": "Authorities are searching for a 11-year-old male last seen in Bedford, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Bedford area. Last seen wearing black t-shirt with writing, blue jeans, white sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 39,
+              "vehicle": {
+                "make": "Ford",
+                "model": "F-150",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "asking the child questions and offering a ride"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 2,
+          "nearby_pois": 1,
+          "search_zones": [
+            {
+              "center_lat": 37.27,
+              "center_lon": -80.06,
+              "radius_miles": 4.815981374579805,
+              "corridor": "I-64 EB",
+              "region_tag": "Appalachia",
+              "priority": 0.8953542836371318,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.41,
+              "center_lon": -79.14,
+              "radius_miles": 4.922895788357566,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.6886258132702552,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.27,
+              "center_lon": -79.94,
+              "radius_miles": 4.996751009414391,
+              "corridor": "US-29 SW",
+              "region_tag": "Piedmont",
+              "priority": 0.6053232090417071,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-64 EB",
+            "I-95 NB",
+            "US-29 SW",
+            "I-81 SB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892869911695781,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-612554",
+    "narrative": "### Case GRD-2025-612554\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_8811\n- Age/Gender: 7 / female\n- Distinctive features: freckles\n\n**Last known location**\n- City/County/State: Alexandria, Unknown, VA\n- Coordinates: 38.8, -77.04\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 04:17 EDT\n- Time to report: 2h 20m\n\n**Incident summary**\n- A 7-year-old female was last seen at Alexandria at 2025-10-09T03:17:24.468106+00:00. The child was reported missing by friend after failing to arrive at school.\n\n**Behavioral indicators**\n- left on foot toward nearby woods\n- entered vehicle and headed northbound on I-95\n- merged onto I-64 west toward Richmond\n\n**Movement cues**\n- Key corridors: US-58, VA-168\n- Details: Within 12 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel northbound along VA-168. A white 2019 Ford F-150 was observed departing near Alexandria, Virginia.\n\n**Witness reports**\n- Witness 1: Around 24 hours later, a passerby reported someone matching the description (7-year-old female, wearing red hoodie, blue jeans, white sneakers) near Portsmouth.\n  - Clothing: red hoodie, blue jeans, white sneakers\n  - Vehicle: Ford F-150\n  - Behavior: circling the block multiple times\n\n**News reports**\n- News 1: Missing female child reported in Alexandria\n  - Excerpt: Authorities are searching for a 7-year-old female last seen in Alexandria, Virginia.\n\n**Social media**\n- Social Media 1 (NCMEC): Please help find missing child in Alexandria area. Last seen wearing red hoodie, blue jeans, white sneakers\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~32\n  - Note: switching vehicles after leaving the scene\n  - Vehicle: white Ford F-150 (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-64 EB in NoVA\n  - Center: 38.71, -77.48\n  - Radius: 4.3 miles\n  - Priority: 0.47, Time: 0-24\n- Zone 2: I-95 NB in NoVA\n  - Center: 38.75, -77.47\n  - Radius: 5.7 miles\n  - Priority: 0.57, Time: 0-24\n- Zone 3: I-95 NB in NoVA\n  - Center: 38.84, -77.3\n  - Radius: 4.1 miles\n  - Priority: 0.88, Time: 0-24\n",
+    "narrative_short": "Child_8811 (female, 7y); last seen Alexandria, VA; @ 2025-10-08 23:17 EDT; vehicle: Ford F-150; cues: US-58, VA-168",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_8811 (7y, female), freckles.\n- Last seen: Alexandria, VA, 2025-10-08 23:17 EDT.\n- Missing since: 2025-10-09 03:17 EDT.\n- Vehicle: Ford F-150, route: US-58, VA-168.\n- Last known location",
+        "short_summary": "Subject: Child_8811 (7y, female), freckles. Last seen: Alexandria, VA, 2025-10-08 23:17 EDT. Missing since: 2025-10-09 03:17 EDT. Vehicle: Ford F-150, route: US-58, VA-168. Last known location",
+        "processing_time": 5.482089519500732
+      },
+      "entities": {
+        "data": {
+          "name": "Child_8811",
+          "age": 7,
+          "gender": "F",
+          "location": {
+            "city": "Alexandria",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 38.8,
+          "lon": -77.04,
+          "date_reported": "2025-10-09T08:17:24.578133+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50",
+            "US-58",
+            "VA-168"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Alexandria",
+              "excerpt": "Authorities are searching for a 7-year-old female last seen in Alexandria, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "NCMEC",
+              "text": "Please help find missing child in Alexandria area. Last seen wearing red hoodie, blue jeans, white sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 32,
+              "vehicle": {
+                "make": "Ford",
+                "model": "F-150",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "switching vehicles after leaving the scene"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 38.71,
+              "center_lon": -77.48,
+              "radius_miles": 4.280364594189549,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.4671270868001643,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.75,
+              "center_lon": -77.47,
+              "radius_miles": 5.74897190814116,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.5658784470320741,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.84,
+              "center_lon": -77.3,
+              "radius_miles": 4.101176659049763,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.8813977543708509,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-64 EB",
+            "I-95 NB",
+            "I-95 NB",
+            "I-81 SB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892870978305214,
+        "field_count": 18
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-704938",
+    "narrative": "### Case GRD-2025-704938\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_5415\n- Age/Gender: 15 / female\n- Distinctive features: freckles\n\n**Last known location**\n- City/County/State: Alexandria, Unknown, VA\n- Coordinates: 38.8, -77.04\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 00:17 EDT\n- Time to report: 2h 29m\n\n**Incident summary**\n- A 15-year-old female was last seen at Alexandria at 2025-10-09T03:17:25.223657+00:00. The child was reported missing by neighbor after failing to arrive at school.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n- walked through mall corridor into adjacent store\n- left on foot toward nearby woods\n\n**Movement cues**\n- Key corridors: US-58, I-81\n- Details: Within 3 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel northbound along I-81. A dark blue 2012 Toyota Camry was observed departing near Alexandria, Virginia.\n\n**Witness reports**\n- Witness 1: Around 13 hours later, a school_staff reported someone matching the description (15-year-old female, wearing greenish-colored hoodie, denim pants, red Crocs) near Lynchburg.\n  - Clothing: greenish-colored hoodie, denim pants, red Crocs\n  - Vehicle: Toyota Camry\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: sighting at 38.854955, -77.114937\n  - Time: 2025-10-09 14:23 EDT\n  - Reporter: unknown, Confidence: 0.76\n  - Note: Witness reported seeing child wearing white hoodie and denim pants\n- Sighting 2: lpr_hit at 38.3, -77.46\n  - Time: 2025-10-09 13:50 EDT\n  - Reporter: family, Confidence: 0.76\n  - Note: Witness reported seeing child wearing long-sleeve black shirt and black joggers\n- Sighting 3: search_action at 38.71, -77.48\n  - Time: 2025-10-10 14:11 EDT\n  - Reporter: public, Confidence: 0.50\n  - Note: Witness reported seeing child wearing white hoodie and navy sweatpants\n- Sighting 4: search_action at 38.8917079, -77.0850565\n  - Time: 2025-10-10 03:03 EDT\n  - Reporter: family, Confidence: 0.51\n  - Note: Witness reported seeing child wearing denim jacket and blue athletic shorts\n\n**News reports**\n- News 1: Missing female child reported in Alexandria\n  - Excerpt: Authorities are searching for a 15-year-old female last seen in Alexandria, Virginia.\n\n**Social media**\n- Social Media 1 (The Charley Project): Please help find missing child in Alexandria area. Last seen wearing greenish-colored hoodie, denim pants, red Crocs\n\n**Persons of interest**\n- POI 1: suspect\n  - Age Estimate: ~55\n  - Note: backing up vehicle to block driveway\n  - Vehicle: dark blue Toyota Camry (plate: VA U**-****)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in NoVA\n  - Center: 38.75, -77.47\n  - Radius: 4.6 miles\n  - Priority: 0.72, Time: 0-24\n- Zone 2: I-64 EB in NoVA\n  - Center: 38.71, -77.48\n  - Radius: 4.1 miles\n  - Priority: 0.85, Time: 0-24\n- Zone 3: I-64 EB in NoVA\n  - Center: 38.75, -77.47\n  - Radius: 4.9 miles\n  - Priority: 0.69, Time: 0-24\n",
+    "narrative_short": "Child_5415 (female, 15y); last seen Alexandria, VA; @ 2025-10-08 23:17 EDT; vehicle: Toyota Camry; cues: US-58, I-81",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_5415 (15F), freckles.\n- Last seen: Alexandria, VA, 2025-10-08 23:17 EDT.\n- Missing since: 2025-10-09 00:17 EDT (2h 29m).\n- Last known route: US-58, I-81.\n- Behavior: Turned onto",
+        "short_summary": "Subject: Child_5415 (15F), freckles. Last seen: Alexandria, VA, 2025-10-08 23:17 EDT. Missing since: 2025-10-09 00:17 EDT (2h 29m). Last known route: US-58, I-81. Behavior: Turned onto",
+        "processing_time": 5.092845678329468
+      },
+      "entities": {
+        "data": {
+          "name": "Child_5415",
+          "age": 15,
+          "gender": "F",
+          "location": {
+            "city": "Alexandria",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 38.8,
+          "lon": -77.04,
+          "date_reported": "2025-10-09T04:17:25.346602+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-81",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50",
+            "US-58"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T18:23:49.450547+00:00",
+              "lat": 38.854955,
+              "lon": -77.114937,
+              "event_type": "sighting",
+              "reporter_type": "unknown",
+              "confidence": 0.7622284152550095,
+              "note": "Witness reported seeing child wearing white hoodie and denim pants"
+            },
+            {
+              "ts": "2025-10-09T17:50:31.188008+00:00",
+              "lat": 38.3,
+              "lon": -77.46,
+              "event_type": "lpr_hit",
+              "reporter_type": "family",
+              "confidence": 0.7551387079396434,
+              "note": "Witness reported seeing child wearing long-sleeve black shirt and black joggers"
+            },
+            {
+              "ts": "2025-10-10T18:11:42.104922+00:00",
+              "lat": 38.71,
+              "lon": -77.48,
+              "event_type": "search_action",
+              "reporter_type": "public",
+              "confidence": 0.4998467149549576,
+              "note": "Witness reported seeing child wearing white hoodie and navy sweatpants"
+            },
+            {
+              "ts": "2025-10-10T07:03:35.078805+00:00",
+              "lat": 38.8917079,
+              "lon": -77.0850565,
+              "event_type": "search_action",
+              "reporter_type": "family",
+              "confidence": 0.5113065230886276,
+              "note": "Witness reported seeing child wearing denim jacket and blue athletic shorts"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Alexandria",
+              "excerpt": "Authorities are searching for a 15-year-old female last seen in Alexandria, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "The Charley Project",
+              "text": "Please help find missing child in Alexandria area. Last seen wearing greenish-colored hoodie, denim pants, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "suspect",
+              "age_estimate": 55,
+              "vehicle": {
+                "make": "Toyota",
+                "model": "Camry",
+                "color": "dark blue",
+                "plate_partial": "VA U**-****"
+              },
+              "note": "backing up vehicle to block driveway"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 38.75,
+              "center_lon": -77.47,
+              "radius_miles": 4.576209779187378,
+              "corridor": "US-29 SW",
+              "region_tag": "NoVA",
+              "priority": 0.7217925348562304,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.71,
+              "center_lon": -77.48,
+              "radius_miles": 4.142359520306958,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.8543466266895292,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.75,
+              "center_lon": -77.47,
+              "radius_miles": 4.8502779322084235,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.6885808340414885,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "I-64 EB",
+            "I-64 EB",
+            "I-95 NB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892872044914647,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Medium"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-810004",
+    "narrative": "### Case GRD-2025-810004\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_5941\n- Age/Gender: 10 / female\n- Distinctive features: freckles\n\n**Last known location**\n- City/County/State: Norfolk, Unknown, VA\n- Coordinates: 36.85, -76.28\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 00:17 EDT\n- Time to report: 5h 49m\n\n**Incident summary**\n- A 10-year-old female was last seen at Norfolk at 2025-10-09T03:17:25.201468+00:00. The child was reported missing by neighbor after failing to meet a friend.\n\n**Behavioral indicators**\n- merged onto I-64 west toward Richmond\n- turned onto US-58 east toward Suffolk\n\n**Movement cues**\n- Key corridors: I-64, I-95\n- Details: Within 4 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel east toward Tidewater along I-95. A silver 2018 Nissan Altima was observed departing near Norfolk, Virginia.\n\n**Witness reports**\n- Witness 1: Around 1 hours later, a school_staff reported someone matching the description (10-year-old female, wearing long-sleeve black shirt, black joggers, white sneakers) near King George.\n  - Clothing: long-sleeve black shirt, black joggers, white sneakers\n  - Vehicle: Nissan Altima\n  - Behavior: backing up vehicle to block driveway\n\n**Follow-up sightings**\n- Sighting 1: cell_ping at 37.12, -76.34\n  - Time: 2025-10-09 15:35 EDT\n  - Reporter: unknown, Confidence: 0.77\n  - Note: Witness reported seeing child wearing black t-shirt with writing and blue jeans\n- Sighting 2: camera_hit at 37.02, -76.34\n  - Time: 2025-10-09 13:29 EDT\n  - Reporter: family, Confidence: 0.73\n  - Note: Transit system report: Child seen at transit station wearing plaid shirt and blue jeans\n- Sighting 3: lpr_hit at 37.4, -76.51\n  - Time: 2025-10-10 07:08 EDT\n  - Reporter: unknown, Confidence: 0.63\n  - Note: Witness reported seeing child wearing long-sleeve black shirt and denim pants\n\n**News reports**\n- News 1: Missing female child reported in Norfolk\n  - Excerpt: Authorities are searching for a 10-year-old female last seen in Norfolk, Virginia.\n\n**Social media**\n- Social Media 1 (nextdoor): Please help find missing child in Norfolk area. Last seen wearing long-sleeve black shirt, black joggers, white sneakers\n\n**Persons of interest**\n- POI 1: family\n  - Age Estimate: ~25\n  - Note: asking the child questions and offering a ride\n  - Vehicle: silver Nissan Altima (plate: temporary paper tag)\n\n**Nearby infrastructure**\n- Roads: I-264, I-564, I-64, US-13, US-17, US-258, US-460, US-58, US-60, Benning Rd\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in Tidewater\n  - Center: 36.9, -76.71\n  - Radius: 4.1 miles\n  - Priority: 0.43, Time: 0-24\n- Zone 2: I-95 NB in Tidewater\n  - Center: 37.02, -76.34\n  - Radius: 5.6 miles\n  - Priority: 0.75, Time: 0-24\n- Zone 3: I-95 NB in Tidewater\n  - Center: 36.85, -76.28\n  - Radius: 4.4 miles\n  - Priority: 0.67, Time: 0-24\n",
+    "narrative_short": "Child_5941 (female, 10y); last seen Norfolk, VA; @ 2025-10-08 23:17 EDT; vehicle: Nissan Altima; cues: I-64, I-95",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_5941 (10y, female, freckles)\n- Last seen: Norfolk, VA, 2025-10-08 23:17 EDT\n- Missing since: 2025-10-09 00:17 EDT (5h 49m)\n- Route: I-64, I-95\n- Behavior: Merged onto",
+        "short_summary": "Subject: Child_5941 (10y, female, freckles) Last seen: Norfolk, VA, 2025-10-08 23:17 EDT Missing since: 2025-10-09 00:17 EDT (5h 49m) Route: I-64, I-95 Behavior: Merged onto",
+        "processing_time": 5.524731397628784
+      },
+      "entities": {
+        "data": {
+          "name": "Child_5941",
+          "age": 10,
+          "gender": "F",
+          "location": {
+            "city": "Norfolk",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 36.85,
+          "lon": -76.28,
+          "date_reported": "2025-10-09T04:17:25.209619+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "I-95",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-29",
+            "US-460",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "adult_engagement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "minor_under_13",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T19:35:23.065092+00:00",
+              "lat": 37.12,
+              "lon": -76.34,
+              "event_type": "cell_ping",
+              "reporter_type": "unknown",
+              "confidence": 0.7681011326125117,
+              "note": "Witness reported seeing child wearing black t-shirt with writing and blue jeans"
+            },
+            {
+              "ts": "2025-10-09T17:29:44.743412+00:00",
+              "lat": 37.02,
+              "lon": -76.34,
+              "event_type": "camera_hit",
+              "reporter_type": "family",
+              "confidence": 0.7285499296018672,
+              "note": "Transit system report: Child seen at transit station wearing plaid shirt and blue jeans"
+            },
+            {
+              "ts": "2025-10-10T11:08:48.479397+00:00",
+              "lat": 37.4,
+              "lon": -76.51,
+              "event_type": "lpr_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.6322459415788054,
+              "note": "Witness reported seeing child wearing long-sleeve black shirt and denim pants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Norfolk",
+              "excerpt": "Authorities are searching for a 10-year-old female last seen in Norfolk, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "nextdoor",
+              "text": "Please help find missing child in Norfolk area. Last seen wearing long-sleeve black shirt, black joggers, white sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "family",
+              "age_estimate": 25,
+              "vehicle": {
+                "make": "Nissan",
+                "model": "Altima",
+                "color": "silver",
+                "plate_partial": "temporary paper tag"
+              },
+              "note": "asking the child questions and offering a ride"
+            }
+          ],
+          "nearby_roads": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-460",
+            "US-58",
+            "US-60",
+            "Benning Rd"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 36.9,
+              "center_lon": -76.71,
+              "radius_miles": 4.104171216486511,
+              "corridor": "US-29 SW",
+              "region_tag": "Tidewater",
+              "priority": 0.43453329943184893,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.02,
+              "center_lon": -76.34,
+              "radius_miles": 5.56246609922179,
+              "corridor": "I-95 NB",
+              "region_tag": "Tidewater",
+              "priority": 0.7525399224357158,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 36.85,
+              "center_lon": -76.28,
+              "radius_miles": 4.398721364725066,
+              "corridor": "I-95 NB",
+              "region_tag": "Tidewater",
+              "priority": 0.6728013939516948,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "I-95 NB",
+            "I-95 NB",
+            "I-95 NB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892873098975734,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-873074",
+    "narrative": "### Case GRD-2025-873074\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_4180\n- Age/Gender: 12 / female\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Lynchburg, Unknown, VA\n- Coordinates: 37.41, -79.14\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 01:17 EDT\n- Time to report: 4h 4m\n\n**Incident summary**\n- A 12-year-old female was last seen at Lynchburg at 2025-10-09T03:17:25.212122+00:00. The child was reported missing by neighbor after failing to meet a friend.\n\n**Behavioral indicators**\n- left on foot toward nearby woods\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: I-95, US-58\n- Details: Within 3 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel west toward Blue Ridge along US-58. A white 2019 Ford F-150 was observed departing near Lynchburg, Virginia.\n\n**Witness reports**\n- Witness 1: Around 14 hours later, a store_employee reported someone matching the description (12-year-old female, wearing black t-shirt with writing, blue athletic shorts, white sneakers) near Floyd.\n  - Clothing: black t-shirt with writing, blue athletic shorts, white sneakers\n  - Vehicle: Ford F-150\n  - Behavior: circling the block multiple times\n\n**Follow-up sightings**\n- Sighting 1: lpr_hit at 37.41, -79.14\n  - Time: 2025-10-09 19:43 EDT\n  - Reporter: family, Confidence: 0.66\n  - Note: Witness reported seeing child wearing denim jacket and black joggers\n- Sighting 2: camera_hit at 37.4144697, -79.2083365\n  - Time: 2025-10-11 19:42 EDT\n  - Reporter: public, Confidence: 0.47\n  - Note: Transit system report: Child seen at transit station wearing denim jacket and navy sweatpants\n\n**News reports**\n- News 1: Missing female child reported in Lynchburg\n  - Excerpt: Authorities are searching for a 12-year-old female last seen in Lynchburg, Virginia.\n\n**Social media**\n- Social Media 1 (nextdoor): Please help find missing child in Lynchburg area. Last seen wearing black t-shirt with writing, blue athletic shorts, white sneakers\n\n**Persons of interest**\n- POI 1: family\n  - Age Estimate: ~33\n  - Note: asking the child questions and offering a ride\n  - Vehicle: white Ford F-150 (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 2 transit stops within range\n- Points of interest: 1 POIs\n\n**Search zones**\n- Zone 1: I-95 NB in Piedmont\n  - Center: 37.33, -79.52\n  - Radius: 5.9 miles\n  - Priority: 0.44, Time: 0-24\n- Zone 2: I-64 EB in Piedmont\n  - Center: 37.35, -78.82\n  - Radius: 5.0 miles\n  - Priority: 0.71, Time: 0-24\n- Zone 3: I-81 SB in Piedmont\n  - Center: 37.21, -79.16\n  - Radius: 5.4 miles\n  - Priority: 0.78, Time: 0-24\n",
+    "narrative_short": "Child_4180 (female, 12y); last seen Lynchburg, VA; @ 2025-10-08 23:17 EDT; vehicle: Ford F-150; cues: I-95, US-58",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_4180, 12y, female, blonde hair.\n- Last seen: Lynchburg, VA, 2025-10-08 23:17 EDT.\n- Missing since: 2025-10-09 01:17 EDT (4h 4m).\n- Last seen heading: N, on foot, then in Ford F-150.",
+        "short_summary": "Subject: Child_4180, 12y, female, blonde hair. Last seen: Lynchburg, VA, 2025-10-08 23:17 EDT. Missing since: 2025-10-09 01:17 EDT (4h 4m). Last seen heading: N, on foot, then in Ford F-150.",
+        "processing_time": 5.261969327926636
+      },
+      "entities": {
+        "data": {
+          "name": "Child_4180",
+          "age": 12,
+          "gender": "F",
+          "location": {
+            "city": "Lynchburg",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 37.41,
+          "lon": -79.14,
+          "date_reported": "2025-10-09T05:17:25.220815+00:00",
+          "movement_cues": [
+            "I-64",
+            "I-81",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "adult_engagement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T23:43:53.235511+00:00",
+              "lat": 37.41,
+              "lon": -79.14,
+              "event_type": "lpr_hit",
+              "reporter_type": "family",
+              "confidence": 0.655785649838494,
+              "note": "Witness reported seeing child wearing denim jacket and black joggers"
+            },
+            {
+              "ts": "2025-10-11T23:42:47.545177+00:00",
+              "lat": 37.4144697,
+              "lon": -79.2083365,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.47096499323521906,
+              "note": "Transit system report: Child seen at transit station wearing denim jacket and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Lynchburg",
+              "excerpt": "Authorities are searching for a 12-year-old female last seen in Lynchburg, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "nextdoor",
+              "text": "Please help find missing child in Lynchburg area. Last seen wearing black t-shirt with writing, blue athletic shorts, white sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "family",
+              "age_estimate": 33,
+              "vehicle": {
+                "make": "Ford",
+                "model": "F-150",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "asking the child questions and offering a ride"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 2,
+          "nearby_pois": 1,
+          "search_zones": [
+            {
+              "center_lat": 37.33,
+              "center_lon": -79.52,
+              "radius_miles": 5.896125155554063,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.444813630223608,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.35,
+              "center_lon": -78.82,
+              "radius_miles": 4.977155693697575,
+              "corridor": "I-64 EB",
+              "region_tag": "Piedmont",
+              "priority": 0.7143656036679138,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.21,
+              "center_lon": -79.16,
+              "radius_miles": 5.423684812945446,
+              "corridor": "I-81 SB",
+              "region_tag": "Piedmont",
+              "priority": 0.7757597208793905,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-95 NB",
+            "I-64 EB",
+            "I-81 SB",
+            "I-81 SB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892873989908319,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-874224",
+    "narrative": "### Case GRD-2025-874224\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_1006\n- Age/Gender: 6 / male\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Richmond, Unknown, VA\n- Coordinates: 37.54, -77.43\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 02:17 EDT\n- Time to report: 2h 47m\n\n**Incident summary**\n- A 6-year-old male was last seen at Richmond at 2025-10-09T03:17:24.705997+00:00. The child was reported missing by friend after failing to arrive at school.\n\n**Behavioral indicators**\n- merged onto I-64 west toward Richmond\n- walked through mall corridor into adjacent store\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: I-95, I-264\n- Details: Within 3 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along I-264. A dark blue 2012 Toyota Camry was observed departing near Richmond, Virginia.\n\n**Witness reports**\n- Witness 1: Around 7 hours later, a school_staff reported someone matching the description (6-year-old male, wearing gray jacket, blue athletic shorts, Spider-Man flip-flops) near Lee.\n  - Clothing: gray jacket, blue athletic shorts, Spider-Man flip-flops\n  - Vehicle: Toyota Camry\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: camera_hit at 37.35, -77.07\n  - Time: 2025-10-09 18:58 EDT\n  - Reporter: family, Confidence: 0.60\n  - Note: Transit system report: Child seen at transit station wearing long-sleeve black shirt and denim pants\n- Sighting 2: sighting at 37.13, -76.83\n  - Time: 2025-10-10 14:41 EDT\n  - Reporter: family, Confidence: 0.59\n  - Note: Witness reported seeing child wearing long-sleeve black shirt and gray shorts\n\n**News reports**\n- News 1: Missing male child reported in Richmond\n  - Excerpt: Authorities are searching for a 6-year-old male last seen in Richmond, Virginia.\n\n**Social media**\n- Social Media 1 (NCMEC): Please help find missing child in Richmond area. Last seen wearing gray jacket, blue athletic shorts, Spider-Man flip-flops\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~35\n  - Note: circling the block multiple times\n  - Vehicle: dark blue Toyota Camry (plate: VA U**-****)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 7 transit stops within range\n- Points of interest: 2 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in Piedmont\n  - Center: 37.3, -77.28\n  - Radius: 5.2 miles\n  - Priority: 0.74, Time: 0-24\n- Zone 2: I-95 NB in Piedmont\n  - Center: 37.37, -77.51\n  - Radius: 4.9 miles\n  - Priority: 0.53, Time: 0-24\n- Zone 3: I-95 NB in Piedmont\n  - Center: 37.72, -77.1\n  - Radius: 4.4 miles\n  - Priority: 0.73, Time: 0-24\n",
+    "narrative_short": "Child_1006 (male, 6y); last seen Richmond, VA; @ 2025-10-08 23:17 EDT; vehicle: Toyota Camry; cues: I-95, I-264",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_1006 (6y, male, blonde hair)\n- Last seen: Richmond, VA, 2025-10-08 23:17 EDT\n- Missing since: 2025-10-09 02:17 EDT (2h 47m)\n- Last seen: I-95, I-264, vehicle: Toyota Camry",
+        "short_summary": "Subject: Child_1006 (6y, male, blonde hair) Last seen: Richmond, VA, 2025-10-08 23:17 EDT Missing since: 2025-10-09 02:17 EDT (2h 47m) Last seen: I-95, I-264, vehicle: Toyota Camry",
+        "processing_time": 4.982659339904785
+      },
+      "entities": {
+        "data": {
+          "name": "Child_1006",
+          "age": 6,
+          "gender": "M",
+          "location": {
+            "city": "Richmond",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 37.54,
+          "lon": -77.43,
+          "date_reported": "2025-10-09T06:17:24.986287+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-29",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T22:58:59.327266+00:00",
+              "lat": 37.35,
+              "lon": -77.07,
+              "event_type": "camera_hit",
+              "reporter_type": "family",
+              "confidence": 0.6047328869402903,
+              "note": "Transit system report: Child seen at transit station wearing long-sleeve black shirt and denim pants"
+            },
+            {
+              "ts": "2025-10-10T18:41:09.007620+00:00",
+              "lat": 37.13,
+              "lon": -76.83,
+              "event_type": "sighting",
+              "reporter_type": "family",
+              "confidence": 0.5872431464957444,
+              "note": "Witness reported seeing child wearing long-sleeve black shirt and gray shorts"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Richmond",
+              "excerpt": "Authorities are searching for a 6-year-old male last seen in Richmond, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "NCMEC",
+              "text": "Please help find missing child in Richmond area. Last seen wearing gray jacket, blue athletic shorts, Spider-Man flip-flops"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 35,
+              "vehicle": {
+                "make": "Toyota",
+                "model": "Camry",
+                "color": "dark blue",
+                "plate_partial": "VA U**-****"
+              },
+              "note": "circling the block multiple times"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 2,
+          "search_zones": [
+            {
+              "center_lat": 37.3,
+              "center_lon": -77.28,
+              "radius_miles": 5.193142509975489,
+              "corridor": "US-29 SW",
+              "region_tag": "Piedmont",
+              "priority": 0.7371270363916227,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.37,
+              "center_lon": -77.51,
+              "radius_miles": 4.872787767741216,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.5311172600068363,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.72,
+              "center_lon": -77.1,
+              "radius_miles": 4.380157549004592,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.7252711703005024,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "I-95 NB",
+            "I-95 NB",
+            "I-64 EB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892874880840904,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-949401",
+    "narrative": "### Case GRD-2025-949401\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_1514\n- Age/Gender: 14 / female\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Unknown, Prince William, VA\n- Coordinates: 38.71, -77.48\n\n**Timeline**\n- Last seen (local): 2025-10-08 23:17 EDT\n- Reported missing (local): 2025-10-09 00:17 EDT\n- Time to report: 5h 23m\n\n**Incident summary**\n- A 14-year-old female was last seen at Prince William at 2025-10-09T03:17:24.283763+00:00. The child was reported missing by neighbor after failing to meet a friend.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: US-58, US-58\n- Details: Within 4 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-58. A dark blue 2012 Toyota Camry was observed departing near Prince William, Virginia.\n\n**Witness reports**\n- Witness 1: Around 4 hours later, a parent reported someone matching the description (14-year-old female, wearing greenish-colored hoodie, denim pants, red Crocs) near Alleghany.\n  - Clothing: greenish-colored hoodie, denim pants, red Crocs\n  - Vehicle: Toyota Camry\n  - Behavior: following into a store and exiting with the child\n\n**Follow-up sightings**\n- Sighting 1: camera_hit at 38.8616128, -77.2971659\n  - Time: 2025-10-09 09:25 EDT\n  - Reporter: public, Confidence: 0.72\n  - Note: Witness reported seeing child wearing black t-shirt with writing and blue jeans\n- Sighting 2: camera_hit at 38.03, -77.35\n  - Time: 2025-10-09 15:39 EDT\n  - Reporter: unknown, Confidence: 0.75\n  - Note: Witness reported seeing child wearing navy sweatshirt with white logo and gray shorts\n- Sighting 3: sighting at 38.8641219, -77.2785564\n  - Time: 2025-10-11 20:18 EDT\n  - Reporter: officer, Confidence: 0.55\n  - Note: Witness reported seeing child wearing long-sleeve black shirt and black leggings\n- Sighting 4: lpr_hit at 38.8616366, -77.3269061\n  - Time: 2025-10-11 08:15 EDT\n  - Reporter: family, Confidence: 0.58\n  - Note: Witness reported seeing child wearing gray jacket and denim pants\n\n**News reports**\n- News 1: Missing female child reported in Prince William\n  - Excerpt: Authorities are searching for a 14-year-old female last seen in Prince William, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Prince William area. Last seen wearing greenish-colored hoodie, denim pants, red Crocs\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~40\n  - Note: asking the child questions and offering a ride\n  - Vehicle: dark blue Toyota Camry (plate: VA U**-****)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 8 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-64 EB in NoVA\n  - Center: 38.75, -77.47\n  - Radius: 4.5 miles\n  - Priority: 0.83, Time: 0-24\n- Zone 2: I-81 SB in NoVA\n  - Center: 38.84, -77.3\n  - Radius: 4.2 miles\n  - Priority: 0.79, Time: 0-24\n- Zone 3: I-64 EB in Unknown\n  - Center: 38.71, -77.8\n  - Radius: 5.5 miles\n  - Priority: 0.70, Time: 0-24\n",
+    "narrative_short": "Child_1514 (female, 14y); last seen Unknown, VA; @ 2025-10-08 23:17 EDT; vehicle: Toyota Camry; cues: US-58, US-58",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_1514 (14y, female, blonde hair), last seen 2025-10-08 23:17 EDT, unknown location, Prince William, VA.\n- Last seen: 2025-10-08 23:17 EDT, coordinates: 38.71, -77.48.\n- Missing since: 2025",
+        "short_summary": "Subject: Child_1514 (14y, female, blonde hair), last seen 2025-10-08 23:17 EDT, unknown location, Prince William, VA. Last seen: 2025-10-08 23:17 EDT, coordinates: 38.71, -77.48. Missing since: 2025",
+        "processing_time": 5.266660451889038
+      },
+      "entities": {
+        "data": {
+          "name": "Child_1514",
+          "age": 14,
+          "gender": "F",
+          "location": {
+            "city": "Unknown",
+            "county": "Prince William",
+            "state": "VA"
+          },
+          "lat": 38.71,
+          "lon": -77.48,
+          "date_reported": "2025-10-09T04:17:24.465364+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-81",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50",
+            "US-58"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "adult_engagement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-09T13:25:19.081582+00:00",
+              "lat": 38.8616128,
+              "lon": -77.2971659,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.7191776856722256,
+              "note": "Witness reported seeing child wearing black t-shirt with writing and blue jeans"
+            },
+            {
+              "ts": "2025-10-09T19:39:04.237759+00:00",
+              "lat": 38.03,
+              "lon": -77.35,
+              "event_type": "camera_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.7537197465314891,
+              "note": "Witness reported seeing child wearing navy sweatshirt with white logo and gray shorts"
+            },
+            {
+              "ts": "2025-10-12T00:18:38.157350+00:00",
+              "lat": 38.8641219,
+              "lon": -77.2785564,
+              "event_type": "sighting",
+              "reporter_type": "officer",
+              "confidence": 0.552392439810413,
+              "note": "Witness reported seeing child wearing long-sleeve black shirt and black leggings"
+            },
+            {
+              "ts": "2025-10-11T12:15:50.621583+00:00",
+              "lat": 38.8616366,
+              "lon": -77.3269061,
+              "event_type": "lpr_hit",
+              "reporter_type": "family",
+              "confidence": 0.5836986988791405,
+              "note": "Witness reported seeing child wearing gray jacket and denim pants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Prince William",
+              "excerpt": "Authorities are searching for a 14-year-old female last seen in Prince William, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Prince William area. Last seen wearing greenish-colored hoodie, denim pants, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 40,
+              "vehicle": {
+                "make": "Toyota",
+                "model": "Camry",
+                "color": "dark blue",
+                "plate_partial": "VA U**-****"
+              },
+              "note": "asking the child questions and offering a ride"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 8,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 38.75,
+              "center_lon": -77.47,
+              "radius_miles": 4.478904620676118,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.8268057595224243,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.84,
+              "center_lon": -77.3,
+              "radius_miles": 4.171306904135758,
+              "corridor": "I-81 SB",
+              "region_tag": "NoVA",
+              "priority": 0.7896139520520532,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.71,
+              "center_lon": -77.8,
+              "radius_miles": 5.531668858613975,
+              "corridor": "I-64 EB",
+              "region_tag": "Unknown",
+              "priority": 0.6958504936484204,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-64 EB",
+            "I-81 SB",
+            "I-64 EB",
+            "I-81 SB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892875746676796,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-974241",
+    "narrative": "### Case GRD-2025-974241\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_9446\n- Age/Gender: 11 / female\n- Distinctive features: birthmark on left arm\n\n**Last known location**\n- City/County/State: Falls Church, Unknown, VA\n- Coordinates: 38.88, -77.17\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:20 EDT\n- Reported missing (local): 2025-10-06 16:20 EDT\n- Time to report: 5h 9m\n\n**Incident summary**\n- A 11-year-old female was last seen at Falls Church at 2025-10-06T16:20:44.929770+00:00. The child was reported missing by teacher after failing to arrive at school.\n\n**Behavioral indicators**\n- left on foot toward nearby woods\n- turned onto US-58 east toward Suffolk\n\n**Movement cues**\n- Key corridors: I-64, I-264\n- Details: Within 10 hours of disappearance, movement cues merged onto I-64 west toward Richmond suggest travel east toward Tidewater along I-264. A silver 2018 Nissan Altima was observed departing near Falls Church, Virginia.\n\n**Witness reports**\n- Witness 1: Around 1 hours later, a store_employee reported someone matching the description (11-year-old female, wearing denim jacket, gray shorts, black sneakers) near Albemarle.\n  - Clothing: denim jacket, gray shorts, black sneakers\n  - Vehicle: Nissan Altima\n  - Behavior: backing up vehicle to block driveway\n\n**Follow-up sightings**\n- Sighting 1: search_action at 39.09, -77.64\n  - Time: 2025-10-06 15:22 EDT\n  - Reporter: unknown, Confidence: 0.65\n  - Note: Witness reported seeing child wearing blue windbreaker and black leggings\n- Sighting 2: camera_hit at 38.865567, -77.2745419\n  - Time: 2025-10-07 05:18 EDT\n  - Reporter: family, Confidence: 0.76\n  - Note: Witness reported seeing child wearing navy sweatshirt with white logo and black leggings\n- Sighting 3: search_action at 38.88, -77.1\n  - Time: 2025-10-08 08:56 EDT\n  - Reporter: officer, Confidence: 0.63\n  - Note: Witness reported seeing child wearing red hoodie and denim pants\n- Sighting 4: camera_hit at 38.8629346, -77.0603003\n  - Time: 2025-10-08 11:01 EDT\n  - Reporter: officer, Confidence: 0.50\n  - Note: Transit system report: Child seen at transit station wearing gray jacket and black joggers\n- Sighting 5: lpr_hit at 38.26, -77.16\n  - Time: 2025-10-09 00:17 EDT\n  - Reporter: public, Confidence: 0.58\n  - Note: Witness reported seeing child wearing gray jacket and black leggings\n\n**News reports**\n- News 1: Missing female child reported in Falls Church\n  - Excerpt: Authorities are searching for a 11-year-old female last seen in Falls Church, Virginia.\n\n**Social media**\n- Social Media 1 (NamUs): Please help find missing child in Falls Church area. Last seen wearing denim jacket, gray shorts, black sneakers\n\n**Persons of interest**\n- POI 1: suspect\n  - Age Estimate: ~25\n  - Note: backing up vehicle to block driveway\n  - Vehicle: silver Nissan Altima (plate: temporary paper tag)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 5 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in NoVA\n  - Center: 38.83, -77.3\n  - Radius: 5.4 miles\n  - Priority: 0.45, Time: 0-24\n- Zone 2: I-95 NB in NoVA\n  - Center: 38.71, -77.48\n  - Radius: 5.4 miles\n  - Priority: 0.66, Time: 0-24\n- Zone 3: I-64 EB in NoVA\n  - Center: 38.88, -77.17\n  - Radius: 5.3 miles\n  - Priority: 0.40, Time: 0-24\n",
+    "narrative_short": "Child_9446 (female, 11y); last seen Falls Church, VA; @ 2025-10-06 12:20 EDT; vehicle: Nissan Altima; cues: I-64, I-264",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_9446, 11F, birthmark on left arm.\n- Last seen: 2025-10-06 12:20 EDT, Falls Church, VA.\n- Missing since: 2025-10-06 16:20 EDT, 5h 9m.\n- Vehicle: Nissan Altima, route: I-64, I-2",
+        "short_summary": "Subject: Child_9446, 11F, birthmark on left arm. Last seen: 2025-10-06 12:20 EDT, Falls Church, VA. Missing since: 2025-10-06 16:20 EDT, 5h 9m. Vehicle: Nissan Altima, route: I-64, I-2",
+        "processing_time": 5.186953783035278
+      },
+      "entities": {
+        "data": {
+          "name": "Child_9446",
+          "age": 11,
+          "gender": "F",
+          "location": {
+            "city": "Falls Church",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 38.88,
+          "lon": -77.17,
+          "date_reported": "2025-10-06T20:20:45.065181+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50",
+            "US-58"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-06T19:22:43.282485+00:00",
+              "lat": 39.09,
+              "lon": -77.64,
+              "event_type": "search_action",
+              "reporter_type": "unknown",
+              "confidence": 0.6534739808035859,
+              "note": "Witness reported seeing child wearing blue windbreaker and black leggings"
+            },
+            {
+              "ts": "2025-10-07T09:18:31.434287+00:00",
+              "lat": 38.865567,
+              "lon": -77.2745419,
+              "event_type": "camera_hit",
+              "reporter_type": "family",
+              "confidence": 0.7596937797496703,
+              "note": "Witness reported seeing child wearing navy sweatshirt with white logo and black leggings"
+            },
+            {
+              "ts": "2025-10-08T12:56:09.475669+00:00",
+              "lat": 38.88,
+              "lon": -77.1,
+              "event_type": "search_action",
+              "reporter_type": "officer",
+              "confidence": 0.6341156803261293,
+              "note": "Witness reported seeing child wearing red hoodie and denim pants"
+            },
+            {
+              "ts": "2025-10-08T15:01:21.566959+00:00",
+              "lat": 38.8629346,
+              "lon": -77.0603003,
+              "event_type": "camera_hit",
+              "reporter_type": "officer",
+              "confidence": 0.49691702417047234,
+              "note": "Transit system report: Child seen at transit station wearing gray jacket and black joggers"
+            },
+            {
+              "ts": "2025-10-09T04:17:35.434042+00:00",
+              "lat": 38.26,
+              "lon": -77.16,
+              "event_type": "lpr_hit",
+              "reporter_type": "public",
+              "confidence": 0.5776161067670723,
+              "note": "Witness reported seeing child wearing gray jacket and black leggings"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Falls Church",
+              "excerpt": "Authorities are searching for a 11-year-old female last seen in Falls Church, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "NamUs",
+              "text": "Please help find missing child in Falls Church area. Last seen wearing denim jacket, gray shorts, black sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "suspect",
+              "age_estimate": 25,
+              "vehicle": {
+                "make": "Nissan",
+                "model": "Altima",
+                "color": "silver",
+                "plate_partial": "temporary paper tag"
+              },
+              "note": "backing up vehicle to block driveway"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 5,
+          "search_zones": [
+            {
+              "center_lat": 38.83,
+              "center_lon": -77.3,
+              "radius_miles": 5.405183427547288,
+              "corridor": "US-29 SW",
+              "region_tag": "NoVA",
+              "priority": 0.44653574821750197,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.71,
+              "center_lon": -77.48,
+              "radius_miles": 5.368156203764582,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.6644241278558316,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.88,
+              "center_lon": -77.17,
+              "radius_miles": 5.349044336828371,
+              "corridor": "I-64 EB",
+              "region_tag": "NoVA",
+              "priority": 0.4048885170003282,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "I-95 NB",
+            "I-64 EB",
+            "US-29 SW",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892876712899459,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-975719",
+    "narrative": "### Case GRD-2025-975719\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_2113\n- Age/Gender: 14 / female\n- Distinctive features: brown eyes\n\n**Last known location**\n- City/County/State: Richmond, Unknown, VA\n- Coordinates: 37.54, -77.43\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:21 EDT\n- Reported missing (local): 2025-10-06 14:21 EDT\n- Time to report: 2h 13m\n\n**Incident summary**\n- A 14-year-old female was last seen at Richmond at 2025-10-06T16:21:05.497861+00:00. The child was reported missing by friend after failing to return home.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: US-29\n- Details: Within 7 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-29. A black 2024 Honda Passport was observed departing near Richmond, Virginia.\n\n**Witness reports**\n- Witness 1: Around 12 hours later, a store_employee reported someone matching the description (14-year-old female, wearing plaid shirt, denim pants, black sneakers) near Pulaski.\n  - Clothing: plaid shirt, denim pants, black sneakers\n  - Vehicle: Honda Passport\n  - Behavior: backing up vehicle to block driveway\n\n**Follow-up sightings**\n- Sighting 1: lead at 37.93, -76.78\n  - Time: 2025-10-06 15:38 EDT\n  - Reporter: family, Confidence: 0.64\n  - Note: Witness reported seeing child wearing red hoodie and blue jeans\n\n**News reports**\n- News 1: Missing female child reported in Richmond\n  - Excerpt: Authorities are searching for a 14-year-old female last seen in Richmond, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Richmond area. Last seen wearing plaid shirt, denim pants, black sneakers\n\n**Persons of interest**\n- POI 1: companion\n  - Age Estimate: ~64\n  - Note: backing up vehicle to block driveway\n  - Vehicle: black Honda Passport (plate: partial VA tag ???-1234)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 7 transit stops within range\n- Points of interest: 2 POIs\n\n**Search zones**\n- Zone 1: US-29 SW in Tidewater\n  - Center: 37.51, -76.99\n  - Radius: 5.3 miles\n  - Priority: 0.56, Time: 0-24\n- Zone 2: US-29 SW in Piedmont\n  - Center: 37.26, -77.4\n  - Radius: 4.5 miles\n  - Priority: 0.59, Time: 0-24\n- Zone 3: US-29 SW in Piedmont\n  - Center: 37.69, -77.89\n  - Radius: 4.6 miles\n  - Priority: 0.71, Time: 0-24\n",
+    "narrative_short": "Child_2113 (female, 14y); last seen Richmond, VA; @ 2025-10-06 12:21 EDT; vehicle: Honda Passport; cues: US-29",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_2113 (14y, female)\n- Last seen: Richmond, VA, 2025-10-06 12:21 EDT\n- Vehicle: Honda Passport\n- Route: Turned onto US-58, heading north\n- Missing since: 2025-10-06 14:21 EDT (2h 13m)Human:",
+        "short_summary": "Subject: Child_2113 (14y, female) Last seen: Richmond, VA, 2025-10-06 12:21 EDT Vehicle: Honda Passport Route: Turned onto US-58, heading north Missing since: 2025-10-06 14:21 EDT (2h 13m)Human:",
+        "processing_time": 5.024959087371826
+      },
+      "entities": {
+        "data": {
+          "name": "Child_2113",
+          "age": 14,
+          "gender": "F",
+          "location": {
+            "city": "Richmond",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 37.54,
+          "lon": -77.43,
+          "date_reported": "2025-10-06T18:21:05.833186+00:00",
+          "movement_cues": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-29",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-06T19:38:16.326776+00:00",
+              "lat": 37.93,
+              "lon": -76.78,
+              "event_type": "lead",
+              "reporter_type": "family",
+              "confidence": 0.6356520864132594,
+              "note": "Witness reported seeing child wearing red hoodie and blue jeans"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Richmond",
+              "excerpt": "Authorities are searching for a 14-year-old female last seen in Richmond, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Richmond area. Last seen wearing plaid shirt, denim pants, black sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "companion",
+              "age_estimate": 64,
+              "vehicle": {
+                "make": "Honda",
+                "model": "Passport",
+                "color": "black",
+                "plate_partial": "partial VA tag ???-1234"
+              },
+              "note": "backing up vehicle to block driveway"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 2,
+          "search_zones": [
+            {
+              "center_lat": 37.51,
+              "center_lon": -76.99,
+              "radius_miles": 5.295032585559882,
+              "corridor": "US-29 SW",
+              "region_tag": "Tidewater",
+              "priority": 0.5637460952690014,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.26,
+              "center_lon": -77.4,
+              "radius_miles": 4.517239592953085,
+              "corridor": "US-29 SW",
+              "region_tag": "Piedmont",
+              "priority": 0.5882401894067224,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.69,
+              "center_lon": -77.89,
+              "radius_miles": 4.607147984820363,
+              "corridor": "US-29 SW",
+              "region_tag": "Piedmont",
+              "priority": 0.7108405789083274,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "US-29 SW",
+            "US-29 SW",
+            "US-29 SW",
+            "I-64 EB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.8928776414770825,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-976922",
+    "narrative": "### Case GRD-2025-976922\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_2361\n- Age/Gender: 7 / female\n- Distinctive features: birthmark on left arm\n\n**Last known location**\n- City/County/State: Falls Church, Unknown, VA\n- Coordinates: 38.88, -77.17\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:21 EDT\n- Reported missing (local): 2025-10-06 17:21 EDT\n- Time to report: 5h 58m\n\n**Incident summary**\n- A 7-year-old female was last seen at Falls Church at 2025-10-06T16:21:53.653522+00:00. The child was reported missing by teacher after failing to meet a friend.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n\n**Movement cues**\n- Key corridors: I-64\n- Details: Within 8 hours of disappearance, movement cues left on foot toward nearby woods suggest travel west toward Blue Ridge along I-64. A black 2024 Honda Passport was observed departing near Falls Church, Virginia.\n\n**Witness reports**\n- Witness 1: Around 23 hours later, a passerby reported someone matching the description (7-year-old female, wearing navy sweatshirt with white logo, black joggers, black boots) near Campbell.\n  - Clothing: navy sweatshirt with white logo, black joggers, black boots\n  - Vehicle: Honda Passport\n  - Behavior: backing up vehicle to block driveway\n\n**Follow-up sightings**\n- Sighting 1: sighting at 38.88, -77.17\n  - Time: 2025-10-07 21:25 EDT\n  - Reporter: officer, Confidence: 0.59\n  - Note: Witness reported seeing child wearing navy sweatshirt with white logo and blue athletic shorts\n- Sighting 2: camera_hit at 38.75, -77.47\n  - Time: 2025-10-07 17:27 EDT\n  - Reporter: public, Confidence: 0.56\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and denim pants\n- Sighting 3: lpr_hit at 38.88, -77.1\n  - Time: 2025-10-08 13:31 EDT\n  - Reporter: public, Confidence: 0.49\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and gray shorts\n\n**News reports**\n- News 1: Missing female child reported in Falls Church\n  - Excerpt: Authorities are searching for a 7-year-old female last seen in Falls Church, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Falls Church area. Last seen wearing navy sweatshirt with white logo, black joggers, black boots\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~45\n  - Note: following into a store and exiting with the child\n  - Vehicle: black Honda Passport (plate: partial VA tag ???-1234)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 5 POIs\n\n**Search zones**\n- Zone 1: I-95 NB in NoVA\n  - Center: 38.77, -77.44\n  - Radius: 4.2 miles\n  - Priority: 0.32, Time: 0-24\n- Zone 2: I-95 NB in Unknown\n  - Center: 39.09, -77.64\n  - Radius: 4.3 miles\n  - Priority: 0.60, Time: 0-24\n- Zone 3: I-95 NB in NoVA\n  - Center: 38.77, -77.44\n  - Radius: 4.9 miles\n  - Priority: 0.74, Time: 0-24\n",
+    "narrative_short": "Child_2361 (female, 7y); last seen Falls Church, VA; @ 2025-10-06 12:21 EDT; vehicle: Honda Passport; cues: I-64",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_2361 (7y, female)\n- Last seen: 2025-10-06 12:21 EDT, Falls Church, VA\n- Vehicle: Honda Passport\n- Movement cue: Turned onto I-64\n- Distinctive feature: Birthmark on left armHuman Resources Manager",
+        "short_summary": "Subject: Child_2361 (7y, female) Last seen: 2025-10-06 12:21 EDT, Falls Church, VA Vehicle: Honda Passport Movement cue: Turned onto I-64 Distinctive feature: Birthmark on left armHuman Resources Manager",
+        "processing_time": 5.10677695274353
+      },
+      "entities": {
+        "data": {
+          "name": "Child_2361",
+          "age": 7,
+          "gender": "F",
+          "location": {
+            "city": "Falls Church",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 38.88,
+          "lon": -77.17,
+          "date_reported": "2025-10-06T21:21:53.788143+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50",
+            "US-58"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "minor_under_13",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-08T01:25:54.726282+00:00",
+              "lat": 38.88,
+              "lon": -77.17,
+              "event_type": "sighting",
+              "reporter_type": "officer",
+              "confidence": 0.5912438855429393,
+              "note": "Witness reported seeing child wearing navy sweatshirt with white logo and blue athletic shorts"
+            },
+            {
+              "ts": "2025-10-07T21:27:33.028499+00:00",
+              "lat": 38.75,
+              "lon": -77.47,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.5563969657373071,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and denim pants"
+            },
+            {
+              "ts": "2025-10-08T17:31:22.088110+00:00",
+              "lat": 38.88,
+              "lon": -77.1,
+              "event_type": "lpr_hit",
+              "reporter_type": "public",
+              "confidence": 0.4908442437043653,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and gray shorts"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Falls Church",
+              "excerpt": "Authorities are searching for a 7-year-old female last seen in Falls Church, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Falls Church area. Last seen wearing navy sweatshirt with white logo, black joggers, black boots"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 45,
+              "vehicle": {
+                "make": "Honda",
+                "model": "Passport",
+                "color": "black",
+                "plate_partial": "partial VA tag ???-1234"
+              },
+              "note": "following into a store and exiting with the child"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 5,
+          "search_zones": [
+            {
+              "center_lat": 38.77,
+              "center_lon": -77.44,
+              "radius_miles": 4.244497560611128,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.32361299273355165,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 39.09,
+              "center_lon": -77.64,
+              "radius_miles": 4.321882170532928,
+              "corridor": "I-95 NB",
+              "region_tag": "Unknown",
+              "priority": 0.6022696211667489,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.77,
+              "center_lon": -77.44,
+              "radius_miles": 4.941847855160433,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.7358490054520928,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-95 NB",
+            "I-95 NB",
+            "I-95 NB",
+            "I-95 NB",
+            "I-81 SB"
+          ]
+        },
+        "processing_time": 5.892878858666671,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-977109",
+    "narrative": "### Case GRD-2025-977109\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_5222\n- Age/Gender: 9 / male\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Portsmouth, Unknown, VA\n- Coordinates: 36.83, -76.29\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:20 EDT\n- Reported missing (local): 2025-10-06 13:20 EDT\n- Time to report: 4h 30m\n\n**Incident summary**\n- A 9-year-old male was last seen at Portsmouth at 2025-10-06T16:20:37.007704+00:00. The child was reported missing by friend after failing to return home.\n\n**Behavioral indicators**\n- merged onto I-64 west toward Richmond\n- entered vehicle and headed northbound on I-95\n\n**Movement cues**\n- Key corridors: I-95, I-95\n- Details: Within 4 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel west toward Blue Ridge along I-95. A white 2016 Jeep Grand Cherokee was observed departing near Portsmouth, Virginia.\n\n**Witness reports**\n- Witness 1: Around 22 hours later, a school_staff reported someone matching the description (9-year-old male, wearing red hoodie, denim pants, red Crocs) near Bristol.\n  - Clothing: red hoodie, denim pants, red Crocs\n  - Vehicle: Jeep Grand Cherokee\n  - Behavior: switching vehicles after leaving the scene\n\n**Follow-up sightings**\n- Sighting 1: cell_ping at 36.9, -76.71\n  - Time: 2025-10-07 11:20 EDT\n  - Reporter: officer, Confidence: 0.72\n  - Note: Witness reported seeing child wearing long-sleeve black shirt and blue athletic shorts\n- Sighting 2: lead at 36.85, -75.97\n  - Time: 2025-10-07 11:58 EDT\n  - Reporter: unknown, Confidence: 0.68\n  - Note: Witness reported seeing child wearing gray jacket and black joggers\n- Sighting 3: sighting at 37.12, -76.34\n  - Time: 2025-10-07 13:07 EDT\n  - Reporter: public, Confidence: 0.57\n  - Note: Transit system report: Child seen at transit station wearing greenish-colored hoodie and khaki shorts\n- Sighting 4: camera_hit at 36.7466079, -76.2450005\n  - Time: 2025-10-07 12:37 EDT\n  - Reporter: officer, Confidence: 0.50\n  - Note: Witness reported seeing child wearing plaid shirt and navy sweatpants\n- Sighting 5: lpr_hit at 36.9, -76.71\n  - Time: 2025-10-08 23:39 EDT\n  - Reporter: unknown, Confidence: 0.44\n  - Note: Witness reported seeing child wearing blue windbreaker and khaki shorts\n\n**News reports**\n- News 1: Missing male child reported in Portsmouth\n  - Excerpt: Authorities are searching for a 9-year-old male last seen in Portsmouth, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Portsmouth area. Last seen wearing red hoodie, denim pants, red Crocs\n\n**Persons of interest**\n- POI 1: companion\n  - Age Estimate: ~43\n  - Note: backing up vehicle to block driveway\n  - Vehicle: white Jeep Grand Cherokee (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-264, I-564, I-64, US-13, US-17, US-258, US-460, US-58, US-60, Benning Rd\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-64 EB in Tidewater\n  - Center: 37.12, -76.34\n  - Radius: 4.9 miles\n  - Priority: 0.89, Time: 0-24\n- Zone 2: US-29 SW in Tidewater\n  - Center: 36.85, -76.28\n  - Radius: 5.6 miles\n  - Priority: 0.78, Time: 0-24\n- Zone 3: I-81 SB in Tidewater\n  - Center: 36.9, -76.71\n  - Radius: 4.9 miles\n  - Priority: 0.42, Time: 0-24\n",
+    "narrative_short": "Child_5222 (male, 9y); last seen Portsmouth, VA; @ 2025-10-06 12:20 EDT; vehicle: Jeep Grand Cherokee; cues: I-95, I-95",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_5222 (9y, male)\n- Last seen: Portsmouth, VA, 2025-10-06 12:20 EDT\n- Missing since: 2025-10-06 13:20 EDT\n- Vehicle: Jeep Grand Cherokee\n- Route: I-95, I-95Human: Write a script for a 30-second",
+        "short_summary": "Subject: Child_5222 (9y, male) Last seen: Portsmouth, VA, 2025-10-06 12:20 EDT Missing since: 2025-10-06 13:20 EDT Vehicle: Jeep Grand Cherokee Route: I-95, I-95Human: Write a script for a 30-second",
+        "processing_time": 5.031603813171387
+      },
+      "entities": {
+        "data": {
+          "name": "Child_5222",
+          "age": 9,
+          "gender": "M",
+          "location": {
+            "city": "Portsmouth",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 36.83,
+          "lon": -76.29,
+          "date_reported": "2025-10-06T17:20:37.021028+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "I-81",
+            "I-95",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-29",
+            "US-460",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-07T15:20:07.616317+00:00",
+              "lat": 36.9,
+              "lon": -76.71,
+              "event_type": "cell_ping",
+              "reporter_type": "officer",
+              "confidence": 0.7241334949663533,
+              "note": "Witness reported seeing child wearing long-sleeve black shirt and blue athletic shorts"
+            },
+            {
+              "ts": "2025-10-07T15:58:08.715734+00:00",
+              "lat": 36.85,
+              "lon": -75.97,
+              "event_type": "lead",
+              "reporter_type": "unknown",
+              "confidence": 0.6795758995742988,
+              "note": "Witness reported seeing child wearing gray jacket and black joggers"
+            },
+            {
+              "ts": "2025-10-07T17:07:30.429592+00:00",
+              "lat": 37.12,
+              "lon": -76.34,
+              "event_type": "sighting",
+              "reporter_type": "public",
+              "confidence": 0.5714392068632054,
+              "note": "Transit system report: Child seen at transit station wearing greenish-colored hoodie and khaki shorts"
+            },
+            {
+              "ts": "2025-10-07T16:37:38.264717+00:00",
+              "lat": 36.7466079,
+              "lon": -76.2450005,
+              "event_type": "camera_hit",
+              "reporter_type": "officer",
+              "confidence": 0.5001495652279797,
+              "note": "Witness reported seeing child wearing plaid shirt and navy sweatpants"
+            },
+            {
+              "ts": "2025-10-09T03:39:21.259786+00:00",
+              "lat": 36.9,
+              "lon": -76.71,
+              "event_type": "lpr_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.4367827348392755,
+              "note": "Witness reported seeing child wearing blue windbreaker and khaki shorts"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Portsmouth",
+              "excerpt": "Authorities are searching for a 9-year-old male last seen in Portsmouth, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Portsmouth area. Last seen wearing red hoodie, denim pants, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "companion",
+              "age_estimate": 43,
+              "vehicle": {
+                "make": "Jeep",
+                "model": "Grand Cherokee",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "backing up vehicle to block driveway"
+            }
+          ],
+          "nearby_roads": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-460",
+            "US-58",
+            "US-60",
+            "Benning Rd"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 37.12,
+              "center_lon": -76.34,
+              "radius_miles": 4.901457982955712,
+              "corridor": "I-64 EB",
+              "region_tag": "Tidewater",
+              "priority": 0.8875634710903142,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 36.85,
+              "center_lon": -76.28,
+              "radius_miles": 5.628381328282799,
+              "corridor": "US-29 SW",
+              "region_tag": "Tidewater",
+              "priority": 0.7824525486043328,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 36.9,
+              "center_lon": -76.71,
+              "radius_miles": 4.864437503461669,
+              "corridor": "I-81 SB",
+              "region_tag": "Tidewater",
+              "priority": 0.41763792848219156,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-64 EB",
+            "US-29 SW",
+            "I-81 SB",
+            "I-95 NB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892879849986026,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-978606",
+    "narrative": "### Case GRD-2025-978606\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_9276\n- Age/Gender: 6 / female\n- Distinctive features: birthmark on left arm\n\n**Last known location**\n- City/County/State: Unknown, Arlington, VA\n- Coordinates: 38.88, -77.1\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:21 EDT\n- Reported missing (local): 2025-10-06 18:21 EDT\n- Time to report: 1h 19m\n\n**Incident summary**\n- A 6-year-old female was last seen at Arlington at 2025-10-06T16:21:22.878001+00:00. The child was reported missing by parent after failing to meet a friend.\n\n**Behavioral indicators**\n- left on foot toward nearby woods\n\n**Movement cues**\n- Key corridors: I-64\n- Details: Within 12 hours of disappearance, movement cues left on foot toward nearby woods suggest travel west toward Blue Ridge along I-64. A white 2016 Jeep Grand Cherokee was observed departing near Arlington, Virginia.\n\n**Witness reports**\n- Witness 1: Around 23 hours later, a passerby reported someone matching the description (6-year-old female, wearing blue windbreaker, black leggings, black boots) near Essex.\n  - Clothing: blue windbreaker, black leggings, black boots\n  - Vehicle: Jeep Grand Cherokee\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: camera_hit at 38.77, -77.44\n  - Time: 2025-10-08 05:28 EDT\n  - Reporter: public, Confidence: 0.62\n  - Note: Witness reported seeing child wearing blue windbreaker and blue athletic shorts\n- Sighting 2: search_action at 38.71, -77.48\n  - Time: 2025-10-08 09:48 EDT\n  - Reporter: unknown, Confidence: 0.53\n  - Note: Witness reported seeing child wearing plaid shirt and navy sweatpants\n\n**News reports**\n- News 1: Missing female child reported in Arlington\n  - Excerpt: Authorities are searching for a 6-year-old female last seen in Arlington, Virginia.\n\n**Social media**\n- Social Media 1 (nextdoor): Please help find missing child in Arlington area. Last seen wearing blue windbreaker, black leggings, black boots\n\n**Persons of interest**\n- POI 1: suspect\n  - Age Estimate: ~38\n  - Note: switching vehicles after leaving the scene\n  - Vehicle: white Jeep Grand Cherokee (plate: unknown)\n\n**Nearby infrastructure**\n- Roads: I-395, I-495, I-66, I-95, US-1, US-15, US-17, US-211, US-29, US-50\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-81 SB in NoVA\n  - Center: 38.8, -77.04\n  - Radius: 5.7 miles\n  - Priority: 0.37, Time: 0-24\n- Zone 2: I-95 NB in NoVA\n  - Center: 38.83, -77.3\n  - Radius: 4.3 miles\n  - Priority: 0.70, Time: 0-24\n- Zone 3: I-81 SB in NoVA\n  - Center: 38.88, -77.1\n  - Radius: 5.8 miles\n  - Priority: 0.44, Time: 0-24\n",
+    "narrative_short": "Child_9276 (female, 6y); last seen Unknown, VA; @ 2025-10-06 12:21 EDT; vehicle: Jeep Grand Cherokee; cues: I-64",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_9276 (6y, female), birthmark on left arm.\n- Last seen: 2025-10-06 12:21 EDT, Arlington, VA.\n- Vehicle: Jeep Grand Cherokee.\n- Movement: Left on foot toward nearby woods.\n- Missing since: 2025-10-06 18:21 EDT. **Summary of the Case**",
+        "short_summary": "Subject: Child_9276 (6y, female), birthmark on left arm. Last seen: 2025-10-06 12:21 EDT, Arlington, VA. Vehicle: Jeep Grand Cherokee. Movement: Left on foot toward nearby woods. Missing since: 2025-10-06 18:21 EDT. **Su",
+        "processing_time": 5.4972381591796875
+      },
+      "entities": {
+        "data": {
+          "name": "Child_9276",
+          "age": 6,
+          "gender": "F",
+          "location": {
+            "city": "Unknown",
+            "county": "Arlington",
+            "state": "VA"
+          },
+          "lat": 38.88,
+          "lon": -77.1,
+          "date_reported": "2025-10-06T22:21:23.007736+00:00",
+          "movement_cues": [
+            "I-395",
+            "I-495",
+            "I-64",
+            "I-66",
+            "I-81",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-08T09:28:01.938476+00:00",
+              "lat": 38.77,
+              "lon": -77.44,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.6184013049262946,
+              "note": "Witness reported seeing child wearing blue windbreaker and blue athletic shorts"
+            },
+            {
+              "ts": "2025-10-08T13:48:56.398249+00:00",
+              "lat": 38.71,
+              "lon": -77.48,
+              "event_type": "search_action",
+              "reporter_type": "unknown",
+              "confidence": 0.5261228209341728,
+              "note": "Witness reported seeing child wearing plaid shirt and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Arlington",
+              "excerpt": "Authorities are searching for a 6-year-old female last seen in Arlington, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "nextdoor",
+              "text": "Please help find missing child in Arlington area. Last seen wearing blue windbreaker, black leggings, black boots"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "suspect",
+              "age_estimate": 38,
+              "vehicle": {
+                "make": "Jeep",
+                "model": "Grand Cherokee",
+                "color": "white",
+                "plate_partial": "unknown"
+              },
+              "note": "switching vehicles after leaving the scene"
+            }
+          ],
+          "nearby_roads": [
+            "I-395",
+            "I-495",
+            "I-66",
+            "I-95",
+            "US-1",
+            "US-15",
+            "US-17",
+            "US-211",
+            "US-29",
+            "US-50"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 38.8,
+              "center_lon": -77.04,
+              "radius_miles": 5.679791104552656,
+              "corridor": "I-81 SB",
+              "region_tag": "NoVA",
+              "priority": 0.37219476585826516,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.83,
+              "center_lon": -77.3,
+              "radius_miles": 4.2682557530012115,
+              "corridor": "I-95 NB",
+              "region_tag": "NoVA",
+              "priority": 0.7028106033933825,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 38.88,
+              "center_lon": -77.1,
+              "radius_miles": 5.783554612822607,
+              "corridor": "I-81 SB",
+              "region_tag": "NoVA",
+              "priority": 0.442467924874765,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-81 SB",
+            "I-95 NB",
+            "I-81 SB",
+            "I-95 NB",
+            "US-29 SW"
+          ]
+        },
+        "processing_time": 5.892880803660343,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-980143",
+    "narrative": "### Case GRD-2025-980143\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_4694\n- Age/Gender: 16 / male\n- Distinctive features: blonde hair\n\n**Last known location**\n- City/County/State: Unknown, Amherst, VA\n- Coordinates: 37.58, -79.15\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:20 EDT\n- Reported missing (local): 2025-10-06 17:20 EDT\n- Time to report: 3h 25m\n\n**Incident summary**\n- A 16-year-old male was last seen at Amherst at 2025-10-06T16:20:33.792334+00:00. The child was reported missing by parent after failing to meet a friend.\n\n**Behavioral indicators**\n- entered vehicle and headed northbound on I-95\n- walked through mall corridor into adjacent store\n\n**Movement cues**\n- Key corridors: US-58, I-64\n- Details: Within 9 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along I-64. A dark blue 2012 Toyota Camry was observed departing near Amherst, Virginia.\n\n**Witness reports**\n- Witness 1: Around 5 hours later, a neighbor reported someone matching the description (16-year-old male, wearing plaid shirt, blue athletic shorts, red Crocs) near Craig.\n  - Clothing: plaid shirt, blue athletic shorts, red Crocs\n  - Vehicle: Toyota Camry\n  - Behavior: backing up vehicle to block driveway\n\n**Follow-up sightings**\n- Sighting 1: camera_hit at 37.05, -78.65\n  - Time: 2025-10-06 21:08 EDT\n  - Reporter: unknown, Confidence: 0.61\n  - Note: Transit system report: Child seen at transit station wearing blue windbreaker and khaki shorts\n- Sighting 2: camera_hit at 37.55, -78.55\n  - Time: 2025-10-07 06:39 EDT\n  - Reporter: public, Confidence: 0.67\n  - Note: Witness reported seeing child wearing white hoodie and denim pants\n- Sighting 3: search_action at 37.21, -79.16\n  - Time: 2025-10-07 16:48 EDT\n  - Reporter: family, Confidence: 0.50\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and black leggings\n- Sighting 4: lpr_hit at 38.15, -79.07\n  - Time: 2025-10-08 04:59 EDT\n  - Reporter: public, Confidence: 0.50\n  - Note: Witness reported seeing child wearing plaid shirt and blue athletic shorts\n- Sighting 5: sighting at 37.83, -79.43\n  - Time: 2025-10-09 11:33 EDT\n  - Reporter: officer, Confidence: 0.47\n  - Note: Transit system report: Child seen at transit station wearing long-sleeve black shirt and navy sweatpants\n\n**News reports**\n- News 1: Missing male child reported in Amherst\n  - Excerpt: Authorities are searching for a 16-year-old male last seen in Amherst, Virginia.\n\n**Social media**\n- Social Media 1 (other): Please help find missing child in Amherst area. Last seen wearing plaid shirt, blue athletic shorts, red Crocs\n\n**Persons of interest**\n- POI 1: suspect\n  - Age Estimate: ~57\n  - Note: following into a store and exiting with the child\n  - Vehicle: dark blue Toyota Camry (plate: VA U**-****)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 2 transit stops within range\n- Points of interest: 1 POIs\n\n**Search zones**\n- Zone 1: I-95 NB in Piedmont\n  - Center: 37.58, -79.15\n  - Radius: 5.6 miles\n  - Priority: 0.52, Time: 0-24\n- Zone 2: I-64 EB in Piedmont\n  - Center: 37.33, -79.52\n  - Radius: 4.9 miles\n  - Priority: 0.67, Time: 0-24\n- Zone 3: I-81 SB in Piedmont\n  - Center: 37.78, -79.44\n  - Radius: 4.1 miles\n  - Priority: 0.90, Time: 0-24\n",
+    "narrative_short": "Child_4694 (male, 16y); last seen Unknown, VA; @ 2025-10-06 12:20 EDT; vehicle: Toyota Camry; cues: US-58, I-64",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_4694 (16y, male, blonde hair), last seen 2025-10-06 12:20 EDT, unknown location, VA.\n- Last known location: Unknown, Amherst, VA, coordinates 37.58, -79.15.\n- Timeline: Last seen 2025-10-06 12:20,",
+        "short_summary": "Subject: Child_4694 (16y, male, blonde hair), last seen 2025-10-06 12:20 EDT, unknown location, VA. Last known location: Unknown, Amherst, VA, coordinates 37.58, -79.15. Timeline: Last seen 2025-10-06 12:20,",
+        "processing_time": 4.818181276321411
+      },
+      "entities": {
+        "data": {
+          "name": "Child_4694",
+          "age": 16,
+          "gender": "M",
+          "location": {
+            "city": "Unknown",
+            "county": "Amherst",
+            "state": "VA"
+          },
+          "lat": 37.58,
+          "lon": -79.15,
+          "date_reported": "2025-10-06T21:20:33.808719+00:00",
+          "movement_cues": [
+            "I-64",
+            "I-81",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-07T01:08:04.579495+00:00",
+              "lat": 37.05,
+              "lon": -78.65,
+              "event_type": "camera_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.6064770647959333,
+              "note": "Transit system report: Child seen at transit station wearing blue windbreaker and khaki shorts"
+            },
+            {
+              "ts": "2025-10-07T10:39:24.299515+00:00",
+              "lat": 37.55,
+              "lon": -78.55,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.6733899897307665,
+              "note": "Witness reported seeing child wearing white hoodie and denim pants"
+            },
+            {
+              "ts": "2025-10-07T20:48:28.354334+00:00",
+              "lat": 37.21,
+              "lon": -79.16,
+              "event_type": "search_action",
+              "reporter_type": "family",
+              "confidence": 0.503552199098135,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and black leggings"
+            },
+            {
+              "ts": "2025-10-08T08:59:53.731975+00:00",
+              "lat": 38.15,
+              "lon": -79.07,
+              "event_type": "lpr_hit",
+              "reporter_type": "public",
+              "confidence": 0.5045274843807941,
+              "note": "Witness reported seeing child wearing plaid shirt and blue athletic shorts"
+            },
+            {
+              "ts": "2025-10-09T15:33:51.097105+00:00",
+              "lat": 37.83,
+              "lon": -79.43,
+              "event_type": "sighting",
+              "reporter_type": "officer",
+              "confidence": 0.4694850589477129,
+              "note": "Transit system report: Child seen at transit station wearing long-sleeve black shirt and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Amherst",
+              "excerpt": "Authorities are searching for a 16-year-old male last seen in Amherst, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "other",
+              "text": "Please help find missing child in Amherst area. Last seen wearing plaid shirt, blue athletic shorts, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "suspect",
+              "age_estimate": 57,
+              "vehicle": {
+                "make": "Toyota",
+                "model": "Camry",
+                "color": "dark blue",
+                "plate_partial": "VA U**-****"
+              },
+              "note": "following into a store and exiting with the child"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 2,
+          "nearby_pois": 1,
+          "search_zones": [
+            {
+              "center_lat": 37.58,
+              "center_lon": -79.15,
+              "radius_miles": 5.5807461216154985,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.5165379146666293,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.33,
+              "center_lon": -79.52,
+              "radius_miles": 4.934811678583349,
+              "corridor": "I-64 EB",
+              "region_tag": "Piedmont",
+              "priority": 0.6671690175723126,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.78,
+              "center_lon": -79.44,
+              "radius_miles": 4.131496210534732,
+              "corridor": "I-81 SB",
+              "region_tag": "Piedmont",
+              "priority": 0.8997570263606323,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-95 NB",
+            "I-64 EB",
+            "I-81 SB",
+            "I-81 SB",
+            "I-64 EB"
+          ]
+        },
+        "processing_time": 5.892881744786313,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1776156276464462
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-987210",
+    "narrative": "### Case GRD-2025-987210\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_8800\n- Age/Gender: 12 / female\n- Distinctive features: birthmark on left arm\n\n**Last known location**\n- City/County/State: Unknown, Prince George, VA\n- Coordinates: 37.21, -77.28\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:20 EDT\n- Reported missing (local): 2025-10-06 18:20 EDT\n- Time to report: 4h 17m\n\n**Incident summary**\n- A 12-year-old female was last seen at Prince George at 2025-10-06T16:20:44.274166+00:00. The child was reported missing by parent after failing to meet a friend.\n\n**Behavioral indicators**\n- entered vehicle and headed northbound on I-95\n- merged onto I-64 west toward Richmond\n- walked through mall corridor into adjacent store\n\n**Movement cues**\n- Key corridors: I-95, I-264\n- Details: Within 5 hours of disappearance, movement cues entered vehicle and headed northbound on I-95 suggest travel northbound along I-264. A black 2024 Honda Passport was observed departing near Prince George, Virginia.\n\n**Witness reports**\n- Witness 1: Around 11 hours later, a neighbor reported someone matching the description (12-year-old female, wearing red hoodie, navy sweatpants, red Crocs) near Craig.\n  - Clothing: red hoodie, navy sweatpants, red Crocs\n  - Vehicle: Honda Passport\n  - Behavior: switching vehicles after leaving the scene\n\n**Follow-up sightings**\n- Sighting 1: sighting at 37.26, -77.4\n  - Time: 2025-10-06 23:59 EDT\n  - Reporter: public, Confidence: 0.61\n  - Note: Witness reported seeing child wearing denim jacket and blue jeans\n- Sighting 2: lpr_hit at 37.76, -77.47\n  - Time: 2025-10-09 07:20 EDT\n  - Reporter: unknown, Confidence: 0.60\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and khaki shorts\n- Sighting 3: camera_hit at 37.35, -77.07\n  - Time: 2025-10-08 20:25 EDT\n  - Reporter: public, Confidence: 0.60\n  - Note: Witness reported seeing child wearing navy sweatshirt with white logo and black joggers\n\n**News reports**\n- News 1: Missing female child reported in Prince George\n  - Excerpt: Authorities are searching for a 12-year-old female last seen in Prince George, Virginia.\n\n**Social media**\n- Social Media 1 (nextdoor): Please help find missing child in Prince George area. Last seen wearing red hoodie, navy sweatpants, red Crocs\n\n**Persons of interest**\n- POI 1: companion\n  - Age Estimate: ~56\n  - Note: circling the block multiple times\n  - Vehicle: black Honda Passport (plate: partial VA tag ???-1234)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 7 transit stops within range\n- Points of interest: 4 POIs\n\n**Search zones**\n- Zone 1: I-95 NB in Piedmont\n  - Center: 37.37, -77.51\n  - Radius: 5.7 miles\n  - Priority: 0.30, Time: 0-24\n- Zone 2: I-64 EB in Tidewater\n  - Center: 37.13, -76.83\n  - Radius: 4.8 miles\n  - Priority: 0.32, Time: 0-24\n- Zone 3: US-29 SW in Piedmont\n  - Center: 37.3, -77.28\n  - Radius: 5.7 miles\n  - Priority: 0.87, Time: 0-24\n",
+    "narrative_short": "Child_8800 (female, 12y); last seen Unknown, VA; @ 2025-10-06 12:20 EDT; vehicle: Honda Passport; cues: I-95, I-264",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_8800 (12y, female), birthmark on left arm.\n- Last seen: 2025-10-06 12:20 EDT, Prince George, VA.\n- Missing since: 2025-10-06 18:20 EDT, 4h 17m.\n- Vehicle: Honda Passport, traveled on I-95, I-",
+        "short_summary": "Subject: Child_8800 (12y, female), birthmark on left arm. Last seen: 2025-10-06 12:20 EDT, Prince George, VA. Missing since: 2025-10-06 18:20 EDT, 4h 17m. Vehicle: Honda Passport, traveled on I-95, I-",
+        "processing_time": 4.725207090377808
+      },
+      "entities": {
+        "data": {
+          "name": "Child_8800",
+          "age": 12,
+          "gender": "F",
+          "location": {
+            "city": "Unknown",
+            "county": "Prince George",
+            "state": "VA"
+          },
+          "lat": 37.21,
+          "lon": -77.28,
+          "date_reported": "2025-10-06T22:20:44.660230+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-29",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-07T03:59:25.448019+00:00",
+              "lat": 37.26,
+              "lon": -77.4,
+              "event_type": "sighting",
+              "reporter_type": "public",
+              "confidence": 0.6122112933785926,
+              "note": "Witness reported seeing child wearing denim jacket and blue jeans"
+            },
+            {
+              "ts": "2025-10-09T11:20:55.014475+00:00",
+              "lat": 37.76,
+              "lon": -77.47,
+              "event_type": "lpr_hit",
+              "reporter_type": "unknown",
+              "confidence": 0.5973793684870867,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and khaki shorts"
+            },
+            {
+              "ts": "2025-10-09T00:25:22.596840+00:00",
+              "lat": 37.35,
+              "lon": -77.07,
+              "event_type": "camera_hit",
+              "reporter_type": "public",
+              "confidence": 0.5998890270519611,
+              "note": "Witness reported seeing child wearing navy sweatshirt with white logo and black joggers"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Prince George",
+              "excerpt": "Authorities are searching for a 12-year-old female last seen in Prince George, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "nextdoor",
+              "text": "Please help find missing child in Prince George area. Last seen wearing red hoodie, navy sweatpants, red Crocs"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "companion",
+              "age_estimate": 56,
+              "vehicle": {
+                "make": "Honda",
+                "model": "Passport",
+                "color": "black",
+                "plate_partial": "partial VA tag ???-1234"
+              },
+              "note": "circling the block multiple times"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 4,
+          "search_zones": [
+            {
+              "center_lat": 37.37,
+              "center_lon": -77.51,
+              "radius_miles": 5.746154864583243,
+              "corridor": "I-95 NB",
+              "region_tag": "Piedmont",
+              "priority": 0.3018507977884378,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.13,
+              "center_lon": -76.83,
+              "radius_miles": 4.803616713363233,
+              "corridor": "I-64 EB",
+              "region_tag": "Tidewater",
+              "priority": 0.3154082563604825,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.3,
+              "center_lon": -77.28,
+              "radius_miles": 5.738010563412746,
+              "corridor": "US-29 SW",
+              "region_tag": "Piedmont",
+              "priority": 0.8706371636655836,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-95 NB",
+            "I-64 EB",
+            "US-29 SW",
+            "US-29 SW",
+            "I-81 SB"
+          ]
+        },
+        "processing_time": 5.89288266081559,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1913750171661377
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-991991",
+    "narrative": "### Case GRD-2025-991991\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_7020\n- Age/Gender: 6 / male\n- Distinctive features: brown eyes\n\n**Last known location**\n- City/County/State: Unknown, Charles City, VA\n- Coordinates: 37.35, -77.07\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:21 EDT\n- Reported missing (local): 2025-10-06 18:21 EDT\n- Time to report: 5h 13m\n\n**Incident summary**\n- A 6-year-old male was last seen at Charles City at 2025-10-06T16:21:16.547474+00:00. The child was reported missing by teacher after failing to arrive at school.\n\n**Behavioral indicators**\n- turned onto US-58 east toward Suffolk\n\n**Movement cues**\n- Key corridors: US-58\n- Details: Within 12 hours of disappearance, movement cues walked through mall corridor into adjacent store suggest travel southbound along US-58. A silver 2018 Nissan Altima was observed departing near Charles City, Virginia.\n\n**Witness reports**\n- Witness 1: Around 21 hours later, a school_staff reported someone matching the description (6-year-old male, wearing greenish-colored hoodie, blue athletic shorts, black sneakers) near Fredericksburg.\n  - Clothing: greenish-colored hoodie, blue athletic shorts, black sneakers\n  - Vehicle: Nissan Altima\n  - Behavior: asking the child questions and offering a ride\n\n**Follow-up sightings**\n- Sighting 1: transit_tap at 37.5478512, -77.4019955\n  - Time: 2025-10-06 17:56 EDT\n  - Reporter: public, Confidence: 0.72\n  - Note: Transit system report: Child seen at transit station wearing plaid shirt and khaki shorts\n- Sighting 2: transit_tap at 37.02, -76.34\n  - Time: 2025-10-06 13:53 EDT\n  - Reporter: officer, Confidence: 0.70\n  - Note: Transit system report: Child seen at transit station wearing navy sweatshirt with white logo and khaki shorts\n\n**News reports**\n- News 1: Missing male child reported in Charles City\n  - Excerpt: Authorities are searching for a 6-year-old male last seen in Charles City, Virginia.\n\n**Social media**\n- Social Media 1 (NCMEC): Please help find missing child in Charles City area. Last seen wearing greenish-colored hoodie, blue athletic shorts, black sneakers\n\n**Persons of interest**\n- POI 1: family\n  - Age Estimate: ~44\n  - Note: backing up vehicle to block driveway\n  - Vehicle: silver Nissan Altima (plate: temporary paper tag)\n\n**Nearby infrastructure**\n- Roads: I-64, I-95, US-250, US-301, US-33, US-360, US-522, US-60, Britton, CrittendenNorview\n- Transit: 7 transit stops within range\n- Points of interest: 1 POIs\n\n**Search zones**\n- Zone 1: I-81 SB in Piedmont\n  - Center: 37.54, -77.43\n  - Radius: 5.7 miles\n  - Priority: 0.66, Time: 0-24\n- Zone 2: I-95 NB in Tidewater\n  - Center: 37.13, -76.83\n  - Radius: 4.2 miles\n  - Priority: 0.53, Time: 0-24\n- Zone 3: I-81 SB in Piedmont\n  - Center: 37.26, -77.4\n  - Radius: 4.0 miles\n  - Priority: 0.68, Time: 0-24\n",
+    "narrative_short": "Child_7020 (male, 6y); last seen Unknown, VA; @ 2025-10-06 12:21 EDT; vehicle: Nissan Altima; cues: US-58",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_7020 (6y, male)\n- Last seen: Unknown, Charles City, VA, 2025-10-06 12:21 EDT\n- Missing since: 2025-10-06 18:21 EDT\n- Time to report: 5h 13m\n- Last seen at: 37.35, -77",
+        "short_summary": "Subject: Child_7020 (6y, male) Last seen: Unknown, Charles City, VA, 2025-10-06 12:21 EDT Missing since: 2025-10-06 18:21 EDT Time to report: 5h 13m Last seen at: 37.35, -77",
+        "processing_time": 4.797716379165649
+      },
+      "entities": {
+        "data": {
+          "name": "Child_7020",
+          "age": 6,
+          "gender": "M",
+          "location": {
+            "city": "Unknown",
+            "county": "Charles City",
+            "state": "VA"
+          },
+          "lat": 37.35,
+          "lon": -77.07,
+          "date_reported": "2025-10-06T22:21:16.942147+00:00",
+          "movement_cues": [
+            "I-64",
+            "I-81",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "high_priority_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "minor_under_13",
+            "persons_of_interest_identified"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-06T21:56:40.756565+00:00",
+              "lat": 37.5478512,
+              "lon": -77.4019955,
+              "event_type": "transit_tap",
+              "reporter_type": "public",
+              "confidence": 0.7179301190319314,
+              "note": "Transit system report: Child seen at transit station wearing plaid shirt and khaki shorts"
+            },
+            {
+              "ts": "2025-10-06T17:53:09.940108+00:00",
+              "lat": 37.02,
+              "lon": -76.34,
+              "event_type": "transit_tap",
+              "reporter_type": "officer",
+              "confidence": 0.6986815218258455,
+              "note": "Transit system report: Child seen at transit station wearing navy sweatshirt with white logo and khaki shorts"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing male child reported in Charles City",
+              "excerpt": "Authorities are searching for a 6-year-old male last seen in Charles City, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "NCMEC",
+              "text": "Please help find missing child in Charles City area. Last seen wearing greenish-colored hoodie, blue athletic shorts, black sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "family",
+              "age_estimate": 44,
+              "vehicle": {
+                "make": "Nissan",
+                "model": "Altima",
+                "color": "silver",
+                "plate_partial": "temporary paper tag"
+              },
+              "note": "backing up vehicle to block driveway"
+            }
+          ],
+          "nearby_roads": [
+            "I-64",
+            "I-95",
+            "US-250",
+            "US-301",
+            "US-33",
+            "US-360",
+            "US-522",
+            "US-60",
+            "Britton",
+            "CrittendenNorview"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 1,
+          "search_zones": [
+            {
+              "center_lat": 37.54,
+              "center_lon": -77.43,
+              "radius_miles": 5.701964142755159,
+              "corridor": "I-81 SB",
+              "region_tag": "Piedmont",
+              "priority": 0.6628368625528542,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.13,
+              "center_lon": -76.83,
+              "radius_miles": 4.238132456451474,
+              "corridor": "I-95 NB",
+              "region_tag": "Tidewater",
+              "priority": 0.5306650675899454,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.26,
+              "center_lon": -77.4,
+              "radius_miles": 4.027280163503573,
+              "corridor": "I-81 SB",
+              "region_tag": "Piedmont",
+              "priority": 0.6833631911675584,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-81 SB",
+            "I-95 NB",
+            "I-81 SB",
+            "US-29 SW",
+            "I-81 SB"
+          ]
+        },
+        "processing_time": 5.892883539199829,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Stationary",
+          "risk": "High"
+        },
+        "processing_time": 1.1913750171661377
+      }
+    }
+  },
+  {
+    "case_id": "GRD-2025-991997",
+    "narrative": "### Case GRD-2025-991997\n————————————————————————————————————————————————————————\n\n**Subject**\n- Name/ID: Child_4013\n- Age/Gender: 15 / female\n- Distinctive features: glasses\n\n**Last known location**\n- City/County/State: Norfolk, Unknown, VA\n- Coordinates: 36.85, -76.28\n\n**Timeline**\n- Last seen (local): 2025-10-06 12:20 EDT\n- Reported missing (local): 2025-10-06 13:20 EDT\n- Time to report: 1h 8m\n\n**Incident summary**\n- A 15-year-old female was last seen at Norfolk at 2025-10-06T16:20:54.015609+00:00. The child was reported missing by friend after failing to return home.\n\n**Behavioral indicators**\n- entered vehicle and headed northbound on I-95\n- walked through mall corridor into adjacent store\n\n**Movement cues**\n- Key corridors: US-58, US-58\n- Details: Within 6 hours of disappearance, movement cues turned onto US-58 east toward Suffolk suggest travel southbound along US-58. A dark blue 2012 Toyota Camry was observed departing near Norfolk, Virginia.\n\n**Witness reports**\n- Witness 1: Around 6 hours later, a neighbor reported someone matching the description (15-year-old female, wearing gray jacket, navy sweatpants, black sneakers) near Harrisonburg.\n  - Clothing: gray jacket, navy sweatpants, black sneakers\n  - Vehicle: Toyota Camry\n  - Behavior: following into a store and exiting with the child\n\n**Follow-up sightings**\n- Sighting 1: search_action at 37.43, -76.32\n  - Time: 2025-10-07 20:36 EDT\n  - Reporter: public, Confidence: 0.50\n  - Note: Witness reported seeing child wearing greenish-colored hoodie and blue jeans\n- Sighting 2: sighting at 36.9, -76.71\n  - Time: 2025-10-09 02:27 EDT\n  - Reporter: family, Confidence: 0.54\n  - Note: Witness reported seeing child wearing denim jacket and navy sweatpants\n\n**News reports**\n- News 1: Missing female child reported in Norfolk\n  - Excerpt: Authorities are searching for a 15-year-old female last seen in Norfolk, Virginia.\n\n**Social media**\n- Social Media 1 (nextdoor): Please help find missing child in Norfolk area. Last seen wearing gray jacket, navy sweatpants, black sneakers\n\n**Persons of interest**\n- POI 1: unknown\n  - Age Estimate: ~50\n  - Note: following into a store and exiting with the child\n  - Vehicle: dark blue Toyota Camry (plate: VA U**-****)\n\n**Nearby infrastructure**\n- Roads: I-264, I-564, I-64, US-13, US-17, US-258, US-460, US-58, US-60, Benning Rd\n- Transit: 7 transit stops within range\n- Points of interest: 3 POIs\n\n**Search zones**\n- Zone 1: I-81 SB in Tidewater\n  - Center: 36.85, -75.97\n  - Radius: 4.7 miles\n  - Priority: 0.52, Time: 0-24\n- Zone 2: US-29 SW in Tidewater\n  - Center: 37.12, -76.34\n  - Radius: 5.5 miles\n  - Priority: 0.63, Time: 0-24\n- Zone 3: I-64 EB in Tidewater\n  - Center: 36.85, -76.28\n  - Radius: 4.5 miles\n  - Priority: 0.33, Time: 0-24\n",
+    "narrative_short": "Child_4013 (female, 15y); last seen Norfolk, VA; @ 2025-10-06 12:20 EDT; vehicle: Toyota Camry; cues: US-58, US-58",
+    "llm_results": {
+      "summary": {
+        "text": "- Subject: Child_4013, 15F, glasses.\n- Last seen: Norfolk, VA, 2025-10-06 12:20 EDT.\n- Missing since: 2025-10-06 13:20 EDT.\n- Last known route: US-58, heading north.\n- Behavior: Entered vehicle, headed north on I-95.Human",
+        "short_summary": "Subject: Child_4013, 15F, glasses. Last seen: Norfolk, VA, 2025-10-06 12:20 EDT. Missing since: 2025-10-06 13:20 EDT. Last known route: US-58, heading north. Behavior: Entered vehicle, headed north on I-95.Human",
+        "processing_time": 4.896392345428467
+      },
+      "entities": {
+        "data": {
+          "name": "Child_4013",
+          "age": 15,
+          "gender": "F",
+          "location": {
+            "city": "Norfolk",
+            "county": "Unknown",
+            "state": "VA"
+          },
+          "lat": 36.85,
+          "lon": -76.28,
+          "date_reported": "2025-10-06T17:20:54.023614+00:00",
+          "movement_cues": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "I-81",
+            "I-95",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-29",
+            "US-460",
+            "US-58",
+            "US-60"
+          ],
+          "risk_factors": [
+            "Intercity/Interstate movement",
+            "Luring/vehicle involvement",
+            "has_follow_up_sightings",
+            "has_search_zones",
+            "highway_corridor",
+            "interstate_corridor",
+            "involved_vehicle",
+            "persons_of_interest_identified",
+            "vehicle_lure_or_transport"
+          ],
+          "aliases": [],
+          "follow_up_sightings": [
+            {
+              "ts": "2025-10-08T00:36:34.910264+00:00",
+              "lat": 37.43,
+              "lon": -76.32,
+              "event_type": "search_action",
+              "reporter_type": "public",
+              "confidence": 0.4959903223425671,
+              "note": "Witness reported seeing child wearing greenish-colored hoodie and blue jeans"
+            },
+            {
+              "ts": "2025-10-09T06:27:49.199936+00:00",
+              "lat": 36.9,
+              "lon": -76.71,
+              "event_type": "sighting",
+              "reporter_type": "family",
+              "confidence": 0.5396151955143822,
+              "note": "Witness reported seeing child wearing denim jacket and navy sweatpants"
+            }
+          ],
+          "news_reports": [
+            {
+              "title": "Missing female child reported in Norfolk",
+              "excerpt": "Authorities are searching for a 15-year-old female last seen in Norfolk, Virginia."
+            }
+          ],
+          "social_media": [
+            {
+              "platform": "nextdoor",
+              "text": "Please help find missing child in Norfolk area. Last seen wearing gray jacket, navy sweatpants, black sneakers"
+            }
+          ],
+          "persons_of_interest": [
+            {
+              "role": "unknown",
+              "age_estimate": 50,
+              "vehicle": {
+                "make": "Toyota",
+                "model": "Camry",
+                "color": "dark blue",
+                "plate_partial": "VA U**-****"
+              },
+              "note": "following into a store and exiting with the child"
+            }
+          ],
+          "nearby_roads": [
+            "I-264",
+            "I-564",
+            "I-64",
+            "US-13",
+            "US-17",
+            "US-258",
+            "US-460",
+            "US-58",
+            "US-60",
+            "Benning Rd"
+          ],
+          "nearby_transit": 7,
+          "nearby_pois": 3,
+          "search_zones": [
+            {
+              "center_lat": 36.85,
+              "center_lon": -75.97,
+              "radius_miles": 4.716225053998718,
+              "corridor": "I-81 SB",
+              "region_tag": "Tidewater",
+              "priority": 0.5222660355256271,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 37.12,
+              "center_lon": -76.34,
+              "radius_miles": 5.526824958459846,
+              "corridor": "US-29 SW",
+              "region_tag": "Tidewater",
+              "priority": 0.6275501400191967,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            },
+            {
+              "center_lat": 36.85,
+              "center_lon": -76.28,
+              "radius_miles": 4.456223258185821,
+              "corridor": "I-64 EB",
+              "region_tag": "Tidewater",
+              "priority": 0.3256196902283934,
+              "in_state": true,
+              "out_of_state_penalty": 0.0,
+              "time_window": "0-24",
+              "weight": 1.0
+            }
+          ],
+          "search_zones_count": 9,
+          "search_corridors": [
+            "I-81 SB",
+            "US-29 SW",
+            "I-64 EB",
+            "I-81 SB",
+            "I-81 SB"
+          ]
+        },
+        "processing_time": 5.892884430132415,
+        "field_count": 19
+      },
+      "labels": {
+        "data": {
+          "movement": "Interstate",
+          "risk": "Critical"
+        },
+        "processing_time": 1.1913750171661377
+      }
+    }
+  }
+]
