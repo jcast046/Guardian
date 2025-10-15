@@ -238,7 +238,8 @@ def backfill(entity, narrative):
     if any(k in txt for k in ["entered vehicle", "offered a ride", "lured"]): rf.add("Luring/vehicle involvement")
     if any(k in txt for k in ["i-95", "i-64", "us-58", "i-81"]): rf.add("Intercity/Interstate movement")
     if re.search(r"elapsed|time to report:\s*(\d+)\s*minutes", txt):
-        if int(re.search(r"(\d+)\s*minutes", txt).group(1)) > 120:
+        match = re.search(r"(\d+)\s*minutes", txt)
+        if match and int(match.group(1)) > 120:
             rf.add("Delayed reporting")
     entity["risk_factors"] = sorted(rf)
 

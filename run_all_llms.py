@@ -1134,7 +1134,7 @@ def backfill_entities(entities: dict, case: dict) -> dict:
         " ".join([poi.get("note", "") for poi in n.get("persons_of_interest", [])])
     ]).lower()
 
-    if (out.get("age") is not None and out["age"] <= 12):
+    if (out.get("age") is not None and isinstance(out["age"], (int, float)) and out["age"] <= 12):
         rf.add("minor_under_13")
     if any(k in fulltext for k in ["entered vehicle", "vehicle"]):
         rf.add("involved_vehicle")

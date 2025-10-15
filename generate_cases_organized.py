@@ -139,9 +139,7 @@ The system implements comprehensive error handling:
 - `enum`: Enumerated constants for better code organization
 
 ## Author
-
-**Joshua Castillo** - Computer Scientist, Guardian Project
-
+Joshua Castillo
 """
 
 import json

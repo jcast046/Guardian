@@ -2,13 +2,13 @@
   "total_cases": 500,
   "total_zones": 4500,
   "zones_with_plausibility": 4500,
-  "avg_plausibility": 0.7064,
-  "priority_improvements": 321,
+  "avg_plausibility": 0.7111999999999999,
+  "priority_improvements": 335,
   "cases_processed": [
     {
       "case_id": "GRD-2025-000487",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-003614",
@@ -138,7 +138,7 @@
     {
       "case_id": "GRD-2025-056406",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-056590",
@@ -148,7 +148,7 @@
     {
       "case_id": "GRD-2025-057559",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-060220",
@@ -168,12 +168,12 @@
     {
       "case_id": "GRD-2025-067348",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-068542",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-071356",
@@ -238,12 +238,12 @@
     {
       "case_id": "GRD-2025-097527",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-100943",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-103896",
@@ -253,7 +253,7 @@
     {
       "case_id": "GRD-2025-105805",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-114987",
@@ -283,12 +283,12 @@
     {
       "case_id": "GRD-2025-121839",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-124007",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-125805",
@@ -298,7 +298,7 @@
     {
       "case_id": "GRD-2025-126389",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-129301",
@@ -313,7 +313,7 @@
     {
       "case_id": "GRD-2025-131223",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-135022",
@@ -323,7 +323,7 @@
     {
       "case_id": "GRD-2025-135048",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-135254",
@@ -353,7 +353,7 @@
     {
       "case_id": "GRD-2025-146319",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-147321",
@@ -413,12 +413,12 @@
     {
       "case_id": "GRD-2025-163864",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-164144",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-168910",
@@ -453,7 +453,7 @@
     {
       "case_id": "GRD-2025-186063",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-186288",
@@ -483,7 +483,7 @@
     {
       "case_id": "GRD-2025-196256",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-197208",
@@ -518,7 +518,7 @@
     {
       "case_id": "GRD-2025-212129",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-212484",
@@ -533,7 +533,7 @@
     {
       "case_id": "GRD-2025-215064",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-215378",
@@ -663,12 +663,12 @@
     {
       "case_id": "GRD-2025-266673",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-267861",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-269136",
@@ -703,12 +703,12 @@
     {
       "case_id": "GRD-2025-281222",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-284813",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-289346",
@@ -723,7 +723,7 @@
     {
       "case_id": "GRD-2025-290121",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-293985",
@@ -733,7 +733,7 @@
     {
       "case_id": "GRD-2025-295244",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-296458",
@@ -748,7 +748,7 @@
     {
       "case_id": "GRD-2025-300943",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-302620",
@@ -758,7 +758,7 @@
     {
       "case_id": "GRD-2025-305628",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-309778",
@@ -783,7 +783,7 @@
     {
       "case_id": "GRD-2025-317283",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-320711",
@@ -803,7 +803,7 @@
     {
       "case_id": "GRD-2025-323993",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-324079",
@@ -813,7 +813,7 @@
     {
       "case_id": "GRD-2025-328576",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-329749",
@@ -918,7 +918,7 @@
     {
       "case_id": "GRD-2025-380458",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-385503",
@@ -938,7 +938,7 @@
     {
       "case_id": "GRD-2025-388362",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-390188",
@@ -948,12 +948,12 @@
     {
       "case_id": "GRD-2025-392850",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-392906",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-393557",
@@ -993,7 +993,7 @@
     {
       "case_id": "GRD-2025-408187",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-408937",
@@ -1003,12 +1003,12 @@
     {
       "case_id": "GRD-2025-411967",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-414839",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-417426",
@@ -1078,7 +1078,7 @@
     {
       "case_id": "GRD-2025-434272",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-434631",
@@ -1113,7 +1113,7 @@
     {
       "case_id": "GRD-2025-445192",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-449221",
@@ -1148,7 +1148,7 @@
     {
       "case_id": "GRD-2025-463174",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-464039",
@@ -1173,7 +1173,7 @@
     {
       "case_id": "GRD-2025-468238",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-469750",
@@ -1198,7 +1198,7 @@
     {
       "case_id": "GRD-2025-473431",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-474405",
@@ -1208,7 +1208,7 @@
     {
       "case_id": "GRD-2025-476136",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-476263",
@@ -1233,12 +1233,12 @@
     {
       "case_id": "GRD-2025-488983",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-489002",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-491022",
@@ -1248,7 +1248,7 @@
     {
       "case_id": "GRD-2025-491475",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-492757",
@@ -1263,12 +1263,12 @@
     {
       "case_id": "GRD-2025-497350",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-502028",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-502381",
@@ -1288,7 +1288,7 @@
     {
       "case_id": "GRD-2025-510454",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-514232",
@@ -1303,7 +1303,7 @@
     {
       "case_id": "GRD-2025-516910",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-517033",
@@ -1323,12 +1323,12 @@
     {
       "case_id": "GRD-2025-524970",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-525436",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-529873",
@@ -1338,7 +1338,7 @@
     {
       "case_id": "GRD-2025-539737",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-540310",
@@ -1353,17 +1353,17 @@
     {
       "case_id": "GRD-2025-544172",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-546196",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-546833",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-547379",
@@ -1393,7 +1393,7 @@
     {
       "case_id": "GRD-2025-559835",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-560057",
@@ -1403,12 +1403,12 @@
     {
       "case_id": "GRD-2025-560842",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-565347",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-567871",
@@ -1423,7 +1423,7 @@
     {
       "case_id": "GRD-2025-571072",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-577236",
@@ -1463,7 +1463,7 @@
     {
       "case_id": "GRD-2025-600200",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-602504",
@@ -1483,7 +1483,7 @@
     {
       "case_id": "GRD-2025-606435",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-607081",
@@ -1523,7 +1523,7 @@
     {
       "case_id": "GRD-2025-616767",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-617100",
@@ -1558,7 +1558,7 @@
     {
       "case_id": "GRD-2025-622615",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-623427",
@@ -1568,7 +1568,7 @@
     {
       "case_id": "GRD-2025-626123",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-628635",
@@ -1578,7 +1578,7 @@
     {
       "case_id": "GRD-2025-629838",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-632636",
@@ -1598,7 +1598,7 @@
     {
       "case_id": "GRD-2025-633719",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-633727",
@@ -1613,7 +1613,7 @@
     {
       "case_id": "GRD-2025-635761",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-635894",
@@ -1623,7 +1623,7 @@
     {
       "case_id": "GRD-2025-636166",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-637849",
@@ -1638,17 +1638,17 @@
     {
       "case_id": "GRD-2025-638988",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-641636",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-642940",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-643251",
@@ -1708,7 +1708,7 @@
     {
       "case_id": "GRD-2025-673773",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-678104",
@@ -1733,7 +1733,7 @@
     {
       "case_id": "GRD-2025-684046",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-688115",
@@ -1743,12 +1743,12 @@
     {
       "case_id": "GRD-2025-688402",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-689857",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-691308",
@@ -1778,7 +1778,7 @@
     {
       "case_id": "GRD-2025-700759",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-700917",
@@ -1793,7 +1793,7 @@
     {
       "case_id": "GRD-2025-701440",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-704672",
@@ -1813,7 +1813,7 @@
     {
       "case_id": "GRD-2025-709633",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-710360",
@@ -1833,7 +1833,7 @@
     {
       "case_id": "GRD-2025-711875",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-712307",
@@ -1853,7 +1853,7 @@
     {
       "case_id": "GRD-2025-718102",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-721222",
@@ -1878,7 +1878,7 @@
     {
       "case_id": "GRD-2025-733640",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-734781",
@@ -1923,7 +1923,7 @@
     {
       "case_id": "GRD-2025-743345",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-743920",
@@ -1948,7 +1948,7 @@
     {
       "case_id": "GRD-2025-762343",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-763336",
@@ -1973,7 +1973,7 @@
     {
       "case_id": "GRD-2025-770780",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-773048",
@@ -1988,7 +1988,7 @@
     {
       "case_id": "GRD-2025-776431",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-776538",
@@ -2013,7 +2013,7 @@
     {
       "case_id": "GRD-2025-793238",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-793612",
@@ -2033,12 +2033,12 @@
     {
       "case_id": "GRD-2025-795655",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-796883",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-797359",
@@ -2073,7 +2073,7 @@
     {
       "case_id": "GRD-2025-809947",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-810004",
@@ -2083,7 +2083,7 @@
     {
       "case_id": "GRD-2025-810828",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-813185",
@@ -2098,7 +2098,7 @@
     {
       "case_id": "GRD-2025-816615",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-819798",
@@ -2183,7 +2183,7 @@
     {
       "case_id": "GRD-2025-868925",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-873074",
@@ -2253,17 +2253,17 @@
     {
       "case_id": "GRD-2025-899476",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-899876",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-900426",
       "zones_count": 9,
-      "avg_plausibility": 0.8999999999999999
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-901193",
@@ -2298,7 +2298,7 @@
     {
       "case_id": "GRD-2025-915272",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-916028",
@@ -2313,7 +2313,7 @@
     {
       "case_id": "GRD-2025-918977",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-919017",
@@ -2353,7 +2353,7 @@
     {
       "case_id": "GRD-2025-940845",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-941139",
@@ -2378,7 +2378,7 @@
     {
       "case_id": "GRD-2025-949401",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.8999999999999999
     },
     {
       "case_id": "GRD-2025-949433",
@@ -2433,12 +2433,12 @@
     {
       "case_id": "GRD-2025-969562",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-970740",
       "zones_count": 9,
-      "avg_plausibility": 0.7
+      "avg_plausibility": 0.5
     },
     {
       "case_id": "GRD-2025-970983",
@@ -2463,7 +2463,7 @@
     {
       "case_id": "GRD-2025-974241",
       "zones_count": 9,
-      "avg_plausibility": 0.5
+      "avg_plausibility": 0.7
     },
     {
       "case_id": "GRD-2025-975719",
