@@ -41,24 +41,6 @@ The validation system detects the appropriate schema for each JSON file based on
 - **Reinforcement Learning**: Incorporates RL search patterns and time windows
 - **Performance Optimization**: Memory management, caching, and GPU acceleration for RTX 4060
 
-## Installation
-
-```bash
-# Clone the repository
-git clone git@github.com:jcast046/Guardian.git
-cd Guardian
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download models (requires Hugging Face token for Llama)
-$env:HUGGINGFACE_HUB_TOKEN = "hf_XXXX"
-powershell -ExecutionPolicy Bypass -File .\scripts\download_models.ps1
-
-# Validate data sources
-python build.py
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -217,19 +199,6 @@ Models are configured in `guardian.config.json` and versions are pinned in `mode
 }
 ```
 
-### Downloading Models
-
-```powershell
-# Set Hugging Face token (required for Llama models)
-$env:HUGGINGFACE_HUB_TOKEN = "hf_XXXX"
-
-# Activate virtual environment
-.\.venv\Scripts\Activate.ps1
-
-# Download all models
-powershell -ExecutionPolicy Bypass -File .\scripts\download_models.ps1
-```
-
 ### Pinning Model Versions
 
 For reproducible builds, pin models to exact commit hashes:
@@ -242,22 +211,6 @@ python .\scripts\freeze_lock.py
 This updates `models.lock.json` with exact commit hashes instead of "main" branches.
 
 ## Usage
-
-### Basic Usage
-
-```bash
-# Generate 500 synthetic cases (default)
-python generate_cases.py
-
-# Generate with specific seed for reproducibility
-python generate_cases.py --n 100 --seed 42
-
-# Output to custom directory
-python generate_cases_organized.py --n 1000 --out data/large_batch_cases
-
-# Generate smaller batches for testing
-python generate_cases.py --n 10
-```
 
 ### LLM Usage
 
