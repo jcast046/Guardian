@@ -1,5 +1,4 @@
-"""
-Entity extraction using Qwen2.5-3B-Instruct for JSON extraction.
+"""Entity extraction using Qwen2.5-3B-Instruct for JSON extraction.
 
 This module provides structured entity extraction capabilities using the Qwen2.5-3B-Instruct
 model. It extracts persons, vehicles, locations, timeline events, and evidence from case
@@ -10,23 +9,8 @@ high-quality entity extraction for investigative workflows.
 
 Author: Joshua Castillo
 
-Classes:
-    None
-
-Functions:
-    extract_entities(narrative: str) -> dict: Extract all entities from case narrative
-    extract_persons(narrative: str) -> list: Extract only person entities
-    extract_vehicles(narrative: str) -> list: Extract only vehicle entities
-    extract_locations(narrative: str) -> list: Extract only location entities
-    extract_json(text: str, hints: dict | None = None) -> dict: Deterministic scaffold with LLM fill
-    batch_extract_json(narratives: list[str], batch_size: int = 2, hints_list: list[dict] | None = None) -> list[dict]: Batch processing
-    scaffold_from_narrative(text: str) -> dict: Lightweight deterministic scaffold from structured lines
-    merge_keep_existing(base: dict, add: dict) -> dict: Merge dicts preferring existing non-null values
-    backfill(entity, narrative): Fast, deterministic backfills for missing fields
-    minimal_entities_from_case(case: dict) -> dict: Extract minimal entities for EDA
-
 Example:
-    >>> from guardian_llm import extract_entities, extract_persons
+    >>> from guardian_llm.extractor import extract_entities, extract_persons
     >>> entities = extract_entities("John Smith was seen driving a red Honda...")
     >>> persons = extract_persons("John Smith was seen driving a red Honda...")
 """
@@ -39,14 +23,13 @@ from .prompts import EXTRACTION_PROMPT
 
 # --- minimal helpers for EDA ---
 def _abbr_state(s: str | None) -> str | None:
-    """
-    Normalize state abbreviations to standard format.
+    """Normalize state abbreviations to standard format.
     
     Args:
-        s (str | None): State string to normalize
+        s: State string to normalize
         
     Returns:
-        str | None: Normalized state abbreviation or None if input is None/empty
+        Normalized state abbreviation or None if input is None/empty
     """
     if not s: return None
     s = s.strip()
@@ -104,17 +87,16 @@ RE_REPORTED   = re.compile(r'(Reported Missing|Date Reported):\s*([0-9]{4}-[0-9]
 RE_MOVES      = re.compile(r'\b(I-\d{1,3}|US-\d{1,3}|VA-\d{1,3})\b', re.I)
 
 def scaffold_from_narrative(text: str) -> dict:
-    """
-    Create lightweight deterministic scaffold from structured narrative lines.
+    """Create lightweight deterministic scaffold from structured narrative lines.
     
     This function uses regex patterns to extract basic information from well-structured
     case narratives, providing a foundation for LLM-based extraction.
     
     Args:
-        text (str): Case narrative text to parse
+        text: Case narrative text to parse
         
     Returns:
-        dict: Scaffold data with extracted fields and risk factors
+        Scaffold data with extracted fields and risk factors
     """
     data = {
         "name": None,
@@ -246,18 +228,17 @@ def backfill(entity, narrative):
     return entity
 
 def _generate_json_strict(prompt: str, max_new_tokens: int = 192) -> str:
-    """
-    Internal generate wrapper for JSON extraction with optimized settings.
+    """Internal generate wrapper for JSON extraction with optimized settings.
     
     This function handles the actual model inference for JSON extraction tasks,
     using optimized generation parameters for consistent JSON output.
     
     Args:
-        prompt (str): Input prompt for the model
-        max_new_tokens (int): Maximum number of new tokens to generate
+        prompt: Input prompt for the model
+        max_new_tokens: Maximum number of new tokens to generate
         
     Returns:
-        str: Generated text from the model
+        Generated text from the model
     """
     _ensure_loaded()
     
@@ -554,26 +535,24 @@ def _ensure_loaded():
     _mdl.eval()  # Set to evaluation mode
 
 def extract_entities(narrative: str) -> dict:
-    """
-    Extract entities from case narrative using Qwen2.5-3B-Instruct.
+    """Extract entities from case narrative using Qwen2.5-3B-Instruct.
     
-    This function processes a case narrative and extracts structured entities
-    including persons, vehicles, locations, timeline events, and evidence.
-    The output is returned as a dictionary with standardized JSON structure.
+    Processes a case narrative and extracts structured entities including persons,
+    vehicles, locations, timeline events, and evidence. Returns standardized JSON structure.
     
     Args:
-        narrative (str): The case narrative text to extract entities from
+        narrative: The case narrative text to extract entities from.
         
     Returns:
-        dict: Dictionary containing extracted entities with the following structure:
-            {
-                "persons": [{"name": str, "description": str, "role": str}],
-                "vehicles": [{"make": str, "model": str, "color": str, "license": str}],
-                "locations": [{"address": str, "landmark": str, "coordinates": str}],
-                "timeline": [{"date": str, "time": str, "event": str}],
-                "evidence": [{"type": str, "description": str, "location": str}]
-            }
-            
+        Dictionary containing extracted entities with structure:
+        {
+            "persons": [{"name": str, "description": str, "role": str}],
+            "vehicles": [{"make": str, "model": str, "color": str, "license": str}],
+            "locations": [{"address": str, "landmark": str, "coordinates": str}],
+            "timeline": [{"date": str, "time": str, "event": str}],
+            "evidence": [{"type": str, "description": str, "location": str}]
+        }
+        
     Example:
         >>> narrative = "John Smith was seen driving a red Honda Civic..."
         >>> entities = extract_entities(narrative)
@@ -581,7 +560,6 @@ def extract_entities(narrative: str) -> dict:
         
     Note:
         If JSON parsing fails, returns an empty structure with empty lists.
-        The function uses low temperature (0.1) for consistent JSON output.
     """
     _ensure_loaded()
     

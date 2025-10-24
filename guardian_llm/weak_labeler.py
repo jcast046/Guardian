@@ -1,34 +1,20 @@
-"""
-Weak labeling using Qwen2.5-3B for movement classification and risk assessment.
+"""Weak labeling module for movement classification and risk assessment.
 
 This module provides automated labeling capabilities for case narratives using the
 Qwen2.5-3B-Instruct model. It classifies movement patterns and assesses risk
 levels to support investigative workflows and case prioritization.
 
-The weak labeler is designed to provide consistent, automated labeling that can be
-used for case categorization, risk assessment, and workflow optimization.
+The weak labeler combines LLM-based classification with rule-based overlays to
+provide consistent, automated labeling for case categorization, risk assessment,
+and workflow optimization.
 
 Author: Joshua Castillo
 
-Functions:
-    classify_movement(narrative: str) -> str: Classify movement pattern in case
-    assess_risk(narrative: str) -> str: Assess risk level of case
-    label_case(narrative: str) -> dict: Combined movement and risk labeling
-    label_batch(narratives: list) -> list: Batch process multiple cases
-    batch_label_cases(narratives: list, batch_size: int = 2) -> list: Batch process with optimized settings
-    load_weak_labeler(model_id_or_dir: str, device_map: str = "auto"): Load model once for batch processing
-    weak_label_batch(pipe, texts: List[str]) -> List[Dict[str, str]]: Batch label multiple texts
-    _risk_by_rules(text: str) -> str: Rule-based risk scoring
-    apply_risk_overlay(llm_risk: str, entities: dict, narrative: str) -> str: Apply rule overlay to LLM risk
-    rule_risk(entities: dict) -> str: Rule-based risk calibration
-    release(): Release model and clear GPU memory
-    unload_model(model, tokenizer): Explicitly unload model and clear GPU memory
-
 Example:
-    >>> from guardian_llm import classify_movement, assess_risk, label_case
+    >>> from guardian_llm.weak_labeler import classify_movement, label_case
     >>> movement = classify_movement("Suspect traveled from NYC to LA...")
-    >>> risk = assess_risk("Armed robbery with weapon...")
     >>> labels = label_case("Case narrative...")
+    >>> print(labels['movement'], labels['risk'])
 """
 import json, re, torch, os
 from pathlib import Path
@@ -64,16 +50,24 @@ INTERSTATE = re.compile(r'\bI-\d{1,3}\b', re.I)
 # =============================================================================
 
 def load_weak_labeler(model_id_or_dir: str, device_map: str = "auto"):
-    """
-    Load Qwen2.5-3B-Instruct once.
-    Return a callable/pipe used for repeated inference.
+    """Load Qwen2.5-3B-Instruct model for batch processing.
+    
+    Loads the model once and returns a pipeline for repeated inference.
+    Optimizes for GPU memory usage with 4-bit quantization when available.
     
     Args:
-        model_id_or_dir (str): Model path or HuggingFace model ID
-        device_map (str): Device mapping for model loading
+        model_id_or_dir: Model path or HuggingFace model ID
+        device_map: Device mapping for model loading ("auto", "cpu", "cuda")
         
     Returns:
-        pipeline: HuggingFace pipeline for text generation
+        HuggingFace pipeline configured for text generation with sampling
+        
+    Raises:
+        Exception: If model loading fails or CUDA is unavailable
+        
+    Example:
+        >>> pipe = load_weak_labeler("Qwen/Qwen2.5-3B-Instruct")
+        >>> results = pipe(["Case narrative 1", "Case narrative 2"])
     """
     from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
     
@@ -125,14 +119,19 @@ def load_weak_labeler(model_id_or_dir: str, device_map: str = "auto"):
     return pipe
 
 def _prompt_for_labeling(text: str) -> str:
-    """
-    Build prompt for weak labeling using the existing prompt format.
+    """Build formatted prompt for weak labeling.
+    
+    Creates a structured prompt for the Qwen2.5-3B model to classify movement
+    patterns and assess risk levels from case narratives.
     
     Args:
-        text (str): Case narrative text
+        text: Case narrative text to analyze
         
     Returns:
-        str: Formatted prompt for the model
+        Formatted prompt string for the model
+        
+    Note:
+        Input text is automatically trimmed to fit token limits
     """
     # Trim narrative to fit within token limits
     trimmed_narrative = _trim_to_tokens(text, _TOKENIZER, max_input_tokens=1000) if _TOKENIZER else text
@@ -151,14 +150,19 @@ Return JSON only in this exact format:
 """
 
 def _parse_labeler_json(s: str) -> Dict[str, str]:
-    """
-    Parse JSON output from the weak labeler model.
+    """Parse JSON output from the weak labeler model.
+    
+    Robustly extracts movement and risk labels from model output, handling
+    common JSON formatting issues and malformed responses.
     
     Args:
-        s (str): Model output text
+        s: Raw model output text containing JSON
         
     Returns:
-        Dict[str, str]: Parsed movement and risk labels
+        Dictionary with 'movement' and 'risk' keys, defaults to "Unknown" if parsing fails
+        
+    Note:
+        Uses regex fallback when JSON parsing fails
     """
     import json, re
     
@@ -203,15 +207,20 @@ def _parse_labeler_json(s: str) -> Dict[str, str]:
         return {"movement": movement, "risk": risk}
 
 def weak_label_batch(pipe, texts: List[str]) -> List[Dict[str, str]]:
-    """
-    Batch process multiple case narratives for movement and risk labeling.
+    """Batch process multiple case narratives for movement and risk labeling.
+    
+    Processes multiple case narratives efficiently using a pre-loaded pipeline.
+    Applies rule-based overlays to LLM results for improved accuracy.
     
     Args:
         pipe: HuggingFace pipeline loaded with load_weak_labeler
-        texts (List[str]): List of case narrative texts
+        texts: List of case narrative texts to process
         
     Returns:
-        List[Dict[str, str]]: List of dicts like {"movement": "...", "risk": "...", "time": float}
+        List of dictionaries containing movement, risk, and timing information
+        
+    Note:
+        Processing time is tracked and included in results
     """
     import time
     
@@ -403,39 +412,46 @@ def _build_prompt(narr: str) -> str:
     return f"<|im_start|>system\n{_SYSTEM}<|im_end|>\n<|im_start|>user\nNarrative:\n{trimmed_narrative}\n\nReturn JSON only in this exact format:\n{{\"movement\": \"Stationary\", \"risk\": \"Medium\"}}<|im_end|>\n<|im_start|>assistant\n"
 
 def label_case(narrative: str) -> dict:
-    """
-    Compatible single-item call for case labeling.
+    """Label a single case narrative for movement and risk.
+    
+    Convenience function for processing individual case narratives.
+    Returns structured results compatible with the zone_qa system.
     
     Args:
-        narrative (str): Case narrative text to label
+        narrative: Case narrative text to analyze
         
     Returns:
-        dict: Labeling results with plausibility, rationale, and source
+        Dictionary containing movement, risk, and metadata
+        
+    Example:
+        >>> result = label_case("Missing person last seen in NYC...")
+        >>> print(result['movement'], result['risk'])
     """
     return label_batch([narrative])[0]
 
 @torch.inference_mode()
 def label_batch(narratives: list[str], batch_size: int = 64, max_new_tokens: int = 24) -> list[dict]:
-    """
-    Batch process multiple narratives using direct model calls for maximum efficiency.
+    """Batch process multiple narratives using direct model calls.
     
-    This function processes multiple case narratives in batches, using optimized
-    generation settings for speed while maintaining quality. It returns structured
-    results compatible with the zone_qa.py system.
+    Processes multiple case narratives efficiently using optimized generation
+    settings. Returns structured results compatible with the zone_qa system.
     
     Args:
-        narratives (list[str]): List of case narrative texts to process
-        batch_size (int): Number of narratives to process in each batch
-        max_new_tokens (int): Maximum number of new tokens to generate
+        narratives: List of case narrative texts to process
+        batch_size: Number of narratives to process in each batch
+        max_new_tokens: Maximum number of new tokens to generate
         
     Returns:
-        list[dict]: List of labeling results, each containing:
-            - plausibility (float): Risk score between 0.0 and 1.0
-            - rationale (str): Explanation of the assessment
-            - __labeler_source__ (str): Source of the labeling ("real" or "fallback")
+        List of dictionaries containing:
+            - plausibility: Risk score between 0.0 and 1.0
+            - rationale: Explanation of the assessment
+            - __labeler_source__: Source of the labeling ("real" or "fallback")
         
     Raises:
         RuntimeError: If model loading or generation fails
+        
+    Note:
+        Uses torch.inference_mode() for optimal performance
     """
     try:
         result = _ensure_loaded()
@@ -808,25 +824,18 @@ def _rule_adjust_movement(text: str, movement: str) -> str:
     return movement if movement and movement != "Unknown" else "Unknown"
 
 def classify_movement(narrative: str) -> str:
-    """
-    Classify movement pattern in case narrative.
+    """Classify movement pattern in case narrative.
     
-    This function analyzes a case narrative and classifies the movement pattern
-    of persons or vehicles involved. The classification helps with case categorization
-    and investigative workflow optimization.
+    Analyzes a case narrative and classifies the movement pattern of persons or
+    vehicles involved. Helps with case categorization and investigative workflow optimization.
     
     Args:
-        narrative (str): The case narrative text to classify
+        narrative: The case narrative text to classify
         
     Returns:
-        str: Movement classification from the following categories:
-            - "Stationary": Person/vehicle remained in one location
-            - "Local": Short-distance movement within neighborhood/city
-            - "Regional": Medium-distance movement within state/region
-            - "Interstate": Long-distance movement across state lines
-            - "International": Movement across country borders
-            - "Unknown": Insufficient information to determine
-            
+        Movement classification from categories: "Stationary", "Local", "Regional",
+        "Interstate", "International", or "Unknown"
+        
     Raises:
         RuntimeError: If model is not loaded or generation fails
         
@@ -836,8 +845,7 @@ def classify_movement(narrative: str) -> str:
         >>> print(movement)  # "Interstate"
         
     Note:
-        If no clear classification is found, returns "Unknown".
-        Uses temperature 0.6 for consistent classification output.
+        If no clear classification is found, returns "Unknown"
     """
     _ensure_loaded()
     

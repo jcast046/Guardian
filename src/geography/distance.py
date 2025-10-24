@@ -1,5 +1,4 @@
-"""
-Distance calculation utilities for geographic coordinates.
+"""Distance calculation utilities for geographic coordinates.
 
 This module contains various distance calculation functions optimized
 for different use cases in the Guardian system.

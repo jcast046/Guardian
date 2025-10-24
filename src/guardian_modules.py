@@ -1,8 +1,9 @@
-"""
-Consolidated Guardian modules for organized code structure.
+"""Consolidated Guardian modules for organized code structure.
 
 This module contains all the organized functions from the original
 generate_cases.py, providing a clean interface for the main script.
+
+Author: Joshua Castillo
 """
 
 import heapq
@@ -14,7 +15,20 @@ BASE = Path(".")
 
 
 def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    """Calculate the great circle distance between two points on Earth."""
+    """Calculate the great circle distance between two points on Earth.
+    
+    Uses the Haversine formula to compute the shortest distance between two points
+    on the Earth's surface, accounting for the Earth's curvature.
+    
+    Args:
+        lat1: Latitude of the first point in decimal degrees
+        lon1: Longitude of the first point in decimal degrees
+        lat2: Latitude of the second point in decimal degrees
+        lon2: Longitude of the second point in decimal degrees
+        
+    Returns:
+        Distance between the two points in miles
+    """
     import math
     
     # Convert decimal degrees to radians
@@ -39,7 +53,16 @@ def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> fl
 
 
 def get_region_from_coordinates(lat: float, lon: float, regions_geojson: Dict[str, Any]) -> str:
-    """Determine which region a location falls into using GeoJSON boundaries."""
+    """Determine which region a location falls into using GeoJSON boundaries.
+    
+    Args:
+        lat: Latitude of the location
+        lon: Longitude of the location
+        regions_geojson: GeoJSON data containing regional boundaries
+        
+    Returns:
+        Name of the region containing the location, or "Unknown" if not found
+    """
     for feature in regions_geojson.get('features', []):
         if feature.get('geometry', {}).get('type') == 'Polygon':
             coords = feature['geometry']['coordinates'][0]
@@ -102,7 +125,17 @@ def is_geographically_accurate_road(road_name: str, region: str, nearby_places: 
 
 
 def is_major_road_in_region(road_name: str, region: str, lat: float, lon: float) -> bool:
-    """Determine if a major road should be included based on region and location."""
+    """Determine if a major road should be included based on region and location.
+    
+    Args:
+        road_name: Name of the road to check
+        region: Regional classification of the location
+        lat: Latitude of the location
+        lon: Longitude of the location
+        
+    Returns:
+        True if the road should be included in this region, False otherwise
+    """
     road_lower = road_name.lower()
     
     # I-95 runs through most of Virginia
@@ -141,7 +174,14 @@ def is_major_road_in_region(road_name: str, region: str, lat: float, lon: float)
 
 
 def clean_road_name(road_name: str) -> str:
-    """Clean up concatenated road names and remove duplicates."""
+    """Clean up concatenated road names and remove duplicates.
+    
+    Args:
+        road_name: Raw road name to clean
+        
+    Returns:
+        Cleaned road name with duplicates removed
+    """
     # Split on common separators and take the first meaningful part
     separators = ['.', 'Rd', 'Ave', 'St', 'Dr', 'Blvd', 'Pkwy', 'Way']
     

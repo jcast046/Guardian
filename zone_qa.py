@@ -1,28 +1,14 @@
 #!/usr/bin/env python3
-"""
-Zone QA - LLM Sidecar Module for Search Zone Plausibility Analysis
+"""Zone QA - LLM Sidecar Module for Search Zone Plausibility Analysis.
 
 This module enhances search zone prioritization using LLM-based plausibility scoring
 without modifying the core synthetic cases. It operates as a "sidecar" to the main
 EDA pipeline, providing LLM-enhanced zone analysis for evaluation.
 
-WORKFLOW
---------
-1. Read case JSON files (GRD-*.json) with search zones and narrative
-2. Use weak labeler LLM to score plausibility (0-1) for each zone
-3. Reweight priorities based on LLM plausibility + RL config
-4. Generate evaluation metrics (Geo-hit@K) for baseline vs LLM-enhanced
+Author: Joshua Castillo
 
-USAGE
------
-python zone_qa.py --input data/synthetic_cases --config reinforcement_learning/search_reward_config.json --outdir eda_out --evaluate
-
-OUTPUTS
--------
-- eda_out/zones_review.jsonl - Per-case zone plausibility scores and rationale
-- eda_out/zones_reweighted.jsonl - LLM-enhanced zones with priority_llm field
-- eda_out/zone_qa_metrics.json - Evaluation metrics (Geo-hit@K baseline vs LLM)
-- eda_out/zone_evaluation_results.json - Detailed Geo-hit@K evaluation results
+Example:
+    python zone_qa.py --input data/synthetic_cases --config reinforcement_learning/search_reward_config.json --outdir eda_out --evaluate
 """
 # Standard library imports
 import json
@@ -99,8 +85,7 @@ if _real_label_case is not None:
         }
 
 def _choose_labeler(force_real=False):
-    """
-    Select appropriate labeler implementation based on environment and availability.
+    """Select appropriate labeler implementation based on environment and availability.
     
     This function implements a fallback strategy for LLM labeler selection:
     1. Force real labeler if explicitly requested (with error if unavailable)
@@ -108,10 +93,10 @@ def _choose_labeler(force_real=False):
     3. Fall back to mock labeler for testing and development
     
     Args:
-        force_real (bool): Force use of real labeler, raise error if unavailable
+        force_real: Force use of real labeler, raise error if unavailable
         
     Returns:
-        Tuple[callable, str]: (labeler_function, source_identifier)
+        Tuple of (labeler_function, source_identifier)
         
     Raises:
         RuntimeError: If force_real=True but real labeler is unavailable
@@ -129,19 +114,18 @@ def _choose_labeler(force_real=False):
     return _mock_label_case, "mock"  # _mock_label_case defined below
 
 def _mock_label_case(structured_case: Dict[str, Any], narrative: str) -> Dict[str, Any]:
-    """
-    Mock LLM implementation for testing and development fallback.
+    """Mock LLM implementation for testing and development fallback.
     
     This function provides deterministic plausibility scoring based on zone
     characteristics and narrative content. It simulates LLM reasoning patterns
     for testing and development when real LLM services are unavailable.
     
     Args:
-        structured_case (Dict[str, Any]): Case data with search zones
-        narrative (str): Text narrative for analysis
+        structured_case: Case data with search zones
+        narrative: Text narrative for analysis
         
     Returns:
-        Dict[str, Any]: Mock analysis result with plausibility score and rationale
+        Mock analysis result with plausibility score and rationale
         
     Note:
         The mock implementation uses heuristics based on zone types and
@@ -244,19 +228,18 @@ def recompute_priority(zone: Dict[str, Any], qa_result: Dict[str, Any],
     return 1.0/(1.0 + math.exp(-3*(score-0.5)))
 
 def load_reward_config(config_path: str, profile: str = None) -> Dict[str, Any]:
-    """
-    Load reinforcement learning reward configuration with profile selection.
+    """Load reinforcement learning reward configuration with profile selection.
     
     This function loads the RL configuration file and sets the active profile
     for priority computation. It provides fallback defaults if the file cannot
     be loaded or if the specified profile is not found.
     
     Args:
-        config_path (str): Path to the reward configuration JSON file
-        profile (str, optional): Profile name to activate (default: use default_profile)
+        config_path: Path to the reward configuration JSON file
+        profile: Profile name to activate (default: use default_profile)
         
     Returns:
-        Dict[str, Any]: Configuration dictionary with active profile set
+        Configuration dictionary with active profile set
         
     Note:
         The function sets the __active_profile__ key to indicate which profile

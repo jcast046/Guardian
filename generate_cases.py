@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Guardian Synthetic Case Generator
+"""Guardian Synthetic Case Generator.
 
 A comprehensive system for generating realistic, schema-valid synthetic missing-child cases
 for Virginia using advanced geographic, transportation, and behavioral data integration.
@@ -8,135 +7,10 @@ for Virginia using advanced geographic, transportation, and behavioral data inte
 This module implements industry-standard practices for synthetic data generation,
 including graph-based algorithms, geographic validation, and comprehensive error handling.
 
-## Features
+Author: Joshua Castillo
 
-### Geographic Accuracy
-- **Virginia Gazetteer Integration**: Uses official Virginia geographic data for location accuracy
-- **Regional Boundary Validation**: Ensures cases align with Virginia's regional classifications
-- **Coordinate-based Filtering**: Prevents geographically impossible road/transit combinations
-
-### Transportation Network Analysis
-- **Graph-based Road Finding**: Uses Dijkstra's algorithm for network-based road discovery
-- **Transit Network Integration**: Leverages real transit stations for realistic accessibility
-- **Distance Calculations**: Implements Haversine formula for accurate geographic distances
-
-### Data Quality Assurance
-- **Schema Validation**: Ensures all generated cases conform to Guardian JSON schema
-- **Geographic Filtering**: Removes misclassified roads and transit stops
-- **Temporal Consistency**: Maintains realistic time sequences and search patterns
-
-### Reinforcement Learning Integration
-- **Search Zone Generation**: Creates realistic search areas based on RL configurations
-- **Time Window Management**: Implements temporal constraints for search operations
-- **Behavioral Patterns**: Integrates realistic witness and suspect behavior data
-
-## Architecture
-
-The system follows a modular architecture with clear separation of concerns:
-
-1. **Data Loading**: Centralized data source management
-2. **Geographic Processing**: Location validation and regional classification
-3. **Transportation Analysis**: Network-based road and transit finding
-4. **Case Generation**: Synthetic case creation with realistic constraints
-5. **Validation**: Schema compliance and data quality assurance
-
-## Usage
-
-### Command Line Interface
-```bash
-# Generate 10 cases with seed 42
-python generate_cases.py --n 10 --seed 42 --out data/custom_cases
-
-# Generate cases with custom parameters
-python generate_cases.py --n 50 --seed 123 --out data/production_cases
-```
-
-### Programmatic Usage
-```python
-from generate_cases import generate_synthetic_case
-
-# Generate a single case
-case = generate_synthetic_case(
-    location_data=gazetteer_data,
-    road_segments=road_data,
-    transit_data=transit_data
-)
-```
-
-## Data Sources
-
-### Geographic Data
-- **Virginia Gazetteer** (`data/geo/va_gazetteer.json`): Official Virginia location database
-- **Regional Boundaries** (`data/geo/va_rl_regions.geojson`): Virginia regional classifications
-
-### Transportation Data
-- **Road Segments** (`data/transportation/va_road_segments.json`): Detailed road network data
-- **Transit Stations** (`data/transportation/va_transit.json`): Public transportation stations
-- **Transportation Summary** (`data/transportation/va_transportation_summary.json`): Major route data
-
-### Behavioral Data
-- **Behaviors** (`data/lexicons/behaviors.json`): Witness and suspect behavior patterns
-- **Clothing** (`data/lexicons/clothing.json`): Realistic clothing descriptions
-- **Vehicles** (`data/lexicons/vehicles.json`): Vehicle make/model data
-- **Witnesses** (`data/lexicons/witness.json`): Witness relationship types
-
-## Algorithm Details
-
-### Road Finding Algorithm
-The system uses a hybrid approach combining:
-1. **Transit Network Graph**: Builds graph of connected transit stations
-2. **Dijkstra's Algorithm**: Finds shortest paths to nearby stations
-3. **Regional Proximity**: Maps stations to geographically appropriate roads
-4. **Distance Filtering**: Removes roads beyond realistic travel distances
-
-### Geographic Validation
-Implements multi-layer geographic validation:
-1. **Regional Classification**: Ensures roads match location region
-2. **Coordinate Validation**: Filters based on latitude/longitude constraints
-3. **Name-based Filtering**: Removes obviously misclassified roads
-4. **Distance Thresholds**: Enforces realistic proximity limits
-
-## Error Handling
-
-The system implements comprehensive error handling:
-- **Data Validation**: Validates all input data sources
-- **Schema Compliance**: Ensures generated cases meet Guardian schema
-- **Geographic Accuracy**: Prevents impossible geographic combinations
-- **Graceful Degradation**: Handles missing or corrupted data gracefully
-
-## Performance Optimization
-
-### Caching Strategy
-- **Graph Caching**: Caches transit network graphs for performance
-- **Station Caching**: Caches station data to avoid repeated processing
-- **Regional Caching**: Caches regional classifications for efficiency
-
-### Algorithm Efficiency
-- **Bounded Dijkstra**: Early termination for distance-based queries
-- **Spatial Indexing**: Efficient geographic proximity searches
-- **Lazy Loading**: Loads data only when needed
-
-## Dependencies
-
-### Core Libraries
-- `json`: JSON data processing and serialization
-- `random`: Cryptographically secure random number generation
-- `uuid`: UUID generation for unique case identifiers
-- `argparse`: Command-line argument parsing
-- `datetime`: Date and time handling with timezone support
-- `math`: Mathematical operations including trigonometric functions
-- `pathlib`: Cross-platform path manipulation
-- `jsonschema`: JSON schema validation
-- `collections`: Advanced data structures (defaultdict, Counter)
-
-### Data Processing
-- `typing`: Type hints for improved code maintainability
-- `dataclasses`: Structured data representation
-- `enum`: Enumerated constants for better code organization
-
-## Author
-Joshua Castillo
-
+Example:
+    python generate_cases.py --n 10 --seed 42 --out data/custom_cases
 """
 
 import json
@@ -160,17 +34,16 @@ _GRAPH_CACHE = None
 _STATIONS_CACHE = None
 
 def load(p: Path) -> Dict[str, Any]:
-    """
-    Load JSON file with comprehensive error handling.
+    """Load JSON file with comprehensive error handling.
     
     This function safely loads JSON data from a file path with proper
     error handling for common file system and JSON parsing issues.
     
     Args:
-        p (Path): Path to the JSON file to load
+        p: Path to the JSON file to load
         
     Returns:
-        Dict[str, Any]: Parsed JSON data as a dictionary
+        Parsed JSON data as a dictionary
         
     Raises:
         FileNotFoundError: If the file doesn't exist at the specified path
@@ -182,26 +55,19 @@ def load(p: Path) -> Dict[str, Any]:
         >>> data = load(Path("data/geo/va_gazetteer.json"))
         >>> 'entries' in data
         True
-        >>> len(data['entries']) > 0
-        True
-        
-    Note:
-        This function uses UTF-8 encoding by default and will raise
-        appropriate exceptions for common file loading issues.
     """
     return json.load(open(p, "r", encoding="utf-8"))
 
 def validate(instance: Dict[str, Any], schema: Dict[str, Any]) -> None:
-    """
-    Validate instance against schema with detailed error reporting.
+    """Validate instance against schema with detailed error reporting.
     
     Uses Draft202012Validator for comprehensive JSON Schema validation
     with detailed error path reporting for debugging. This function is
     critical for ensuring data quality and schema compliance.
     
     Args:
-        instance (Dict[str, Any]): JSON data to validate against the schema
-        schema (Dict[str, Any]): JSON Schema definition to validate against
+        instance: JSON data to validate against the schema
+        schema: JSON Schema definition to validate against
         
     Raises:
         AssertionError: If validation fails, with detailed error messages
@@ -244,25 +110,21 @@ def gen_case_id():
     return f"GRD-{datetime.datetime.now().year}-{random.randint(0,999999):06d}"
 
 def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    """
-    Calculate the great circle distance between two points on Earth using the Haversine formula.
+    """Calculate the great circle distance between two points on Earth using the Haversine formula.
     
     The Haversine formula is the standard method for calculating distances between two points
     on a sphere (Earth) given their latitude and longitude coordinates. This formula accounts
     for the Earth's curvature and provides more accurate results than simple Euclidean distance
     calculations for geographic coordinates.
     
-    The formula is derived from the spherical law of cosines and is particularly well-suited
-    for calculating distances over relatively short distances (up to a few hundred kilometers).
-    
     Args:
-        lat1 (float): Latitude of the first point in decimal degrees (-90 to 90)
-        lon1 (float): Longitude of the first point in decimal degrees (-180 to 180)
-        lat2 (float): Latitude of the second point in decimal degrees (-90 to 90)
-        lon2 (float): Longitude of the second point in decimal degrees (-180 to 180)
+        lat1: Latitude of the first point in decimal degrees (-90 to 90)
+        lon1: Longitude of the first point in decimal degrees (-180 to 180)
+        lat2: Latitude of the second point in decimal degrees (-90 to 90)
+        lon2: Longitude of the second point in decimal degrees (-180 to 180)
         
     Returns:
-        float: Distance between the two points in miles
+        Distance between the two points in miles
         
     Raises:
         ValueError: If latitude or longitude values are outside valid ranges
@@ -274,10 +136,6 @@ def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> fl
     Note:
         This function assumes the Earth is a perfect sphere with radius 3959 miles.
         For very high precision applications, consider using the WGS84 ellipsoid model.
-        
-    References:
-        - https://en.wikipedia.org/wiki/Haversine_formula
-        - https://www.movable-type.co.uk/scripts/latlong.html
     """
     R = 3959  # Earth's radius in miles
     

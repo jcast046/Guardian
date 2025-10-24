@@ -1,52 +1,13 @@
 #!/usr/bin/env python3
-"""
-EDA + Hotspotting for Guardian synthetic cases (Visualization Only)
+"""EDA + Hotspotting for Guardian synthetic cases (Visualization Only).
 
-SINGLE SOURCE OF TRUTH ARCHITECTURE
------------------------------------
 This script focuses ONLY on visualization and KDE analysis.
 For normalization, validation, and tabular counts, use run_all_llms.py.
 
-WORKFLOW
---------
-1. Normalization + Validation (run_all_llms.py):
-   - Produces: eda_out/eda_cases_min.jsonl (authoritative input)
-   - Produces: eda_out/eda_counts.json (authoritative counts)
-   - Produces: eda_out/validation_report.json
+Author: Joshua Castillo
 
-2. Visualization (eda_hotspot.py):
-   - Reads: eda_out/eda_cases_min.jsonl
-   - Generates: Charts, histograms, and KDE heat maps
-   - Optionally skips count recomputation
-
-USAGE
------
-# Full visualization (includes basic charts)
-python eda_hotspot.py --input eda_out/eda_cases_min.jsonl --outdir eda_out --state VA --bw 1500
-
-# KDE only (skip count recomputation)
-python eda_hotspot.py --input eda_out/eda_cases_min.jsonl --outdir eda_out --state VA --bw 1500 --skip-counts
-
-# With locked map extent + shared color scale + markdown report
-python eda_hotspot.py --input eda_out/eda_cases_min.jsonl --outdir eda_out --state VA --bw 1500 \
-  --fixed-extent --shared-scale
-
-
-DEPENDENCIES
-------------
-- pandas
-- numpy
-- matplotlib
-- geopandas
-- shapely
-- scikit-learn (for KernelDensity)
-- contextily (optional; for basemap tiles — script works without it)
-
-Outputs
--------
-- PNGs: distribution_summary.png, age_hist.png, gender_bar.png, county_topN_bar.png (if not --skip-counts)
-- PNGs: kde_all.png, kde_age_le12.png, kde_age_13_17.png
-
+Example:
+    python eda_hotspot.py --input eda_out/eda_cases_min.jsonl --outdir eda_out --state VA --bw 1500
 """
 # Standard library imports
 from __future__ import annotations
@@ -122,11 +83,10 @@ def _exists(p):
 # -----------------------------
 
 def ensure_outdir(path: str) -> None:
-    """
-    Create output directory if it doesn't exist.
+    """Create output directory if it doesn't exist.
     
     Args:
-        path (str): Directory path to create
+        path: Directory path to create
         
     Raises:
         OSError: If directory creation fails due to permissions or other system issues
@@ -135,25 +95,24 @@ def ensure_outdir(path: str) -> None:
 
 
 def load_cases(path: str, state: str | None) -> pd.DataFrame:
-    """
-    Load and preprocess case data from JSONL or CSV files.
+    """Load and preprocess case data from JSONL or CSV files.
     
     This function handles multiple input formats and performs comprehensive data cleaning
     including coordinate validation, data type conversion, and optional state filtering.
     
     Args:
-        path (str): Path to input file (.jsonl, .json, or .csv)
-        state (str | None): Optional state filter (e.g., "VA"). Case-insensitive.
+        path: Path to input file (.jsonl, .json, or .csv)
+        state: Optional state filter (e.g., "VA"). Case-insensitive.
         
     Returns:
-        pd.DataFrame: Cleaned DataFrame with required columns:
-            - age (int): Age in years
-            - gender (str): Gender ("M" or "F")
-            - county (str): County name
-            - lat (float): Latitude (-90 to 90)
-            - lon (float): Longitude (-180 to 180)
-            - age_band (str): Age category ("≤12" or "13–17")
-            
+        Cleaned DataFrame with required columns:
+        - age (int): Age in years
+        - gender (str): Gender ("M" or "F")
+        - county (str): County name
+        - lat (float): Latitude (-90 to 90)
+        - lon (float): Longitude (-180 to 180)
+        - age_band (str): Age category ("≤12" or "13–17")
+        
     Raises:
         SystemExit: If input file doesn't exist, has unsupported format, or missing required columns
         

@@ -1,51 +1,35 @@
-"""
-Geographic validation utilities for road accuracy.
+"""Geographic validation utilities for road accuracy.
 
 This module contains functions for validating road accuracy based on
 geographic context and regional expectations.
+
+Author: Joshua Castillo
 """
 
 from typing import Dict, List, Any
 
 
 def is_geographically_accurate_road(road_name: str, region: str, nearby_places: List[Dict[str, Any]], lat: float, lon: float) -> bool:
-    """
-    Determine if a road is geographically accurate based on location context.
+    """Determine if a road is geographically accurate based on location context.
     
     This function uses nearby places and regional context to validate
     whether a road should be included in the results.
     
     Args:
-        road_name (str): Name of the road to validate
-        region (str): Regional classification of the road
-        nearby_places (List[Dict[str, Any]]): Nearby places from gazetteer
-        lat (float): Latitude of the location
-        lon (float): Longitude of the location
+        road_name: Name of the road to validate
+        region: Regional classification of the road
+        nearby_places: Nearby places from gazetteer
+        lat: Latitude of the location
+        lon: Longitude of the location
         
     Returns:
-        bool: True if the road is geographically accurate
+        True if the road is geographically accurate
         
     Example:
         >>> places = [{'name': 'Alexandria', 'distance': 2.0}]
         >>> is_accurate = is_geographically_accurate_road('I-395', 'Northern Virginia', places, 38.8, -77.0)
         >>> is_accurate
         True
-        
-    Algorithm:
-        1. Filter out obviously incorrect roads
-        2. Check if road name matches nearby places
-        3. Validate major interstates by region
-        4. Allow local roads with less strict validation
-        
-    Performance:
-        - Time Complexity: O(n) where n is number of nearby places
-        - Space Complexity: O(1)
-        - Typical runtime: ~0.0001 seconds
-        
-    Note:
-        This function provides geographic context validation to ensure
-        road accuracy by cross-referencing with nearby places and
-        regional expectations.
     """
     road_lower = road_name.lower()
     
@@ -69,43 +53,24 @@ def is_geographically_accurate_road(road_name: str, region: str, nearby_places: 
 
 
 def is_major_road_in_region(road_name: str, region: str, lat: float, lon: float) -> bool:
-    """
-    Determine if a major road should be included based on region and location.
+    """Determine if a major road should be included based on region and location.
     
     This function validates major roads (interstates, US routes) based on
     their expected presence in different regions of Virginia.
     
     Args:
-        road_name (str): Name of the road to validate
-        region (str): Regional classification
-        lat (float): Latitude of the location
-        lon (float): Longitude of the location
+        road_name: Name of the road to validate
+        region: Regional classification
+        lat: Latitude of the location
+        lon: Longitude of the location
         
     Returns:
-        bool: True if the road should be included
+        True if the road should be included
         
     Example:
         >>> is_valid = is_major_road_in_region('I-95', 'Northern Virginia', 38.8, -77.0)
         >>> is_valid
         True
-        >>> is_valid = is_major_road_in_region('I-81', 'Tidewater', 36.8, -76.0)
-        >>> is_valid
-        False
-        
-    Algorithm:
-        1. Check interstate-specific regional rules
-        2. Validate US routes by general presence
-        3. Validate state routes by region
-        4. Return appropriate inclusion decision
-        
-    Performance:
-        - Time Complexity: O(1)
-        - Space Complexity: O(1)
-        - Typical runtime: ~0.00001 seconds
-        
-    Note:
-        This function implements regional road validation rules based on
-        the actual presence of major roads in different regions of Virginia.
     """
     road_lower = road_name.lower()
     

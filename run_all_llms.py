@@ -1,33 +1,19 @@
 #!/usr/bin/env python3
-"""
-Guardian LLM Analysis Script
+"""Guardian LLM Analysis Script.
 
 This script provides a comprehensive LLM analysis pipeline for processing missing person cases
 in the Guardian project. It supports both full LLM processing and minimal deterministic modes,
 optimized for different phases of the project lifecycle.
 
-Key Features:
-- Multi-stage LLM processing (summarizer, extractor, weak labeler)
-- Minimal deterministic mode (no LLM dependencies)
-- Geographic data processing with Virginia gazetteer integration
-- Comprehensive case validation and quality assurance
-- EDA (Exploratory Data Analysis) pipeline for data insights
-- Performance optimization with stage-by-stage processing
+The pipeline processes case data through multiple stages including geographic normalization,
+entity extraction, narrative generation, and quality assurance validation.
 
-Architecture:
-- Phase switches control LLM usage (PHASE_MINIMAL, USE_SUMMARIZER, etc.)
-- Geographic normalization using Virginia gazetteer data
-- Deterministic entity extraction for minimal mode
-- Comprehensive case narrative generation
-- Multi-format output support (JSON, JSONL, structured data)
+Author: Joshua Castillo
 
-Usage:
+Example:
     python run_all_llms.py                    # Run minimal EDA pipeline
     python run_all_llms.py --reasoned         # Run with LLM enhancement
     python run_all_llms.py --do-summary       # Include summarization
-    python run_all_llms.py --fallback-extractor # Use fallback extraction
-
-Author: Joshua Castillo
 """
 
 import json
@@ -102,25 +88,20 @@ from zoneinfo import ZoneInfo
 SECTION = "—" * 56
 
 def _fmt_mins(m: int) -> str:
-    """
-    Format minutes as human-readable time string.
+    """Format minutes as human-readable time string.
     
     Converts minutes to hours and minutes format (e.g., 90 minutes -> "1h 30m").
     Handles None values gracefully by returning "unknown".
     
     Args:
-        m (int): Number of minutes to format
+        m: Number of minutes to format
         
     Returns:
-        str: Formatted time string (e.g., "1h 30m", "45m", "unknown")
+        Formatted time string (e.g., "1h 30m", "45m", "unknown")
         
-    Examples:
+    Example:
         >>> _fmt_mins(90)
         '1h 30m'
-        >>> _fmt_mins(45)
-        '45m'
-        >>> _fmt_mins(None)
-        'unknown'
     """
     if m is None:
         return "unknown"
@@ -128,24 +109,21 @@ def _fmt_mins(m: int) -> str:
     return f"{h}h {r}m" if h else f"{r}m"
 
 def _fmt_dt(ts_iso: str, tz_name: str = "America/New_York") -> tuple[str, str]:
-    """
-    Format ISO timestamp to UTC and local timezone strings.
+    """Format ISO timestamp to UTC and local timezone strings.
     
     Converts an ISO timestamp to both UTC and local timezone representations.
     Handles timezone conversion and provides fallback for invalid timestamps.
     
     Args:
-        ts_iso (str): ISO format timestamp string
-        tz_name (str): Target timezone name (default: "America/New_York")
+        ts_iso: ISO format timestamp string
+        tz_name: Target timezone name (default: "America/New_York")
         
     Returns:
-        tuple[str, str]: (UTC_iso_string, local_formatted_string)
+        Tuple of (UTC_iso_string, local_formatted_string)
         
-    Examples:
+    Example:
         >>> _fmt_dt("2024-01-15T14:30:00Z")
         ('2024-01-15T14:30:00+00:00', '2024-01-15 09:30 EST')
-        >>> _fmt_dt("")
-        ('', '')
     """
     if not ts_iso:
         return ("", "")
@@ -356,25 +334,22 @@ def _load_gazetteer_unified(path="va_gazetteer.json"):
 _GAZ = _load_gazetteer_unified()  
 
 def _geocode_from_gaz(city: str | None, county: str | None):
-    """
-    Geocode location using Virginia gazetteer data.
+    """Geocode location using Virginia gazetteer data.
     
     Attempts to find coordinates for a location using the gazetteer lookup table.
     Prioritizes county-level geocoding, then falls back to city-level.
     For Virginia independent cities, county and city are the same, so county lookup succeeds.
     
     Args:
-        city (str | None): City name to geocode
-        county (str | None): County name to geocode
+        city: City name to geocode
+        county: County name to geocode
         
     Returns:
-        tuple[float, float] | tuple[None, None]: (latitude, longitude) or (None, None) if not found
+        Tuple of (latitude, longitude) or (None, None) if not found
         
-    Examples:
+    Example:
         >>> _geocode_from_gaz("Richmond", "Richmond City")
         (37.5407, -77.4360)
-        >>> _geocode_from_gaz("Unknown City", None)
-        (None, None)
     """
     # Try county first (higher priority for Virginia independent cities)
     if county:
@@ -622,26 +597,25 @@ def eda_counts(min_records):
 # ---------- helpers ----------
 
 def build_clean_narrative(case: dict) -> dict:
-    """
-    Build comprehensive case narrative from structured case data.
+    """Build comprehensive case narrative from structured case data.
     
     Creates a well-formatted markdown narrative from a case dictionary with
     nested structure (demographic/spatial/temporal/narrative_osint). Includes
     all relevant case information in organized sections.
     
     Args:
-        case (dict): Case dictionary with nested structure containing:
-                    - demographic: age, gender, name, features
-                    - spatial: location data, coordinates
-                    - temporal: timestamps, timezone
-                    - narrative_osint: incident details, witnesses, etc.
+        case: Case dictionary with nested structure containing:
+              - demographic: age, gender, name, features
+              - spatial: location data, coordinates
+              - temporal: timestamps, timezone
+              - narrative_osint: incident details, witnesses, etc.
         
     Returns:
-        dict: Narrative dictionary with keys:
-              - text: Full markdown narrative with sections
-              - short: One-line summary for UI display
-              
-    Examples:
+        Narrative dictionary with keys:
+        - text: Full markdown narrative with sections
+        - short: One-line summary for UI display
+        
+    Example:
         >>> case = {"case_id": "GRD-001", "demographic": {"name": "John", "age_years": 15}}
         >>> build_clean_narrative(case)
         {'text': '### Case GRD-001\\n...', 'short': 'John (male, 15y) last seen...'}

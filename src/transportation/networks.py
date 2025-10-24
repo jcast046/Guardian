@@ -1,8 +1,9 @@
-"""
-Transportation network construction and caching utilities.
+"""Transportation network construction and caching utilities.
 
 This module contains functions for building transportation networks
 from various data sources and managing global caches for performance.
+
+Author: Joshua Castillo
 """
 
 from typing import Dict, List, Tuple, Any
@@ -22,43 +23,23 @@ _ROAD_STATIONS_CACHE = None
 
 
 def build_transit_graph(transit_data: Dict[str, Any], max_connection_distance: float = 2.0) -> Tuple[Dict[int, List[Tuple[int, float]]], List[Dict[str, Any]]]:
-    """
-    Build a transit network graph from station coordinates.
+    """Build a transit network graph from station coordinates.
     
     This function creates a network where transit stations are nodes
     and connections are made between nearby stations. It's used for
     network-based pathfinding in the transit system.
     
     Args:
-        transit_data (Dict[str, Any]): Transit stations data with geometry coordinates
-        max_connection_distance (float, optional): Maximum distance to connect stations.
-            Defaults to 2.0 miles.
+        transit_data: Transit stations data with geometry coordinates
+        max_connection_distance: Maximum distance to connect stations (default: 2.0 miles)
         
     Returns:
-        Tuple[Dict[int, List[Tuple[int, float]]], List[Dict[str, Any]]]: 
-            Transit network graph and station information
+        Tuple of (transit network graph, station information)
         
     Example:
         >>> graph, stations = build_transit_graph(transit_data)
         >>> len(graph) > 0
         True
-        >>> len(stations) > 0
-        True
-        
-    Algorithm:
-        1. Extract station coordinates from transit data
-        2. Create connections between nearby stations
-        3. Build adjacency list representation
-        4. Return graph and station information
-        
-    Performance:
-        - Time Complexity: O(n²) where n is number of stations
-        - Space Complexity: O(n²) for graph storage
-        - Typical runtime: ~2-5 seconds for 2,359 stations
-        
-    Note:
-        This function builds a complete transit network graph that can be used
-        for various pathfinding algorithms including Dijkstra's and A*.
     """
     stations = []
     
@@ -91,28 +72,19 @@ def build_transit_graph(transit_data: Dict[str, Any], max_connection_distance: f
 
 
 def build_road_network(transit_data: Dict[str, Any], road_segments: List[Dict[str, Any]], max_connection_distance: float = 2.0) -> Tuple[Dict[int, List[Tuple[int, float]]], List[Dict[str, Any]]]:
-    """
-    Build a road network graph from transit stations and road segments.
+    """Build a road network graph from transit stations and road segments.
     
     This function creates a network where transit stations are nodes
     and connections are made based on proximity to road segments.
     Each station is mapped to nearby road names for road accessibility.
     
     Args:
-        transit_data (Dict[str, Any]): Transit stations data with geometry coordinates
-        road_segments (List[Dict[str, Any]]): Road segments data with road names
-        max_connection_distance (float, optional): Maximum distance to connect stations.
-            Defaults to 2.0 miles.
+        transit_data: Transit stations data with geometry coordinates
+        road_segments: Road segments data with road names
+        max_connection_distance: Maximum distance to connect stations (default: 2.0 miles)
         
     Returns:
-        Tuple[Dict[int, List[Tuple[int, float]]], List[Dict[str, Any]]]: 
-            Road network graph and station information with road mappings
-        
-    Algorithm:
-        1. Extract station coordinates from transit data
-        2. Map each station to nearby road segments
-        3. Create connections between nearby stations
-        4. Build adjacency list representation
+        Tuple of (road network graph, station information with road mappings)
     """
     stations = []
     station_road_mapping = {}

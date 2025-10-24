@@ -1,5 +1,4 @@
-"""
-Regional classification and geographic analysis utilities.
+"""Regional classification and geographic analysis utilities.
 
 This module contains functions for determining geographic regions
 and finding nearby places using various data sources.

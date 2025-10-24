@@ -1,5 +1,4 @@
-"""
-Prompt templates for Guardian LLM modules.
+"""Prompt templates for Guardian LLM modules.
 
 This module contains standardized prompt templates for various LLM tasks in the Guardian
 system, including entity extraction, summarization, weak labeling, and fine-tuning.
@@ -9,7 +8,7 @@ Author: Joshua Castillo
 
 Constants:
     EXTRACTION_PROMPT: Template for entity extraction tasks
-    SUMMARY_PROMPT: Template for case summarization tasks
+    SUMMARY_PROMPT: Template for case summarization tasks  
     MOVEMENT_CLASSIFICATION_PROMPT: Template for movement pattern classification
     RISK_ASSESSMENT_PROMPT: Template for risk level assessment
     FINE_TUNE_SUMMARY_PROMPT: Template for fine-tuning summarizer models

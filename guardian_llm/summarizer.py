@@ -1,5 +1,4 @@
-"""
-Guardian LLM Summarizer Module
+"""Guardian LLM Summarizer Module.
 
 This module provides case summarization functionality using the Llama-3.2-3B-Instruct model.
 It generates concise, factual summaries for investigators in a structured bullet-point format.
@@ -7,10 +6,10 @@ It generates concise, factual summaries for investigators in a structured bullet
 Author: Joshua Castillo
 
 Functions:
-    summarize(sum_text: str) -> str: Generate concise case summary
-    batch_summarize(texts: list, batch_size: int = 8) -> list: Batch process multiple summaries
-    release(): Release model and clear GPU memory
-    unload_model(model, tokenizer): Explicitly unload model and clear GPU memory
+    summarize: Generate concise case summary
+    batch_summarize: Batch process multiple summaries
+    release: Release model and clear GPU memory
+    unload_model: Explicitly unload model and clear GPU memory
 
 Example:
     >>> from guardian_llm import summarize
@@ -185,18 +184,16 @@ def _ensure_loaded():
 
 
 def summarize(sum_text: str) -> str:
-    """
-    Generate concise case summary optimized for speed.
+    """Generate concise case summary optimized for speed.
     
-    This function creates a bullet-point summary of a case narrative,
-    optimized for investigator use. It uses a compact prompt and
-    generation settings for fast processing.
+    Creates a bullet-point summary of a case narrative, optimized for investigator use.
+    Uses a compact prompt and generation settings for fast processing.
     
     Args:
-        sum_text (str): Case narrative text to summarize
+        sum_text: Case narrative text to summarize
         
     Returns:
-        str: Bullet-point summary (up to 5 points)
+        Bullet-point summary (up to 5 points)
         
     Raises:
         RuntimeError: If model is not loaded or generation fails
@@ -242,19 +239,17 @@ def summarize(sum_text: str) -> str:
 
 
 def batch_summarize(texts: list, batch_size: int = 8) -> list:
-    """
-    Batch process multiple summaries for efficiency.
+    """Batch process multiple summaries for efficiency.
     
-    This function processes multiple case narratives in sequence,
-    generating summaries for each. It uses optimized generation
-    settings for speed while maintaining quality.
+    Processes multiple case narratives in sequence, generating summaries for each.
+    Uses optimized generation settings for speed while maintaining quality.
     
     Args:
-        texts (list): List of case narrative texts to summarize
-        batch_size (int): Number of texts to process (currently processes sequentially)
+        texts: List of case narrative texts to summarize
+        batch_size: Number of texts to process (currently processes sequentially)
         
     Returns:
-        list: List of bullet-point summaries, one per input text
+        List of bullet-point summaries, one per input text
         
     Raises:
         RuntimeError: If model is not loaded or generation fails
