@@ -217,7 +217,7 @@ class GuardianFineTuner:
             weight_decay=0.01,
             logging_dir=f"{output_dir}/logs",
             logging_steps=10,
-            evaluation_strategy="steps" if eval_data else "no",
+            eval_strategy="steps" if eval_data else "no", 
             eval_steps=100 if eval_data else None,
             save_steps=500,
             save_total_limit=2,
@@ -313,7 +313,7 @@ def fine_tune_extractor(train_data: list, eval_data: list = None,
     """
     if not model_path:
         CFG = json.load(open("guardian.config.json", "r"))
-        model_path = CFG["models"]["extractor"]
+        model_path = CFG["models"]["extractor_instruct"]
     
     tuner = GuardianFineTuner(model_path, "extractor")
     tuner.load_model()
@@ -348,9 +348,111 @@ def fine_tune_weak_labeler(train_data: list, eval_data: list = None,
     """
     if not model_path:
         CFG = json.load(open("guardian.config.json", "r"))
-        model_path = CFG["models"]["weak_labeler"]
+        model_path = CFG["models"]["weak_labeler_instruct"]
     
     tuner = GuardianFineTuner(model_path, "weak_labeler")
     tuner.load_model()
     tuner.setup_lora()
     return tuner.train(train_data, eval_data, output_dir)
+
+if __name__ == "__main__":
+    import glob
+    import json
+    
+    print("=" * 80)
+    print("Guardian Model Fine-Tuning")
+    print("=" * 80)
+    
+    # Load synthetic cases
+    print("\n[1/4] Loading synthetic cases...")
+    case_files = glob.glob("data/synthetic_cases/*.json")
+    print(f"Found {len(case_files)} case files")
+    
+    cases = []
+    for file in case_files[:50]:  # Use first 50 for demo
+        with open(file, 'r') as f:
+            cases.append(json.load(f))
+    print(f"Loaded {len(cases)} cases for training")
+    
+    # Prepare training data for summarizer
+    print("\n[2/4] Preparing summarizer training data...")
+    summarizer_data = []
+    for case in cases:
+        narrative = case.get("narrative_osint", {}).get("incident_summary", "")
+        if narrative:
+            summarizer_data.append({
+                "narrative": narrative,
+                "summary": case.get("narrative_osint", {}).get("incident_summary", "")
+            })
+    print(f"Prepared {len(summarizer_data)} summarizer examples")
+    
+    # Prepare training data for extractor
+    print("\n[3/4] Preparing extractor training data...")
+    extractor_data = []
+    for case in cases:
+        narrative = case.get("narrative_osint", {}).get("incident_summary", "")
+        movement_cues = case.get("narrative_osint", {}).get("movement_cues_text", "")
+        if narrative and movement_cues:
+            # Create extraction JSON from case data
+            extraction = json.dumps({
+                "persons": [{"name": case.get("demographic", {}).get("name", "Unknown")}],
+                "locations": [case.get("spatial", {}).get("last_seen_location", "")],
+                "timeline": case.get("narrative_osint", {}).get("temporal_markers", [])
+            })
+            extractor_data.append({
+                "narrative": narrative + " " + movement_cues,
+                "extraction": extraction
+            })
+    print(f"Prepared {len(extractor_data)} extractor examples")
+    
+    # Prepare training data for weak labeler
+    print("\n[4/4] Preparing weak labeler training data...")
+    weak_labeler_data = []
+    for case in cases:
+        narrative = case.get("narrative_osint", {}).get("incident_summary", "")
+        movement_cues = case.get("narrative_osint", {}).get("movement_cues_text", "")
+        if narrative:
+            weak_labeler_data.append({
+                "narrative": narrative + " " + movement_cues,
+                "movement": "Regional",  # Default placeholder
+                "risk": "High"  # Default placeholder
+            })
+    print(f"Prepared {len(weak_labeler_data)} weak labeler examples")
+    
+    # Fine-tune summarizer
+    print("\n" + "=" * 80)
+    print("Fine-tuning Summarizer Model")
+    print("=" * 80)
+    trainer = fine_tune_summarizer(
+        train_data=summarizer_data,
+        output_dir="./finetuned_summarizer"
+    )
+    print("✓ Summarizer fine-tuning complete! Saved to ./finetuned_summarizer/")
+    
+    # Fine-tune extractor
+    print("\n" + "=" * 80)
+    print("Fine-tuning Extractor Model")
+    print("=" * 80)
+    trainer = fine_tune_extractor(
+        train_data=extractor_data,
+        output_dir="./finetuned_extractor"
+    )
+    print("✓ Extractor fine-tuning complete! Saved to ./finetuned_extractor/")
+    
+    # Fine-tune weak labeler
+    print("\n" + "=" * 80)
+    print("Fine-tuning Weak Labeler Model")
+    print("=" * 80)
+    trainer = fine_tune_weak_labeler(
+        train_data=weak_labeler_data,
+        output_dir="./finetuned_weak_labeler"
+    )
+    print("✓ Weak labeler fine-tuning complete! Saved to ./finetuned_weak_labeler/")
+    
+    print("\n" + "=" * 80)
+    print("All fine-tuning complete!")
+    print("=" * 80)
+    print("\nOutput directories:")
+    print("  - ./finetuned_summarizer/")
+    print("  - ./finetuned_extractor/")
+    print("  - ./finetuned_weak_labeler/")

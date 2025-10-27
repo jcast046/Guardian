@@ -20,6 +20,7 @@ import json, re, torch, os
 from pathlib import Path
 from typing import List, Dict
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig, pipeline
+from peft import PeftModel
 try:
     from .prompts import MOVEMENT_CLASSIFICATION_PROMPT, RISK_ASSESSMENT_PROMPT
 except ImportError:
@@ -376,6 +377,35 @@ def _ensure_loaded():
             trust_remote_code=True,
             local_files_only=True
         )
+    
+    # Try to load PEFT adapter
+    try:
+        with open("guardian.config.json", "r") as f:
+            config = json.load(f)
+        adapter_path = config["models"].get("weak_labeler_adapter")
+        strict_mode = config.get("adapter_config", {}).get("strict_mode", False)
+    except Exception as e:
+        print(f"[WARN] Config load failed: {e}, using defaults")
+        adapter_path = None
+        strict_mode = False
+    
+    if adapter_path:
+        adapter_exists = Path(adapter_path).exists()
+        if adapter_exists and (Path(adapter_path) / "adapter_config.json").exists():
+            try:
+                print(f"[INIT] Loading PEFT adapter from {adapter_path}")
+                _MODEL = PeftModel.from_pretrained(_MODEL, adapter_path)
+                print(f"[CHK]  Adapter loaded successfully")
+            except Exception as e:
+                if strict_mode:
+                    raise RuntimeError(f"Adapter load failed in strict mode: {e}")
+                print(f"[WARN] Failed to load adapter, using base model: {e}")
+        else:
+            if strict_mode:
+                raise FileNotFoundError(f"Adapter not found at {adapter_path} (strict mode)")
+            print(f"[WARN] Adapter not found at {adapter_path}, using base model")
+    else:
+        print(f"[INFO] No adapter configured, using base model")
     
     print(f"[CHK]  Model name_or_path: {getattr(_MODEL.config, '_name_or_path', 'unknown')}")
     print(f"[CHK]  4-bit loaded: {getattr(_MODEL, 'is_loaded_in_4bit', False)}")

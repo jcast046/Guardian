@@ -23,6 +23,7 @@ import json
 from pathlib import Path
 from typing import Optional
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import PeftModel
 
 # Enable TF32 for RTX 40xx speedup and advanced optimizations
 torch.set_float32_matmul_precision("high")
@@ -121,6 +122,7 @@ def _ensure_loaded():
     This function implements lazy loading - the model is only loaded when
     first needed, and then cached for subsequent calls to avoid reloading.
     Uses 4-bit quantization for memory efficiency.
+    Automatically loads PEFT adapters if configured in guardian.config.json.
     
     Raises:
         FileNotFoundError: If model directory is not found
@@ -129,6 +131,17 @@ def _ensure_loaded():
     global _tok, _mdl
     if _mdl is not None:
         return
+    
+    # Load config and check for adapter
+    try:
+        with open("guardian.config.json", "r") as f:
+            config = json.load(f)
+        adapter_path = config["models"].get("summarizer_adapter")
+        strict_mode = config.get("adapter_config", {}).get("strict_mode", False)
+    except Exception as e:
+        print(f"[WARN] Config load failed: {e}, using defaults")
+        adapter_path = None
+        strict_mode = False
 
     # Validate model directory exists
     _assert_model_dir(MODEL_ID)
@@ -173,6 +186,25 @@ def _ensure_loaded():
             use_cache=True,
             local_files_only=True
         )
+    
+    # Try to load PEFT adapter
+    if adapter_path:
+        adapter_exists = Path(adapter_path).exists()
+        if adapter_exists and (Path(adapter_path) / "adapter_config.json").exists():
+            try:
+                print(f"[INIT] Loading PEFT adapter from {adapter_path}")
+                _mdl = PeftModel.from_pretrained(_mdl, adapter_path)
+                print(f"[CHK]  Adapter loaded successfully")
+            except Exception as e:
+                if strict_mode:
+                    raise RuntimeError(f"Adapter load failed in strict mode: {e}")
+                print(f"[WARN] Failed to load adapter, using base model: {e}")
+        else:
+            if strict_mode:
+                raise FileNotFoundError(f"Adapter not found at {adapter_path} (strict mode)")
+            print(f"[WARN] Adapter not found at {adapter_path}, using base model")
+    else:
+        print(f"[INFO] No adapter configured, using base model")
     
     print(f"[CHK]  Model name_or_path: {getattr(_mdl.config, '_name_or_path', 'unknown')}")
     print(f"[CHK]  4-bit loaded: {getattr(_mdl, 'is_loaded_in_4bit', False)}")
