@@ -180,7 +180,7 @@ def _mock_label_case(structured_case: Dict[str, Any], narrative: str) -> Dict[st
     }
 
 def recompute_priority(zone: Dict[str, Any], qa_result: Dict[str, Any], 
-                      reward_config: Dict[str, Any]) -> float:
+                     reward_config: Dict[str, Any]) -> float:
     """
     Recompute zone priority using LLM plausibility and reinforcement learning weights.
     
@@ -197,8 +197,15 @@ def recompute_priority(zone: Dict[str, Any], qa_result: Dict[str, Any],
         float: New priority score (0-1) combining multiple factors
         
     Formula:
-        score = α*original_priority + β*plausibility - γ*radius + risk_boost
+        score = α*orig + β*plaus - γ*radius + δ_rl*rl_score_norm + risk_boost
         priority = 1/(1 + exp(-3*(score - 0.5)))  # Sigmoid normalization
+        
+        Where:
+        - α: Weight for original priority (alpha_orig)
+        - β: Weight for LLM plausibility (beta_plaus)
+        - γ: Penalty weight for zone radius (gamma_radius)
+        - δ_rl: Weight for normalized RL score (delta_rl)
+        - risk_boost: Additional boost for high-risk zones (if risk_tier present)
         
     Note:
         The function uses a sigmoid function to ensure the output is bounded
@@ -212,6 +219,7 @@ def recompute_priority(zone: Dict[str, Any], qa_result: Dict[str, Any],
     alpha = float(w.get("alpha_orig", 0.6))      # Weight for original priority
     beta = float(w.get("beta_plaus", 0.8))       # Weight for LLM plausibility
     gamma = float(w.get("gamma_radius", 0.02))    # Penalty weight for zone radius
+    delta_rl = float(w.get("delta_rl", 0.0))      # Weight for RL normalized score
     
     # Optional risk boost for high-risk zones
     risk_boost = float(w.get("risk_boost", 0.0)) if zone.get("risk_tier") else 0.0
@@ -219,10 +227,11 @@ def recompute_priority(zone: Dict[str, Any], qa_result: Dict[str, Any],
     # Extract input values with defaults
     orig = float(zone.get("priority", 0.5))      # Original priority score
     plaus = float(qa_result.get("plausibility", 0.5))  # LLM plausibility score
-    radius = float(zone.get("radius_km", 5.0))   # Zone radius in kilometers
+    radius = float(zone.get("radius_miles", 3.11))   # Zone radius in miles
+    rl_score_norm = float(zone.get("rl_score_norm", 0.0))  # Precomputed RL score in [0,1]
 
     # Compute weighted combination
-    score = alpha*orig + beta*plaus - gamma*radius + risk_boost
+    score = alpha*orig + beta*plaus - gamma*radius + delta_rl*rl_score_norm + risk_boost
     
     # Apply sigmoid normalization to ensure output is in [0, 1] range
     return 1.0/(1.0 + math.exp(-3*(score-0.5)))
@@ -266,23 +275,36 @@ def _load_truth_map(path="reinforcement_learning/ground_truth.json"):
     Load ground truth mapping for evaluation analysis.
     
     This function loads the ground truth data that maps case IDs to their
-    true/planted zone IDs for evaluation purposes. It's used in Geo-hit@K
+    true coordinates (lat/lon) for evaluation purposes. It's used in Geo-hit@K
     evaluation to determine if the LLM-enhanced prioritization correctly
-    identifies the true zones.
+    identifies zones containing the truth location.
     
     Args:
         path (str): Path to ground truth JSON file
         
     Returns:
-        Dict[str, str]: Mapping of case_id to true_zone_id
+        Dict[str, Dict[str, float]]: Mapping of case_id to {"lat": float, "lon": float}
         
     Note:
         Returns empty dict if file cannot be loaded, which will cause
         evaluation to skip cases without ground truth data.
+        Supports both old format (zone_id strings) and new format (coordinates).
     """
     try:
         with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            data = json.load(f)
+            # Convert old format (zone_id strings) to new format if needed
+            # Old format: {"case_id": "z01"}
+            # New format: {"case_id": {"lat": 37.5, "lon": -77.4}}
+            result = {}
+            for case_id, value in data.items():
+                if isinstance(value, dict) and "lat" in value and "lon" in value:
+                    # New format - already coordinates
+                    result[case_id] = value
+                elif isinstance(value, str):
+                    # Old format - zone_id string, skip (no coordinates available)
+                    continue
+            return result
     except Exception:
         return {}
 
@@ -317,6 +339,68 @@ def format_zone_results(zone_data: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 TRUTH = _load_truth_map()
+
+def _minmax_norm(values):
+    try:
+        vmin = min(values)
+        vmax = max(values)
+    except ValueError:
+        return []
+    if (vmax - vmin) < 1e-9:
+        return [0.5 for _ in values]
+    return [(v - vmin)/(vmax - vmin) for v in values]
+
+
+def _load_rl_lookup(zones_rl_path: pathlib.Path) -> Dict[str, Dict[str, float]]:
+    """Load RL zone scores, normalize per-window, and aggregate per zone_id.
+
+    Reads zones_rl.jsonl file containing reinforcement learning zone scores
+    organized by case and time window. Performs min-max normalization within
+    each time window, then aggregates scores across windows using maximum value
+    per zone.
+
+    Args:
+        zones_rl_path: Path to zones_rl.jsonl file containing RL zone scores.
+            File format: JSONL with records containing case_id, zones (dict
+            by window), and zone_scores (dict by window).
+
+    Returns:
+        Dictionary mapping case_id -> zone_id -> normalized RL score in [0,1].
+        Returns empty dict if file does not exist or cannot be parsed.
+
+    Note:
+        Normalization is performed per time window to account for varying
+        score ranges across windows. Aggregation uses maximum score to preserve
+        the highest RL confidence across all windows for each zone.
+    """
+    lookup: Dict[str, Dict[str, float]] = {}
+    if not zones_rl_path.exists():
+        return lookup
+    with open(zones_rl_path, 'r', encoding='utf-8') as fr:
+        for line in fr:
+            try:
+                rec = json.loads(line.strip())
+            except Exception:
+                continue
+            case_id = rec.get("case_id")
+            if not case_id:
+                continue
+            zones_by_w = rec.get("zones", {}) or {}
+            scores_by_w = rec.get("zone_scores", {}) or {}
+            case_map: Dict[str, float] = lookup.setdefault(case_id, {})
+            for wid, zones in zones_by_w.items():
+                raw_scores = scores_by_w.get(wid)
+                if not zones or not raw_scores or len(raw_scores) != len(zones):
+                    continue
+                norms = _minmax_norm(raw_scores)
+                for z, rn in zip(zones, norms):
+                    zid = z.get("zone_id")
+                    if not zid:
+                        continue
+                    prev = case_map.get(zid, 0.0)
+                    if rn > prev:
+                        case_map[zid] = float(rn)
+    return lookup
 
 def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, profile: str = None, sample: int = 0, force_real: bool = False, verbose: bool = False, per_zone: bool = False, batch_size: int = 16) -> Dict[str, Any]:
     """
@@ -354,7 +438,9 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
     Note:
         The function implements intelligent batching for LLM processing to balance
         efficiency and accuracy. It gracefully handles both real and mock labelers
-        with comprehensive error handling and progress reporting.
+        with comprehensive error handling and progress reporting. The function
+        integrates RL scores from zones_rl.jsonl (if present) to enhance priority
+        computation with normalized RL-based scores.
     """
     out_path = pathlib.Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
@@ -435,6 +521,9 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
 
             # Process each case in the batch
             try:
+                # Load RL lookup once per batch (path: out_dir/zones_rl.jsonl)
+                rl_lookup = _load_rl_lookup(pathlib.Path(out_dir) / "zones_rl.jsonl")
+
                 for idx, case_obj, zones, case_id in case_refs:
                     # Fallback to single-call labeler if no batch results
                     if qa_list is None:
@@ -457,8 +546,15 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
                         try:
                             plausibility = float(qa_result_case.get("plausibility", 0.5))
                             rationale = qa_result_case.get("rationale", "No rationale provided")
+                            # RL blend: attach normalized RL score for this case/zone if present
+                            rl_norm = 0.0
+                            zid = z.get("zone_id")
+                            if zid and case_id in rl_lookup and zid in rl_lookup[case_id]:
+                                rl_norm = float(rl_lookup[case_id][zid])
+                            # Store on zone so recompute_priority can read it
+                            z_with_rl = {**z, "rl_score_norm": rl_norm}
 
-                            new_priority = recompute_priority(z, qa_result_case, reward_config)
+                            new_priority = recompute_priority(z_with_rl, qa_result_case, reward_config)
                             original_priority = float(z.get("priority", 0.5))
 
                             if new_priority > original_priority:
@@ -472,10 +568,15 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
                                 "original_priority": original_priority,
                                 "new_priority": new_priority,
                                 "labeler_source": qa_result_case.get("__labeler_source__", labeler_src),
+                                # Include coordinate fields for geometric evaluation
+                                "center_lat": z.get("center_lat"),
+                                "center_lon": z.get("center_lon"),
+                                "radius_miles": z.get("radius_miles"),
                             })
 
                             reweighted.append({
                                 **z,
+                                "rl_score_norm": rl_norm,
                                 "plausibility": plausibility,
                                 "priority_llm": new_priority,
                                 "rationale": rationale,
@@ -494,9 +595,9 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
                             print(f"[WARN] Error processing zone in {case_id}: {ze}")
                             continue
 
-                    # Write one line per-case
-                    f_rev.write(json.dumps({"case_id": case_id, "zones": reviewed}, indent=2, ensure_ascii=False) + "\n")
-                    f_rew.write(json.dumps({"case_id": case_id, "zones": reweighted}, indent=2, ensure_ascii=False) + "\n")
+                    # Write one JSON object per line
+                    f_rev.write(json.dumps({"case_id": case_id, "zones": reviewed}, ensure_ascii=False) + "\n")
+                    f_rew.write(json.dumps({"case_id": case_id, "zones": reweighted}, ensure_ascii=False) + "\n")
 
                     if case_plausibilities:
                         avg_plausibility = sum(case_plausibilities) / len(case_plausibilities)
@@ -583,38 +684,88 @@ def run_zone_qa(case_files_dir: str, reward_config_path: str, out_dir: str, prof
     return metrics
 
 def evaluate_geo_hit_at_k(baseline_zones: List[Dict], llm_zones: List[Dict], 
-                          true_zone_id: str, k: int = 3) -> Dict[str, Any]:
+                          true_coords: Dict[str, float], k: int = 3) -> Dict[str, Any]:
     """
     Evaluate Geo-hit@K metric comparing baseline vs LLM-enhanced zones.
+    
+    Uses geometric hit detection: a zone "hits" if the truth point is within
+    the zone's radius (haversine distance <= radius_miles).
     
     Args:
         baseline_zones: Original zones sorted by priority
         llm_zones: LLM-enhanced zones sorted by priority_llm
-        true_zone_id: ID of the true/planted zone
+        true_coords: Dictionary with "lat" and "lon" keys for truth coordinates
         k: Number of top zones to consider
         
     Returns:
-        Dictionary with hit rates for baseline and LLM-enhanced
+        Dictionary with hit rates, distances, and metrics for baseline and LLM-enhanced
     """
+    from src.geography.distance import haversine_distance
+    
+    tlat = float(true_coords["lat"])
+    tlon = float(true_coords["lon"])
+    
     # Sort zones by priority (baseline) and priority_llm (LLM)
     baseline_sorted = sorted(baseline_zones, key=lambda x: x.get("priority", 0), reverse=True)
-    llm_sorted = sorted(llm_zones, key=lambda x: x.get("priority_llm", 0), reverse=True)
+    llm_sorted = sorted(llm_zones, key=lambda x: x.get("priority_llm", x.get("priority", 0)), reverse=True)
     
-    # Get top-K zone IDs
-    baseline_top_k = [z.get("zone_id") for z in baseline_sorted[:k]]
-    llm_top_k = [z.get("zone_id") for z in llm_sorted[:k]]
+    # Check hits for baseline zones
+    baseline_hits = []
+    baseline_distances = []
+    baseline_best_distance = None
     
-    # Check if true zone is in top-K
-    baseline_hit = true_zone_id in baseline_top_k
-    llm_hit = true_zone_id in llm_top_k
+    for i, z in enumerate(baseline_sorted[:k]):
+        zlat = z.get("center_lat")
+        zlon = z.get("center_lon")
+        radius_mi = z.get("radius_miles", 10.0)
+        
+        if zlat is not None and zlon is not None:
+            d = haversine_distance(tlat, tlon, float(zlat), float(zlon))
+            hit = d <= float(radius_mi)
+            baseline_hits.append(hit)
+            baseline_distances.append(d)
+            
+            # Best distance: distance outside radius (0 if inside)
+            best_d = max(0.0, d - float(radius_mi))
+            if baseline_best_distance is None or best_d < baseline_best_distance:
+                baseline_best_distance = best_d
+    
+    # Check hits for LLM zones
+    llm_hits = []
+    llm_distances = []
+    llm_best_distance = None
+    
+    for i, z in enumerate(llm_sorted[:k]):
+        zlat = z.get("center_lat")
+        zlon = z.get("center_lon")
+        radius_mi = z.get("radius_miles", 10.0)
+        
+        if zlat is not None and zlon is not None:
+            d = haversine_distance(tlat, tlon, float(zlat), float(zlon))
+            hit = d <= float(radius_mi)
+            llm_hits.append(hit)
+            llm_distances.append(d)
+            
+            # Best distance: distance outside radius (0 if inside)
+            best_d = max(0.0, d - float(radius_mi))
+            if llm_best_distance is None or best_d < llm_best_distance:
+                llm_best_distance = best_d
+    
+    # Hit at K: true if any zone in top-K hits
+    baseline_hit = any(baseline_hits) if baseline_hits else False
+    llm_hit = any(llm_hits) if llm_hits else False
     
     return {
         "baseline_hit": baseline_hit,
         "llm_hit": llm_hit,
-        "baseline_top_k": baseline_top_k,
-        "llm_top_k": llm_top_k,
+        "baseline_hits": baseline_hits,
+        "llm_hits": llm_hits,
+        "baseline_distances": baseline_distances,
+        "llm_distances": llm_distances,
+        "baseline_best_distance_miles": baseline_best_distance,
+        "llm_best_distance_miles": llm_best_distance,
         "k": k,
-        "true_zone_id": true_zone_id
+        "true_coords": true_coords
     }
 
 def run_evaluation_analysis(case_files_dir: str, zones_review_path: str, 
@@ -652,8 +803,42 @@ def run_evaluation_analysis(case_files_dir: str, zones_review_path: str,
             if case_id:
                 reweighted_data[case_id] = data.get("zones", [])
     
-    # Use ground truth mapping for evaluation
-    true_zones = TRUTH
+    # Load zones_rl.jsonl to get coordinates if missing from review_data
+    # Note: zones_rl.jsonl has zones organized by time window, so flatten them
+    # and match by position/index since zone_ids may differ (grid-based vs rank-based)
+    zones_rl_path = out_path / "zones_rl.jsonl"
+    zones_rl_lookup = {}  # case_id -> [zone1, zone2, ...] (flattened list by priority)
+    zones_rl_by_window = {}  # case_id -> {window: [zones]} for TTF tracking
+    if zones_rl_path.exists():
+        with open(zones_rl_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    data = json.loads(line.strip())
+                    case_id = data.get("case_id")
+                    if not case_id:
+                        continue
+                    # Store zones by window for TTF tracking
+                    zones_rl_by_window[case_id] = data.get("zones", {})
+                    # Flatten zones from all windows into a single list, sorted by priority
+                    all_zones = []
+                    zones_by_window = data.get("zones", {})
+                    for window, zones in zones_by_window.items():
+                        for zone in zones:
+                            all_zones.append({
+                                "zone_id": zone.get("zone_id"),
+                                "center_lat": zone.get("center_lat"),
+                                "center_lon": zone.get("center_lon"),
+                                "radius_miles": zone.get("radius_miles", 10.0),
+                                "priority": zone.get("priority", 0.0)
+                            })
+                    # Sort by priority (descending) to match the order in zones_review
+                    all_zones.sort(key=lambda z: z.get("priority", 0.0), reverse=True)
+                    zones_rl_lookup[case_id] = all_zones
+                except Exception:
+                    continue
+    
+    # Use ground truth mapping for evaluation (now contains coordinates)
+    true_coords_map = TRUTH
     
     # Run evaluation for different K values
     evaluation_results = {
@@ -662,39 +847,141 @@ def run_evaluation_analysis(case_files_dir: str, zones_review_path: str,
         "summary_metrics": {}
     }
     
+    # Track TTF (time-to-first-hit) per case
+    ttf_by_case = {}  # case_id -> first_hit_window or None
+    
     for k in evaluation_results["k_values"]:
         baseline_hits = 0
         llm_hits = 0
         total_cases = 0
+        baseline_distances = []
+        llm_distances = []
         
         case_results = []
+        diagnostic_print_count = 0  # Limit prints to first 10 cases
         
         for case_id in review_data:
-            if case_id not in reweighted_data or case_id not in true_zones:
+            if case_id not in reweighted_data or case_id not in true_coords_map:
                 continue
                 
-            true_zone_id = true_zones[case_id]
+            true_coords = true_coords_map[case_id]
             baseline_zones = review_data[case_id]
             llm_zones = reweighted_data[case_id]
             
-            # Convert review data to zone format for evaluation
+            # Ensure zones have required fields for geometric evaluation
+            # Zones should already have center_lat, center_lon, radius_miles
+            # but look up from zones_rl.jsonl if missing (match by position/index)
             baseline_zones_formatted = []
-            for zone in baseline_zones:
-                baseline_zones_formatted.append({
-                    "zone_id": zone.get("zone_id"),
-                    "priority": zone.get("original_priority", 0.5)
-                })
+            rl_zones = zones_rl_lookup.get(case_id, [])
+            for i, zone in enumerate(baseline_zones):
+                zone_id = zone.get("zone_id")
+                center_lat = zone.get("center_lat")
+                center_lon = zone.get("center_lon")
+                radius_miles = zone.get("radius_miles", 10.0)
+                
+                # If coordinates missing, try to look up from zones_rl.jsonl by position
+                if (center_lat is None or center_lon is None) and i < len(rl_zones):
+                    rl_zone = rl_zones[i]
+                    center_lat = center_lat or rl_zone.get("center_lat")
+                    center_lon = center_lon or rl_zone.get("center_lon")
+                    radius_miles = radius_miles if radius_miles != 10.0 else rl_zone.get("radius_miles", 10.0)
+                
+                zone_formatted = {
+                    "zone_id": zone_id,
+                    "priority": zone.get("original_priority", zone.get("priority", 0.5)),
+                    "center_lat": center_lat,
+                    "center_lon": center_lon,
+                    "radius_miles": radius_miles,
+                    "seed_ref": zone.get("seed_ref")  # Preserve seed reference for diagnostics
+                }
+                # Only include zones with coordinates
+                if zone_formatted["center_lat"] is not None and zone_formatted["center_lon"] is not None:
+                    baseline_zones_formatted.append(zone_formatted)
             
-            # Run evaluation
+            # Ensure LLM zones have required fields
+            llm_zones_formatted = []
+            for zone in llm_zones:
+                zone_formatted = {
+                    "zone_id": zone.get("zone_id"),
+                    "priority": zone.get("priority", 0.5),
+                    "priority_llm": zone.get("priority_llm", zone.get("priority", 0.5)),
+                    "center_lat": zone.get("center_lat"),
+                    "center_lon": zone.get("center_lon"),
+                    "radius_miles": zone.get("radius_miles", 10.0)
+                }
+                # Only include zones with coordinates
+                if zone_formatted["center_lat"] is not None and zone_formatted["center_lon"] is not None:
+                    llm_zones_formatted.append(zone_formatted)
+            
+            # Skip if no valid zones
+            if not baseline_zones_formatted or not llm_zones_formatted:
+                continue
+            
+            # Run evaluation with coordinates
             eval_result = evaluate_geo_hit_at_k(
-                baseline_zones_formatted, llm_zones, true_zone_id, k
+                baseline_zones_formatted, llm_zones_formatted, true_coords, k
             )
+            
+            # Track TTF: find first hit window from zones_rl.jsonl if available
+            first_hit_window = None
+            if case_id in zones_rl_by_window and k == 3:  # Only track for K=3 to avoid duplicates
+                zones_by_window = zones_rl_by_window[case_id]
+                
+                # Check which window first hit occurred in
+                from src.geography.distance import haversine_distance
+                tlat = float(true_coords["lat"])
+                tlon = float(true_coords["lon"])
+                
+                for wid in ["0-24", "24-48", "48-72"]:
+                    if wid in zones_by_window:
+                        for zone in zones_by_window[wid]:
+                            zlat = zone.get("center_lat")
+                            zlon = zone.get("center_lon")
+                            radius_mi = zone.get("radius_miles", 10.0)
+                            if zlat is not None and zlon is not None:
+                                d = haversine_distance(tlat, tlon, float(zlat), float(zlon))
+                                if d <= float(radius_mi):
+                                    first_hit_window = wid
+                                    break
+                        if first_hit_window:
+                            break
+                
+                if case_id not in ttf_by_case:
+                    ttf_by_case[case_id] = first_hit_window
+            
+            # Get seed from zones if available
+            seed_info = None
+            if baseline_zones_formatted:
+                seed_info = baseline_zones_formatted[0].get("seed_ref")
+            
+            # Best gap (distance minus radius, 0 = inside)
+            best_gap_baseline = eval_result.get("baseline_best_distance_miles", float('inf'))
+            best_gap_llm = eval_result.get("llm_best_distance_miles", float('inf'))
+            
+            # Check if LLM changed top-1 zone
+            baseline_top1 = baseline_zones_formatted[0] if baseline_zones_formatted else None
+            llm_top1 = llm_zones_formatted[0] if llm_zones_formatted else None
+            changed = (baseline_top1 and llm_top1 and 
+                     baseline_top1.get("zone_id") != llm_top1.get("zone_id"))
+            
+            # Per-case sanity print (limit to first 10 cases, only for K=3)
+            if diagnostic_print_count < 10 and seed_info and k == 3:
+                ls_lat = seed_info.get("last_seen_lat", "?")
+                ls_lon = seed_info.get("last_seen_lon", "?")
+                baseline_gap3 = best_gap_baseline
+                llm_gap3 = best_gap_llm
+                print(f"[{case_id}] seed=({ls_lat:.4f},{ls_lon:.4f}) "
+                      f"K=3 baseline_gap≈{baseline_gap3:.2f}mi → LLM_gap≈{llm_gap3:.2f}mi "
+                      f"first_hit={first_hit_window or '—'}")
+                diagnostic_print_count += 1
             
             case_results.append({
                 "case_id": case_id,
-                "true_zone_id": true_zone_id,
+                "true_coords": true_coords,
                 "baseline_hit": eval_result["baseline_hit"],
                 "llm_hit": eval_result["llm_hit"],
+                "baseline_best_distance_miles": eval_result.get("baseline_best_distance_miles"),
+                "llm_best_distance_miles": eval_result.get("llm_best_distance_miles"),
                 "k": k
             })
             
@@ -703,20 +990,155 @@ def run_evaluation_analysis(case_files_dir: str, zones_review_path: str,
             if eval_result["llm_hit"]:
                 llm_hits += 1
             total_cases += 1
+            
+            # Collect distances for summary statistics
+            if eval_result.get("baseline_best_distance_miles") is not None:
+                baseline_distances.append(eval_result["baseline_best_distance_miles"])
+            if eval_result.get("llm_best_distance_miles") is not None:
+                llm_distances.append(eval_result["llm_best_distance_miles"])
         
-        # Calculate hit rates
+        # Calculate hit rates and distance statistics
         baseline_hit_rate = baseline_hits / total_cases if total_cases > 0 else 0
         llm_hit_rate = llm_hits / total_cases if total_cases > 0 else 0
         improvement = llm_hit_rate - baseline_hit_rate
         
+        # Calculate median distances
+        import statistics
+        baseline_median_distance = statistics.median(baseline_distances) if baseline_distances else None
+        llm_median_distance = statistics.median(llm_distances) if llm_distances else None
+        
+        # Calculate TTF metrics (only for K=3 to avoid duplicates)
+        ttf_0_24 = 0
+        ttf_24_48 = 0
+        ttf_48_72 = 0
+        ttf_miss = 0
+        if k == 3:
+            for case_id, first_hit in ttf_by_case.items():
+                if first_hit == "0-24":
+                    ttf_0_24 += 1
+                elif first_hit == "24-48":
+                    ttf_24_48 += 1
+                elif first_hit == "48-72":
+                    ttf_48_72 += 1
+                else:
+                    ttf_miss += 1
+        
         evaluation_results["case_results"][f"k_{k}"] = case_results
-        evaluation_results["summary_metrics"][f"k_{k}"] = {
+        summary_metrics = {
             "total_cases": total_cases,
             "baseline_hit_rate": baseline_hit_rate,
             "llm_hit_rate": llm_hit_rate,
             "improvement": improvement,
-            "improvement_pct": (improvement / baseline_hit_rate * 100) if baseline_hit_rate > 0 else 0
+            "improvement_pct": (improvement / baseline_hit_rate * 100) if baseline_hit_rate > 0 else 0,
+            "baseline_median_distance_miles": baseline_median_distance,
+            "llm_median_distance_miles": llm_median_distance
         }
+        
+        # Add TTF metrics for K=3
+        if k == 3:
+            summary_metrics.update({
+                "ttf_0_24": ttf_0_24,
+                "ttf_24_48": ttf_24_48,
+                "ttf_48_72": ttf_48_72,
+                "ttf_miss": ttf_miss
+            })
+        
+        evaluation_results["summary_metrics"][f"k_{k}"] = summary_metrics
+    
+    # Generate quality dashboard
+    def _generate_quality_dashboard(evaluation_results, zones_rl_path, review_data):
+        """Generate red/yellow/green quality dashboard.
+        
+        Red flags:
+        - Missing last_seen seeds
+        - Duplicate zones in any window
+        - K=3 hit rate < 35%
+        
+        Yellow flags:
+        - K=3 hit rate < prior benchmark (e.g., <50% for LLM)
+        
+        Returns:
+            Dictionary with status, flags, and metrics.
+        """
+        red_flags = []
+        yellow_flags = []
+        
+        # Check K=3 hit rate
+        k3_metrics = evaluation_results.get("summary_metrics", {}).get("k_3", {})
+        llm_hit_rate_k3 = k3_metrics.get("llm_hit_rate", 0.0)
+        baseline_hit_rate_k3 = k3_metrics.get("baseline_hit_rate", 0.0)
+        
+        if baseline_hit_rate_k3 < 0.35:
+            red_flags.append(f"Baseline K=3 hit rate {baseline_hit_rate_k3:.1%} < 35%")
+        
+        if llm_hit_rate_k3 < 0.35:
+            red_flags.append(f"LLM K=3 hit rate {llm_hit_rate_k3:.1%} < 35%")
+        elif llm_hit_rate_k3 < 0.50:
+            yellow_flags.append(f"LLM K=3 hit rate {llm_hit_rate_k3:.1%} < 50% (below target)")
+        
+        # Check for missing seeds (would need to check zones_rl.jsonl)
+        # This is a simplified check - in practice would scan zones_rl.jsonl
+        missing_seeds = 0
+        if zones_rl_path.exists():
+            with open(zones_rl_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    try:
+                        data = json.loads(line.strip())
+                        zones = data.get("zones", {})
+                        # Check if any zone has seed_ref
+                        has_seed = False
+                        for window_zones in zones.values():
+                            for zone in window_zones:
+                                if zone.get("seed_ref"):
+                                    has_seed = True
+                                    break
+                            if has_seed:
+                                break
+                        if not has_seed:
+                            missing_seeds += 1
+                    except Exception:
+                        continue
+        
+        if missing_seeds > 0:
+            red_flags.append(f"{missing_seeds} cases missing seed_ref in zones")
+        
+        # Check for duplicate zones (would need to parse zones_rl.jsonl)
+        # This is simplified - actual duplicate detection happens during generation
+        
+        # Calculate mean TTF and median gap
+        k3_metrics = evaluation_results.get("summary_metrics", {}).get("k_3", {})
+        mean_ttf = None
+        if k3_metrics.get("ttf_0_24") is not None:
+            total_hits = (k3_metrics.get("ttf_0_24", 0) + 
+                         k3_metrics.get("ttf_24_48", 0) + 
+                         k3_metrics.get("ttf_48_72", 0))
+            if total_hits > 0:
+                # Weighted mean: 0-24h = 12h, 24-48h = 36h, 48-72h = 60h
+                mean_ttf = (k3_metrics.get("ttf_0_24", 0) * 12 +
+                           k3_metrics.get("ttf_24_48", 0) * 36 +
+                           k3_metrics.get("ttf_48_72", 0) * 60) / total_hits
+        
+        median_gap = k3_metrics.get("llm_median_distance_miles")
+        
+        # Determine status
+        status = "green"
+        if red_flags:
+            status = "red"
+        elif yellow_flags:
+            status = "yellow"
+        
+        return {
+            "status": status,
+            "red_flags": red_flags,
+            "yellow_flags": yellow_flags,
+            "mean_ttf_hours": mean_ttf,
+            "median_gap_miles": median_gap,
+            "k3_llm_hit_rate": llm_hit_rate_k3,
+            "k3_baseline_hit_rate": baseline_hit_rate_k3
+        }
+    
+    dashboard = _generate_quality_dashboard(evaluation_results, zones_rl_path, review_data)
+    evaluation_results["quality_dashboard"] = dashboard
     
     # Save evaluation results
     eval_path = out_path / "zone_evaluation_results.json"
@@ -725,13 +1147,37 @@ def run_evaluation_analysis(case_files_dir: str, zones_review_path: str,
     
     # Print summary
     print(f"\n[EVALUATION] Zone QA Performance Analysis:")
-    print(f"  Cases evaluated: {total_cases}")
+    # Get total cases from first K value (should be same for all K)
+    first_k = evaluation_results["k_values"][0] if evaluation_results["k_values"] else None
+    if first_k:
+        total_cases = evaluation_results["summary_metrics"][f"k_{first_k}"]["total_cases"]
+        print(f"  Cases evaluated: {total_cases}")
     for k in evaluation_results["k_values"]:
         metrics = evaluation_results["summary_metrics"][f"k_{k}"]
-        print(f"  K={k}: Baseline {metrics['baseline_hit_rate']:.1%} → LLM {metrics['llm_hit_rate']:.1%} "
+        # Use ASCII arrow for Windows console compatibility
+        print(f"  K={k}: Baseline {metrics['baseline_hit_rate']:.1%} -> LLM {metrics['llm_hit_rate']:.1%} "
               f"(+{metrics['improvement_pct']:.1f}% improvement)")
+        if metrics.get("baseline_median_distance_miles") is not None:
+            print(f"    Median distances: Baseline {metrics['baseline_median_distance_miles']:.2f} mi, "
+                  f"LLM {metrics.get('llm_median_distance_miles', 0):.2f} mi")
     
     print(f"  Evaluation results saved to: {eval_path}")
+    
+    # Print quality dashboard status
+    if "quality_dashboard" in evaluation_results:
+        dashboard = evaluation_results["quality_dashboard"]
+        status_emoji = {"green": "[OK]", "yellow": "[WARN]", "red": "[FAIL]"}.get(dashboard["status"], "[?]")
+        print(f"\n[QUALITY] Dashboard: {status_emoji} {dashboard['status'].upper()}")
+        if dashboard.get("red_flags"):
+            for flag in dashboard["red_flags"]:
+                print(f"  RED: {flag}")
+        if dashboard.get("yellow_flags"):
+            for flag in dashboard["yellow_flags"]:
+                print(f"  YELLOW: {flag}")
+        if dashboard.get("mean_ttf_hours") is not None:
+            print(f"  Mean TTF: {dashboard['mean_ttf_hours']:.1f} hours")
+        if dashboard.get("median_gap_miles") is not None:
+            print(f"  Median gap: {dashboard['median_gap_miles']:.2f} miles")
     
     return evaluation_results
 
@@ -778,6 +1224,10 @@ def main():
     parser.add_argument("--outdir", default="eda_out", help="Output directory")
     parser.add_argument("--profile", default=None, help="Profile key in search_reward_config.json")
     parser.add_argument("--evaluate", action="store_true", help="Run evaluation analysis after zone QA")
+    parser.add_argument("--ttf", action="store_true",
+                       help="Compute time-to-first-hit metrics")
+    parser.add_argument("--cdf", action="store_true", 
+                       help="Generate CDF of distance gaps")
     parser.add_argument("--sample", type=int, default=0, help="Sample N cases for quick testing")
     parser.add_argument("--selftest", action="store_true", help="Run self-test checks")
     parser.add_argument("--force-real", action="store_true",
@@ -814,7 +1264,7 @@ def main():
         print("[SELFTEST] Running self-test checks...")
         
         # Test recompute_priority function
-        test_zone = {"priority": 0.5, "radius_km": 5}
+        test_zone = {"priority": 0.5, "radius_miles": 3.11}
         test_qa = {"plausibility": 0.7}
         test_config = {"weights": {"alpha_orig": 0.6, "beta_plaus": 0.8}, "penalties": {"gamma_radius": 0.02}}
         result = recompute_priority(test_zone, test_qa, test_config)

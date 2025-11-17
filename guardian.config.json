@@ -1,15 +1,22 @@
 {
   "models": {
     "summarizer_instruct": "models/Qwen2.5-3B-Instruct",
+    "summarizer_adapter": "./finetuned_summarizer",
     "extractor_instruct": "models/Qwen2.5-3B-Instruct",
-    "weak_labeler_instruct": "models/Qwen2.5-3B-Instruct"
+    "extractor_adapter": "./finetuned_extractor",
+    "weak_labeler_instruct": "models/Qwen2.5-3B-Instruct",
+    "weak_labeler_adapter": "./finetuned_weak_labeler"
   },
   "use_llama_as_extractor": false,
   "quantize_4bit": true,
   "device": "cuda",
   "dtype": "bfloat16",
   "batch_size": 16,
-  "max_new_tokens": 256
+  "max_new_tokens": 256,
+  "adapter_config": {
+    "strict_mode": false,
+    "merge_on_load": false
+  }
 }
 
 

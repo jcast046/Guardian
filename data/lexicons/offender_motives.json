@@ -1,0 +1,13 @@
+{
+  "$schema": "guardian.motives.v1",
+  "motives": [
+    { "id": "sexual", "prior": 0.52, "traits": ["control","fantasy"], "age_bias": {"6-12": 0.7, "13-17": 0.3} },
+    { "id": "custodial", "prior": 0.32, "traits": ["planning","family_access"] },
+    { "id": "trafficking", "prior": 0.08, "traits": ["profit","networked"] },
+    { "id": "maternal_desire", "prior": 0.02, "traits": ["infant_target"], "age_lock": "<=1" },
+    { "id": "revenge", "prior": 0.06, "traits": ["anger","impulsive"] }
+  ],
+  "constraints": {
+    "by_region": { "NoVA": {"trafficking": 1.2}, "Rural": {"sexual": 1.1} }
+  }
+}

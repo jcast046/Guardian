@@ -10,7 +10,8 @@ including graph-based algorithms, geographic validation, and comprehensive error
 Author: Joshua Castillo
 
 Example:
-    python generate_cases.py --n 10 --seed 42 --out data/custom_cases
+    python generate_cases.py --n 10 --seed 42 --out data/synthetic_cases
+    python generate_cases.py --n 500 --seed 42 --out data/synthetic_cases
 """
 
 import json
@@ -26,6 +27,10 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Any, Set
 from collections import defaultdict
 from jsonschema import Draft202012Validator
+from src.priors import (
+    sample_motive, sample_lure, sample_transport,
+    sample_movement_profile, sample_concealment_site, sample_time_window
+)
 
 BASE = Path(".")
 
@@ -1247,20 +1252,45 @@ def generate_realistic_movement_cues(behaviors, routes, current_region, destinat
         return random.choice(behaviors['movement_cues'])
 
 def generate_search_zones(lat, lon, rl_config, gazetteer, regions):
-    """Generate search zones based on RL configuration for each time window."""
+    """Generate search zones based on RL configuration for each time window.
+
+    Creates search zones for each time window defined in the RL configuration.
+    Zone centers are selected from nearby gazetteer locations, with search radius
+    expanding over time. Zone radii scale with time window progression, and zones
+    are assigned to regional classifications and transportation corridors.
+
+    Args:
+        lat: Starting latitude in decimal degrees.
+        lon: Starting longitude in decimal degrees.
+        rl_config: RL configuration dictionary containing time_windows and
+            action_space settings.
+        gazetteer: Gazetteer data dictionary with entries containing lat/lon
+            coordinates and location names.
+        regions: Regional boundaries GeoJSON for regional classification.
+
+    Returns:
+        List of zone dictionaries, each containing:
+        - center_lat: Zone center latitude
+        - center_lon: Zone center longitude
+        - radius_miles: Search radius in miles
+        - corridor: Assigned transportation corridor identifier
+        - region_tag: Regional classification tag
+        - priority: Priority score (0.3-0.9)
+        - in_state: Boolean indicating state boundary containment
+        - out_of_state_penalty: Penalty value (0.0 for in-state zones)
+        - time_window: Time window identifier
+        - weight: Time window weight for scoring
+    """
     zones = []
     time_windows = rl_config['rl_search_config']['time_windows']
     zones_per_window = rl_config['rl_search_config']['action_space']['zones_per_window']
-    zone_schema = rl_config['rl_search_config']['action_space']['zone_schema']
     
     for window in time_windows:
         window_id = window['id']
         weight = window['weight']
         
-        # Generate zones for this time window
         for i in range(zones_per_window):
-            # Select a nearby location for the zone center
-            max_distance = 30 + (window['start_hr'] * 5)  # Expand search radius over time
+            max_distance = 30 + (window['start_hr'] * 5)
             nearby_locations = []
             
             for loc in gazetteer['entries']:
@@ -1273,17 +1303,14 @@ def generate_search_zones(lat, lon, rl_config, gazetteer, regions):
                 zone_lat = zone_location['lat']
                 zone_lon = zone_location['lon']
             else:
-                # Fallback to random location within expanded radius
                 zone_lat = lat + random.uniform(-0.5, 0.5)
                 zone_lon = lon + random.uniform(-0.5, 0.5)
             
-            # Determine radius based on time window (later = larger radius)
             min_radius = 5
             max_radius = 50
             radius = min_radius + (window['start_hr'] / 72) * (max_radius - min_radius)
             radius = random.uniform(radius * 0.8, radius * 1.2)
             
-            # Get region tag for the zone
             zone_region = get_region_from_coordinates(zone_lat, zone_lon, regions)
             
             zone = {
@@ -1293,7 +1320,7 @@ def generate_search_zones(lat, lon, rl_config, gazetteer, regions):
                 "corridor": random.choice(["I-95 NB", "I-64 EB", "US-29 SW", "I-81 SB"]),
                 "region_tag": zone_region,
                 "priority": random.uniform(0.3, 0.9),
-                "in_state": True,  # All zones are in Virginia
+                "in_state": True,
                 "out_of_state_penalty": 0.0,
                 "time_window": window_id,
                 "weight": weight
@@ -1303,12 +1330,38 @@ def generate_search_zones(lat, lon, rl_config, gazetteer, regions):
     return zones
 
 def generate_follow_up_sightings(behaviors, vehicles, witnesses, clothing, gazetteer, regions, transit_data, original_lat, original_lon, rl_config, time_offset_base=1):
-    """Generate follow-up sighting events using RL time windows and search patterns."""
+    """Generate follow-up sighting events using RL time windows and search patterns.
+
+    Creates temporal sighting events aligned with RL time window structure. Sightings
+    are distributed across time windows with realistic geographic constraints, using
+    transit stations when available for enhanced realism. Confidence scores scale with
+    time window weights, and event types vary based on location characteristics.
+
+    Args:
+        behaviors: Behavioral pattern dictionary (unused but kept for interface).
+        vehicles: Vehicle inventory dictionary (unused but kept for interface).
+        witnesses: Witness type dictionary (unused but kept for interface).
+        clothing: Clothing categories dictionary for sighting descriptions.
+        gazetteer: Gazetteer data dictionary with location entries.
+        regions: Regional boundaries GeoJSON (unused but kept for interface).
+        transit_data: Transit stations data with geometry coordinates.
+        original_lat: Starting latitude in decimal degrees.
+        original_lon: Starting longitude in decimal degrees.
+        rl_config: RL configuration dictionary containing time_windows settings.
+        time_offset_base: Base time offset in hours (default: 1, unused).
+
+    Returns:
+        List of sighting dictionaries, each containing:
+        - ts: ISO format timestamp
+        - lat: Sighting latitude in decimal degrees
+        - lon: Sighting longitude in decimal degrees
+        - event_type: Type of sighting event (transit_tap, camera_hit, sighting, etc.)
+        - reporter_type: Type of reporter (public, officer, family, unknown)
+        - confidence: Confidence score (0.3-0.9)
+        - note: Descriptive text about the sighting
+    """
     sightings = []
-    
-    # Use RL time windows to structure sightings
     time_windows = rl_config['rl_search_config']['time_windows']
-    zones_per_window = rl_config['rl_search_config']['action_space']['zones_per_window']
     
     for window in time_windows:
         window_id = window['id']
@@ -1316,16 +1369,13 @@ def generate_follow_up_sightings(behaviors, vehicles, witnesses, clothing, gazet
         end_hr = window['end_hr']
         weight = window['weight']
         
-        # Generate sightings within this time window
-        num_sightings_in_window = random.randint(0, 2)  # 0-2 sightings per window
+        num_sightings_in_window = random.randint(0, 2)
         
         for i in range(num_sightings_in_window):
-            # Calculate time within the window
             window_duration = end_hr - start_hr
             time_offset = start_hr + random.uniform(0, window_duration)
             
-            # Select a nearby location within reasonable distance
-            max_distance = 50  # miles
+            max_distance = 50
             nearby_locations = []
             
             for loc in gazetteer['entries']:
@@ -1333,7 +1383,6 @@ def generate_follow_up_sightings(behaviors, vehicles, witnesses, clothing, gazet
                 if distance <= max_distance:
                     nearby_locations.append(loc)
             
-            # Try to use transit stations for more realistic sightings
             nearby_transit_stations = []
             for station in transit_data.get('stations', []):
                 if 'geometry' in station and station['geometry']['coordinates']:
@@ -1342,22 +1391,19 @@ def generate_follow_up_sightings(behaviors, vehicles, witnesses, clothing, gazet
                     if distance <= max_distance:
                         nearby_transit_stations.append((stop_lat, stop_lon, station.get('name', 'Transit Station')))
             
-            if nearby_transit_stations and random.random() < 0.3:  # 30% chance to use transit station
+            if nearby_transit_stations and random.random() < 0.3:
                 sighting_lat, sighting_lon, station_name = random.choice(nearby_transit_stations)
             elif nearby_locations:
                 sighting_location = random.choice(nearby_locations)
                 sighting_lat = sighting_location['lat']
                 sighting_lon = sighting_location['lon']
             else:
-                # Fallback to random location within Virginia
                 sighting_lat = random.uniform(36.5, 39.5)
                 sighting_lon = random.uniform(-83.5, -75.0)
             
-            # Calculate confidence based on time window (earlier = higher confidence)
-            base_confidence = 0.3 + (weight * 0.4)  # Use window weight for confidence
+            base_confidence = 0.3 + (weight * 0.4)
             confidence = min(0.9, base_confidence + random.uniform(-0.1, 0.1))
             
-            # Determine event type based on location type
             if nearby_transit_stations and random.random() < 0.3:
                 event_type = random.choice(["transit_tap", "camera_hit", "sighting"])
                 note = f"Transit system report: Child seen at transit station wearing {random.choice(clothing['categories']['tops'])} and {random.choice(clothing['categories']['bottoms'])}"
@@ -1390,7 +1436,7 @@ def main() -> None:
     for accurate network-based road finding.
     
     Command Line Arguments:
-        --n (int): Number of cases to generate (default: 10)
+        --n (int): Number of cases to generate (default: 500)
         --seed (int): Random seed for reproducibility (default: 42)
         --out (Path): Output directory for generated cases (default: data/synthetic_cases)
         
@@ -1424,7 +1470,7 @@ def main() -> None:
         All cases validated against Guardian schema
         
     Performance:
-        - Typical runtime: ~30-60 seconds for 10 cases
+        - Typical runtime: ~10-15 minutes for 500 cases
         - Memory usage: ~100-200 MB for full dataset
         - Graph construction: ~2-5 seconds for 2,359 stations
         - Case generation: ~2-3 seconds per case
@@ -1509,13 +1555,36 @@ def main() -> None:
         child_age = random.randint(6, 17)
         child_gender = random.choice(["male", "female"])
         
+        # Determine region for realistic movement patterns 
+        current_region = get_region_from_coordinates(p["lat"], p["lon"], regions)
+        
+        # Determine age band for behavioral priors
+        if child_age <= 1:
+            age_band = "<=1"
+        elif child_age <= 12:
+            age_band = "6-12"
+        else:
+            age_band = "13-17"
+        
+        # Map region name for priors (convert to lexicon format)
+        region_for_priors = None
+        if current_region == "NoVA":
+            region_for_priors = "NoVA"
+        elif current_region in ["Piedmont", "Shenandoah", "Appalachia"]:
+            region_for_priors = "Rural"
+        
+        # Sample behavioral priors (motive conditions downstream choices)
+        motive = sample_motive(region=region_for_priors, age_band=age_band)
+        lure = sample_lure(motive=motive)
+        transport = sample_transport(motive=motive, lure=lure)
+        movement_profile = sample_movement_profile(motive=motive)
+        concealment_site = sample_concealment_site(motive=motive)
+        time_window_pref = sample_time_window(motive=motive, lure=lure)
+        
         # Find nearby infrastructure
         nearby_roads = find_nearby_roads(p["lat"], p["lon"], road_segments['road_segments'], regions, transit_data)
         nearby_transit = find_nearby_transit(p["lat"], p["lon"], transit_data)
         nearby_pois = find_nearby_pois(p["lat"], p["lon"], gaz)
-        
-        # Determine region for realistic movement patterns
-        current_region = get_region_from_coordinates(p["lat"], p["lon"], regions)
         
         # Fill template strings
         init = tmpl["synthetic_case_templates"]["Initial_Report"]["template"].format(
@@ -1646,7 +1715,15 @@ def main() -> None:
                         },
                         "note": random.choice(behaviors["suspect_behaviors"])
                     }
-                ]
+                ],
+                "behavioral_priors": {
+                    "motive": motive,
+                    "lure": lure,
+                    "transport": transport,
+                    "movement_profile": movement_profile,
+                    "concealment_site": concealment_site,
+                    "time_window_pref": time_window_pref
+                }
             },
             "provenance": {
                 "sources": ["synthetic_generator"],

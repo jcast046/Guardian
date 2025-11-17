@@ -192,6 +192,21 @@
             },
             "additionalProperties": false
           }
+        },
+
+        "behavioral_priors": {
+          "type": "object",
+          "description": "Behavioral priors sampled from lexicons for movement model and RL rewards",
+          "properties": {
+            "motive": { "type": "string", "description": "Offender motive ID" },
+            "lure": { "type": "string", "description": "Lure method ID" },
+            "transport": { "type": "string", "description": "Transport method ID" },
+            "movement_profile": { "type": "string", "description": "Movement profile ID" },
+            "concealment_site": { "type": "string", "description": "Concealment site type ID" },
+            "time_window_pref": { "type": "string", "description": "Time window preference ID" }
+          },
+          "required": ["motive", "lure", "transport", "movement_profile", "concealment_site", "time_window_pref"],
+          "additionalProperties": false
         }
       },
       "additionalProperties": false

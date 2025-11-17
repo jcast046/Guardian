@@ -1,0 +1,19 @@
+{
+  "$schema": "guardian.time.v1",
+  "windows": [
+    {"id":"overnight", "hours":[22,6], "guardianship_low": 0.9},
+    {"id":"morning",   "hours":[6,12], "guardianship_low": 0.4},
+    {"id":"afternoon","hours":[12,17], "guardianship_low": 0.7},
+    {"id":"evening",  "hours":[17,22], "guardianship_low": 0.6}
+  ],
+  "motive_bias": {
+    "sexual": {"overnight": 1.3, "afternoon": 1.1},
+    "custodial": {"evening": 1.2},
+    "trafficking": {"evening": 1.1, "overnight": 1.1}
+  },
+  "lure_bias": {
+    "ask_question": {"afternoon": 1.3},
+    "offer_ride":   {"afternoon": 1.2},
+    "online_grooming": {"evening": 1.2}
+  }
+}

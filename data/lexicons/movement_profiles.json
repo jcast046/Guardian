@@ -1,0 +1,39 @@
+{
+  "$schema": "guardian.movement.v1",
+  "profiles": [
+    {
+      "id": "residential_local",
+      "prior": 0.44,
+      "comfort_radius_miles": [0.62, 3.73],
+      "beta_cost": 1.2,
+      "beta_seclusion": 0.6,
+      "steps": [2, 4],
+      "seclusion_bias": ["wooded","industrial_low"],
+      "familiarity_prob": 0.6
+    },
+    {
+      "id": "corridor_highway",
+      "prior": 0.18,
+      "comfort_radius_miles": [3.11, 21.75],
+      "beta_cost": 0.6,
+      "beta_seclusion": 0.2,
+      "steps": [3, 6],
+      "seclusion_bias": ["motel","truck_stop"],
+      "familiarity_prob": 0.3
+    },
+    {
+      "id": "urban_nodes",
+      "prior": 0.38,
+      "comfort_radius_miles": [0.62, 7.46],
+      "beta_cost": 0.9,
+      "beta_seclusion": 0.4,
+      "steps": [2, 5],
+      "seclusion_bias": ["parking_garage","vacant"],
+      "familiarity_prob": 0.45
+    }
+  ],
+  "motive_couplings": {
+    "sexual": {"residential_local": 1.3},
+    "trafficking": {"corridor_highway": 1.6}
+  }
+}

@@ -56,7 +56,7 @@ DEFAULTS = dict(
     input=f"{OUT_DIR}/eda_cases_min.jsonl",
     outdir=OUT_DIR,
     state="VA",
-    bw=30000.0,   # 30 km kernel bandwidth for state-scale analysis
+    bw=30000.0,   # 30,000 meters (approximately 18.64 miles) kernel bandwidth for state-scale analysis
     # common map behavior
     fixed_extent=True,
     shared_scale=True,
@@ -72,6 +72,9 @@ DEFAULTS = dict(
     # heat colormaps per style
     dot_heat_cmap="inferno",
     dark_heat_cmap="magma",
+    # reference map data
+    gazetteer_path=f"{DATA_DIR}/geo/va_gazetteer.json",
+    us_states_shapefile=f"{DATA_DIR}/geo/cb_us_state/cb_2023_us_state_500k.shp",
 )
 
 def _exists(p): 
@@ -308,6 +311,88 @@ def create_visualizations(df: pd.DataFrame, outdir: str, top_n_counties: int = 2
 
 
 # -----------------------------
+# RL Input Export (grid, costs, seclusion, hotspots)
+# -----------------------------
+
+def _make_grid_from_df(df: "pd.DataFrame", nx: int = 80, ny: int = 80, pad: float = 0.25) -> np.ndarray:
+    lon_min, lon_max = float(df["lon"].min()), float(df["lon"].max())
+    lat_min, lat_max = float(df["lat"].min()), float(df["lat"].max())
+    dlon, dlat = (lon_max - lon_min), (lat_max - lat_min)
+    lon_min -= pad * dlon; lon_max += pad * dlon
+    lat_min -= pad * dlat; lat_max += pad * dlat
+    lons = np.linspace(lon_min, lon_max, nx)
+    lats = np.linspace(lat_min, lat_max, ny)
+    grid = np.array([[x, y] for y in lats for x in lons], dtype=float)
+    return grid
+
+
+def export_rl_inputs(df: "pd.DataFrame", outdir: str, nx: int = 80, ny: int = 80, bandwidth_deg: float = 0.25, topk: int = 20) -> None:
+    """Export reinforcement learning movement model inputs from case data.
+
+    Generates grid-based spatial data structures and KDE hotspot locations for
+    use by the reinforcement_learning module. Creates uniform grid covering the
+    spatial extent of input data, computes kernel density hotspots, and exports
+    all required files in the expected format.
+
+    Args:
+        df: DataFrame containing case data with 'lon' and 'lat' columns for
+            spatial extent calculation and hotspot detection.
+        outdir: Output directory path for generated files. Directory will be
+            created if it does not exist.
+        nx: Number of grid cells in x-direction (longitude) for spatial grid
+            (default: 80).
+        ny: Number of grid cells in y-direction (latitude) for spatial grid
+            (default: 80).
+        bandwidth_deg: Kernel bandwidth in degrees for KDE hotspot computation
+            (default: 0.25 degrees, approximately 28 km at mid-latitudes).
+        topk: Number of top-density hotspots to export (default: 20).
+
+    Output Files:
+        - grid_xy.npy: NumPy array of shape (N, 2) containing [longitude, latitude]
+            coordinates for each grid cell.
+        - road_cost.npy: NumPy array of shape (N,) containing placeholder road
+            cost values (currently all set to 10.0).
+        - seclusion.npy: NumPy array of shape (N,) containing placeholder seclusion
+            values (currently all zeros).
+        - kde_hotspots.json: JSON array of hotspot entries, each containing
+            [longitude, latitude, normalized_weight, sigma_miles] where weight is
+            normalized to [0,1] relative to maximum density.
+
+    Note:
+        Road cost and seclusion arrays are currently placeholders. The KDE hotspot
+        export requires scikit-learn (KernelDensity) and will be skipped with a
+        warning if unavailable. Grid extent is computed from input DataFrame
+        spatial bounds.
+    """
+    import json as _json
+    # Build grid from case extent
+    grid_xy = _make_grid_from_df(df, nx=nx, ny=ny)
+    np.save(os.path.join(outdir, "grid_xy.npy"), grid_xy)
+
+    # Placeholders for now (replace with real network and seclusion layers later)
+    np.save(os.path.join(outdir, "road_cost.npy"), np.full(len(grid_xy), 10.0, dtype=float))
+    np.save(os.path.join(outdir, "seclusion.npy"), np.zeros(len(grid_xy), dtype=float))
+
+    # KDE hotspots over lon/lat if KernelDensity available
+    if KernelDensity is None:
+        print("[WARN] scikit-learn not installed; skipping kde_hotspots.json export.")
+    else:
+        pts = df[["lon","lat"]].dropna().to_numpy(dtype=float)
+        kde = KernelDensity(bandwidth=bandwidth_deg, kernel="gaussian")
+        kde.fit(pts)
+        dens = np.exp(kde.score_samples(grid_xy))
+        idx = np.argsort(-dens)[:max(1, int(topk))]
+        maxd = float(dens[idx[0]]) if len(idx) else 1.0
+        sigma_miles = 12.43
+        hotspots = []
+        for i in idx:
+            w = float(dens[i]) / (maxd + 1e-12)
+            hotspots.append([float(grid_xy[i,0]), float(grid_xy[i,1]), w, float(sigma_miles)])
+        with open(os.path.join(outdir, "kde_hotspots.json"), "w", encoding="utf-8") as fw:
+            _json.dump(hotspots, fw)
+    print("[OK] Exported RL inputs (grid_xy, road_cost, seclusion" + (", kde_hotspots" if KernelDensity else "") + ") to", outdir)
+
+# -----------------------------
 # Geospatial Overlay Helpers
 # -----------------------------
 
@@ -339,16 +424,90 @@ def _plot_roads(ax, roads_gdf, class_col, cmap, lw, alpha):
         return
     if class_col and class_col in r.columns and r[class_col].notna().any():
         if r[class_col].dtype.kind in "ifu":
-            r.plot(ax=ax, column=class_col, cmap=cmap, linewidth=lw, alpha=alpha, legend=False)
+            r.plot(ax=ax, column=class_col, cmap=cmap, linewidth=lw, alpha=alpha, legend=False, zorder=4)
         else:
             cats = r[class_col].astype(str)
             uniq = sorted(cats.unique())
             cm = plt.get_cmap(cmap, len(uniq))
             color_lu = {u: cm(i) for i,u in enumerate(uniq)}
             r.assign(_c=cats.map(color_lu)).plot(ax=ax, color=r.assign(_c=cats.map(color_lu))["_c"],
-                                                 linewidth=lw, alpha=alpha)
+                                                 linewidth=lw, alpha=alpha, zorder=4)
     else:
-        r.plot(ax=ax, color="purple", linewidth=lw, alpha=alpha)
+        r.plot(ax=ax, color="purple", linewidth=lw, alpha=alpha, zorder=4)
+
+
+def _plot_reference_basemap(ax, states_shapefile_path, gazetteer_path, boundary_gdf):
+    """Plot a reference basemap using local shapefiles and gazetteer data.
+    
+    Renders state boundaries from US Census shapefile and city/county labels
+    from the Virginia gazetteer to provide geographic context.
+    
+    Args:
+        ax: Matplotlib axis to plot on (must be in EPSG:3857)
+        states_shapefile_path: Path to US states shapefile
+        gazetteer_path: Path to VA gazetteer JSON file
+        boundary_gdf: GeoDataFrame of VA boundary for filtering/extent
+    """
+    if gpd is None:
+        return
+    
+    # Load and plot US states for reference context
+    if states_shapefile_path and os.path.exists(states_shapefile_path):
+        try:
+            states_gdf = gpd.read_file(states_shapefile_path)
+            if not states_gdf.empty:
+                states_gdf = states_gdf.to_crs(epsg=3857)
+                # Filter to Virginia and neighboring states 
+                # For now, plot all states but with subtle styling
+                states_gdf.plot(ax=ax, facecolor="#e8e8e8", edgecolor="#d0d0d0", 
+                               linewidth=0.35, alpha=0.7, zorder=0)
+        except Exception as e:
+            print(f"[WARN] Could not load states shapefile: {e}")
+    
+    # Overlay VA boundary more prominently with medium-dark blue border
+    if boundary_gdf is not None:
+        b = boundary_gdf.to_crs(epsg=3857)
+        b.plot(ax=ax, facecolor="#fafafa", edgecolor="#2b8cbe", 
+              linewidth=1.0, alpha=0.8, zorder=1)
+    
+    # Load and plot city/county labels from gazetteer
+    if gazetteer_path and os.path.exists(gazetteer_path):
+        try:
+            import json
+            with open(gazetteer_path, 'r', encoding='utf-8') as f:
+                gazetteer = json.load(f)
+            
+            entries = gazetteer.get("entries", [])
+            # Filter to major cities (population centers) to avoid clutter
+            # Show cities and major places, filter by type or name length
+            major_places = [e for e in entries if e.get("type") in ["city", "county"] 
+                           or len(e.get("name", "")) < 15]  # Avoid very long names
+            
+            # Convert lat/lon to Web Mercator and plot labels
+            for entry in major_places[:50]:  # Limit to top 50 to avoid overcrowding
+                lat = entry.get("lat")
+                lon = entry.get("lon")
+                name = entry.get("name", "")
+                if lat is not None and lon is not None and name:
+                    try:
+                        # Use geopandas to convert coordinates 
+                        if Point is None:
+                            continue
+                        point_4326 = Point(lon, lat)
+                        point_gdf = gpd.GeoDataFrame([1], geometry=[point_4326], crs="EPSG:4326")
+                        point_3857 = point_gdf.to_crs(epsg=3857)
+                        x = point_3857.geometry.iloc[0].x
+                        y = point_3857.geometry.iloc[0].y
+                        ax.text(x, y, name, fontsize=9, color="#888888", 
+                               alpha=0.7, ha="center", va="bottom",
+                               bbox=dict(boxstyle="round,pad=0.3", facecolor="white", 
+                                        edgecolor="none", alpha=0.7),
+                               zorder=2)
+                    except Exception:
+                        # Skip entries that fail coordinate transformation
+                        continue
+        except Exception as e:
+            print(f"[WARN] Could not load/plot gazetteer: {e}")
 
 
 def load_boundary(path: str):
@@ -465,9 +624,53 @@ def plot_kde_heatmap(
     vmin: Optional[float] = None, vmax: Optional[float] = None,
     # NEW:
     boundary_gdf=None, roads_gdf=None, roads_class_col=None, roads_cmap="rainbow",
-    roads_width=0.8, roads_alpha=0.9, no_basemap=False, dark_style=False, heat_cmap_name="inferno"
+    roads_width=0.8, roads_alpha=0.9, no_basemap=False, dark_style=False, heat_cmap_name="inferno",
+    use_local_reference=False, states_shapefile_path=None, gazetteer_path=None
 ) -> None:
-    """Create and save a KDE heatmap visualization from geospatial point data with overlays and dual styles."""
+    """Create and save a KDE heatmap visualization from geospatial point data.
+
+    Generates kernel density estimation (KDE) heatmaps from point geometries with
+    optional basemap overlays, road networks, and boundary silhouettes. Supports
+    two visualization styles: standard dot-style with basemap and dark-style with
+    minimal chrome for presentation use.
+
+    Args:
+        gdf: GeoDataFrame containing point geometries to visualize.
+        title: Title text displayed on the map.
+        outpath: File path for saving the output image (PNG format).
+        bw: Kernel bandwidth in meters for KDE computation.
+        region: Region identifier for display (default: "VA").
+        fixed_bounds: Optional tuple (xmin, xmax, ymin, ymax) in Web Mercator
+            coordinates to set fixed map extent. If None, bounds computed from data.
+        vmin: Minimum value for color scale normalization. If None, uses data minimum.
+        vmax: Maximum value for color scale normalization. If None, uses data maximum.
+        boundary_gdf: Optional GeoDataFrame containing boundary polygon for masking
+            and silhouette overlay. If None, no boundary overlay is drawn.
+        roads_gdf: Optional GeoDataFrame containing road network for overlay.
+            If None, no roads are drawn.
+        roads_class_col: Column name in roads_gdf for road classification coloring.
+            If None, roads use uniform color.
+        roads_cmap: Colormap name for road classification (default: "rainbow").
+        roads_width: Line width for road segments (default: 0.8).
+        roads_alpha: Transparency alpha for road overlay (default: 0.9).
+        no_basemap: If True, skips basemap tile loading (default: False).
+        dark_style: If True, uses dark theme with minimal chrome and cyan accents
+            (default: False). If False, uses standard style with basemap and grid.
+        heat_cmap_name: Colormap name for KDE heat overlay (default: "inferno").
+            For dark_style, typically use "magma"; for dot-style, use "inferno".
+        use_local_reference: If True, uses local shapefiles and gazetteer for
+            reference basemap instead of online tiles (default: False).
+        states_shapefile_path: Path to US states shapefile for local reference
+            basemap. Required if use_local_reference=True.
+        gazetteer_path: Path to gazetteer JSON file for local reference labels.
+            Required if use_local_reference=True.
+
+    Note:
+        The function performs coordinate transformation to Web Mercator (EPSG:3857)
+        for visualization. Density values are masked to boundary polygon if provided.
+        Visualization layers are drawn in order: basemap (zorder=0), heat raster
+        (zorder=2), boundary silhouette (zorder=3), roads (zorder=4), points (zorder=5).
+    """
     if gpd is None:
         print("[WARN] Skipping KDE map: geopandas not installed."); return
     if len(gdf) == 0:
@@ -489,25 +692,7 @@ def plot_kde_heatmap(
         for s in ax.spines.values(): s.set_visible(False)
         ax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)
 
-    # --- DRAW HEAT RASTER (with per-pixel alpha so NaNs are fully transparent) ---
-    alpha_arr = np.where(np.isnan(Z), 0.0, 0.88)
-    img = ax.imshow(
-        Z, origin="lower",
-        extent=(X.min(), X.max(), Y.min(), Y.max()),
-        cmap=plt.get_cmap(heat_cmap_name),
-        vmin=vmin, vmax=vmax,
-        interpolation="bilinear"
-    )
-    img.set_alpha(alpha_arr)
-
-    # --- SILHOUETTE / OUTLINE ---
-    if boundary_gdf is not None:
-        b = boundary_gdf.to_crs(epsg=3857)
-        face = "#0b0f1a" if dark_style else "none"
-        edge = "#3dd5ff" if dark_style else "#2b8cbe"
-        b.plot(ax=ax, facecolor=face, edgecolor=edge, linewidth=1.4, alpha=(0.9 if dark_style else 1.0), zorder=1)
-
-    # --- LIMIT VIEW TO STATE BOUNDS (if we have them) ---
+    # --- LIMIT VIEW TO STATE BOUNDS (do this FIRST to set extent for basemap) ---
     if boundary_gdf is not None:
         b = boundary_gdf.to_crs(epsg=3857)
         x0, y0, x1, y1 = b.total_bounds
@@ -518,18 +703,41 @@ def plot_kde_heatmap(
         ax.set_xlim(fixed_bounds[0], fixed_bounds[1])
         ax.set_ylim(fixed_bounds[2], fixed_bounds[3])
 
-    # --- BASEMAP FOR DOT-STYLE (do this AFTER xlim/ylim are set) ---
-    if _HAS_CTX and not no_basemap:
+    # --- BASEMAP FOR DOT-STYLE (draw FIRST as background layer, zorder=0) ---
+    if use_local_reference and not dark_style and not no_basemap:
+        # Use local reference basemap from shapefiles and gazetteer
+        _plot_reference_basemap(ax, states_shapefile_path, gazetteer_path, boundary_gdf)
+    elif _HAS_CTX and not no_basemap:
+        # Fallback to online basemap
         try:
             ctx.add_basemap(ax, crs="EPSG:3857", source=ctx.providers.CartoDB.Positron, alpha=1.0, zorder=0)
         except Exception as e:
             print(f"[WARN] Could not load basemap: {e}")
 
-    # --- OPTIONAL ROADS OVERLAY (above basemap, below points) ---
+    # --- DRAW HEAT RASTER (draw SECOND on top of basemap, zorder=2) ---
+    alpha_arr = np.where(np.isnan(Z), 0.0, 0.88)
+    img = ax.imshow(
+        Z, origin="lower",
+        extent=(X.min(), X.max(), Y.min(), Y.max()),
+        cmap=plt.get_cmap(heat_cmap_name),
+        vmin=vmin, vmax=vmax,
+        interpolation="bilinear",
+        zorder=2
+    )
+    img.set_alpha(alpha_arr)
+
+    # --- SILHOUETTE / OUTLINE (draw THIRD, zorder=3) ---
+    if boundary_gdf is not None:
+        b = boundary_gdf.to_crs(epsg=3857)
+        face = "#0b0f1a" if dark_style else "none"
+        edge = "#3dd5ff" if dark_style else "#2b8cbe"
+        b.plot(ax=ax, facecolor=face, edgecolor=edge, linewidth=1.4, alpha=(0.9 if dark_style else 1.0), zorder=3)
+
+    # --- OPTIONAL ROADS OVERLAY (draw FOURTH, above heat and boundary, zorder=4) ---
     _plot_roads(ax, roads_gdf, roads_class_col, roads_cmap, roads_width, roads_alpha)
 
-    # --- POINTS for reference ---
-    ax.scatter(xs, ys, s=8, c="white", alpha=0.85, edgecolors="black", linewidth=0.4, zorder=3)
+    # --- POINTS for reference (draw LAST, zorder=5) ---
+    ax.scatter(xs, ys, s=8, c="white", alpha=0.85, edgecolors="black", linewidth=0.4, zorder=5)
 
     # --- TITLE / AXES ---
     ax.set_title(f"{title} ({region})", fontsize=15, fontweight="bold",
@@ -558,7 +766,8 @@ def run_hotspotting(
     roads_class_col: Optional[str] = None, roads_cmap: str = "rainbow",
     roads_width: float = 0.8, roads_alpha: float = 0.9,
     no_basemap: bool = False, dark_style: bool = False, heat_cmap_name: str = "inferno",
-    boundary_gdf=None,
+    boundary_gdf=None, use_local_reference: bool = False,
+    states_shapefile_path: Optional[str] = None, gazetteer_path: Optional[str] = None,
 ) -> None:
     """
     Generate KDE hotspot maps for all cases and age bands.
@@ -630,6 +839,8 @@ def run_hotspotting(
         boundary_gdf=boundary_gdf, roads_gdf=roads_gdf, roads_class_col=roads_class_col,
         roads_cmap=roads_cmap, roads_width=roads_width, roads_alpha=roads_alpha,
         no_basemap=no_basemap, dark_style=dark_style, heat_cmap_name=heat_cmap_name,
+        use_local_reference=use_local_reference, states_shapefile_path=states_shapefile_path,
+        gazetteer_path=gazetteer_path,
     )
 
     # Generate KDE maps for each age band
@@ -645,6 +856,8 @@ def run_hotspotting(
             boundary_gdf=boundary_gdf, roads_gdf=roads_gdf, roads_class_col=roads_class_col,
             roads_cmap=roads_cmap, roads_width=roads_width, roads_alpha=roads_alpha,
             no_basemap=no_basemap, dark_style=dark_style, heat_cmap_name=heat_cmap_name,
+            use_local_reference=use_local_reference, states_shapefile_path=states_shapefile_path,
+            gazetteer_path=gazetteer_path,
         )
 
 
@@ -652,8 +865,26 @@ def run_hotspotting(
 # Dual-Style Auto-Runner
 # -----------------------------
 
-def run_profiles_auto(df, state):
-    """Generate both DOT-style and dark poster-style maps automatically."""
+def run_profiles_auto(df: "pd.DataFrame", state: str) -> None:
+    """Generate both DOT-style and dark poster-style maps automatically.
+
+    Creates dual-style KDE heatmap visualizations from point data using the same
+    kernel bandwidth and configuration. Generates standard dot-style maps with
+    basemap and road overlays, plus dark poster-style maps with minimal chrome
+    for presentation use.
+
+    Args:
+        df: DataFrame containing geospatial point data with latitude and longitude
+            columns for KDE computation.
+        state: State identifier for region labeling (e.g., "VA").
+
+    Note:
+        Output directories are created automatically:
+        - maps_dot/: Standard style with basemap and roads
+        - maps_dark/: Dark style without basemap or roads
+        Both styles use the same kernel bandwidth and boundary clipping from
+        DEFAULTS configuration.
+    """
     # Load boundary once for both styles
     boundary_gdf = load_boundary(DEFAULTS["boundary_path"])
     
@@ -675,6 +906,9 @@ def run_profiles_auto(df, state):
         roads_width=DEFAULTS["roads_width"], roads_alpha=DEFAULTS["roads_alpha"],
         no_basemap=False, dark_style=False, heat_cmap_name=DEFAULTS["dot_heat_cmap"],
         boundary_gdf=boundary_gdf,
+        use_local_reference=False,
+        states_shapefile_path=DEFAULTS["us_states_shapefile"] if _exists(DEFAULTS["us_states_shapefile"]) else None,
+        gazetteer_path=DEFAULTS["gazetteer_path"] if _exists(DEFAULTS["gazetteer_path"]) else None,
     )
     # Dark poster style (no basemap, no roads)
     out_dark = os.path.join(DEFAULTS["outdir"], "maps_dark")
@@ -764,6 +998,10 @@ def main():
         create_visualizations(df, args.outdir, top_n_counties=args.topN)
     else:
         print("[INFO] Skipping count computation (using counts from run_all_llms.py)")
+
+    # Export RL inputs for downstream reinforcement_learning pipeline
+    print("[INFO] Exporting RL inputs (grid, costs, seclusion, hotspots)…")
+    export_rl_inputs(df, args.outdir)
 
     # Generate spatial hotspot analysis (both styles)
     print("[INFO] Running hotspotting (dot + dark)…")

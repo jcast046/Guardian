@@ -1,0 +1,839 @@
+{
+  "k_values": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "case_results": {
+    "k_1": [
+      {
+        "case_id": "GRD-2025-033659",
+        "true_coords": {
+          "lat": 37.08,
+          "lon": -76.49
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 21.78943083506028,
+        "llm_best_distance_miles": 21.78943083506028,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-041797",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 75.46528579584934,
+        "llm_best_distance_miles": 6.797210615231921,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-067348",
+        "true_coords": {
+          "lat": 38.83,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 20.692578100836272,
+        "llm_best_distance_miles": 20.692578100836272,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-207963",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 7.264466429239494,
+        "llm_best_distance_miles": 7.264466429239494,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-309571",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 111.49547930180566,
+        "llm_best_distance_miles": 0.0,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-604596",
+        "true_coords": {
+          "lat": 37.41,
+          "lon": -79.14
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 82.31429418646456,
+        "llm_best_distance_miles": 24.464358816708902,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-745652",
+        "true_coords": {
+          "lat": 38.77,
+          "lon": -77.44
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 35.424978385346506,
+        "llm_best_distance_miles": 0.060638797134132894,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-779592",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 238.49826710172638,
+        "llm_best_distance_miles": 18.979634003141285,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-789359",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 83.38548653590482,
+        "llm_best_distance_miles": 13.492572418914389,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-799929",
+        "true_coords": {
+          "lat": 37.93,
+          "lon": -76.78
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 20.07826862839545,
+        "llm_best_distance_miles": 20.07826862839545,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-812510",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 2.6061762277483496,
+        "llm_best_distance_miles": 18.383129304890964,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-894940",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 19.440904418077096,
+        "llm_best_distance_miles": 19.440904418077096,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-905798",
+        "true_coords": {
+          "lat": 38.71,
+          "lon": -77.48
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.6308004613028411,
+        "llm_best_distance_miles": 0.6308004613028411,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-923653",
+        "true_coords": {
+          "lat": 38.75,
+          "lon": -77.47
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 55.45086853812586,
+        "llm_best_distance_miles": 17.49843046526132,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-923782",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 125.7083429581296,
+        "llm_best_distance_miles": 22.979078954004393,
+        "k": 1
+      },
+      {
+        "case_id": "GRD-2025-994876",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 88.75834615279045,
+        "llm_best_distance_miles": 0.0,
+        "k": 1
+      }
+    ],
+    "k_3": [
+      {
+        "case_id": "GRD-2025-033659",
+        "true_coords": {
+          "lat": 37.08,
+          "lon": -76.49
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 21.78943083506028,
+        "llm_best_distance_miles": 3.5422599969563864,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-041797",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 75.46528579584934,
+        "llm_best_distance_miles": 6.797210615231921,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-067348",
+        "true_coords": {
+          "lat": 38.83,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 20.692578100836272,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-207963",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 7.264466429239494,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-309571",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 47.130395838927136,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-604596",
+        "true_coords": {
+          "lat": 37.41,
+          "lon": -79.14
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 24.464358816708902,
+        "llm_best_distance_miles": 24.464358816708902,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-745652",
+        "true_coords": {
+          "lat": 38.77,
+          "lon": -77.44
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.060638797134132894,
+        "llm_best_distance_miles": 0.060638797134132894,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-779592",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 18.979634003141285,
+        "llm_best_distance_miles": 1.5822989622529438,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-789359",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 13.492572418914389,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-799929",
+        "true_coords": {
+          "lat": 37.93,
+          "lon": -76.78
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 20.07826862839545,
+        "llm_best_distance_miles": 12.711498631483016,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-812510",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 2.6061762277483496,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-894940",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 19.440904418077096,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-905798",
+        "true_coords": {
+          "lat": 38.71,
+          "lon": -77.48
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.6308004613028411,
+        "llm_best_distance_miles": 0.6308004613028411,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-923653",
+        "true_coords": {
+          "lat": 38.75,
+          "lon": -77.47
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 17.49843046526132,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-923782",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 85.37695873263861,
+        "llm_best_distance_miles": 22.979078954004393,
+        "k": 3
+      },
+      {
+        "case_id": "GRD-2025-994876",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 3
+      }
+    ],
+    "k_5": [
+      {
+        "case_id": "GRD-2025-033659",
+        "true_coords": {
+          "lat": 37.08,
+          "lon": -76.49
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-041797",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 6.797210615231921,
+        "llm_best_distance_miles": 6.797210615231921,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-067348",
+        "true_coords": {
+          "lat": 38.83,
+          "lon": -77.3
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-207963",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-309571",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-604596",
+        "true_coords": {
+          "lat": 37.41,
+          "lon": -79.14
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 24.464358816708902,
+        "llm_best_distance_miles": 12.321876886367058,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-745652",
+        "true_coords": {
+          "lat": 38.77,
+          "lon": -77.44
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.060638797134132894,
+        "llm_best_distance_miles": 0.060638797134132894,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-779592",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 18.979634003141285,
+        "llm_best_distance_miles": 1.5822989622529438,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-789359",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-799929",
+        "true_coords": {
+          "lat": 37.93,
+          "lon": -76.78
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 12.711498631483016,
+        "llm_best_distance_miles": 12.711498631483016,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-812510",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-894940",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 19.440904418077096,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-905798",
+        "true_coords": {
+          "lat": 38.71,
+          "lon": -77.48
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.6308004613028411,
+        "llm_best_distance_miles": 0.6308004613028411,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-923653",
+        "true_coords": {
+          "lat": 38.75,
+          "lon": -77.47
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-923782",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 67.0860315058415,
+        "llm_best_distance_miles": 5.278931324827617,
+        "k": 5
+      },
+      {
+        "case_id": "GRD-2025-994876",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 5
+      }
+    ],
+    "k_10": [
+      {
+        "case_id": "GRD-2025-033659",
+        "true_coords": {
+          "lat": 37.08,
+          "lon": -76.49
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-041797",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 6.797210615231921,
+        "llm_best_distance_miles": 6.797210615231921,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-067348",
+        "true_coords": {
+          "lat": 38.83,
+          "lon": -77.3
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-207963",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-309571",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-604596",
+        "true_coords": {
+          "lat": 37.41,
+          "lon": -79.14
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 12.321876886367058,
+        "llm_best_distance_miles": 12.321876886367058,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-745652",
+        "true_coords": {
+          "lat": 38.77,
+          "lon": -77.44
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.060638797134132894,
+        "llm_best_distance_miles": 0.060638797134132894,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-779592",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 1.5822989622529438,
+        "llm_best_distance_miles": 1.5822989622529438,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-789359",
+        "true_coords": {
+          "lat": 36.85,
+          "lon": -76.28
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-799929",
+        "true_coords": {
+          "lat": 37.93,
+          "lon": -76.78
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 12.711498631483016,
+        "llm_best_distance_miles": 12.711498631483016,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-812510",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-894940",
+        "true_coords": {
+          "lat": 38.8,
+          "lon": -77.04
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-905798",
+        "true_coords": {
+          "lat": 38.71,
+          "lon": -77.48
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 0.6308004613028411,
+        "llm_best_distance_miles": 0.6308004613028411,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-923653",
+        "true_coords": {
+          "lat": 38.75,
+          "lon": -77.47
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-923782",
+        "true_coords": {
+          "lat": 38.84,
+          "lon": -77.3
+        },
+        "baseline_hit": false,
+        "llm_hit": false,
+        "baseline_best_distance_miles": 5.278931324827617,
+        "llm_best_distance_miles": 5.278931324827617,
+        "k": 10
+      },
+      {
+        "case_id": "GRD-2025-994876",
+        "true_coords": {
+          "lat": 38.88,
+          "lon": -77.1
+        },
+        "baseline_hit": true,
+        "llm_hit": true,
+        "baseline_best_distance_miles": 0.0,
+        "llm_best_distance_miles": 0.0,
+        "k": 10
+      }
+    ]
+  },
+  "summary_metrics": {
+    "k_1": {
+      "total_cases": 16,
+      "baseline_hit_rate": 0.0,
+      "llm_hit_rate": 0.125,
+      "improvement": 0.125,
+      "improvement_pct": 0,
+      "baseline_median_distance_miles": 45.43792346173618,
+      "llm_median_distance_miles": 17.94077988507614
+    },
+    "k_3": {
+      "total_cases": 16,
+      "baseline_hit_rate": 0.0625,
+      "llm_hit_rate": 0.5,
+      "improvement": 0.4375,
+      "improvement_pct": 700.0,
+      "baseline_median_distance_miles": 19.21026921060919,
+      "llm_median_distance_miles": 0.030319398567066447,
+      "ttf_0_24": 16,
+      "ttf_24_48": 0,
+      "ttf_48_72": 0,
+      "ttf_miss": 0
+    },
+    "k_5": {
+      "total_cases": 16,
+      "baseline_hit_rate": 0.5,
+      "llm_hit_rate": 0.5625,
+      "improvement": 0.0625,
+      "improvement_pct": 12.5,
+      "baseline_median_distance_miles": 0.030319398567066447,
+      "llm_median_distance_miles": 0.0
+    },
+    "k_10": {
+      "total_cases": 16,
+      "baseline_hit_rate": 0.5625,
+      "llm_hit_rate": 0.5625,
+      "improvement": 0.0,
+      "improvement_pct": 0.0,
+      "baseline_median_distance_miles": 0.0,
+      "llm_median_distance_miles": 0.0
+    }
+  },
+  "quality_dashboard": {
+    "status": "red",
+    "red_flags": [
+      "Baseline K=3 hit rate 6.2% < 35%"
+    ],
+    "yellow_flags": [],
+    "mean_ttf_hours": 12.0,
+    "median_gap_miles": 0.030319398567066447,
+    "k3_llm_hit_rate": 0.5,
+    "k3_baseline_hit_rate": 0.0625
+  }
+}

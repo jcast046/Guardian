@@ -1,0 +1,17 @@
+{
+  "$schema": "guardian.concealment.v1",
+  "site_types": [
+    {"id":"wooded", "prior": 0.28, "radius_hint_mi": [0.1, 2.0]},
+    {"id":"motel", "prior": 0.16, "radius_hint_mi": [0.1, 5.0]},
+    {"id":"vacant", "prior": 0.14},
+    {"id":"industrial_low", "prior": 0.12},
+    {"id":"parking_garage", "prior": 0.08},
+    {"id":"truck_stop", "prior": 0.10},
+    {"id":"storage_units", "prior": 0.12}
+  ],
+  "motive_couplings": {
+    "sexual": {"wooded": 1.4, "vacant": 1.2},
+    "trafficking": {"motel": 1.5, "truck_stop": 1.5},
+    "custodial": {"storage_units": 1.2}
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "guardian.lures_transport.v1",
+  "lures": [
+    { "id": "ask_question", "prior": 0.23, "contexts": ["school_route","park"], "min_force": true },
+    { "id": "offer_ride", "prior": 0.22, "requires": ["vehicle"] },
+    { "id": "gift_candy", "prior": 0.09 },
+    { "id": "offer_money", "prior": 0.06 },
+    { "id": "authority_ruse", "prior": 0.06, "contexts": ["residential","school"] },
+    { "id": "online_grooming", "prior": 0.18, "channels": ["chat","social"], "lead_time_hr": [24, 336] }
+  ],
+  "transport": [
+    { "id": "vehicle_local", "prior": 0.55, "speed_mph": [15.53, 27.96] },
+    { "id": "vehicle_highway", "prior": 0.10, "speed_mph": [37.28, 62.14] },
+    { "id": "on_foot", "prior": 0.25, "speed_mph": [1.86, 3.73] },
+    { "id": "public_transit", "prior": 0.10, "speed_mph": [12.43, 21.75] }
+  ],
+  "couplings": [
+    { "motive": "sexual", "lures": {"ask_question": 1.1, "offer_ride": 1.2, "online_grooming": 1.3} },
+    { "motive": "custodial", "lures": {"authority_ruse": 1.4} },
+    { "motive": "trafficking", "transport": {"vehicle_highway": 1.5, "public_transit": 1.2} }
+  ]
+}

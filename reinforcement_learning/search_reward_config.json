@@ -96,15 +96,15 @@
     
     "profiles": {
       "baseline": {
-        "weights": {"alpha_orig": 0.9, "beta_plaus": 0.1},
+        "weights": {"alpha_orig": 0.9, "beta_plaus": 0.1, "delta_rl": 0.1},
         "penalties": {"gamma_radius": 0.02}
       },
       "high_llm": {
-        "weights": {"alpha_orig": 0.3, "beta_plaus": 0.7},
+        "weights": {"alpha_orig": 0.3, "beta_plaus": 0.7, "delta_rl": 0.1},
         "penalties": {"gamma_radius": 0.02}
       },
       "risk_heavy": {
-        "weights": {"alpha_orig": 0.5, "beta_plaus": 0.5},
+        "weights": {"alpha_orig": 0.5, "beta_plaus": 0.5, "delta_rl": 0.5},
         "risk_boost": 0.1
       }
     },

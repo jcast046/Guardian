@@ -49,7 +49,7 @@ WRITE_VERBOSE_NARRATIVE = True  # enable verbose narrative generation
 if not PHASE_MINIMAL:
     # Full LLM processing mode - import all Guardian LLM modules
     from guardian_llm import (
-        summarize,           # Case summarization using Llama-3.2-3B-Instruct
+        summarize,           # Case summarization using Qwen2.5-3B-Instruct
         label_case,          # Combined movement/risk labeling using Qwen2.5-3B-Instruct
         classify_movement,    # Movement pattern classification using Qwen2.5-3B-Instruct
         assess_risk          # Risk level assessment using Qwen2.5-3B-Instruct

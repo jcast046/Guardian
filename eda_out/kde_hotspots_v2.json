@@ -1,0 +1,22 @@
+[
+  {
+    "lon":-79.19198783533922,
+    "lat":37.36686378352696,
+    "weight":0.02711045603869497,
+    "radius_miles":22.617502336189165,
+    "method":"kde",
+    "params_hash":"5019803a6b",
+    "params_json":"{\"__method__\":\"kde\",\"bandwidth_meters\":30000.0,\"grid_res_m\":250,\"hotspot_mode\":\"iso_polygons\",\"iso_mass\":0.9,\"kernel\":\"gaussian\",\"label_policy\":\"none\",\"min_area_m2\":10000}",
+    "crs":"EPSG:4326"
+  },
+  {
+    "lon":-76.96261693304096,
+    "lat":37.87259506806056,
+    "weight":0.872467333237844,
+    "radius_miles":75.70414315806488,
+    "method":"kde",
+    "params_hash":"5019803a6b",
+    "params_json":"{\"__method__\":\"kde\",\"bandwidth_meters\":30000.0,\"grid_res_m\":250,\"hotspot_mode\":\"iso_polygons\",\"iso_mass\":0.9,\"kernel\":\"gaussian\",\"label_policy\":\"none\",\"min_area_m2\":10000}",
+    "crs":"EPSG:4326"
+  }
+]

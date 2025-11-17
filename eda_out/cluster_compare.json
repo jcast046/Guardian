@@ -1,0 +1,11 @@
+{
+  "jaccard_kmeans_dbscan": 0.008494018994172778,
+  "jaccard_kmeans_kde": 0.0,
+  "jaccard_dbscan_kde": 0.0,
+  "counts": {
+    "kmeans": 30,
+    "dbscan": 12,
+    "kde": 2
+  },
+  "timestamp": "2025-11-11T21:08:13.348229"
+}
