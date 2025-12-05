@@ -25,8 +25,67 @@
       "type": "store_employee",
       "capture": "mall CCTV",
       "sample_quote": "Security pulled video showing a {suspect_desc} exiting with the child."
+    },
+    {
+      "type": "caregiver",
+      "capture": "911 call",
+      "sample_quote": "I think he just disappeared. Maybe he wandered off.",
+      "research_note": "Caregivers may show false allegation indicators: evasion, equivocation, delayed reporting"
+    },
+    {
+      "type": "family_member",
+      "capture": "911 call",
+      "sample_quote": "My child is missing. Last seen at {time} wearing {clothing}.",
+      "research_note": "Family members may provide immediate reporting with clear timeline (truthful) or show delayed/equivocal reporting (false allegation)"
     }
   ],
+  "reporting_behaviors": {
+    "truthful_indicators": [
+      "Immediate reporting",
+      "Clear timeline",
+      "Exact time last seen provided",
+      "Sensory details",
+      "Immediate focus on child",
+      "No evasion",
+      "Displays urgency and anxiety",
+      "Provides clear sensory details and immediate timeline"
+    ],
+    "false_allegation_indicators": [
+      "Evasion when responding to dispatcher questions",
+      "Equivocation ('I think,' 'maybe,' 'possibly')",
+      "Awkward or unexpected phrasing",
+      "Attempts to convince the dispatcher by repeating key phrases",
+      "Initial delay in speaking after call is answered",
+      "Extraneous information presented outside question context",
+      "Information in inappropriate order",
+      "Conflicting facts",
+      "Minimal sensory detail",
+      "Unclear timeline",
+      "Child last seen 'sometime earlier' with vague time",
+      "Reported disappearance time unclear or not provided",
+      "Delayed initial response"
+    ],
+    "call_duration": "Call lengths ranged widely (39 seconds to ~16 minutes), but duration did not differ between truthful and false allegation callers."
+  },
+  "witness_reliability_indicators": {
+    "high_reliability": [
+      "Provides clear sensory details",
+      "Immediate reporting with exact timeline",
+      "No evasion or equivocation",
+      "Consistent information",
+      "Appropriate information order",
+      "Displays urgency and anxiety consistent with situation"
+    ],
+    "low_reliability": [
+      "Equivocation and hesitation",
+      "Delayed reporting",
+      "Unclear or vague timeline",
+      "Conflicting information",
+      "Information in inappropriate order",
+      "Minimal sensory detail",
+      "Evasive responses"
+    ]
+  },
   "sample_sentence_patterns": [
     "A {type} provided {capture}, timestamped {time}.",
     "According to a {type}, the child was seen {activity} near {location}."

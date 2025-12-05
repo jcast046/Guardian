@@ -23,6 +23,10 @@ Example:
     >>> trainer = fine_tune_summarizer(train_data, eval_data)
     >>> # Model is saved to ./finetuned_summarizer/
 """
+# Set environment variable for CUDA memory management BEFORE importing torch
+import os
+os.environ.setdefault('PYTORCH_CUDA_ALLOC_CONF', 'expandable_segments:True')
+
 import json
 import torch
 from transformers import (
@@ -97,7 +101,7 @@ class GuardianFineTuner:
         self.model = AutoModelForCausalLM.from_pretrained(
             self.model_path,
             device_map="auto" if torch.cuda.is_available() else None,
-            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32
+            dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32
         )
         
     def setup_lora(self, r=16, lora_alpha=32, lora_dropout=0.1):
@@ -132,7 +136,7 @@ class GuardianFineTuner:
         self.peft_model = get_peft_model(self.model, lora_config)
         self.peft_model.print_trainable_parameters()
         
-    def prepare_data(self, data: list):
+    def prepare_data(self, data: list, max_length: int = None):
         """
         Prepare training data for fine-tuning.
         
@@ -145,6 +149,8 @@ class GuardianFineTuner:
                         - summarizer: {"narrative": str, "summary": str}
                         - extractor: {"narrative": str, "extraction": str}
                         - weak_labeler: {"narrative": str, "movement": str, "risk": str}
+            max_length (int, optional): Maximum sequence length. Defaults to 1024 for 
+                                       summarizer/extractor, 512 for weak_labeler.
         
         Returns:
             Dataset: Hugging Face Dataset object ready for training
@@ -164,13 +170,17 @@ class GuardianFineTuner:
             ) for d in data]
         else:
             raise ValueError(f"Unknown task type: {self.task_type}")
+        
+        # Use smaller max_length for weak_labeler to reduce memory usage
+        if max_length is None:
+            max_length = 512 if self.task_type == "weak_labeler" else 1024
             
         # Tokenize
         tokenized = self.tokenizer(
             texts,
             truncation=True,
             padding=True,
-            max_length=2048,
+            max_length=max_length,
             return_tensors="pt"
         )
         
@@ -203,16 +213,21 @@ class GuardianFineTuner:
         if not self.peft_model:
             raise ValueError("LoRA not setup. Call setup_lora() first.")
             
-        # Prepare data
-        train_dataset = self.prepare_data(train_data)
-        eval_dataset = self.prepare_data(eval_data) if eval_data else None
+        # Prepare data (use smaller max_length for weak_labeler)
+        max_length = 512 if self.task_type == "weak_labeler" else 1024
+        train_dataset = self.prepare_data(train_data, max_length=max_length)
+        eval_dataset = self.prepare_data(eval_data, max_length=max_length) if eval_data else None
+        
+        # Reduce gradient accumulation for weak_labeler to save memory
+        gradient_accumulation_steps = 2 if self.task_type == "weak_labeler" else 4
         
         # Training arguments
         training_args = TrainingArguments(
             output_dir=output_dir,
             num_train_epochs=num_epochs,
-            per_device_train_batch_size=batch_size,
-            per_device_eval_batch_size=batch_size,
+            per_device_train_batch_size=1,
+            per_device_eval_batch_size=1,
+            gradient_accumulation_steps=gradient_accumulation_steps,
             warmup_steps=100,
             weight_decay=0.01,
             logging_dir=f"{output_dir}/logs",
@@ -224,6 +239,8 @@ class GuardianFineTuner:
             load_best_model_at_end=True if eval_data else False,
             metric_for_best_model="eval_loss" if eval_data else None,
             greater_is_better=False if eval_data else None,
+            fp16=True,
+            dataloader_pin_memory=False,
         )
         
         # Data collator
@@ -248,10 +265,68 @@ class GuardianFineTuner:
         trainer.save_model()
         self.tokenizer.save_pretrained(output_dir)
         
+        # Clear trainer's model reference and internal state before cleanup
+        trainer.model = None
+        if hasattr(trainer, 'accelerator') and trainer.accelerator is not None:
+            trainer.accelerator = None
+        # Clear optimizer and scheduler state
+        if hasattr(trainer, 'optimizer'):
+            trainer.optimizer = None
+        if hasattr(trainer, 'lr_scheduler'):
+            trainer.lr_scheduler = None
+        # Clear state dict
+        if hasattr(trainer, 'state'):
+            trainer.state = None
+        
+        # Clean up to free GPU memory
+        self.cleanup()
+        
         return trainer
+    
+    def cleanup(self):
+        """
+        Clean up model and free GPU memory.
+        
+        This method explicitly deletes the model, tokenizer, and PEFT model
+        to free GPU memory. It should be called after training is complete
+        to allow other models to be loaded.
+        
+        Moves models to CPU before deletion to ensure GPU memory is freed.
+        """
+        import gc
+        
+        # Move models to CPU before deleting to ensure GPU memory is freed
+        if self.peft_model is not None:
+            if hasattr(self.peft_model, 'to'):
+                self.peft_model.to('cpu')
+            # Also move the base model if it exists (PEFT wraps the model)
+            if hasattr(self.peft_model, 'get_base_model'):
+                base_model = self.peft_model.get_base_model()
+                if hasattr(base_model, 'to'):
+                    base_model.to('cpu')
+            elif hasattr(self.peft_model, 'base_model'):
+                if hasattr(self.peft_model.base_model, 'to'):
+                    self.peft_model.base_model.to('cpu')
+            del self.peft_model
+        if self.model is not None:
+            if hasattr(self.model, 'to'):
+                self.model.to('cpu')
+            del self.model
+        if self.tokenizer is not None:
+            del self.tokenizer
+        
+        self.peft_model = None
+        self.model = None
+        self.tokenizer = None
+        
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
+            torch.cuda.synchronize()  # Ensure all operations complete
 
 def fine_tune_summarizer(train_data: list, eval_data: list = None, 
-                        model_path: str = None, output_dir: str = "./finetuned_summarizer"):
+                        model_path: str = None, output_dir: str = "models/finetuned_summarizer"):
     """
     Fine-tune summarizer model using QLoRA.
     
@@ -283,10 +358,12 @@ def fine_tune_summarizer(train_data: list, eval_data: list = None,
     tuner = GuardianFineTuner(model_path, "summarizer")
     tuner.load_model()
     tuner.setup_lora()
-    return tuner.train(train_data, eval_data, output_dir)
+    trainer = tuner.train(train_data, eval_data, output_dir)
+    tuner.cleanup()
+    return trainer
 
 def fine_tune_extractor(train_data: list, eval_data: list = None,
-                       model_path: str = None, output_dir: str = "./finetuned_extractor"):
+                       model_path: str = None, output_dir: str = "models/finetuned_extractor"):
     """
     Fine-tune extractor model using QLoRA.
     
@@ -318,10 +395,12 @@ def fine_tune_extractor(train_data: list, eval_data: list = None,
     tuner = GuardianFineTuner(model_path, "extractor")
     tuner.load_model()
     tuner.setup_lora()
-    return tuner.train(train_data, eval_data, output_dir)
+    trainer = tuner.train(train_data, eval_data, output_dir)
+    tuner.cleanup()
+    return trainer
 
 def fine_tune_weak_labeler(train_data: list, eval_data: list = None,
-                          model_path: str = None, output_dir: str = "./finetuned_weak_labeler"):
+                          model_path: str = None, output_dir: str = "models/finetuned_weak_labeler"):
     """
     Fine-tune weak labeler model using QLoRA.
     
@@ -353,11 +432,62 @@ def fine_tune_weak_labeler(train_data: list, eval_data: list = None,
     tuner = GuardianFineTuner(model_path, "weak_labeler")
     tuner.load_model()
     tuner.setup_lora()
-    return tuner.train(train_data, eval_data, output_dir)
+    trainer = tuner.train(train_data, eval_data, output_dir)
+    tuner.cleanup()
+    return trainer
+
+def load_psychology_training():
+    """
+    Load psychology training examples from extracted file.
+    
+    Returns:
+        List of training examples with format: [{"narrative": str, "movement": str, "risk": str}, ...]
+    """
+    import json
+    from pathlib import Path
+    
+    training_path = Path("data/training/psychology_weak_labeler_training.json")
+    if not training_path.exists():
+        print(f"Warning: {training_path} not found, skipping psychology training data")
+        return []
+    
+    try:
+        with open(training_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data if isinstance(data, list) else []
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Warning: Failed to load psychology training data: {e}")
+        return []
+
+
+def load_real_cases_training():
+    """
+    Load real cases training examples from extracted file.
+    
+    Returns:
+        List of training examples with format: [{"narrative": str, "movement": str, "risk": str}, ...]
+    """
+    import json
+    from pathlib import Path
+    
+    training_path = Path("data/training/real_cases_weak_labeler_training.json")
+    if not training_path.exists():
+        print(f"Warning: {training_path} not found, skipping real cases training data")
+        return []
+    
+    try:
+        with open(training_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data if isinstance(data, list) else []
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Warning: Failed to load real cases training data: {e}")
+        return []
+
 
 if __name__ == "__main__":
     import glob
     import json
+    import gc
     
     print("=" * 80)
     print("Guardian Model Fine-Tuning")
@@ -369,7 +499,7 @@ if __name__ == "__main__":
     print(f"Found {len(case_files)} case files")
     
     cases = []
-    for file in case_files[:50]:  # Use first 50 for demo
+    for file in case_files:
         with open(file, 'r') as f:
             cases.append(json.load(f))
     print(f"Loaded {len(cases)} cases for training")
@@ -407,52 +537,102 @@ if __name__ == "__main__":
     
     # Prepare training data for weak labeler
     print("\n[4/4] Preparing weak labeler training data...")
-    weak_labeler_data = []
+    
+    # Load psychology training examples
+    print("  Loading psychology training examples...")
+    psych_training = load_psychology_training()
+    print(f"  Loaded {len(psych_training)} psychology examples")
+    
+    # Load real cases training examples
+    print("  Loading real cases training examples...")
+    real_training = load_real_cases_training()
+    print(f"  Loaded {len(real_training)} real cases examples")
+    
+    # Prepare synthetic cases training data
+    synthetic_training = []
     for case in cases:
         narrative = case.get("narrative_osint", {}).get("incident_summary", "")
         movement_cues = case.get("narrative_osint", {}).get("movement_cues_text", "")
         if narrative:
-            weak_labeler_data.append({
+            synthetic_training.append({
                 "narrative": narrative + " " + movement_cues,
                 "movement": "Regional",  # Default placeholder
                 "risk": "High"  # Default placeholder
             })
-    print(f"Prepared {len(weak_labeler_data)} weak labeler examples")
+    print(f"  Prepared {len(synthetic_training)} synthetic examples")
+    
+    # Combine all sources
+    weak_labeler_data = psych_training + real_training + synthetic_training
+    print(f"\n  Combined training data:")
+    print(f"    - Psychology: {len(psych_training)} examples")
+    print(f"    - Real cases: {len(real_training)} examples")
+    print(f"    - Synthetic: {len(synthetic_training)} examples")
+    print(f"    - Total: {len(weak_labeler_data)} examples")
     
     # Fine-tune summarizer
     print("\n" + "=" * 80)
     print("Fine-tuning Summarizer Model")
     print("=" * 80)
-    trainer = fine_tune_summarizer(
+    _ = fine_tune_summarizer(
         train_data=summarizer_data,
-        output_dir="./finetuned_summarizer"
+        output_dir="models/finetuned_summarizer"
     )
-    print("✓ Summarizer fine-tuning complete! Saved to ./finetuned_summarizer/")
+    print("Summarizer fine-tuning complete! Saved to models/finetuned_summarizer/")
+    # Clean up memory
+    # Force garbage collection multiple times
+    for _ in range(3):
+        gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
+        torch.cuda.synchronize()
+        # Reset peak memory stats
+        torch.cuda.reset_peak_memory_stats()
     
     # Fine-tune extractor
     print("\n" + "=" * 80)
     print("Fine-tuning Extractor Model")
     print("=" * 80)
-    trainer = fine_tune_extractor(
+    _ = fine_tune_extractor(
         train_data=extractor_data,
-        output_dir="./finetuned_extractor"
+        output_dir="models/finetuned_extractor"
     )
-    print("✓ Extractor fine-tuning complete! Saved to ./finetuned_extractor/")
+    print("Extractor fine-tuning complete! Saved to models/finetuned_extractor/")
+    # Clean up memory
+    # Force garbage collection multiple times
+    for _ in range(3):
+        gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
+        torch.cuda.synchronize()
+        # Reset peak memory stats
+        torch.cuda.reset_peak_memory_stats()
     
     # Fine-tune weak labeler
     print("\n" + "=" * 80)
     print("Fine-tuning Weak Labeler Model")
     print("=" * 80)
-    trainer = fine_tune_weak_labeler(
+    _ = fine_tune_weak_labeler(
         train_data=weak_labeler_data,
-        output_dir="./finetuned_weak_labeler"
+        output_dir="models/finetuned_weak_labeler"
     )
-    print("✓ Weak labeler fine-tuning complete! Saved to ./finetuned_weak_labeler/")
+    print("Weak labeler fine-tuning complete! Saved to models/finetuned_weak_labeler/")
+    # Clean up memory
+    # Force garbage collection multiple times
+    for _ in range(3):
+        gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
+        torch.cuda.synchronize()
+        # Reset peak memory stats
+        torch.cuda.reset_peak_memory_stats()
     
     print("\n" + "=" * 80)
     print("All fine-tuning complete!")
     print("=" * 80)
     print("\nOutput directories:")
-    print("  - ./finetuned_summarizer/")
-    print("  - ./finetuned_extractor/")
-    print("  - ./finetuned_weak_labeler/")
+    print("  - models/finetuned_summarizer/")
+    print("  - models/finetuned_extractor/")
+    print("  - models/finetuned_weak_labeler/")

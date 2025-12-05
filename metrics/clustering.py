@@ -208,10 +208,12 @@ def bootstrap_stability(
     # Store results from each iteration
     hotspot_gdfs = []
     label_arrays = []
+    sampled_indices_list = []  # Store indices for ARI computation
     
     for i in range(n_iter):
         # Sample data
         sampled_indices = np.random.choice(n_samples, size=sample_size, replace=False)
+        sampled_indices = np.sort(sampled_indices)  # Sort for easier intersection
         df_sample = df.iloc[sampled_indices].reset_index(drop=True)
         
         # Create new clusterer instance with same parameters
@@ -229,6 +231,7 @@ def bootstrap_stability(
         
         hotspot_gdfs.append(hotspots)
         label_arrays.append(labels)
+        sampled_indices_list.append(sampled_indices)
     
     # Compute Jaccard overlap of hotspot polygons
     jaccard_overlaps = []
@@ -252,16 +255,51 @@ def bootstrap_stability(
     mean_jaccard = np.mean(jaccard_overlaps) if jaccard_overlaps else 0.0
     
     # Compute Adjusted Rand Index between label arrays
-    # Note: This requires mapping labels back to original data indices
-    # For now, compute ARI only if can align the samples
-    # This is a simplified version - a full implementation would require
-    # storing the original data indices for each bootstrap sample
+    # Map labels back to original data indices for pairwise comparison
     ari_scores = []
-    # TODO: Implement proper ARI computation for bootstrapped samples
-    # This would require:
-    # 1. Storing original indices for each bootstrap sample
-    # 2. Computing ARI on the intersection of indices
-    # 3. Mapping labels back to original data space
+    for i in range(n_iter):
+        for j in range(i + 1, n_iter):
+            # Find common indices between the two bootstrap samples
+            common_idx = np.intersect1d(sampled_indices_list[i], sampled_indices_list[j])
+            
+            if len(common_idx) < 2:
+                # Need at least 2 points to compute ARI
+                continue
+            
+            # Map labels for common indices
+            # Create mapping: original_index -> label
+            # labels_i corresponds to positions in sampled_indices_list[i]
+            label_map_i = {orig_idx: label for orig_idx, label in 
+                          zip(sampled_indices_list[i], label_arrays[i])}
+            label_map_j = {orig_idx: label for orig_idx, label in 
+                          zip(sampled_indices_list[j], label_arrays[j])}
+            
+            # Extract labels for common indices (sorted for consistency)
+            labels_i_aligned = np.array([label_map_i[idx] for idx in common_idx])
+            labels_j_aligned = np.array([label_map_j[idx] for idx in common_idx])
+            
+            # Filter out noise points (-1) for both arrays
+            # need points that are not noise in BOTH arrays to compute ARI
+            valid_mask = (labels_i_aligned >= 0) & (labels_j_aligned >= 0)
+            
+            if valid_mask.sum() < 2:
+                # Need at least 2 valid points (not noise) in both arrays
+                continue
+            
+            labels_i_valid = labels_i_aligned[valid_mask]
+            labels_j_valid = labels_j_aligned[valid_mask]
+            
+            # Check if have at least 2 clusters in each
+            unique_i = np.unique(labels_i_valid)
+            unique_j = np.unique(labels_j_valid)
+            
+            if len(unique_i) < 2 or len(unique_j) < 2:
+                # Need at least 2 clusters in both labelings
+                continue
+            
+            # Compute ARI on aligned labels
+            ari = adjusted_rand_score(labels_i_valid, labels_j_valid)
+            ari_scores.append(ari)
     
     return {
         "jaccard_overlap": mean_jaccard,

@@ -9,7 +9,20 @@
       "beta_seclusion": 0.6,
       "steps": [2, 4],
       "seclusion_bias": ["wooded","industrial_low"],
-      "familiarity_prob": 0.6
+      "familiarity_prob": 0.6,
+      "typical_distances_research": "Over one-third of child abduction homicide offenders lived within one mile of the victim's residence and more than two-thirds within five miles. Most residential abductions occur within quarter mile of victim's home.",
+      "common_routes": [
+        "Covert approach on foot to the victim's residence from nearby homes, workplaces, or familiar paths",
+        "Short movements from the residence to a nearby parked vehicle",
+        "Direct travel from the residence or pick-up point to a secondary indoor location (offender's home, vacant building) or nearby outdoor area (field, woods, park)",
+        "Residential movement within the home or neighborhood"
+      ],
+      "transportation_methods": [
+        "Walking the victim away from the residence, especially to nearby outdoor locations",
+        "Use of a motor vehicle parked close to the residence; in many cases, the vehicle is owned by or routinely available to the offender",
+        "On foot (public/outdoor child luring)",
+        "Short vehicle trips within the same general area rather than long-distance or interstate transport"
+      ]
     },
     {
       "id": "corridor_highway",
@@ -19,7 +32,20 @@
       "beta_seclusion": 0.2,
       "steps": [3, 6],
       "seclusion_bias": ["motel","truck_stop"],
-      "familiarity_prob": 0.3
+      "familiarity_prob": 0.3,
+      "typical_distances_research": "Custodial abductions often involve regional to interstate movement, especially when crossing state lines or moving to another city/state. Stereotypical kidnappings involve 50+ miles or overnight detention.",
+      "common_routes": [
+        "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+        "Local vehicle travel along highways and through community parking areas where initial contact or abduction occurs",
+        "Highway travel for custodial abductions moving to extended family locations or home country",
+        "Interstate routes for family abductions crossing state lines"
+      ],
+      "transportation_methods": [
+        "Private motor vehicles (cars, trucks) used to move victims along highways and to and from parking lots and other locations",
+        "Occasional use of rental cars, borrowed vehicles, or rarely stolen vehicles to transport the victim",
+        "Vehicle transport in opportunistic abductions",
+        "Long-distance vehicle travel for custodial and stereotypical kidnappings"
+      ]
     },
     {
       "id": "urban_nodes",
@@ -29,7 +55,20 @@
       "beta_seclusion": 0.4,
       "steps": [2, 5],
       "seclusion_bias": ["parking_garage","vacant"],
-      "familiarity_prob": 0.45
+      "familiarity_prob": 0.45,
+      "typical_distances_research": "Most cases involve local or regional movement within the same city, county, or nearby area. Sexual offenders typically stay local (<5 miles, often within 1 mile).",
+      "common_routes": [
+        "Short-distance movements from residential locations to nearby public or semi-public spaces and back",
+        "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+        "Neighborhood-based patterns within familiar areas",
+        "Routes to and from school or other routine activities (walking routes, bus stops, paths to friends' houses)"
+      ],
+      "transportation_methods": [
+        "On-foot movement from homes into nearby streets, yards, or parking areas, especially in urban or suburban neighborhoods",
+        "Short vehicle trips within the same general area",
+        "Public transit for some acquaintance abductions",
+        "Local vehicle travel within neighborhood or city"
+      ]
     }
   ],
   "motive_couplings": {

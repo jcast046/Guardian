@@ -1,0 +1,107 @@
+{
+    "research_source": "Child Abductions: Known Relationships are the Greater Danger",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "This article does not give specific grooming timelines; it focuses on who abducts children (family, known nonrelatives, strangers) rather than detailed grooming sequences.",
+        "preferred_locations": [
+          "Not specified in this article; emphasis is on offender relationship (family, known nonrelative, stranger) rather than geographic locations."
+        ],
+        "risk_escalation": "Risk is higher from people who already have a relationship with the child. Each year, an estimated 200,000+ children are abducted by family members and 58,000 by nonrelatives with primarily sexual motives, compared with only about 115 stereotypical stranger abductions (strangers who kill, hold for ransom, or keep the child). Registered sex offenders account for only 1–2% of abduction cases, so focusing solely on stranger danger and sex offender registries underestimates the risk from known individuals.",
+        "decision_factors": [
+          "Most abductors in FBI child abduction cases and AMBER Alerts have a known relationship with the child (about two-thirds to 70% across years cited).",
+          "Family members are responsible for the majority of abductions in national estimates (over 200,000 per year).",
+          "Nonrelatives with primarily sexual motives account for tens of thousands of abductions annually (approximately 58,000).",
+          "Only a very small subset of abductions (around 115 annually) are stereotypical stranger kidnappings involving killing, ransom, or long-term keeping of the child.",
+          "Registered sex offenders represent a very small portion of identified abductors in FBI cases (about 1–2%, and less than 1% in later years cited).",
+          "Media emphasis on stranger danger and registered sex offenders may distort public perception and decision-making about risk, drawing attention away from family and known-relationship dangers.",
+          "Children are often taught to fear strangers but also taught to obey known adults without question, which can influence their compliance with known abductors."
+        ],
+        "motive_categories": [
+          "Familial/custodial abduction (family member takes child without lawful authority or against custodial arrangements).",
+          "Nonrelative sexual abduction (non-family offenders with primarily sexual motives).",
+          "Stereotypical stranger kidnapping (stranger abducts and kills the child, holds for ransom, or keeps the child)."
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Abduction by a parent or other family member in the context of custodial disputes or family conflict.",
+        "Abduction by a known nonrelative (neighbor, acquaintance, caregiver, or other person in the child’s life) rather than an unknown stranger.",
+        "Adults (including known individuals) attempting to take a child without explicit parental or guardian consent.",
+        "Overreliance on checking sex offender registries instead of evaluating known relationships and access to the child.",
+        "Children taught to obey elders or known adults without question, increasing vulnerability when those adults abuse trust.",
+        "Situations where a known adult isolates a child or gains unsupervised access, even if they are not a registered sex offender."
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "Not specified in this article; the focus is on who abducts children and how often, not on how long they are missing or how quickly they are recovered.",
+        "escalation_timeline": "Not specified in detail; the article highlights that most abductions are by family members or known individuals, and that public and media focus on rare stranger cases can delay recognition of higher-base-rate risks from known relationships."
+      },
+  
+      "risk_factors": [
+        "Having a family environment with conflict or custody disputes (linked to a large portion of the 200,000+ family abductions annually).",
+        "Presence of adults with a known relationship to the child (relatives, family friends, neighbors, caregivers, acquaintances) who have access and opportunity.",
+        "Assuming that risk is mainly from strangers and registered sex offenders, which can cause families and investigators to overlook known suspects early in an investigation.",
+        "Teaching children only about stranger danger without also teaching boundaries around known adults taking them without parental permission.",
+        "Community and media narratives that exaggerate the role of stereotypical stranger kidnappers, thereby underestimating the statistical risk from family and known offenders."
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Not specified; the article focuses on relationship categories and offender status (family, known nonrelative, stranger, registered sex offender) rather than distance travelled or geographic displacement.",
+        "common_routes": [],
+        "destination_types": [],
+        "transportation_methods": []
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A noncustodial parent in a contentious divorce takes the child from school without notifying the custodial parent and leaves the area. The child is initially reported as missing, and media coverage focuses on the fear of a stranger abduction, but investigation quickly shows the abductor is a parent with a pre-existing relationship to the child.",
+          "movement": "Regional",
+          "risk": "High",
+          "indicators": [
+            "Family conflict and custody dispute",
+            "Family member with direct access to the child",
+            "Abduction initially reported as a missing child taken without guardian knowledge"
+          ],
+          "motive_category": "Familial/custodial abduction",
+          "temporal_markers": [
+            "Abduction occurs during routine daily activity (school day)",
+            "Child reported missing shortly after expected return time"
+          ]
+        },
+        {
+          "narrative": "A neighbor who has known the family for years offers to take a child to a nearby event without obtaining clear parental consent. The child is later reported missing. Initial community focus is on registered sex offenders in the area, but the investigation reveals that the known neighbor, who is not a registered sex offender, took the child with sexual motives.",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": [
+            "Offender has prior relationship with the child and family",
+            "No RSO status despite sexual intent",
+            "Community and media initially assume a stranger or registered sex offender is responsible"
+          ],
+          "motive_category": "Nonrelative sexual abduction",
+          "temporal_markers": [
+            "Abduction coincides with a planned outing or activity",
+            "Delay between departure with known adult and realization that the child is missing"
+          ]
+        },
+        {
+          "narrative": "A child disappears while walking home, and the case fits the rare pattern of a stereotypical stranger kidnapping. Media coverage is intense, and sex offender registries are heavily scrutinized. This case represents one of the very small number of stranger abductions involving killing, ransom, or long-term keeping compared to the much larger number of cases involving family and known offenders.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "No prior relationship between child and offender",
+            "High media attention and public fear",
+            "Extensive focus on identifying unknown suspects and checking sex offender registries"
+          ],
+          "motive_category": "Stereotypical stranger kidnapping",
+          "temporal_markers": [
+            "Sudden disappearance with no contact from child or known adults",
+            "Rapid law enforcement mobilization and public alerts"
+          ]
+        }
+      ]
+    }
+  }
+  

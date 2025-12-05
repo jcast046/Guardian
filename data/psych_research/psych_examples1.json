@@ -1,0 +1,122 @@
+{
+    "research_source": "My child is missing”: 911 calls in mysterious disappearances of children",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": null,
+        "preferred_locations": [
+          "Public or outdoor settings for sexually motivated offenders (parks, open areas, places where children are briefly alone)",
+          "Homes or residential settings for false allegation cases involving caregiver abuse"
+        ],
+        "risk_escalation": "False allegation cases show escalating household instability, interpersonal conflict, and recent family structure changes leading up to the incident.",
+        "decision_factors": [
+          "Child age strongly influences abduction motive categories",
+          "Offender gender varies by motive (males overwhelmingly in sexual; females in maternal-desire cases)",
+          "Opportunity and lack of witnesses increase likelihood of non-familial offenses"
+        ],
+        "motive_categories": [
+          "Sexual gratification",
+          "Financial gain (ransom)",
+          "Maternal desire",
+          "Custodial (family) abduction",
+          "Fatal physical abuse (false allegation cases)"
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Evasion when responding to dispatcher questions",
+        "Equivocation ('I think,' 'maybe,' 'possibly')",
+        "Awkward or unexpected phrasing",
+        "Attempts to convince the dispatcher by repeating key phrases",
+        "Initial delay in speaking after call is answered",
+        "Extraneous information presented outside question context"
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": null,
+        "day_of_week": null,
+        "seasonal_patterns": null,
+        "duration_patterns": "Call lengths ranged widely (39 seconds to ~16 minutes), but duration did not differ between truthful and false allegation callers.",
+        "escalation_timeline": "In false allegation cases, escalation stems from household instability, abuse, or major family changes leading up to the reported disappearance."
+      },
+  
+      "risk_factors": [
+        "Child age under 5 (strongly associated with false allegations and fatal abuse)",
+        "Male children more likely to be victims in false allegation cases",
+        "Younger caregivers more likely to be FAC (False Allegation Callers)",
+        "Unstable households",
+        "Recent changes in household structure (new partners, moves, conflict)",
+        "History of severe discipline or physical abuse"
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Most cases are local, with offenders or caregivers acting within the immediate residential or surrounding area.",
+        "common_routes": [
+          "Residential movement within the home or neighborhood",
+          "Public outdoor paths or parks (sexual-motivation cases)"
+        ],
+        "destination_types": [
+          "Residential disposal sites (false allegation cases)",
+          "Public outdoor locations (sexual abduction)",
+          "Nearby woods or secluded areas"
+        ],
+        "transportation_methods": [
+          "On foot (public/outdoor child luring)",
+          "Vehicle transport in opportunistic abductions",
+          "No transport in false allegation cases (child already deceased)"
+        ]
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A caregiver reports their 3-year-old son missing after claiming he wandered off. Caller hesitates and repeatedly says 'I think he just disappeared.' Investigation shows caregiver had inflicted fatal abuse earlier in the day.",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": [
+            "Equivocation",
+            "Initial delay in speaking",
+            "Attempts to convince",
+            "Awkward phrasing",
+            "Evasive responses"
+          ],
+          "motive_category": "Fatal physical abuse / false allegation",
+          "temporal_markers": [
+            "Child last seen 'sometime earlier' with vague time",
+            "Reported disappearance time unclear or not provided"
+          ]
+        },
+        {
+          "narrative": "A mother reports her daughter missing at a park. Provides clear sensory details and immediate timeline. Displays urgency and anxiety. Investigation confirms stranger abduction attempt.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Sensory details",
+            "Immediate focus on child",
+            "Clear timeline",
+            "No evasion"
+          ],
+          "motive_category": "Sexual",
+          "temporal_markers": [
+            "Immediate reporting",
+            "Exact time last seen provided"
+          ]
+        },
+        {
+          "narrative": "A caregiver calls 911 claiming their child was kidnapped but begins the call by explaining their personal activities first. Provides information in an inappropriate order and contradicts earlier details.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Information in inappropriate order",
+            "Conflicting facts",
+            "Minimal sensory detail",
+            "Repetition"
+          ],
+          "motive_category": "False allegation",
+          "temporal_markers": [
+            "Unclear timeline",
+            "Delayed initial response"
+          ]
+        }
+      ]
+    }
+  }
+  

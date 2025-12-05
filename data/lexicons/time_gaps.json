@@ -7,7 +7,8 @@
       "examples": [
         "Last seen at 9:00 a.m.; reported missing at 3:15 p.m. (\u22486 hours).",
         "Seen around 11:45 a.m.; AMBER Alert issued at 4:30 p.m."
-      ]
+      ],
+      "research_note": "Immediate reporting patterns (truthful callers): Provides clear sensory details and immediate timeline. Displays urgency and anxiety. Exact time last seen provided."
     },
     {
       "label": "overnight_12h",
@@ -15,7 +16,8 @@
       "examples": [
         "Last seen at 9:00 a.m.; reported at 9:00 p.m.",
         "Left the park at noon; family called 911 at midnight."
-      ]
+      ],
+      "research_note": "Delayed reporting may indicate false allegation indicators: Equivocation, delayed initial response, unclear timeline, child last seen 'sometime earlier' with vague time."
     },
     {
       "label": "full_day_24h",
@@ -23,9 +25,57 @@
       "examples": [
         "Missing nearly 24 hours before being located.",
         "Disappeared Friday evening; found Saturday around 6:00 p.m."
-      ]
+      ],
+      "research_note": "In many cases where prior contact existed, last known contact between offender and victim occurred within a week of the abduction, with a substantial portion within 24 hours."
+    },
+    {
+      "label": "immediate_reporting",
+      "description": "reported within minutes to 1 hour",
+      "examples": [
+        "Last seen at 2:00 p.m.; reported missing at 2:15 p.m. (\u224815 minutes).",
+        "Child disappeared at park; 911 called immediately."
+      ],
+      "research_note": "Truthful callers typically report immediately with clear timeline, sensory details, and immediate focus on child. No evasion or equivocation."
+    },
+    {
+      "label": "delayed_reporting",
+      "description": "delayed reporting with unclear timeline",
+      "examples": [
+        "Child last seen 'sometime earlier'; reported disappearance time unclear.",
+        "Caller hesitates and repeatedly says 'I think he just disappeared.'"
+      ],
+      "research_note": "False allegation indicators: Equivocation ('I think,' 'maybe,' 'possibly'), initial delay in speaking, unclear timeline, minimal sensory detail, information in inappropriate order."
     }
   ],
+  "duration_patterns_research": {
+    "call_duration": "Call lengths ranged widely (39 seconds to ~16 minutes), but duration did not differ between truthful and false allegation callers.",
+    "fatal_risk_window": "In cited work on child abduction murders, approximately 74% of abducted children who were killed died within the first 3 hours and about 91% within 24 hours of the abduction, indicating that the highest fatal risk window is the first few hours after disappearance.",
+    "recovery_patterns": "Many nonfamily abductions are brief and end within the same day, especially those that do not involve extended transport or detention. In more serious stereotypical kidnappings, the child may be held overnight or longer, with the highest risk of serious harm in the first hours following abduction.",
+    "prior_contact_timing": "In many cases where prior contact existed, last known contact between offender and victim occurred within a week of the abduction, with a substantial portion within 24 hours."
+  },
+  "reporting_indicators": {
+    "truthful": [
+      "Immediate reporting",
+      "Clear timeline",
+      "Exact time last seen provided",
+      "Sensory details",
+      "Immediate focus on child",
+      "No evasion",
+      "Displays urgency and anxiety"
+    ],
+    "false_allegation": [
+      "Equivocation ('I think,' 'maybe,' 'possibly')",
+      "Initial delay in speaking after call is answered",
+      "Unclear timeline",
+      "Child last seen 'sometime earlier' with vague time",
+      "Reported disappearance time unclear or not provided",
+      "Minimal sensory detail",
+      "Information in inappropriate order",
+      "Conflicting facts",
+      "Repetition of key phrases",
+      "Delayed initial response"
+    ]
+  },
   "sample_sentence_patterns": [
     "The child was last seen at {last_seen_time} and reported missing at {report_time} (\u2248{gap_hours} hours).",
     "An alert was issued {gap_hours} hours after the last confirmed sighting."

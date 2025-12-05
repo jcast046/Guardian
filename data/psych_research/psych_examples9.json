@@ -1,0 +1,134 @@
+{
+  "research_source": "Online child sexual exploitation: An investigative analysis of offender characteristics and offending behavior",
+  "findings": {
+    "motive_patterns": {
+      "grooming_duration": "The study describes preferential offenders whose sexual interest in children typically begins in adolescence and persists over many years. Grooming (both online and offline) is described as an extended process involving repeated contacts and gradual desensitization, rather than a brief or one-time interaction, but no specific average duration in weeks or months is given.",
+      "preferred_locations": [
+        "Online environments used to access children and abuse imagery (chat rooms, email, peer-to-peer networks, online advertisements, social platforms).",
+        "Victims’ homes and offenders’ homes, especially in production and contact offending cases.",
+        "Community settings that provide access to children (schools, churches, youth groups, childcare, counseling, law enforcement and other positions of trust).",
+        "Neighborhood and family networks where offenders have ongoing, non-stranger relationships with children."
+      ],
+      "risk_escalation": "Risk increases when an offender’s persistent sexual interest in children is combined with regular access to minors (living with children, working or volunteering around them), when they collect and organize child sexual abuse images that reflect a clear preference for children, and when they interact with like-minded offenders online who validate and reinforce their behavior. Co-occurring behaviors (possession, contact, production, and travel to meet minors) show that offending often spans multiple categories rather than remaining limited to a single behavior.",
+      "decision_factors": [
+        "Presence of a preferential sexual interest in children, often obsessive and fantasy-driven, rather than purely opportunistic lust toward whoever is available.",
+        "Availability of online tools (Internet, peer-to-peer networks, chat rooms, email) that provide easy access to child sexual abuse material, perceived anonymity, and opportunities to contact minors.",
+        "Access to children through family roles, household composition (living with minors), employment or volunteer positions of trust (education, counseling, clergy, law enforcement, medical, childcare).",
+        "Emotional congruence with children and difficulty forming or sustaining intimate adult relationships, which can drive offenders toward children as preferred or important sexual partners.",
+        "Use of child pornography collections (including specific themes, ages, and acts) to support fantasies, guide offending behavior, and sometimes to groom or coerce victims.",
+        "Use of alcohol or drugs as disinhibitors that increase impulsivity and lower internal restraints against sexual offending."
+      ],
+      "motive_categories": [
+        "Preferential child sex offending characterized by a persistent sexual interest in children, often expressed through both online material and contact offending.",
+        "Situational child sex offending, where some offenders with broader sexual interests exploit opportunistic circumstances (e.g., some travelers who respond to generic ads and then engage with a perceived minor).",
+        "Possession and trading of child sexual abuse material primarily for sexual arousal and fantasy reinforcement.",
+        "Production of images or videos documenting abuse of specific child victims for personal arousal, control, and sometimes to aid in grooming or coercion.",
+        "Traveling with intent to sexually abuse a child, including both contact with real minors and attempts to meet undercover officers posing as minors."
+      ]
+    },
+    "behavioral_indicators": [
+      "Collecting large quantities of child sexual abuse material, often with a clear focus on children under 12 and depictions of penetration or other explicit acts.",
+      "Organizing digital collections by victim age, gender, race, type of sexual act, or other categories, indicating sustained, focused sexual interest in children.",
+      "Possessing both child sexual abuse material and child erotica (e.g., non-illegal but sexualized images of minors), sometimes alongside adult pornography.",
+      "Communicating online with like-minded individuals who share or trade material, offer technical advice, and validate sexual interest in children.",
+      "Using positions of trust (teacher, coach, counselor, clergy, law enforcement, childcare, medical) to gain access to children and to minimize suspicion.",
+      "Engaging in nuisance or boundary-testing sex offenses (e.g., indecent exposure, voyeurism, trespassing, contributing to the delinquency of a minor) that may be part of a broader paraphilic pattern.",
+      "Bringing items such as cameras, condoms, lubricant, or sex toys when traveling to meet a perceived minor, indicating clear sexual intent.",
+      "Using alcohol or drugs with themselves or the victim to reduce inhibitions and facilitate abuse.",
+      "Denying any contact offending and portraying themselves as “only collectors” despite evidence of contact victims uncovered through investigation or polygraph."
+    ],
+    "temporal_patterns": {
+      "time_of_day": [],
+      "day_of_week": [],
+      "seasonal_patterns": [],
+      "duration_patterns": "The study is based on resolved investigations and does not quantify typical time from first online activity to arrest, or from contact offending onset to detection. It emphasizes that sexual interest in children is often long-standing and that many contact offenses are only uncovered after investigation of an online crime.",
+      "escalation_timeline": "Offenders often show a long-term pattern beginning with early sexual interest in children, followed by the collection of child sexual abuse material, participation in online communities of like-minded offenders, and co-occurring behaviors such as contact offending, production of images, and traveling to meet minors. In some situational traveler cases, an offender with a history of adult-focused pornography and no child imagery responds to online opportunities that present a minor, illustrating more opportunistic escalation."
+    },
+    "risk_factors": [
+      "Male gender (100% of the studied offenders).",
+      "Predominantly Caucasian race in the sample, with relative diversity in age and occupation.",
+      "A wide age range but an average age around late 30s, consistent with long-standing patterns of sexual interest in children that began earlier in life.",
+      "Living with others, including a substantial subset living in households with children under 18, increasing access to potential victims.",
+      "Employment or volunteer history that involves positions of trust or regular contact with children (education/coaching, counseling, clergy, law enforcement, medical, childcare).",
+      "Presence of a criminal history in a minority of offenders, but when present, relatively high rates of prior felony sex crimes against children and nuisance sex offenses.",
+      "Use of the Internet and digital technologies, which lower barriers to accessing material, enable anonymous communication, and facilitate multi-jurisdictional offending.",
+      "Participation in online networks of like-minded individuals that normalize offending, provide technical knowledge, and reduce internal inhibitions.",
+      "Access to alcohol or drugs that may function as disinhibitors for offenders and/or victims.",
+      "Prior undetected offending: many offenders with multiple victims or long offending histories lacked official criminal records before the investigated case."
+    ],
+    "movement_patterns": {
+      "typical_distances": "The study focuses on online offending and co-occurring behaviors rather than geographic displacement, but describes both local access to victims (family, household, neighborhood, community roles) and regional or interstate travel to meet minors arranged online.",
+      "common_routes": [
+        "Local movement between offender homes and victim homes or other community locations where offenders have direct access to children.",
+        "Travel from offender residence to pre-arranged meeting points (e.g., hotels, public places, residences) after online communication with a perceived minor or an undercover officer.",
+        "Routine travel associated with employment or volunteer roles that brings offenders into contact with minors in schools, churches, clubs, or other settings."
+      ],
+      "destination_types": [
+        "Victim’s home or offender’s home for contact offending and production of abuse images.",
+        "Hotels, motels, or other transient locations used when offenders travel to meet minors they contacted online.",
+        "Institutional or community locations where offenders hold positions of trust (classrooms, counseling offices, religious facilities, youth activity spaces)."
+      ],
+      "transportation_methods": [
+        "Private motor vehicles for local and regional travel to meet minors or access victims.",
+        "Commercial or longer-distance travel modes (e.g., air or interstate trips) for some offenders who travel to meet minors in other jurisdictions.",
+        "Routine daily transportation associated with work or volunteer activities that provide repeated access to children."
+      ]
+    },
+    "training_examples": [
+      {
+        "narrative": "A 39-year-old man spends hours each night online in chat rooms and peer-to-peer networks collecting images and videos of children being sexually abused. Over several years he builds a highly organized digital collection categorized by age, gender, and sexual act. He believes he is ‘only looking’ and has no official criminal history. During a federal investigation into his online trading, forensic review reveals self-produced images of children he babysat for neighbors. A polygraph examination and subsequent interviews with families uncover multiple contact victims aged 6–12 whom he abused over several years while appearing to be a trusted family friend.",
+        "movement": "Local/Regional",
+        "risk": "Critical",
+        "indicators": [
+          "Extensive, organized collection of child sexual abuse material focused on prepubescent children.",
+          "Use of peer-to-peer networks and contact with like-minded offenders online.",
+          "Trusted access to neighborhood children in their homes as a babysitter and family friend.",
+          "Lack of prior documented criminal history despite a long pattern of abuse.",
+          "Discovery of self-produced images linking online offending to local contact victims."
+        ],
+        "motive_category": "Preferential child sex offending with co-occurring online collection and contact abuse",
+        "temporal_markers": [
+          "Multi-year pattern of nightly online activity preceding detection.",
+          "Contact offenses occurring over several years before disclosure, discovered only after the online investigation.",
+          "Escalation from consumption and trading of material to producing images of his own victims."
+        ]
+      },
+      {
+        "narrative": "A 28-year-old man responds to an online advertisement seeking a sexual partner in another state. In his messages he expresses interest in ‘any female’ and later agrees to meet a 14-year-old girl he believes he is chatting with. Over several days he engages in explicit sexual conversations, requests photos, and arranges a meeting at a hotel near her home. He drives across state lines with condoms, lubricant, and a camera in his car. When he arrives at the hotel parking lot, he is arrested by law enforcement; the ‘girl’ was an undercover officer posing as a minor.",
+        "movement": "Cross-state/Regional",
+        "risk": "High",
+        "indicators": [
+          "Online communication with a perceived minor for explicit sexual purposes.",
+          "Rapid progression from initial contact to explicit conversation and meeting arrangements.",
+          "Travel across state lines specifically to engage in sexual activity with a minor.",
+          "Bringing items such as condoms, lubricant, and a camera, indicating clear sexual intent and possible desire to produce images.",
+          "Offender framing the encounter as a consensual liaison despite the stated age of the supposed victim."
+        ],
+        "motive_category": "Travel with intent to sexually abuse a minor (situational/preferential mix)",
+        "temporal_markers": [
+          "Short but intense period of online communication (days to weeks) before travel.",
+          "Specific meeting time coordinated via online messages and phone calls.",
+          "Offender arrested at the pre-arranged meeting location before contact can occur."
+        ]
+      },
+      {
+        "narrative": "A 45-year-old elementary school counselor, widely regarded as trustworthy, regularly meets alone with students in his office. At home he maintains a large collection of child sexual abuse material focused on children aged 6–12. Over time he begins taking non-explicit photos of selected students during school events and then covertly photographs them in states of undress during overnight school trips. He later progresses to hands-on abuse of two students, recording parts of the abuse on a hidden camera. Investigators uncover the images during a search of his digital devices after a tip about his online trading.",
+        "movement": "Local",
+        "risk": "Critical",
+        "indicators": [
+          "Employment in a position of trust with ongoing unsupervised access to children.",
+          "Large, selective collection of child sexual abuse material focused on the same age range as his students.",
+          "Use of non-explicit and covert images of specific students, blurring boundaries and reinforcing fantasies.",
+          "Production of abuse images documenting contact offenses against children in his care.",
+          "Discovery of victims only after digital forensic review, despite years of undetected offending."
+        ],
+        "motive_category": "Preferential child sex offending with production and contact abuse facilitated by a position of trust",
+        "temporal_markers": [
+          "Prolonged period of employment with access to children before detection.",
+          "Gradual escalation from collecting images to photographing students and then to contact abuse.",
+          "Abuse documented on video before any formal allegation or report is made."
+        ]
+      }
+    ]
+  }
+}

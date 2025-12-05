@@ -1,0 +1,149 @@
+{
+    "research_source": "Early_Identification_of_Risk_Factors_for_Parental_Abduction",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "The research focuses on long-building family conflict, abuse allegations, and legal alienation rather than short-term grooming; risk accumulates over months to years of high conflict, domestic violence, poverty, and distrust of the legal system.",
+        "preferred_locations": [
+          "Child’s current residence or caretaking home (initial custody violation, snatching, or failure to return)",
+          "Another city or State where the abducting parent has extended family or social support",
+          "Another country (particularly the abducting parent’s country of origin in mixed-culture marriages)",
+          "Shelters or undisclosed locations used by underground networks that assist so-called protective parents fleeing perceived abuse"
+        ],
+        "risk_escalation": "Risk escalates when high-conflict, low-income, or culturally alienated parents face separation/divorce, unresolved allegations of abuse or neglect, feel unprotected by courts or child protective services, and gain emotional and logistical support from extended family, friends, or underground networks who support self-help solutions over legal processes.",
+        "decision_factors": [
+          "History of prior threats, hiding, withholding, or snatching the child from the other parent",
+          "Fixed belief that the other parent is abusive or dangerous and that authorities will not protect the child",
+          "Presence of paranoid or psychotic beliefs about the other parent’s intentions (paranoid/delusional profile)",
+          "Severe sociopathic or narcissistic traits, including contempt for law and use of the child as an instrument of revenge or control",
+          "Strong identification with an ethnic or religious homeland following dissolution of a mixed-culture marriage, with desire to raise the child in that culture",
+          "Economic hardship, low education, and alienation from the legal system, combined with strong support in another community or country",
+          "History of family violence and/or child abuse, especially when the victimized parent feels unprotected by courts and child protection systems",
+          "Availability of social networks willing to help plan, fund, and conceal the abduction (family, friends, community groups, underground networks)"
+        ],
+        "motive_categories": [
+          "Protective motive (real or perceived need to rescue the child from abuse, neglect, or domestic violence by the other parent)",
+          "Retaliatory or revenge motive (using the child to punish or control the other parent)",
+          "Identity and cultural continuity motive (returning with the child to home country or community to preserve cultural or religious identity)",
+          "Power/control motive (sociopathic use of the child as a trophy or instrument in ongoing coercive control)",
+          "Escape from legal system or social institutions (acting outside courts due to mistrust, lack of access, or cultural mismatch)"
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "History of threatening to take the child (‘You’ll never see your child again’), hiding the child, refusing visits, or previous short-term snatchings",
+        "Liquidating assets, making maximum withdrawals, borrowing money, or otherwise preparing financially to live in hiding",
+        "Lack of emotional or financial ties to the current area (unemployed, homeless, transient, or ready to relocate)",
+        "Persistent, repetitive allegations of child abuse or neglect that remain unresolved or are viewed as unsubstantiated by authorities",
+        "Fixed belief that the other parent is sexually or physically abusing the child and that authorities will not intervene adequately",
+        "Supportive network of family, friends, or underground groups that validate the abuse narrative and assist in planning or concealment",
+        "Paranoid or psychotic beliefs about the other parent, including irrational fears, boundary confusion with the child, and threats of murder/suicide",
+        "Long history of arrests, contempt for authority, stalking, threats, vexatious litigation, and disregard for court orders (severe sociopathic pattern)",
+        "Idealization of homeland and extended family after a mixed-culture marriage breakdown, paired with devaluation of the other parent’s culture",
+        "Feeling alienated from courts, social services, and mainstream institutions, particularly among poor, ethnic-minority, or immigrant parents",
+        "Use of informal family or cultural norms in place of legal custody orders, with extended family assuming that the child ‘belongs’ to one side",
+        "Reliance on extended family and social networks in another region or country for housing, money, and hiding places during abduction",
+        "Victimization by domestic violence, with the protective parent fearing continued abuse post-separation and feeling unprotected by the system"
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "Among reported and prosecuted cases in the Documentary Study, about one-half of abducted children were returned within approximately 2 months of filing a complaint, and about two-thirds were recovered within 3 years; some children remain away long term, especially in international or deeply concealed cases.",
+        "escalation_timeline": "High-conflict relationships, poverty, and domestic violence → separation/divorce or ongoing dispute → repeated allegations of abuse/neglect and growing distrust of courts/child protection → prior threats, withholding, or short-term abductions → concrete planning behaviors (liquidating assets, contacting supportive networks, preparing documents) → precustodial or postcustodial abduction, often at times of heightened legal conflict such as custody hearings or issuance/modification of orders."
+      },
+  
+      "risk_factors": [
+        "Children who are preschoolers or very young at the time of abduction (most commonly targeted age group in the studies)",
+        "Parents who are divorced, separated, or never married, especially in high-conflict relationships",
+        "Unwed, low-income, poorly educated parents, including those in brief or transient relationships who never developed cooperative parenting patterns",
+        "Parents (often mothers) unemployed, on public assistance, and receiving no child support, with few economic incentives to remain in the area",
+        "Parents who make persistent allegations of child abuse, neglect, or family violence that remain unresolved or are dismissed",
+        "Presence of domestic violence or severe family conflict, regardless of whether formal criminal charges have been filed",
+        "Parental history of narcissistic or sociopathic personality traits, anger, emotional distress, and distrust of the ex-partner’s parenting",
+        "Significant criminal history among abductors (about half had prior arrests; one-third of those had been incarcerated)",
+        "Pre- or postcustodial status: fathers more likely to abduct when no custody order exists; mothers more likely to abduct when orders are in place",
+        "Parents from ethnic or racial minority groups who feel culturally or institutionally alienated, especially when extended family lives in another region or country",
+        "Strong extended-family or community networks who morally support abduction and provide money, shelter, concealment, and practical help",
+        "Lack of legal representation and unfamiliarity with custody law, especially among poor and unwed parents",
+        "Prior contact with juvenile court and child protective systems combined with perceived lack of protection or responsiveness",
+        "Parental alienation from the legal system and reliance on informal or cultural norms for custody decisions instead of court orders"
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Movements range from local (within the same city or county) to regional (between States) and international (to the abducting parent’s country of origin); many cases involve relocation to areas where the abducting parent has extended family or strong social support.",
+        "common_routes": [
+          "Travel from the child’s residence to another city or State where extended family or social networks can hide and support the family",
+          "Cross-border travel in mixed-culture marriages, taking the child to the parent’s country of origin or to locations outside U.S. jurisdiction",
+          "Movement between temporary housing, relatives’ homes, shelters, or underground safe houses coordinated by supportive networks"
+        ],
+        "destination_types": [
+          "Residences of grandparents and extended family members in another U.S. region",
+          "Foreign family-of-origin homes in the abducting parent’s homeland",
+          "Hidden or informal housing arrangements arranged by underground or activist networks",
+          "Shelters and informal community housing when the abductor perceives flight as protective from domestic violence or abuse"
+        ],
+        "transportation_methods": [
+          "Private vehicles used to quickly leave the local jurisdiction or cross State lines",
+          "Domestic and international commercial air travel, often facilitated by holding or using passports for the child and abducting parent",
+          "Bus, train, or other ground transportation to relocate to areas with extended-family support",
+          "Assistance from supporters who provide rides, tickets, or other travel resources to help the parent and child disappear"
+        ]
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A divorced mother with a history of domestic violence allegations against her ex-partner repeatedly tells friends that the courts do not take her concerns seriously. She has little income, receives no child support, and relies heavily on her extended family in another State. She threatens several times that her ex will ‘never see his son again’ if the court does not listen. After a heated custody hearing, she withdraws money from her accounts, quits her job, loads her car, and drives with her preschool son to her parents’ home in another State, where relatives hide them and tell her she is doing the right thing to ‘protect’ the child.",
+          "movement": "Regional",
+          "risk": "High",
+          "indicators": [
+            "Prior threats and history of withholding visitation",
+            "Persistent allegations of abuse not perceived as resolved by courts",
+            "Low income and lack of child support",
+            "Strong extended-family support in another State",
+            "Alienation from the legal system and reliance on informal family norms"
+          ],
+          "motive_category": "Protective motive with family and legal alienation",
+          "temporal_markers": [
+            "Escalation around custody hearings and legal decisions",
+            "Financial preparations and travel immediately following court conflict"
+          ]
+        },
+        {
+          "narrative": "A father with a long history of arrests, contempt for court orders, and controlling behavior continues to stalk and threaten his ex-partner after their separation. He views the child as his property and refuses to accept shared decision-making. During a visitation period, he fails to return the child, turns off his phone, and leaves the area. He moves between friends’ houses, using cash and a borrowed car. He tells the child that the mother is dangerous and that they must stay hidden. He ignores all court summons and sees no reason why the law should apply to him.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "Severe sociopathic traits and contempt for authority",
+            "History of domestic violence, stalking, and threats",
+            "Violation of visitation and custody orders",
+            "Use of social network to conceal whereabouts",
+            "Use of child as instrument of control and revenge"
+          ],
+          "motive_category": "Power/control and retaliatory motive",
+          "temporal_markers": [
+            "Abduction following escalation of threats and stalking",
+            "Failure to return child at the end of scheduled visitation"
+          ]
+        },
+        {
+          "narrative": "In a mixed-culture marriage, a mother who is a citizen of another country feels increasingly isolated after separation. She idealizes her homeland and extended family, believes that her culture is being disrespected in the court process, and worries that her child’s ethnic identity is being erased. After a series of disputes over schooling and religious practices, she secures passports for herself and the child, buys one-way tickets, and quietly leaves the United States for her country of origin, where her extended family welcomes and protects her. She justifies the abduction as preserving the child’s cultural and religious heritage.",
+          "movement": "International",
+          "risk": "Critical",
+          "indicators": [
+            "Dual citizenship or strong ties to another country",
+            "Mixed-culture marriage dissolution and identity crisis",
+            "Extended family support abroad",
+            "Idealization of homeland and devaluation of other parent’s culture",
+            "Use of international travel to remove child from jurisdiction"
+          ],
+          "motive_category": "Identity and cultural continuity motive",
+          "temporal_markers": [
+            "Abduction around time of separation or divorce",
+            "Travel soon after new disputes over child’s education or religious upbringing"
+          ]
+        }
+      ]
+    }
+  }
+  

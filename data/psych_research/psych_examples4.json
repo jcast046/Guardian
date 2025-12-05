@@ -1,0 +1,155 @@
+{
+  "research_source": "Characteristics of survivors of juvenile sex trafficking: Implications for treatment and intervention initiatives",
+  "findings": {
+    "motive_patterns": {
+      "grooming_duration": "Recruitment and control typically develop over weeks to months, layered on top of years of prior adversity (abuse, neglect, insecure attachment, poverty) that create a long-standing vulnerability before the trafficker appears.",
+      "preferred_locations": [
+        "Neighborhoods and communities where prostitution or survival sex is already visible or modeled",
+        "Areas of poverty or high stress where basic needs (food, shelter, safety) are unmet",
+        "Foster care settings and group homes with multiple placements and high turnover",
+        "Online or street environments where youth who run away congregate"
+      ],
+      "risk_escalation": "Risk escalates as early adversity (abuse, neglect, multiple caregivers, poverty, exposure to violence) produces insecure attachment and biological embedding of chronic stress, which in turn impairs judgment, emotional regulation, and relationship discernment. Traffickers then exploit these vulnerabilities through false affection, promises of belonging, and material support, leading to trauma bonding and increased substance use. Over time, this escalates into chronic exploitation, complex trauma, and severe mental and physical health consequences.",
+      "decision_factors": [
+        "Youth’s unmet need for belonging, love, and a ‘secure base’ after histories of neglect, abuse, and unstable caregiving",
+        "Insecure attachment and difficulty discerning safe versus exploitative relationships",
+        "Prior survival sex and exposure to prostitution in family or community normalizing commercial sexual exploitation",
+        "Chronic stress, poverty, and lack of basic needs (food, shelter, safety) pushing youth toward traffickers who appear to ‘fill the void’",
+        "Developmental stage (adolescence, identity vs. identity confusion) where desire for identity, status, and group belonging is high",
+        "Biological embedding of early adversity (HPA axis dysregulation, allostatic load, epigenetic changes) increasing vulnerability to addiction and poor coping",
+        "Increased alcohol and drug use (often after recruitment) that both self-medicate trauma and deepen dependence on traffickers",
+        "Lack of consistent, supportive adult relationships or prosocial peers, making traffickers and their networks feel like the only ‘family’",
+        "Exposure to environments where sex trade is prevalent and modeled, including by caregivers or older peers"
+      ],
+      "motive_categories": [
+        "Survival/need fulfillment (basic needs such as food, shelter, safety, and perceived protection)",
+        "Belonging and attachment (desire for love, acceptance, and a ‘family’ or group identity)",
+        "Material gain and status (clothes, money, perceived glamorous lifestyle of ‘the game’)",
+        "Coercion and fear (threats, violence, manipulation, and trauma bonding used to maintain control)"
+      ]
+    },
+
+    "behavioral_indicators": [
+      "History of childhood physical, sexual, and emotional abuse and/or neglect",
+      "Multiple foster care placements, group homes, or frequent changes in caregivers",
+      "Absent, abusive, or neglectful fathers and overall poor parenting quality",
+      "Exposure to prostitution or survival sex in family or community, including engaging in survival sex to meet basic needs",
+      "Running away from home or placements, often repeatedly",
+      "Living in areas of poverty, high stress, or community chaos",
+      "Early onset of substance use and marked increase in drug/alcohol use after recruitment into trafficking",
+      "Diagnoses such as PTSD or Complex PTSD, depressive disorders, bipolar disorder, anxiety disorders, substance use disorders, and reactive attachment disorder (RAD)",
+      "Difficulty forming or sustaining healthy relationships; lack of stable, supportive adult figures or peers",
+      "Strong attachment to trafficker despite abuse (trauma bonding), describing trafficker as a loved one or protector",
+      "Perception that sex trafficking initially offers acceptance, family, or a path to a better life",
+      "Minimization or denial of victimization, especially early in intervention; describing exploitation as a choice or ‘normal’",
+      "Reliance on trafficker and trafficking network for identity, belonging, and material needs"
+    ],
+
+    "temporal_patterns": {
+      "time_of_day": [
+        "Recruitment and exploitation can occur at any time of day, but contact often intensifies during evenings and nights when youth run away or are unsupervised."
+      ],
+      "day_of_week": [],
+      "seasonal_patterns": [],
+      "duration_patterns": "Vulnerability typically develops over years of early adversity and insecure attachment, followed by recruitment in early to mid-adolescence (most survivors were recruited between ages 11 and 17, with an average age of 15). Once recruited, youth may remain trafficked for extended periods, experiencing chronic stress and cumulative trauma.",
+      "escalation_timeline": "Early adversity and insecure attachment in childhood → exposure to survival sex/prostitution and poverty → running away or instability in placements → recruitment by trafficker (often in early to mid-adolescence) who ‘fills the void’ through false love, identity, and material support → increasing substance use after recruitment, especially for those recruited between ages 12–14 → deepening trauma bonding, psychological isolation, and complex trauma → eventual intervention (often via arrest/detention and contact with supportive law enforcement and services) → gradual realization of exploitation and engagement in treatment, advocacy, and recovery."
+    },
+
+    "risk_factors": [
+      "Insecure attachment and lack of a reliable, nurturing ‘secure base’ in childhood",
+      "History of childhood abuse (physical, sexual, emotional) and/or neglect",
+      "Multiple caregivers, foster care involvement, group homes, and frequent out-of-home placements",
+      "Absent or neglectful fathers and poor overall parental functioning",
+      "Living in poverty or high-stress environments with limited resources and social support",
+      "Exposure to violence (witnessing or experiencing) in home or community",
+      "Use of survival sex to obtain basic needs such as food, shelter, or attention",
+      "Early and chronic exposure to stress leading to biological embedding (HPA axis dysregulation, allostatic load, epigenetic changes)",
+      "Pre-existing or emerging mental health disorders (PTSD/CPTSD, depression, bipolar disorder, anxiety, RAD)",
+      "Early initiation of substance use and high likelihood of increased use after recruitment (youth trafficked between ages 12–14 were nearly twice as likely to increase alcohol use)",
+      "Developmental vulnerability during adolescence (identity vs. identity confusion stage) with strong needs for belonging, identity, and status",
+      "Lack of prosocial peers and supportive adults; social isolation or peers already involved in trafficking",
+      "Community normalization of commercial sexual exploitation and presence of active sex trade"
+    ],
+
+    "movement_patterns": {
+      "typical_distances": "Most survivors are trafficked within their own communities or nearby regions (local or regional exploitation), although the article focuses more on psychological and developmental pathways than on geographic displacement.",
+      "common_routes": [
+        "Movement between unstable homes, foster placements, group homes, and the streets",
+        "Travel along local routes where sex trade is active, including streets, motels, and known prostitution corridors",
+        "Transitions between the community, detention/secure facilities, shelters, and treatment programs during intervention and recovery"
+      ],
+      "destination_types": [
+        "Street-based locations where prostitution is visible and normalized",
+        "Motels, hotels, and short-stay lodgings used for commercial sexual exploitation",
+        "Residences or ‘trap houses’ controlled by traffickers or their associates",
+        "Group homes, foster care, or detention facilities where survivors may be recruited by peers under trafficker influence",
+        "Secure facilities, shelters, and treatment centers where intervention and recovery begin"
+      ],
+      "transportation_methods": [
+        "On foot within neighborhoods and local sex trade areas",
+        "Vehicles used by traffickers or their associates to move survivors between dates, locations, and cities",
+        "Public transportation (buses, trains) in some cases, often under trafficker or peer control"
+      ]
+    },
+
+    "training_examples": [
+      {
+        "narrative": "A 14-year-old girl with a history of physical abuse, neglect, and multiple foster care placements frequently runs away from group homes. She has engaged in survival sex to obtain food and a place to sleep. A trafficker learns about her history, offers affection and promises of ‘family’ and a better life, and slowly recruits her into commercial sex. After being trafficked, she begins using alcohol and drugs more heavily to cope with trauma and stress. She describes feeling like the trafficker is the only person who understands and ‘loves’ her, despite ongoing violence and exploitation.",
+        "movement": "Local/Regional",
+        "risk": "Critical",
+        "indicators": [
+          "History of abuse and neglect",
+          "Multiple foster care placements and group homes",
+          "Running away and survival sex",
+          "Insecure attachment and strong need for belonging",
+          "Rapid increase in substance use after recruitment",
+          "Trauma bonding to trafficker"
+        ],
+        "motive_category": "Belonging and survival/need fulfillment",
+        "temporal_markers": [
+          "Early childhood adversity and insecure attachment",
+          "Recruitment in early adolescence (around age 14)",
+          "Substance use escalation after recruitment"
+        ]
+      },
+      {
+        "narrative": "A 16-year-old youth from a community where prostitution is common witnesses family members engage in commercial sex. She struggles with depression and anxiety and feels she does not belong with peers at school. A group of slightly older girls, already under the control of a trafficker, befriend her and introduce her to ‘the game.’ She initially perceives it as empowering and financially rewarding, but over time experiences violence, sexually transmitted infections, and worsening mental health. She reports feeling trapped and ashamed, yet also loyal to the trafficker and her new ‘family.’",
+        "movement": "Local",
+        "risk": "High",
+        "indicators": [
+          "Exposure to prostitution in family and community",
+          "Existing depression and anxiety",
+          "Peer recruitment by other juveniles controlled by trafficker",
+          "Normalization of commercial sexual exploitation",
+          "Conflicted loyalty and trauma bond with trafficker",
+          "Deteriorating physical and mental health"
+        ],
+        "motive_category": "Material gain, status, and belonging",
+        "temporal_markers": [
+          "Recruitment in mid-adolescence",
+          "Gradual realization of harm over months to years",
+          "Chronic exposure to exploitation and violence"
+        ]
+      },
+      {
+        "narrative": "A 13-year-old girl with reactive attachment disorder and a long history of foster placements runs away from a residential program. Lacking family or supportive adults, she is quickly approached by an older male who offers food, clothing, and a place to stay. He frames himself as her boyfriend and protector, then progressively coerces her into sex with others ‘to help pay bills.’ Her alcohol consumption increases significantly after recruitment, and she reports feeling numb and disconnected. Eventually, she is arrested and detained in a secure facility, where sustained time away from the trafficker and supportive contact with law enforcement and clinicians help her recognize the abuse and begin therapy.",
+        "movement": "Local/Regional",
+        "risk": "Critical",
+        "indicators": [
+          "Reactive attachment disorder and insecure attachment",
+          "Multiple out-of-home placements and foster care history",
+          "Running away from residential care",
+          "Rapid recruitment by trafficker offering basic needs and affection",
+          "Marked increase in alcohol use post-recruitment",
+          "Need for secure detention to break trauma bond and enable insight"
+        ],
+        "motive_category": "Belonging, survival, and coercion",
+        "temporal_markers": [
+          "Recruitment in early adolescence (around age 13)",
+          "Substance use escalation shortly after recruitment",
+          "Gradual cognitive shift during extended time in secure facility"
+        ]
+      }
+    ]
+  }
+}

@@ -48,11 +48,198 @@
       "color": "silver",
       "license": "temporary paper tag",
       "notes": "aftermarket rims"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Tahoe",
+      "year": 2015,
+      "color": "dark gray",
+      "license": "unknown",
+      "notes": "large SUV, tinted rear windows"
+    },
+    {
+      "make": "Dodge",
+      "model": "Caravan",
+      "year": 2011,
+      "color": "red",
+      "license": "VA ***-5678",
+      "notes": "sliding side door on passenger side"
+    },
+    {
+      "make": "Kia",
+      "model": "Soul",
+      "year": 2020,
+      "color": "lime green",
+      "license": "partial plate ***-9A2",
+      "notes": "boxy shape, roof rack"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2017,
+      "color": "white",
+      "license": "unknown",
+      "notes": "rear window sticker in lower left corner"
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback",
+      "year": 2014,
+      "color": "dark green",
+      "license": "VA ***-4B7",
+      "notes": "roof rails, mud splatter on lower panels"
+    },
+    {
+      "make": "GMC",
+      "model": "Savana",
+      "year": 2010,
+      "color": "white",
+      "license": "unknown",
+      "notes": "cargo van with no side windows"
+    },
+    {
+      "make": "Ford",
+      "model": "Transit",
+      "year": 2021,
+      "color": "silver",
+      "license": "rental plate (unknown)",
+      "notes": "high-roof van, company logo removed/covered"
+    },
+    {
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2019,
+      "color": "blue",
+      "license": "partial plate 3**-***",
+      "notes": "rear-mounted spare tire cover with logo"
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2013,
+      "color": "black",
+      "license": "unknown",
+      "notes": "sunroof, loud exhaust"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2018,
+      "color": "red",
+      "license": "VA TRK-***",
+      "notes": "pickup truck with toolbox in bed"
+    },
+    {
+      "make": "Ram",
+      "model": "1500",
+      "year": 2020,
+      "color": "silver",
+      "license": "unknown",
+      "notes": "lifted truck, oversized tires"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "year": 2016,
+      "color": "dark blue",
+      "license": "out-of-state plate (unknown)",
+      "notes": "rear spoiler, tinted tail lights"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2022,
+      "color": "white",
+      "license": "VA EV*-***",
+      "notes": "no front grille, glass roof"
+    },
+    {
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "year": 2019,
+      "color": "maroon",
+      "license": "unknown",
+      "notes": "minivan with roof-mounted cargo box"
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": 2018,
+      "color": "gray",
+      "license": "partial plate ***-K9*",
+      "notes": "small SUV, damage to front passenger fender"
+    },
+    {
+      "make": "Toyota",
+      "model": "Sienna",
+      "year": 2015,
+      "color": "gold",
+      "license": "unknown",
+      "notes": "minivan with child stick-figure decals on rear window"
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "year": 2017,
+      "color": "black",
+      "license": "VA ***-X21",
+      "notes": "roof rack, police-style spotlight near driver mirror"
+    },
+    {
+      "make": "Honda",
+      "model": "Odyssey",
+      "year": 2014,
+      "color": "silver",
+      "license": "unknown",
+      "notes": "rear bumper stickers, sliding doors on both sides"
+    },
+    {
+      "make": "Jeep",
+      "model": "Wrangler",
+      "year": 2013,
+      "color": "bright yellow",
+      "license": "unknown",
+      "notes": "soft top, large off-road tires"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": 2012,
+      "color": "tan",
+      "license": "unknown",
+      "notes": "oxidized paint on roof and hood"
     }
   ],
   "sample_sentence_patterns": [
     "Suspect vehicle: {color} {year} {make} {model} ({license}).",
     "Seen leaving the area in a {color} {make} {model}; {notes}.",
-    "Possibly traveling in a {color} {year} {make} {model} with {notes}."
-  ]
+    "Possibly traveling in a {color} {year} {make} {model} with {notes}.",
+    "Witness described a {color} {make} {model}, approximately {year}, noted {notes}.",
+    "Investigators are looking for a {color} {make} {model} bearing {license}, last seen near the scene."
+  ],
+  "transportation_methods_research": {
+    "vehicle_ownership_patterns": [
+      "Use of a motor vehicle parked close to the residence; in many cases, the vehicle is owned by or routinely available to the offender",
+      "Occasional use of rental cars, borrowed vehicles, or rarely stolen vehicles to transport the victim",
+      "Private motor vehicles (cars, trucks) used to move victims along highways and to and from parking lots and other locations"
+    ],
+    "vehicle_proximity": [
+      "Parked close to the residence",
+      "Short movements from the residence to a nearby parked vehicle",
+      "Vehicle owned by or routinely available to the offender"
+    ],
+    "vehicle_types_by_motive": {
+      "sexual": "Local vehicles (owned or routinely available), parked close to residence. Short vehicle trips within the same general area.",
+      "custodial": "Owned vehicles, rental cars, or borrowed vehicles for longer-distance travel, including interstate movement",
+      "trafficking": "Highway vehicles, rental cars, and vehicles used for long-distance transport along transportation routes",
+      "stranger": "Various vehicle types, can include rental or borrowed vehicles to avoid detection"
+    },
+    "vehicle_characteristics": [
+      "Owned vehicles (most common for local abductions)",
+      "Rental cars (used to avoid detection, especially in custodial cases)",
+      "Borrowed vehicles (less traceable than owned vehicles)",
+      "Stolen vehicles (rare, but used in some cases)",
+      "Temporary paper tags (may indicate rental or recently purchased vehicle)"
+    ]
+  }
 }

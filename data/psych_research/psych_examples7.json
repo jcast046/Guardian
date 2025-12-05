@@ -1,0 +1,147 @@
+{
+    "research_source": "Examining_Child_Abduction_by_Offender_Type_Patterns",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "The study does not describe short-term grooming in detail; instead, it shows that motives and opportunities tend to build over longer periods (months or years) in family cases through custody conflict and relationship breakdown, while many nonfamily abductions appear more opportunistic and linked to immediate criminal motives such as sexual assault or robbery.",
+        "preferred_locations": [
+          "Child’s home or apartment (especially for family and acquaintance abductions)",
+          "Another home or apartment (e.g., residence of a relative, caregiver, or acquaintance)",
+          "Highways and roadside locations",
+          "Parking lots (mall, apartment, school, community, gas station, department store, restaurant, grocery store)",
+          "Public streets and outdoor public places near the victim’s residence"
+        ],
+        "risk_escalation": "Risk escalates when children are in settings with reduced guardianship (after school and evening hours), when there are unresolved custody disputes or separations that increase family tension, and when older youth, especially girls, move through public spaces (streets, highways, parking lots) where nonfamily offenders can act on sexual or profit-driven motives. As children age from preschool into adolescence, the likelihood shifts from family to acquaintance and stranger offenders, reflecting changing routine activities and exposure to higher-risk environments.",
+        "decision_factors": [
+          "For family offenders: separation or divorce, fear of losing custody, unfavorable custody or visitation arrangements, desire to control family life, retaliation against the other parent, and perceived or alleged abuse within the family.",
+          "For acquaintance offenders: existing social or neighborhood connection to the child or family, easier access to the child in or near the home, and opportunity when guardianship is low.",
+          "For stranger offenders: opportunity in public or semi-public spaces, especially streets, highways, and parking lots, often linked to sexual motives for girls and profit/robbery motives for boys.",
+          "Offender age and gender patterns: most offenders are male, and nonfamily offenders are disproportionately young adults (20–29) or under 30, while acquaintance offenders include a larger share of juveniles than family or stranger offenders.",
+          "Victim age and gender: young children (0–5) are more often targeted by family members, while older children and teens (12–17), especially girls, are more often targeted by acquaintances and strangers, consistent with sexual victimization motives."
+        ],
+        "motive_categories": [
+          "Familial/custodial abduction (linked to custody disputes, separation, and family conflict)",
+          "Sexual assault-related abduction (especially for older girls in nonfamily cases)",
+          "Profit/robbery-related abduction (more common for some older male victims in nonfamily cases)",
+          "Mixed-motive nonfamily abduction (combining sexual assault, robbery, or assault in a single event)"
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Ongoing or recent separation or divorce, especially with contentious custody or visitation disputes.",
+        "Family members or caregivers expressing fear of losing custody or threatening to take the child so the other parent cannot see them.",
+        "Children not living with both biological parents, increasing exposure to custody-related conflict and family abduction risk.",
+        "Family members or acquaintances insisting on unsupervised access to the child and violating agreed-upon visitation norms.",
+        "Older children and teens, especially girls, spending time alone or with peers in public spaces such as streets, highways, and parking lots.",
+        "Nonfamily adults or older juveniles taking advantage of low guardianship periods after school and in the evening.",
+        "Use or display of weapons (hands, blunt instruments, guns, knives) in nonfamily abductions, particularly stranger abductions.",
+        "Acquaintances positioning themselves in or around the victim’s home or neighborhood and using that familiarity to facilitate abduction.",
+        "Patterns of high family conflict, threats, or coercive control that precede a family member’s decision to remove the child."
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": [
+          "Overall abductions cluster between approximately 2:00 p.m. and 9:00 p.m.",
+          "Stranger abductions peak in the late afternoon around 5:00 p.m., aligning with after-school travel and time spent in public spaces.",
+          "Family abductions peak later in the evening around 9:00 p.m., when family members and children are more likely to be at home.",
+          "Acquaintance abductions peak even later, around 11:00 p.m., reflecting higher late-night exposure with peers and acquaintances."
+        ],
+        "day_of_week": [
+          "The study finds no meaningful pattern by day of the week; abductions are distributed relatively evenly from Sunday through Saturday."
+        ],
+        "seasonal_patterns": [],
+        "duration_patterns": "The article focuses on incident characteristics (who, where, and when) rather than the length of time children remain missing, so typical durations from abduction to recovery are not specified.",
+        "escalation_timeline": "For family abductions: relationship conflict, separation/divorce, and custody disputes build over time, followed by threats or withholding, and then a precipitating event (such as a custody hearing or visitation disagreement) that precedes the abduction. For nonfamily offenders: escalation is more closely tied to the child’s age and daily routine, with risk increasing as older youth spend more unsupervised time in public or semi-public locations during after-school and evening hours."
+      },
+  
+      "risk_factors": [
+        "Child not living with both parents (divorce, separation, or never-married parents), especially in high-conflict situations.",
+        "Contentious or unresolved custody and visitation arrangements, including fear of unfavorable court decisions.",
+        "Preschool-aged children (0–5) at elevated risk for family abduction, often from the home or another residence.",
+        "Elementary-aged children (6–11) at mixed risk, with both family and nonfamily offenders represented.",
+        "Adolescents (12–17), particularly girls, at elevated risk for acquaintance and stranger abduction with sexual or profit motives.",
+        "Female gender overall is associated with higher risk of nonfamily abduction, especially those with sexual motives.",
+        "Black children in the South Carolina sample are overrepresented relative to their share of the state population in both victim and offender roles.",
+        "Abductions occurring after school and into the evening hours, when guardianship decreases and routine activities take youth into public spaces.",
+        "Presence of weapons or threats in nonfamily incidents, particularly stranger abductions along highways and in parking lots.",
+        "Acquaintance connections that bring offenders into the home or close to the child’s daily environment, making abduction easier to execute."
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Most cases in the study appear to involve local or regional movement within South Carolina; the article focuses on offender type and incident setting rather than long-distance travel, implying that many abductions occur and resolve within the same city, county, or nearby area.",
+        "common_routes": [
+          "Travel from the child’s home or yard into nearby streets, highways, or parking lots.",
+          "Local vehicle travel along highways and through community parking areas where initial contact or abduction occurs.",
+          "Short-distance movements from residential locations to nearby public or semi-public spaces and back."
+        ],
+        "destination_types": [
+          "Victim’s home or apartment as the primary origination and sometimes continued location in family cases.",
+          "Highways, streets, and parking lots as common origination points for stranger abductions.",
+          "Schools or school-adjacent spaces (including parking lots) as less frequent, but notable, abduction sites.",
+          "Other public or community locations (parks, wooded areas, commercial sites) as secondary abduction settings."
+        ],
+        "transportation_methods": [
+          "Private motor vehicles (cars, trucks) used to move victims along highways and to and from parking lots and other locations.",
+          "On-foot movement from homes into nearby streets, yards, or parking areas, especially in urban or suburban neighborhoods.",
+          "Short vehicle trips within the same general area rather than long-distance or interstate transport in most cases."
+        ]
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A 3-year-old boy lives with his mother following a recent separation. The father, who fears losing custody after court hearings, becomes increasingly angry and threatens that the mother will never see the child again. During a scheduled visitation, he picks up his son from the home as agreed, but at the end of the visit he refuses to return him. He drives the child from the mother’s residence to a relative’s house in another part of the state and ignores court orders and phone calls. The incident is recorded as a family abduction originating at the child’s home.",
+          "movement": "Regional",
+          "risk": "High",
+          "indicators": [
+            "Recent separation and high-conflict custody dispute",
+            "Preschool-aged child living with one parent",
+            "Prior threats by the noncustodial parent about taking the child permanently",
+            "Use of legitimate visitation to facilitate abduction",
+            "Departure from the home or apartment setting in a private vehicle"
+          ],
+          "motive_category": "Familial/custodial abduction",
+          "temporal_markers": [
+            "Abduction occurs on a routine visitation day",
+            "Failure to return the child at the agreed-upon time",
+            "Conflict and threats escalate in the weeks leading up to court decisions"
+          ]
+        },
+        {
+          "narrative": "An 11-year-old girl is taken by a neighbor who has known the family for years. The neighbor often spends time around the apartment complex and has informal access to the child. One evening around 8:00 p.m., while the child is playing near the parking lot after dinner, the neighbor coerces her into his vehicle and drives away. The abduction is classified as an acquaintance incident originating in a residential parking lot, occurring during a time of reduced parental supervision.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Acquaintance offender with longstanding access to the family and child",
+            "Abduction from a parking lot near the home rather than from inside the dwelling",
+            "Evening timeframe with lower guardianship after school hours",
+            "Use of a vehicle to move the child away rapidly",
+            "Preteen victim at the transition between child and adolescent routine activities"
+          ],
+          "motive_category": "Mixed-motive nonfamily abduction (likely sexual or control-related)",
+          "temporal_markers": [
+            "Abduction between approximately 7:00 p.m. and 9:00 p.m.",
+            "Offender presence around the home and parking area before the incident",
+            "Gradual increase in unsupervised outdoor time for the child"
+          ]
+        },
+        {
+          "narrative": "A 15-year-old girl walks home from a friend’s house along a main road in the late afternoon around 5:00 p.m. A male stranger in his twenties stops his car on the roadside and offers her a ride. When she refuses, he exits the vehicle, grabs her with his hands, and forces her into the car, possibly displaying a knife. The abduction begins along the highway and is classified as a stranger abduction. The event reflects peak after-school risk for older female victims in public spaces.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "Teenage female victim traveling alone along a highway or main road",
+            "Stranger offender in a private vehicle",
+            "Late afternoon timing around the peak risk period for stranger abductions",
+            "Use of hands and possible weapon (knife) to force compliance",
+            "Abduction originating away from the home in a transportation corridor"
+          ],
+          "motive_category": "Sexual assault-related stranger abduction",
+          "temporal_markers": [
+            "Abduction around 5:00 p.m. during after-school travel",
+            "Brief time window between initial approach and forced entry into the vehicle",
+            "No prior relationship between victim and offender"
+          ]
+        }
+      ]
+    }
+  }
+  

@@ -39,3 +39,13 @@ bandit>=1.7.0
 sphinx>=5.0.0
 sphinx-rtd-theme>=1.0.0
 myst-parser>=0.18.0
+
+# Metrics & Evaluation
+rouge-score>=0.1.2
+
+# Geospatial Geographic Dependencies (for geo_inside_va_rate)
+# shapely>=2.0.0
+# geopandas>=0.14.0
+
+# Clustering Dependencies (optional)
+# kneed>=0.8.0  # For automatic knee/elbow detection (optional, has fallback)

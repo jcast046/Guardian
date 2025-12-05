@@ -50,6 +50,8 @@ def main():
             "summarizer",
             "e2e",
             "diagnostics",
+            "clustering",
+            "predictive",
             "all",
         ],
         default="all",
@@ -96,6 +98,64 @@ def main():
 
     if args.stage == "perf" or args.stage == "all":
         results["perf"] = calc_perf_metrics(cfg)
+
+    if args.stage == "clustering" or args.stage == "all":
+        try:
+            from metrics.evaluation.evaluate_clusters import (
+                load_case_coordinates,
+                evaluate_cluster_stability,
+                plot_stability_results,
+            )
+            import pandas as pd
+            
+            # Get case directory from config or use default
+            cases_dir = cfg.get("synthetic_cases_dir", "data/synthetic_cases")
+            outdir = cfg.get("output_dir", "eda_out")
+            
+            print(f"[INFO] Evaluating cluster stability...")
+            df_coords = load_case_coordinates(cases_dir)
+            cluster_results = evaluate_cluster_stability(df_coords)
+            
+            plot_stability_results(cluster_results, outdir)
+            
+            results["clustering"] = {
+                "timestamp": datetime.now().isoformat(),
+                "stage": "clustering",
+                "methods": cluster_results,
+            }
+        except Exception as e:
+            results["clustering"] = {
+                "error": str(e),
+                "timestamp": datetime.now().isoformat(),
+            }
+
+    if args.stage == "predictive" or args.stage == "all":
+        try:
+            from metrics.evaluation.predictive_consistency import (
+                evaluate_all_cases,
+                plot_consistency_results,
+            )
+            
+            # Get case directory from config or use default
+            cases_dir = cfg.get("synthetic_cases_dir", "data/synthetic_cases")
+            outdir = cfg.get("output_dir", "eda_out")
+            
+            print(f"[INFO] Evaluating predictive consistency...")
+            consistency_results = evaluate_all_cases(cases_dir)
+            
+            plot_consistency_results(consistency_results, outdir)
+            
+            results["predictive"] = {
+                "timestamp": datetime.now().isoformat(),
+                "stage": "predictive",
+                "horizon_pairs": consistency_results.get("horizon_pairs", {}),
+                "parameter_sensitivity": consistency_results.get("parameter_sensitivity", {}),
+            }
+        except Exception as e:
+            results["predictive"] = {
+                "error": str(e),
+                "timestamp": datetime.now().isoformat(),
+            }
 
     if args.stage == "diagnostics":
         results["diagnostics"] = calc_diagnostics(cfg)

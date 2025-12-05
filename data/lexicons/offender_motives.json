@@ -1,11 +1,114 @@
 {
   "$schema": "guardian.motives.v1",
   "motives": [
-    { "id": "sexual", "prior": 0.52, "traits": ["control","fantasy"], "age_bias": {"6-12": 0.7, "13-17": 0.3} },
-    { "id": "custodial", "prior": 0.32, "traits": ["planning","family_access"] },
-    { "id": "trafficking", "prior": 0.08, "traits": ["profit","networked"] },
-    { "id": "maternal_desire", "prior": 0.02, "traits": ["infant_target"], "age_lock": "<=1" },
-    { "id": "revenge", "prior": 0.06, "traits": ["anger","impulsive"] }
+    {
+      "id": "sexual",
+      "prior": 0.52,
+      "traits": ["control","fantasy"],
+      "age_bias": {"6-12": 0.7, "13-17": 0.3},
+      "decision_factors": [
+        "Sexual motivation is the primary driver in most cases (over four-fifths of offenders were sexually motivated)",
+        "Offenders are overwhelmingly male, largely unmarried, and often socially marginal with poor or unstable intimate relationships",
+        "Prior criminal history is common, particularly burglary and assault, which contributes to offender comfort with unlawful entry into dwellings",
+        "Offenders frequently have prior lawful or unlawful familiarity with the general area and/or the victim's residence, including previous visits inside the home",
+        "Victim age and gender strongly influence targeting: primarily school-aged girls, around 6-11 years old, abducted for sexual purposes",
+        "Household characteristics (stressful, chaotic, transient occupants, unsecured doors/windows) lower perceived risk and increase opportunity",
+        "Low level of forensic planning and impulsive decision-making once the opportunity (sleeping child, unsecured home, low guardianship) presents itself"
+      ],
+      "preferred_locations": [
+        "Interior of single-family residences (majority of cases)",
+        "Apartments (minority of cases)",
+        "Victim's bedroom while the child was sleeping",
+        "Public or outdoor settings (parks, open areas, places where children are briefly alone)",
+        "Secondary indoor locations after removal (offender's residence or vacant buildings)",
+        "Secondary outdoor locations after removal (fields, wooded areas, camping areas/parks, nearby backyards)"
+      ],
+      "grooming_duration": "Many offenders built familiarity with the victim, the household, and the neighborhood over repeated visits, sometimes observing the child and residence in the days or weeks before the abduction. Grooming can range from 2-4 weeks for sexual offenders to weeks or months for online grooming.",
+      "risk_escalation": "Risk increases as offenders gain familiarity with the child, the family, and the residence, especially when households are chaotic, resource-limited, and frequently leave doors or windows unsecured; escalation commonly culminates in a nighttime or early-morning entry when guardianship is weakest and the child is asleep."
+    },
+    {
+      "id": "custodial",
+      "prior": 0.32,
+      "traits": ["planning","family_access"],
+      "decision_factors": [
+        "History of prior threats, hiding, withholding, or snatching the child from the other parent",
+        "Fixed belief that the other parent is abusive or dangerous and that authorities will not protect the child",
+        "Severe sociopathic or narcissistic traits, including contempt for law and use of the child as an instrument of revenge or control",
+        "Strong identification with an ethnic or religious homeland following dissolution of a mixed-culture marriage, with desire to raise the child in that culture",
+        "Economic hardship, low education, and alienation from the legal system, combined with strong support in another community or country",
+        "History of family violence and/or child abuse, especially when the victimized parent feels unprotected by courts and child protection systems",
+        "Availability of social networks willing to help plan, fund, and conceal the abduction (family, friends, community groups, underground networks)"
+      ],
+      "preferred_locations": [
+        "Child's current residence or caretaking home (initial custody violation, snatching, or failure to return)",
+        "Another city or State where the abducting parent has extended family or social support",
+        "Another country (particularly the abducting parent's country of origin in mixed-culture marriages)",
+        "Shelters or undisclosed locations used by underground networks that assist so-called protective parents fleeing perceived abuse"
+      ],
+      "grooming_duration": "The research focuses on long-building family conflict, abuse allegations, and legal alienation rather than short-term grooming; risk accumulates over months to years of high conflict, domestic violence, poverty, and distrust of the legal system.",
+      "risk_escalation": "Risk escalates when high-conflict, low-income, or culturally alienated parents face separation/divorce, unresolved allegations of abuse or neglect, feel unprotected by courts or child protective services, and gain emotional and logistical support from extended family, friends, or underground networks who support self-help solutions over legal processes."
+    },
+    {
+      "id": "trafficking",
+      "prior": 0.08,
+      "traits": ["profit","networked"],
+      "decision_factors": [
+        "Youth's unmet need for belonging, love, and a 'secure base' after histories of neglect, abuse, and unstable caregiving",
+        "Insecure attachment and difficulty discerning safe versus exploitative relationships",
+        "Prior survival sex and exposure to prostitution in family or community normalizing commercial sexual exploitation",
+        "Chronic stress, poverty, and lack of basic needs (food, shelter, safety) pushing youth toward traffickers who appear to 'fill the void'",
+        "Developmental stage (adolescence, identity vs. identity confusion) where desire for identity, status, and group belonging is high",
+        "Biological embedding of early adversity (HPA axis dysregulation, allostatic load, epigenetic changes) increasing vulnerability to addiction and poor coping",
+        "Increased alcohol and drug use (often after recruitment) that both self-medicate trauma and deepen dependence on traffickers",
+        "Lack of consistent, supportive adult relationships or prosocial peers, making traffickers and their networks feel like the only 'family'",
+        "Exposure to environments where sex trade is prevalent and modeled, including by caregivers or older peers"
+      ],
+      "preferred_locations": [
+        "Neighborhoods and communities where prostitution or survival sex is already visible or modeled",
+        "Areas of poverty or high stress where basic needs (food, shelter, safety) are unmet",
+        "Foster care settings and group homes with multiple placements and high turnover",
+        "Online or street environments where youth who run away congregate"
+      ],
+      "grooming_duration": "Recruitment and control typically develop over weeks to months, layered on top of years of prior adversity (abuse, neglect, insecure attachment, poverty) that create a long-standing vulnerability before the trafficker appears.",
+      "risk_escalation": "Risk escalates as early adversity (abuse, neglect, multiple caregivers, poverty, exposure to violence) produces insecure attachment and biological embedding of chronic stress, which in turn impairs judgment, emotional regulation, and relationship discernment. Traffickers then exploit these vulnerabilities through false affection, promises of belonging, and material support, leading to trauma bonding and increased substance use."
+    },
+    {
+      "id": "maternal_desire",
+      "prior": 0.02,
+      "traits": ["infant_target"],
+      "age_lock": "<=1",
+      "decision_factors": [
+        "Unmet maternal desires and emotional need to claim a child as one's own",
+        "Female offenders targeting very young infants rather than older children",
+        "Limited prior familiarity with the specific household but awareness of a child present",
+        "Emotionally driven planning focused on acquiring a child"
+      ],
+      "preferred_locations": [
+        "Residential settings where infants are present",
+        "Daytime locations where mothers and infants are accessible",
+        "Homes or apartments where the offender can use a ruse to gain entry"
+      ],
+      "grooming_duration": "Maternal desire cases typically involve short observation periods of the residence before the offense, with limited grooming compared to sexual motive cases.",
+      "risk_escalation": "Daytime overt entry using a ruse, with emotionally driven planning focused on acquiring a child. Risk is high but typically involves less violence than sexual motive cases."
+    },
+    {
+      "id": "revenge",
+      "prior": 0.06,
+      "traits": ["anger","impulsive"],
+      "decision_factors": [
+        "Emotion-based revenge where child abduction is linked to retaliation against an adult partner or family member",
+        "Recent conflict with the family and emotional instability",
+        "Former intimate partner of a family member with direct knowledge of the residence",
+        "History of assault and other violent crimes"
+      ],
+      "preferred_locations": [
+        "Victim's home where adults may also be harmed",
+        "Secondary locations after removal of the child",
+        "Residential settings where the offender has prior familiarity"
+      ],
+      "grooming_duration": "Revenge cases often involve rapid escalation following interpersonal conflict, with less extended grooming than other motives.",
+      "risk_escalation": "Escalation following interpersonal conflict, with emotionally charged escalation that may include harm to adults as well as child abduction."
+    }
   ],
   "constraints": {
     "by_region": { "NoVA": {"trafficking": 1.2}, "Rural": {"sexual": 1.1} }

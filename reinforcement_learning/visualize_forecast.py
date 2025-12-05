@@ -205,6 +205,193 @@ def visualize_forecast_timeline(
 		print(f"Saved cumulative forecast plot: {outpath_cum}")
 
 
+def miles_to_deg(miles: float, lat: float) -> float:
+	"""Convert miles to degrees longitude/latitude (approximate).
+	
+	Args:
+		miles: Distance in miles.
+		lat: Reference latitude for conversion.
+		
+	Returns:
+		Distance in degrees (approximate).
+	"""
+	# Approximate conversion factors
+	lat_to_miles = 69.0  # 1 degree latitude ≈ 69 miles
+	lon_to_miles = 54.6 * np.cos(np.radians(lat))  # Longitude varies with latitude
+	
+	# Use average of lat/lon conversion for radius
+	deg_per_mile = 1.0 / ((lat_to_miles + lon_to_miles) / 2.0)
+	
+	return miles * deg_per_mile
+
+
+def plot_search_plan(
+	case: Dict,
+	search_plan: Dict,
+	outpath: str,
+	title_suffix: str = " (0–72h Search Plan)",
+	top_k_labels: int = 5,
+):
+	"""Generate a SAR-ready search plan visualization map.
+	
+	Map includes:
+	- Hexbin probability distribution (base layer)
+	- Sector boundaries (polygon outlines)
+	- Sector labels with probability percentages
+	- Sector hotspots (marked with X markers)
+	- Probability containment rings (50%, 75%, 90%)
+	- IPP marker (last seen location)
+	
+	Args:
+		case: Case dictionary.
+		search_plan: Output from forecast_search_plan().
+		outpath: Output file path for PNG.
+		title_suffix: Title suffix for plot.
+		top_k_labels: Number of top sectors to label (default: 5).
+	"""
+	fig, ax = plt.subplots(figsize=(14, 10))
+	
+	grid_xy = search_plan["grid_xy"]
+	p = search_plan["p"]
+	sectors_gdf = search_plan["sectors_gdf"]
+	sectors_ranked = search_plan["sectors_ranked"]
+	sector_hotspots_list = search_plan.get("sector_hotspots", [])
+	rings = search_plan.get("rings", [])
+	ipp = search_plan.get("ipp", None)
+	
+	lon = grid_xy[:, 0]
+	lat = grid_xy[:, 1]
+	
+	# 1) Base hexbin layer
+	hexbin = ax.hexbin(lon, lat, C=p, gridsize=120, cmap="YlOrRd",
+	                  bins='log', alpha=0.8, mincnt=1, zorder=1)
+	
+	# Add colorbar
+	cbar = plt.colorbar(hexbin, ax=ax)
+	cbar.set_label("Probability", rotation=270, labelpad=20)
+	
+	# 1.5) Add Virginia state boundary outline
+	if HAS_GEO:
+		try:
+			# Resolve boundary path relative to project root
+			boundary_path = _proj_root / "data/geo/va_boundary.geojson"
+			va_boundary = load_boundary(str(boundary_path))
+			if va_boundary is not None:
+				# Ensure consistent CRS
+				if va_boundary.crs is None:
+					va_boundary = va_boundary.set_crs("EPSG:4326")
+				elif va_boundary.crs.to_string() != "EPSG:4326":
+					va_boundary = va_boundary.to_crs("EPSG:4326")
+				
+				# Plot boundary outline (behind sector polygons, on top of hexbin)
+				va_boundary.boundary.plot(ax=ax, color="black", linewidth=1.5, 
+				                         alpha=0.8, zorder=2)
+		except Exception as e:
+			print(f"[WARN] Could not load VA boundary: {e}")
+	
+	# 2) Sector boundaries
+	if HAS_GEO and sectors_gdf is not None:
+		try:
+			sectors_gdf.boundary.plot(ax=ax, linewidth=1.0, color="black",
+			                         alpha=0.6, zorder=3)
+		except Exception:
+			pass
+	
+	# 3) Sector annotations with label clutter reduction
+	if sectors_ranked and HAS_GEO:
+		for rank, sector in enumerate(sectors_ranked[:top_k_labels]):
+			sector_id = sector["sector_id"]
+			
+			# Find sector geometry in sectors_gdf
+			try:
+				sector_mask = sectors_gdf["sector_id"] == sector_id
+				if sector_mask.any():
+					geom = sectors_gdf.loc[sector_mask, "geometry"].iloc[0]
+					cx, cy = geom.centroid.x, geom.centroid.y
+					
+					# Use bold labels for top 3, lighter for others
+					if rank < 3:
+						fontweight = "bold"
+						fontsize = 12
+					else:
+						fontweight = "normal"
+						fontsize = 10
+					
+					label_text = f'{sector_id}\n{100*sector["mass_pct"]:.1f}%'
+					ax.text(cx, cy, label_text, ha="center", va="center",
+					       fontweight=fontweight, fontsize=fontsize,
+					       bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
+					                alpha=0.7, edgecolor="black", linewidth=1),
+					       zorder=6)
+			except Exception:
+				pass
+	
+	# 4) Sector hotspots
+	for sh in sector_hotspots_list:
+		hotspots = sh.get("hotspots", [])
+		if hotspots:
+			xs = [h["lon"] for h in hotspots]
+			ys = [h["lat"] for h in hotspots]
+			ax.scatter(xs, ys, marker="x", s=30, color="black",
+			          linewidths=1.5, zorder=5, label="Hotspots" if sh == sector_hotspots_list[0] else "")
+	
+	# 5) Probability rings
+	if ipp and rings:
+		for r in rings:
+			radius_mi = r["radius_mi"]
+			quantile = r["q"]
+			
+			# Convert radius to degrees
+			radius_deg = miles_to_deg(radius_mi, ipp["lat"])
+			
+			# Create circle patch
+			from matplotlib.patches import Circle
+			circ = Circle(
+				(ipp["lon"], ipp["lat"]),
+				radius_deg,
+				edgecolor="blue",
+				facecolor="none",
+				linestyle="--",
+				linewidth=1.5,
+				alpha=0.7,
+				zorder=4
+			)
+			ax.add_patch(circ)
+			
+			# Add label for quantile percentage
+			label_lat = ipp["lat"] + radius_deg * 0.1  # Offset slightly
+			ax.text(ipp["lon"], label_lat, f'{int(quantile*100)}%',
+			       color="blue", fontsize=9, fontweight="bold",
+			       bbox=dict(boxstyle="round,pad=0.2", facecolor="white",
+			               alpha=0.8, edgecolor="blue", linewidth=1),
+			       zorder=6, ha="center")
+	
+	# 6) IPP marker
+	if ipp:
+		ax.scatter(ipp["lon"], ipp["lat"], marker="*", s=400, color="red",
+		          edgecolor="black", linewidths=1.5, zorder=10,
+		          label="IPP (Last Seen)")
+	
+	# 7) Final touches
+	case_id = case.get("case_id", "unknown")
+	ax.set_title(f'{case_id}{title_suffix}', fontsize=14, fontweight="bold")
+	ax.set_xlabel("Longitude")
+	ax.set_ylabel("Latitude")
+	ax.set_aspect("equal", adjustable="box")
+	
+	# Add legend
+	ax.legend(loc="upper right", fontsize=9, framealpha=0.9)
+	
+	# Set axis limits based on data bounds
+	if len(grid_xy) > 0:
+		ax.set_xlim(lon.min() - 0.1, lon.max() + 0.1)
+		ax.set_ylim(lat.min() - 0.1, lat.max() + 0.1)
+	
+	plt.tight_layout()
+	plt.savefig(outpath, dpi=200, bbox_inches="tight")
+	plt.close()
+
+
 # CLI entry point (optional - module can be used programmatically without CLI)
 if __name__ == "__main__":
 	import argparse

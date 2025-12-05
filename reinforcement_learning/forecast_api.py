@@ -324,3 +324,179 @@ def forecast_cumulative(
 	
 	return p_cum
 
+
+def attach_sector_probs(
+	grid_xy: np.ndarray,
+	p: np.ndarray,
+	sector_path: str = "data/geo/va_rl_regions.geojson"
+) -> Dict[str, Any]:
+	"""Attach sector-level probabilities to a probability distribution.
+	
+	Args:
+		grid_xy: Grid coordinates array (N, 2) with (lon, lat).
+		p: Probability distribution array (N,).
+		sector_path: Path to sectors GeoJSON.
+		
+	Returns:
+		Dictionary with keys:
+		- sectors_gdf: GeoDataFrame of sectors
+		- sector_idx: Array mapping grid points to sector indices
+		- sectors_ranked: List of ranked sector dictionaries
+	"""
+	from reinforcement_learning.sectors import (
+		load_sectors,
+		assign_grid_to_sectors,
+		rank_sectors,
+	)
+	
+	# Load sectors
+	sectors_gdf = load_sectors(sector_path)
+	
+	# Assign grid points to sectors
+	sector_idx = assign_grid_to_sectors(grid_xy, sectors_gdf)
+	
+	# Rank sectors by probability mass
+	sectors_ranked = rank_sectors(p, sector_idx, sectors_gdf)
+	
+	return {
+		"sectors_gdf": sectors_gdf,
+		"sector_idx": sector_idx,
+		"sectors_ranked": sectors_ranked,
+	}
+
+
+def forecast_search_plan(
+	case: Dict[str, Any],
+	horizons: Tuple[int, ...] = (24, 48, 72),
+	use_cumulative: bool = True,
+	sector_path: str = "data/geo/va_rl_regions.geojson",
+	hotspot_pct: float = 0.9,
+	**kwargs
+) -> Dict[str, Any]:
+	"""Generate a complete search plan with sectors, hotspots, and rings.
+	
+	Args:
+		case: Case dictionary with spatial info.
+		horizons: Time horizons for forecast (hours).
+		use_cumulative: If True, use cumulative forecast across horizons.
+		sector_path: Path to sectors GeoJSON.
+		hotspot_pct: Percentile for sector hotspots (default: 0.9).
+		**kwargs: Additional arguments passed to forecast functions.
+		
+	Returns:
+		Dictionary with keys:
+		- grid_xy: Grid coordinates
+		- p: Final probability distribution
+		- sectors_gdf: Sector GeoDataFrame
+		- sector_idx: Sector assignments
+		- sectors_ranked: Ranked sector list
+		- sectors_ranked_by_horizon: Dictionary mapping horizon hours to ranked sector lists
+		- forecasts_by_horizon: Dictionary mapping horizon hours to probability distributions
+		- sector_hotspots: Hotspot list per sector (for main distribution)
+		- sector_hotspots_by_horizon: Dictionary mapping horizon hours to hotspot lists
+		- rings: Probability containment rings (for main distribution)
+		- rings_by_horizon: Dictionary mapping horizon hours to rings
+		- ipp: Initial Planning Point (lon, lat)
+		- sectors_metadata: Serializable sector metadata (no geometry)
+		- sector_ids: List of sector IDs for geometry lookup
+	"""
+	from reinforcement_learning.sectors import sector_hotspots
+	from reinforcement_learning.rings import probability_radii
+	
+	# 1) Get probability distribution for main visualization
+	if use_cumulative:
+		p = forecast_cumulative(case, horizons=horizons, **kwargs)
+	else:
+		max_horizon = max(horizons)
+		p, _ = forecast_distribution(case, t_hours=float(max_horizon), **kwargs)
+	
+	# 1a) Always get forecasts for all horizons to compute per-horizon rankings
+	forecasts_by_horizon = forecast_timeline(case, horizons=horizons, **kwargs)
+	
+	# 2) Load grid and layers
+	method_weights = kwargs.get("method_weights")
+	grid_xy, hotspots, road_cost, seclusion, va_mask, corridor_score = load_grid_and_layers(method_weights=method_weights)
+	
+	# 3) Sector probabilities for main distribution
+	sector_info = attach_sector_probs(grid_xy, p, sector_path=sector_path)
+	sectors_gdf = sector_info["sectors_gdf"]
+	sector_idx = sector_info["sector_idx"]
+	sectors_ranked = sector_info["sectors_ranked"]
+	
+	# 3a) Compute sector rankings for each horizon separately
+	sectors_ranked_by_horizon = {}
+	for horizon in sorted(horizons):
+		p_horizon = forecasts_by_horizon[horizon]
+		sector_info_h = attach_sector_probs(grid_xy, p_horizon, sector_path=sector_path)
+		sectors_ranked_by_horizon[horizon] = sector_info_h["sectors_ranked"]
+	
+	# 4) Sector hotspots for main distribution
+	sector_hotspots_list = sector_hotspots(
+		grid_xy, p, sector_idx, sectors_ranked, sectors_gdf,
+		local_pct=hotspot_pct,
+		max_hotspots_per_sector=kwargs.get("max_hotspots_per_sector")
+	)
+	
+	# 4a) Compute sector hotspots for each horizon
+	sector_hotspots_by_horizon = {}
+	for horizon in sorted(horizons):
+		p_horizon = forecasts_by_horizon[horizon]
+		sector_info_h = attach_sector_probs(grid_xy, p_horizon, sector_path=sector_path)
+		sector_idx_h = sector_info_h["sector_idx"]
+		sectors_ranked_h = sector_info_h["sectors_ranked"]
+		sector_hotspots_by_horizon[horizon] = sector_hotspots(
+			grid_xy, p_horizon, sector_idx_h, sectors_ranked_h, sectors_gdf,
+			local_pct=hotspot_pct,
+			max_hotspots_per_sector=kwargs.get("max_hotspots_per_sector")
+		)
+	
+	# 5) Extract IPP and compute rings
+	ipp = None
+	rings = []
+	rings_by_horizon = {}
+	
+	try:
+		lat, lon = assert_seed_present(case)
+		ipp = {"lon": float(lon), "lat": float(lat)}
+		
+		# Compute probability containment rings for main distribution
+		rings = probability_radii(grid_xy, p, lon, lat)
+		
+		# Compute rings for each horizon
+		for horizon in sorted(horizons):
+			p_horizon = forecasts_by_horizon[horizon]
+			rings_by_horizon[horizon] = probability_radii(grid_xy, p_horizon, lon, lat)
+	except (KeyError, Exception):
+		# IPP not available, skip rings
+		pass
+	
+	# 6) Create serializable sector metadata (no geometry)
+	sectors_metadata = []
+	sector_ids = []
+	for sector in sectors_ranked:
+		sectors_metadata.append({
+			"sector_id": sector["sector_id"],
+			"name": sector["name"],
+			"region_tag": sector["region_tag"],
+			"mass": sector["mass"],
+			"mass_pct": sector["mass_pct"],
+		})
+		sector_ids.append(sector["sector_id"])
+	
+	return {
+		"grid_xy": grid_xy,
+		"p": p,
+		"forecasts_by_horizon": forecasts_by_horizon,
+		"sectors_gdf": sectors_gdf,
+		"sector_idx": sector_idx,
+		"sectors_ranked": sectors_ranked,
+		"sectors_ranked_by_horizon": sectors_ranked_by_horizon,
+		"sector_hotspots": sector_hotspots_list,
+		"sector_hotspots_by_horizon": sector_hotspots_by_horizon,
+		"rings": rings,
+		"rings_by_horizon": rings_by_horizon,
+		"ipp": ipp,
+		"sectors_metadata": sectors_metadata,
+		"sector_ids": sector_ids,
+	}
+

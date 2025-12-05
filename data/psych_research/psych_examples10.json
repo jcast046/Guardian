@@ -1,0 +1,133 @@
+{
+    "research_source": "Patterns of prior offending by child abductors: A comparison of fatal and non-fatal outcomes",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "The article focuses on long-term criminal careers and prior offending, not on short-term grooming timelines; sexual violence against children emerges later in offenders’ diverse criminal histories, often after a decade or more of offending.",
+        "preferred_locations": [
+          "Areas within approximately a quarter mile of the child’s home (drawing on cited prior work where both boys and girls tended to be abducted close to home).",
+          "Neighborhood streets and residential areas where ‘low-risk’ children live normal routines with their families.",
+          "Locations where an offender can quickly move the child to a secondary site to commit sexual assault and/or murder."
+        ],
+        "risk_escalation": "Risk escalates when a chronically offending adult, already involved in assaults, property crimes, and sometimes forcible sex offenses, encounters an accessible child in a poorly supervised context and uses abduction to facilitate sexual assault and, in many cases, murder. Fatal outcomes are more likely when the offender is prepared to use lethal violence (strangulation, blunt force, stabbing, or shooting) to silence the victim and avoid detection.",
+        "decision_factors": [
+          "Chronic criminal lifestyle with an average of about seven prior arrests over roughly 12 years before the child abduction.",
+          "Criminal versatility rather than specialization: many offenders have prior arrests for property crime, assault, drugs, weapons violations, and sometimes sex offenses.",
+          "Prior forcible or non-forcible sex offenses, including sexual assaults against children or adults, indicating a history of non-consensual sexual behavior.",
+          "Prior kidnapping arrests (including multiple prior kidnappings for a subset of offenders), suggesting a willingness to move victims by force.",
+          "Opportunity to abduct a child perceived as ‘low risk’ (living with family, engaged in routine activities) in a setting that allows quick isolation.",
+          "For some offenders, the decision to kill appears to be driven at least partly by the desire to avoid identification and prosecution after a sexual assault, not only by sadistic motives."
+        ],
+        "motive_categories": [
+          "Sexually motivated abduction with rape or sexual assault as the primary goal.",
+          "Sexually motivated abduction followed by murder, where killing serves sexual, sadistic, and/or instrumental (witness elimination) purposes.",
+          "Broader violent/exploitative motive blending sexual assault with general violence, property crime, or drug-related offending.",
+          "Kidnapping-related offending embedded in a diverse criminal career (abduction used instrumentally within a broader pattern of crime)."
+        ]
+      },
+      "behavioral_indicators": [
+        "Adult offender (mean age about 30–31) with a substantial prior criminal history, often beginning in late adolescence or early adulthood.",
+        "Prior arrests for multiple categories of offenses (criminally versatile), including assault, larceny, burglary/breaking and entering, drug/narcotic offenses, weapons violations, and robbery.",
+        "Prior forcible sex offenses and, in a smaller subset, non-forcible sex offenses, some of which involve children as victims.",
+        "Prior kidnapping arrests, sometimes repeated (two or more prior kidnappings for a notable fraction of these offenders).",
+        "Multi-state arrest histories, indicating geographic mobility and contact with multiple jurisdictions.",
+        "Contact with the criminal justice system extending over a decade or more prior to the abduction.",
+        "In a minority (about one quarter) of cases, a complete absence of known prior criminal history, despite severe current offending.",
+        "Use of hands-on methods of killing (strangulation, asphyxiation, suffocation, blunt force, stabbing) rather than strictly firearm-only approaches, consistent with close personal contact during sexual violence.",
+        "Involvement of co-defendants in nearly one-fifth of cases, suggesting offenders who collaborate in abduction and control of child victims."
+      ],
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "In cited work on child abduction murders, approximately 74% of abducted children who were killed died within the first 3 hours and about 91% within 24 hours of the abduction, indicating that the highest fatal risk window is the first few hours after disappearance.",
+        "escalation_timeline": "Many offenders show a progression from non-sexual crimes (property, assault, drugs) in youth and early adulthood into sexual and kidnapping offenses against both adults and children. When an abduction occurs, the sequence often escalates quickly from initial contact to sexual assault and then, in a significant proportion of cases, to murder within the first day as the offender attempts to avoid detection or exerts violent control."
+      },
+      "risk_factors": [
+        "Offenders: predominantly male (about 95% overall), with very few female offenders in both fatal and non-fatal groups.",
+        "Offenders: three-quarters have prior criminal histories, including a high prevalence of assaults, property crime, drugs, and forcible sex offenses; about one-third meet criteria for ‘criminal versatility’ (more than three distinct offense categories).",
+        "Offenders: only a small fraction (around 8%) are registered sex offenders at the time of the abduction, meaning many high-risk offenders are not flagged in registries.",
+        "Offenders: a notable minority (about 25%) have no recorded adult criminal history despite committing severe abduction crimes.",
+        "Victims: older child age is associated with higher likelihood of being found murdered or presumed dead (pubertal/early adolescent victims at greater fatal risk than younger children).",
+        "Victims: female children are abducted about three and a half times more often than male children overall.",
+        "Victims: non-minority (often Caucasian) children are disproportionately represented among fatal outcomes compared to minority children.",
+        "Victims: being abducted alone (rather than in a group of children or a child-plus-adult scenario) increases the likelihood of a fatal outcome.",
+        "Offender–victim pairing: in roughly four out of five cases, the offender and victim are of the same race; cross-racial pairings occur but are less common.",
+        "Systemic: difficulties in defining and formally recording ‘abduction’ and reliance on plea bargains and charge bargaining may obscure prior abduction behavior in official records."
+      ],
+      "movement_patterns": {
+        "typical_distances": "Most referenced abductions appear to be local in origin (often near the child’s home), but offenders themselves frequently have multi-state arrest histories, implying the capacity to travel and offend across jurisdictions.",
+        "common_routes": [
+          "Short movements from the child’s home or neighborhood into nearby streets, vehicles, or secluded locations for assault or murder.",
+          "Transport of victims from abduction sites to secondary locations (e.g., remote areas, other properties) where sexual assault and homicide occur.",
+          "Offender movement between states over the course of their careers, as reflected in multi-state arrest records."
+        ],
+        "destination_types": [
+          "Remote or concealed outdoor locations used as body recovery sites in fatal cases (e.g., wooded areas, fields, isolated spots).",
+          "Private indoor locations or vehicles where sexual assault occurs before either release (non-fatal) or murder (fatal).",
+          "Occasional use of multiple event sites (abduction site, assault site, and separate body disposal site)."
+        ],
+        "transportation_methods": [
+          "Private motor vehicles used to abduct, transport, and, in some cases, dispose of victims.",
+          "On-foot movement from home or nearby locations to vehicles or secluded spots in the immediate neighborhood.",
+          "Occasional longer-distance travel by car between states, as suggested by multi-state arrest patterns."
+        ]
+      },
+      "training_examples": [
+        {
+          "narrative": "A 32-year-old man with a 12-year criminal history that includes burglary, larceny, drug possession, and multiple assaults has been arrested in two different states. He has one prior conviction for a forcible sex offense involving an adult victim but no recorded crimes against children. One evening he encounters a 12-year-old girl walking alone within a few blocks of her home. Seeing an opportunity, he forces her into his car, drives to a remote area, sexually assaults her, and then strangles her to prevent her from identifying him. Her body is found the next day; investigation later reveals his long, diverse criminal history and prior sexual violence.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "Adult male with a long span of offending and numerous prior arrests.",
+            "Criminal versatility including property crime, drugs, and assault.",
+            "Documented prior forcible sex offense, though not against a child.",
+            "Abduction of an older child (preteen/early teen) alone near her home.",
+            "Hands-on method of killing (strangulation) following sexual assault."
+          ],
+          "motive_category": "Sexually motivated abduction with murder to avoid detection",
+          "temporal_markers": [
+            "Crime escalation from abduction to assault to murder within hours.",
+            "Body recovered within the first 24 hours, consistent with high-risk timeframe.",
+            "Abduction occurring after years of progressively serious criminal offending."
+          ]
+        },
+        {
+          "narrative": "A 28-year-old offender has prior arrests for burglary, breaking and entering, and drug offenses, as well as a non-forcible sex offense. He is known to police in two states and has a record of criminal trespass. One afternoon he observes a 9-year-old boy playing outside within a short distance of his home. The offender lures the child into his vehicle, drives to a vacant property, and sexually assaults him. Fearing that the boy may disclose the assault, he contemplates killing him but, panicking, abandons the child in a nearby field and flees. The child is found alive, traumatized but able to give a description of the offender and vehicle, which ultimately leads investigators to his extensive criminal record.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Adult male with multiple prior property and drug offenses and criminal trespass.",
+            "Non-forcible sex offense in history, suggesting prior sexual boundary violations.",
+            "Abduction of a younger child close to home in a ‘low-risk’ neighborhood.",
+            "Use of a vehicle to move the child quickly to a secondary assault site.",
+            "Offender ultimately leaves the child alive but only after serious sexual violence."
+          ],
+          "motive_category": "Sexually motivated non-fatal abduction within a diverse criminal career",
+          "temporal_markers": [
+            "Abduction and assault occur within a short window of time.",
+            "Rapid investigative response in the first hours after disappearance facilitates recovery.",
+            "Prior criminal history used to narrow suspect pool and link the offender."
+          ]
+        },
+        {
+          "narrative": "A 26-year-old man with no recorded adult criminal history abducts a 13-year-old Caucasian girl walking home alone from a friend’s house. He forces her into his car, sexually assaults her, and fatally stabs her to prevent her from reporting the crime. Her body is discovered the next day in a wooded area. Background investigation reveals no previous documented arrests, but family reports suggest longstanding behavioral problems and unreported aggression. This case illustrates that a sizeable minority of child abductors may present with no official criminal history before a lethal offense.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "Adult male offender with no known prior arrests or documented criminal history.",
+            "Abduction of an older, pubertal child walking alone (single victim).",
+            "Use of a vehicle to quickly isolate the child from a public space.",
+            "Sexual assault followed by lethal violence (stabbing) to avoid identification.",
+            "Victim and offender share racial background, consistent with same-race pairing patterns."
+          ],
+          "motive_category": "Sexually motivated first-known abduction and murder by an offender with no prior recorded history",
+          "temporal_markers": [
+            "Fatal outcome within approximately 24 hours of the abduction.",
+            "No documented prior offending despite severe current violence.",
+            "Rapid escalation from first known contact with victim to lethal sexual assault."
+          ]
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,134 @@
+{
+    "research_source": "The_Abduction_of_Children_by_Strangers_and_Nonfamily_Members",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "Stranger and nonfamily abductions are generally described as opportunistic and event-focused rather than involving long, extended grooming; when prior contact exists (slight acquaintances), it typically develops over days to weeks through casual neighborhood or community interactions rather than intensive, months-long grooming.",
+        "preferred_locations": [
+          "Areas near the child’s home or neighborhood (streets, sidewalks, yards, local play areas).",
+          "Routes to and from school or other routine activities (walking routes, bus stops, paths to friends’ houses).",
+          "Public spaces where children may be alone or lightly supervised (parks, vacant lots, shopping areas, recreational spaces).",
+          "In stereotypical kidnapping cases, initial contact often occurs in the child’s ordinary environment, with subsequent transport to a secondary, more isolated location."
+        ],
+        "risk_escalation": "Risk escalates when an offender encounters a child who is alone or lightly supervised, especially in public or semi-public settings near home or school. The danger increases sharply when the child is forcibly moved to another location, held overnight, or transported a substantial distance away, transforming a brief encounter into a stereotypical kidnapping with a higher likelihood of serious injury or death.",
+        "decision_factors": [
+          "Opportunity to isolate a child who is alone or apart from peers or adults.",
+          "Perceived vulnerability of the victim (younger age, small size, lack of resistance, apparent naivete).",
+          "Sexual interest in children, particularly among male offenders targeting girls and young teens.",
+          "Situational factors such as access to a vehicle, familiarity with the local area, and availability of secluded locations.",
+          "Desire to avoid detection, which can drive decisions to move the child, restrain them, or, in extreme cases, kill to eliminate a witness.",
+          "In some cases, additional motives such as robbery, anger, or general violence that intersect with sexual motives or control."
+        ],
+        "motive_categories": [
+          "Sexual abduction in which the primary motive is sexual assault of the child.",
+          "Stereotypical kidnapping involving movement, extended detention, and often sexual assault and/or homicide.",
+          "Nonsexual opportunistic abductions (e.g., robbery or general violence incidents in which a child is taken during the crime).",
+          "Mixed-motive abductions combining sexual assault, physical violence, and sometimes instrumental motives (theft, revenge, or witness elimination)."
+        ]
+      },
+      "behavioral_indicators": [
+        "Adult or older youth approaching children who are alone in public or semi-public spaces near home, school, or play areas.",
+        "Attempts to lure children into vehicles, buildings, or more secluded areas with offers of rides, gifts, money, or help.",
+        "Use of force or threats (verbal, physical, or with a weapon) to move a child from the initial contact location.",
+        "Targeting older children and young teens, particularly girls, for more serious nonfamily abductions with sexual elements.",
+        "Patterns in which offenders seek or exploit brief windows of low guardianship (e.g., after school, walking between locations, playing outdoors without adults).",
+        "In some incidents, use of deception (claiming to know parents, pretending to need help) to quickly overcome a child’s reluctance."
+      ],
+      "temporal_patterns": {
+        "time_of_day": [
+          "Higher concentration of nonfamily abductions in the afternoon and early evening, when children travel to and from school and activities or play outside.",
+          "Stereotypical kidnappings often begin during daylight or early evening hours but may involve overnight detention or transport that extends into the night."
+        ],
+        "day_of_week": [
+          "Nonfamily abductions occur throughout the week, with some clustering on school days when children have predictable travel patterns to and from school or activities."
+        ],
+        "seasonal_patterns": [
+          "Elevated opportunities during warmer months when children spend more time outdoors and travel on foot or bicycle, although serious abductions occur in all seasons."
+        ],
+        "duration_patterns": "Many nonfamily abductions are brief and end within the same day, especially those that do not involve extended transport or detention. In more serious stereotypical kidnappings, the child may be held overnight or longer, with the highest risk of serious harm in the first hours following abduction.",
+        "escalation_timeline": "A typical escalation begins with an opportunistic encounter when a child is alone, followed by a rapid decision to initiate contact, lure, or use force. If the offender successfully moves the child to a secondary location, risk escalates to sexual assault and, in a subset of cases, to homicide or long-term disappearance. Most fatal outcomes and serious injuries occur within a relatively short period after the initial abduction."
+      },
+      "risk_factors": [
+        "Victim age: older children and adolescents, especially early teens, are at higher risk for nonfamily abductions with sexual or violent components; younger children are at risk but somewhat less frequently targeted by strangers.",
+        "Victim gender: girls are more often victims of sexually motivated abductions; boys are also victimized, particularly in certain age groups and contexts.",
+        "Situational low guardianship: children walking alone, playing outside without close adult supervision, or moving between locations (home, school, friends’ houses).",
+        "Environmental factors such as residential neighborhoods with accessible streets, alleys, or secluded spots where children move around unsupervised.",
+        "Offender characteristics that include male gender, prior or latent sexual interest in children, and, in more serious cases, histories of violence or criminal behavior.",
+        "Runaway or marginally supervised youth, who may spend more time in public spaces and encounter higher levels of risk from nonfamily offenders."
+      ],
+      "movement_patterns": {
+        "typical_distances": "Many nonfamily abductions are local, with initial contact and victim recovery occurring within the same community. Stereotypical kidnappings, as defined in national surveys, often involve longer-distance travel (e.g., 50 miles or more) or extended detention (overnight or longer), indicating movement beyond the child’s immediate environment.",
+        "common_routes": [
+          "Routes between home and school, including sidewalks, side streets, and bus stops.",
+          "Short trips to stores, friends’ homes, recreational facilities, and other neighborhood destinations.",
+          "Vehicle-based routes used by offenders to move children from the point of contact to more secluded or distant locations."
+        ],
+        "destination_types": [
+          "Secluded outdoor locations (wooded areas, fields, vacant lots, construction sites) used for assault or body disposal in fatal cases.",
+          "Private indoor locations such as the offender’s home, vacant buildings, or other controlled spaces where the offender can avoid detection.",
+          "Vehicles that serve as both transport and assault locations in some incidents."
+        ],
+        "transportation_methods": [
+          "Private motor vehicles (cars, vans, trucks) used for rapid abduction and transport.",
+          "Short-distance on-foot movement from sidewalks or yards to nearby hiding spots or vehicles.",
+          "In rare cases, public transportation or shared rides, though most described abductions involve offender-controlled vehicles."
+        ]
+      },
+      "training_examples": [
+        {
+          "narrative": "A 13-year-old girl walks home alone from a friend’s house along a residential street. A man in a car pulls alongside her, asks for directions, and then offers her a ride. When she declines, he stops the car, grabs her, and forces her inside. He drives her to a secluded area outside the neighborhood, sexually assaults her, and leaves her there. She is found by a passerby later that evening and reports the abduction to police.",
+          "movement": "Local/Regional",
+          "risk": "Critical",
+          "indicators": [
+            "Teenage female victim walking alone in a residential area.",
+            "Offender uses a vehicle and deceptive contact followed by force.",
+            "Movement from a public street to a secluded secondary location.",
+            "Sexual assault as the primary motive for the abduction.",
+            "Short but intense timeline from initial contact to assault and abandonment."
+          ],
+          "motive_category": "Sexual abduction by stranger",
+          "temporal_markers": [
+            "Afternoon or early evening timing after a social visit.",
+            "Rapid escalation from casual approach to forced entry into the vehicle.",
+            "Recovery and disclosure within hours of the abduction."
+          ]
+        },
+        {
+          "narrative": "A 10-year-old boy rides his bicycle around his neighborhood in the late afternoon. A man he does not know, parked near a small park, calls the boy over to ask for help loading items into his trunk. When the boy approaches, the man pushes him into the car and drives off. The offender takes him to a nearby vacant building, assaults him, and then releases him in another part of town. The child eventually finds help and gives a description of the man and vehicle.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Child victim engaged in unsupervised outdoor play near home.",
+            "Use of a help-related lure to draw the child close to the vehicle.",
+            "Quick forced movement from the public park area into the car.",
+            "Short-distance transport to a vacant building for assault.",
+            "Release of the child rather than long-term detention or homicide."
+          ],
+          "motive_category": "Opportunistic sexual abduction by nonfamily offender",
+          "temporal_markers": [
+            "Incident occurs during after-school daylight hours.",
+            "Abduction, transport, and assault completed within a single day.",
+            "Disclosure and law enforcement involvement soon after release."
+          ]
+        },
+        {
+          "narrative": "An 11-year-old girl fails to return home from school. After searching the immediate area for about an hour, her parents contact the police. Witnesses later report seeing her talking to an unfamiliar man near a parked car close to the school. Over the next day, investigators learn that the child was taken across a state line and held overnight in a motel by the offender, who sexually assaulted her before abandoning her at a rest stop. This case fits the definition of a stereotypical kidnapping involving nonfamily abduction, extended detention, and long-distance transport.",
+          "movement": "Cross-state",
+          "risk": "Critical",
+          "indicators": [
+            "Nonfamily abduction of a child traveling between school and home.",
+            "Witness accounts of contact with a stranger near a vehicle.",
+            "Overnight detention and movement beyond the local community.",
+            "Sexual assault combined with long-distance transport.",
+            "Multi-jurisdictional investigation required for recovery."
+          ],
+          "motive_category": "Stereotypical kidnapping with sexual assault",
+          "temporal_markers": [
+            "Onset at school dismissal time, with disappearance recognized within hours.",
+            "Overnight detention in a distant location.",
+            "Recovery within one to several days after a coordinated search."
+          ]
+        }
+      ]
+    }
+  }
+  

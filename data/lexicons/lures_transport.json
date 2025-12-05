@@ -1,22 +1,122 @@
 {
   "$schema": "guardian.lures_transport.v1",
   "lures": [
-    { "id": "ask_question", "prior": 0.23, "contexts": ["school_route","park"], "min_force": true },
-    { "id": "offer_ride", "prior": 0.22, "requires": ["vehicle"] },
-    { "id": "gift_candy", "prior": 0.09 },
-    { "id": "offer_money", "prior": 0.06 },
-    { "id": "authority_ruse", "prior": 0.06, "contexts": ["residential","school"] },
-    { "id": "online_grooming", "prior": 0.18, "channels": ["chat","social"], "lead_time_hr": [24, 336] }
+    {
+      "id": "ask_question",
+      "prior": 0.23,
+      "contexts": ["school_route","park"],
+      "min_force": true,
+      "grooming_duration": "Can be immediate opportunistic contact or part of repeated interactions over days to weeks"
+    },
+    {
+      "id": "offer_ride",
+      "prior": 0.22,
+      "requires": ["vehicle"],
+      "grooming_duration": "Often opportunistic, but can be part of repeated contact over days to weeks"
+    },
+    {
+      "id": "gift_candy",
+      "prior": 0.09,
+      "grooming_duration": "Typically part of initial contact, can be repeated over multiple encounters"
+    },
+    {
+      "id": "offer_money",
+      "prior": 0.06,
+      "grooming_duration": "Can be immediate or part of extended grooming process"
+    },
+    {
+      "id": "authority_ruse",
+      "prior": 0.06,
+      "contexts": ["residential","school"],
+      "grooming_duration": "Often immediate, but can involve prior observation of residence"
+    },
+    {
+      "id": "online_grooming",
+      "prior": 0.18,
+      "channels": ["chat","social"],
+      "lead_time_hr": [24, 336],
+      "grooming_duration": "Weeks to months of online contact, with gradual desensitization and trust-building. Extended process involving repeated contacts and gradual introduction of sexual topics."
+    },
+    {
+      "id": "false_affection",
+      "prior": 0.12,
+      "contexts": ["trafficking", "online"],
+      "grooming_duration": "Weeks to months, layered on top of years of prior adversity. Traffickers exploit vulnerabilities through false affection, promises of belonging, and material support.",
+      "description": "False affection and promises of belonging used to exploit vulnerable youth"
+    },
+    {
+      "id": "material_support",
+      "prior": 0.08,
+      "contexts": ["trafficking"],
+      "grooming_duration": "Weeks to months, with increasing dependence on trafficker for basic needs",
+      "description": "Offers of food, shelter, safety, and perceived protection to vulnerable youth"
+    },
+    {
+      "id": "special_attention",
+      "prior": 0.10,
+      "contexts": ["residential", "institutional"],
+      "grooming_duration": "Days to weeks of repeated contact, building trust through one-on-one time and gifts",
+      "description": "Singling out one child for special attention, providing small gifts and extra one-on-one time"
+    }
   ],
   "transport": [
-    { "id": "vehicle_local", "prior": 0.55, "speed_mph": [15.53, 27.96] },
-    { "id": "vehicle_highway", "prior": 0.10, "speed_mph": [37.28, 62.14] },
-    { "id": "on_foot", "prior": 0.25, "speed_mph": [1.86, 3.73] },
-    { "id": "public_transit", "prior": 0.10, "speed_mph": [12.43, 21.75] }
+    {
+      "id": "vehicle_local",
+      "prior": 0.55,
+      "speed_mph": [15.53, 27.96],
+      "ownership_patterns": ["owned", "routinely_available"],
+      "proximity": "Parked close to the residence; in many cases, the vehicle is owned by or routinely available to the offender"
+    },
+    {
+      "id": "vehicle_highway",
+      "prior": 0.10,
+      "speed_mph": [37.28, 62.14],
+      "ownership_patterns": ["owned", "rental", "borrowed"],
+      "proximity": "Used for longer-distance travel, including interstate movement for custodial abductions"
+    },
+    {
+      "id": "on_foot",
+      "prior": 0.25,
+      "speed_mph": [1.86, 3.73],
+      "contexts": ["residential", "public_outdoor"],
+      "description": "Walking the victim away from the residence, especially to nearby outdoor locations. Common for public/outdoor child luring."
+    },
+    {
+      "id": "public_transit",
+      "prior": 0.10,
+      "speed_mph": [12.43, 21.75],
+      "contexts": ["urban", "acquaintance"],
+      "description": "Used in some acquaintance abductions and for movement within urban areas"
+    },
+    {
+      "id": "rental_vehicle",
+      "prior": 0.03,
+      "speed_mph": [25.0, 55.0],
+      "ownership_patterns": ["rental"],
+      "description": "Occasional use of rental cars to transport the victim, often to avoid detection"
+    },
+    {
+      "id": "borrowed_vehicle",
+      "prior": 0.02,
+      "speed_mph": [20.0, 50.0],
+      "ownership_patterns": ["borrowed"],
+      "description": "Borrowed vehicles used to transport victims, less traceable than owned vehicles"
+    }
   ],
   "couplings": [
-    { "motive": "sexual", "lures": {"ask_question": 1.1, "offer_ride": 1.2, "online_grooming": 1.3} },
+    { "motive": "sexual", "lures": {"ask_question": 1.1, "offer_ride": 1.2, "online_grooming": 1.3, "special_attention": 1.2} },
     { "motive": "custodial", "lures": {"authority_ruse": 1.4} },
-    { "motive": "trafficking", "transport": {"vehicle_highway": 1.5, "public_transit": 1.2} }
+    { "motive": "trafficking", "transport": {"vehicle_highway": 1.5, "public_transit": 1.2}, "lures": {"false_affection": 1.5, "material_support": 1.4} }
+  ],
+  "grooming_indicators": [
+    "Repeated visits or passes through the area",
+    "Observing the child and residence in the days or weeks before the abduction",
+    "Prior lawful visits to the victim's home (socializing, staying over, pick up/drop off)",
+    "Building familiarity with the victim, the household, and the neighborhood",
+    "Gradual introduction of sexual topics in online grooming",
+    "Providing small gifts and extra one-on-one time",
+    "Boundary violations that escalate over time (excessive hugging, lap sitting, tickling)",
+    "False affection and promises of belonging",
+    "Material support (food, shelter, safety) to vulnerable youth"
   ]
 }

@@ -1,17 +1,40 @@
 {
   "$schema": "guardian.concealment.v1",
   "site_types": [
-    {"id":"wooded", "prior": 0.28, "radius_hint_mi": [0.1, 2.0]},
-    {"id":"motel", "prior": 0.16, "radius_hint_mi": [0.1, 5.0]},
-    {"id":"vacant", "prior": 0.14},
-    {"id":"industrial_low", "prior": 0.12},
-    {"id":"parking_garage", "prior": 0.08},
-    {"id":"truck_stop", "prior": 0.10},
-    {"id":"storage_units", "prior": 0.12}
+    {"id":"wooded", "prior": 0.28, "radius_hint_mi": [0.1, 2.0], "location_type": "outdoor", "description": "Wooded areas, fields, and nearby backyards used as assault or body disposal sites"},
+    {"id":"motel", "prior": 0.16, "radius_hint_mi": [0.1, 5.0], "location_type": "indoor", "description": "Motels and temporary lodging used for control and exploitation, especially in trafficking cases"},
+    {"id":"vacant", "prior": 0.14, "location_type": "indoor", "description": "Vacant or abandoned residences or buildings used as control locations for assault"},
+    {"id":"industrial_low", "prior": 0.12, "location_type": "indoor", "description": "Low-traffic industrial areas providing seclusion"},
+    {"id":"parking_garage", "prior": 0.08, "location_type": "indoor", "description": "Parking garages in urban areas providing temporary concealment"},
+    {"id":"truck_stop", "prior": 0.10, "location_type": "indoor", "description": "Truck stops along highways, common in trafficking and long-distance abductions"},
+    {"id":"storage_units", "prior": 0.12, "location_type": "indoor", "description": "Storage units used for temporary concealment, especially in custodial cases"},
+    {"id":"offender_residence", "prior": 0.15, "location_type": "indoor", "description": "Offender's own residence used as a secondary location for control and assault", "radius_hint_mi": [0.1, 5.0]},
+    {"id":"fields", "prior": 0.10, "location_type": "outdoor", "description": "Fields and open areas used as secondary outdoor locations", "radius_hint_mi": [0.1, 3.0]},
+    {"id":"parks", "prior": 0.08, "location_type": "outdoor", "description": "Parks and camping areas used as assault or disposal sites", "radius_hint_mi": [0.1, 2.0]},
+    {"id":"nearby_backyards", "prior": 0.06, "location_type": "outdoor", "description": "Nearby backyards providing quick access and seclusion", "radius_hint_mi": [0.1, 1.0]}
   ],
   "motive_couplings": {
-    "sexual": {"wooded": 1.4, "vacant": 1.2},
+    "sexual": {"wooded": 1.4, "vacant": 1.2, "offender_residence": 1.3, "fields": 1.2, "parks": 1.1, "nearby_backyards": 1.1},
     "trafficking": {"motel": 1.5, "truck_stop": 1.5},
-    "custodial": {"storage_units": 1.2}
+    "custodial": {"storage_units": 1.2, "offender_residence": 1.1}
+  },
+  "destination_types_research": {
+    "indoor": [
+      "Offender's residence or a vacant/abandoned residence or building used as a control location for assault",
+      "Victim's home or apartment as the primary origination and sometimes continued location in family cases",
+      "Another home or apartment (e.g., residence of a relative, caregiver, or acquaintance)",
+      "Private physical locations such as the offender's home, the child's home, or secluded rooms within institutions where supervision is low"
+    ],
+    "outdoor": [
+      "Fields, wooded areas, camping areas, parks, and nearby backyards used as assault or body disposal sites",
+      "Public outdoor locations (sexual abduction)",
+      "Nearby woods or secluded areas",
+      "Secondary outdoor locations after removal (fields, wooded areas, camping areas/parks, nearby backyards)"
+    ],
+    "by_motive": {
+      "sexual": "Indoor: offender's residence, vacant buildings. Outdoor: fields, wooded areas, parks, nearby backyards",
+      "custodial": "Extended family locations, another state/country, shelters or undisclosed locations",
+      "trafficking": "Motels, truck stops, temporary lodging along transportation routes"
+    }
   }
 }

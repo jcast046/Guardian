@@ -1,0 +1,156 @@
+{
+    "research_source": "Typologies_and_Psychological_Profiles_of_Child_Sexual_Abusers",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "The review describes a continuum from impulsive, situational offending with little or no grooming to more preferential offenders who may groom over an extended period (weeks or longer), including prolonged online grooming, but it does not specify precise average durations.",
+        "preferred_locations": [
+          "Child’s home or relatives’ homes (intrafamilial and acquaintances who have access to the household).",
+          "Institutional or role-based settings where adults have legitimate access to children (schools, child care, youth groups, religious settings, sports and recreational programs).",
+          "Community and neighborhood spaces where children are present and supervision may be intermittent (parks, playgrounds, local streets, and shared residential areas).",
+          "Online environments including chat rooms, social networking sites, instant messaging platforms, peer-to-peer file sharing networks, and dark/deep web services used for child sexual exploitation materials (CSEM)."
+        ],
+        "risk_escalation": "Risk escalates as offenders move along a motivational continuum from situational to preferential offending: from opportunistic, disinhibited acts to highly organized, fantasy-driven, repetitive abuse. Among online offenders, escalation can progress from incidental viewing of CSEM (browser) to systematic collection, active participation in offending networks, grooming of children, and mixed online–offline abuse. Higher psychopathy, cognitive distortions (e.g., beliefs that children are sexual agents), and impulsivity increase the likelihood of repeated and more severe offending.",
+        "decision_factors": [
+          "Sexual interest in children (including paedophilic preferences) versus more general criminal or antisocial tendencies in non-paedophilic offenders.",
+          "Availability and accessibility of children through family roles, professional positions, or community/online contact points.",
+          "Perceived opportunity and low guardianship (children alone, emotionally neglected, or with limited supervision, or children with extensive unsupervised online access).",
+          "Psychological traits such as high neuroticism, psychopathy, impulsivity, and difficulties in forming secure adult relationships, which can make offending more likely as a maladaptive coping or gratification strategy.",
+          "Cognitive distortions that justify abuse (e.g., beliefs that children are sexually knowledgeable or consenting, minimization of harm, entitlement and power over the child).",
+          "Ease of access to sexual material involving children through CSEM communities, online file sharing, and anonymous platforms, which can normalize or reinforce offending patterns.",
+          "For some online typologies (e.g., producers, distributors, buyers), financial or commercial motives and the existence of a demand–supply marketplace for images and abuse."
+        ],
+        "motive_categories": [
+          "Preferential child sexual abusers whose primary and enduring sexual interest is in children, often highly organized and fantasy driven.",
+          "Situational child sexual abusers who offend opportunistically, often with broader antisocial or criminal behavior portfolios and less specific sexual focus on children.",
+          "Contact child molesters who engage in physical sexual abuse, ranging from fondling and kissing to penetrative acts (e.g., MTC:CM3 subtypes; intercourse, high-contact, and sexual-touch typologies).",
+          "Online child sexual abusers whose primary involvement is through possession, use, and distribution of CSEM or online grooming and cybersex (browsers, private fantasy users, trawlers, collectors, online groomers).",
+          "Mixed offline–online offenders who both engage in online exploitation and commit hands-on abuse, often showing higher cognitive distortions and empathy deficits.",
+          "Commercial or financially motivated offenders (e.g., producers and some distributors or buyers) who create, sell, or purchase CSEM or sexual access to children as a commodity."
+        ]
+      },
+      "behavioral_indicators": [
+        "Pattern of seeking or maintaining roles that provide regular access to children (family positions, caregiving, teaching, coaching, youth leadership, religious or recreational roles).",
+        "Engaging in boundary-violating physical contact that escalates over time (excessive hugging, lap sitting, tickling, or private “games” that gradually become sexualized).",
+        "Frequent rationalization or minimization of sexual behavior toward children (e.g., describing it as educational, affectionate, or something the child wanted).",
+        "Evidence of cognitive distortions such as viewing children as sexual agents, over-attributing mutuality, or believing they are entitled to sexual contact with the child.",
+        "Use of the internet to access, store, or trade child sexual exploitation materials (CSEM), including browsing, collecting, and participating in online communities dedicated to illegal material.",
+        "Engaging in online grooming behaviors: building trust with a child, desensitizing them to sexual content, requesting sexual images, and progressing toward cybersex or offline meetings.",
+        "Use of anonymity, encryption, security tools, and hidden services (secure collectors, dark web users, predatory networks) to avoid detection while accessing or distributing CSEM.",
+        "Patterns of impulsive, disinhibited behavior in some offenders (situational type) including multiple forms of offending, substance misuse, and general disregard for rules and consequences.",
+        "For preferential offenders, highly organized, repetitive, and ritualistic offending patterns with a narrow focus on specific victim types, abuse scripts, or image themes.",
+        "Mixed offenders showing both online and offline abusive behavior, higher victim-empathy distortion, and a broader pattern of exploitative sexual conduct."
+      ],
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "The review does not report systematic time-of-day or seasonal timing; instead, it emphasizes that offending can be either opportunistic and brief (situational, disinhibited episodes) or recurrent and long-term (preferential abuse or prolonged online grooming and repeated CSEM use) that may last months or years.",
+        "escalation_timeline": "The typical timeline described is conceptual rather than clock-based: some offenders escalate from fantasy to CSEM use, and for a subset, from online-only involvement to mixed online–offline abuse. Situational offenders may offend quickly when opportunity and disinhibition converge, whereas preferential offenders may follow a longer trajectory of fantasy development, grooming, and repeated abuse."
+      },
+      "risk_factors": [
+        "Male sex and adult age, as nearly all offenders in the reviewed literature are adult men.",
+        "High neuroticism and associated psychological complaints such as depression, anxiety, anger–hostility, and obsessive–compulsive symptoms among child sexual offenders compared to non-offenders.",
+        "Psychopathic traits including lack of remorse, lack of empathy, irresponsibility, impulsivity, and antisocial lifestyle, particularly in some non-paedophilic child molesters and mixed offenders.",
+        "Early maladaptive schemas and cognitive distortions involving disconnection and rejection, fear of rejection, and difficulty forming secure adult relationships.",
+        "History of childhood sexual abuse or other adverse experiences, which can increase risk both for later victimization and for sexual offending in some offenders.",
+        "Elevated impulsivity, especially cognitive impulsivity, which is associated with higher recidivism risk and larger numbers of victims.",
+        "Low agreeableness and low conscientiousness in some groups of offenders, though findings are less consistent than for neuroticism.",
+        "Social isolation, limited adult intimate relationships, and reliance on children or online interactions to meet emotional or sexual needs.",
+        "Easy and anonymous access to the internet, CSEM, and online sexual communities, which can lower barriers to offending and normalize deviant behavior.",
+        "Underreporting and lack of early detection, which allow offending patterns to continue or escalate without intervention."
+      ],
+      "movement_patterns": {
+        "typical_distances": "The article focuses on typologies and psychological profiles rather than geographic distances; contact offending typically occurs in close physical proximity to the child (home, institutional, or community settings), while online offending involves virtual proximity where the offender may be geographically distant but in constant digital contact.",
+        "common_routes": [
+          "Contact offenders use routine routes and roles that bring them into repeated close contact with children (family caregiving, teaching, coaching, religious or community leadership).",
+          "Online child sexual abusers use digital routes such as chat rooms, social networking sites, instant messaging, peer-to-peer networks, online storage services, and dark-web forums to access and exploit children or CSEM.",
+          "Mixed offenders may move from online grooming to arranging offline meetings, using digital communication to set up physical encounters."
+        ],
+        "destination_types": [
+          "Private physical locations such as the offender’s home, the child’s home, or secluded rooms within institutions where supervision is low.",
+          "Online destinations including social media profiles, messaging applications, forums, peer-to-peer networks, and hidden services dedicated to CSEM trading or abuse discussions.",
+          "For producers and commercial offenders, locations where images or videos can be created without detection, and digital repositories where such material is stored and traded."
+        ],
+        "transportation_methods": [
+          "Physical presence and routine movement in the child’s environment (home visits, transportation to activities, institutional contact).",
+          "Use of computers, smartphones, tablets, and other internet-enabled devices as the primary “transportation” for accessing victims and CSEM in online offending.",
+          "For some mixed offenders, travel to meet victims arranged through online contact, sometimes spanning local, regional, or international distances."
+        ]
+      },
+      "training_examples": [
+        {
+          "narrative": "A 42-year-old man with a stable job and no prior criminal convictions volunteers as a youth leader at a community program. Over several months, he singles out one 11-year-old child for special attention, providing small gifts and extra one-on-one time. He gradually introduces more physical contact through hugs and playful touching that becomes increasingly sexualized. He privately tells himself that the child enjoys the attention and is mature enough to understand. Eventually, he escalates to repeated fondling in secluded rooms at the community center. When confronted, he minimizes the behavior, describing it as harmless affection and denies that the child was harmed.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Preferential focus on one child in a role that provides regular access to children.",
+            "Gradual grooming process with escalating boundary violations and sexualized contact.",
+            "Cognitive distortions that frame the abuse as affection or consensual interaction.",
+            "Difficulty forming secure adult relationships and reliance on a child for emotional intimacy.",
+            "Minimization and rationalization when behavior is discovered."
+          ],
+          "motive_category": "Preferential contact child sexual abuser",
+          "temporal_markers": [
+            "Months-long grooming period with progressively more intrusive contact.",
+            "Repeated abuse episodes occurring during regular program times when the offender can isolate the child.",
+            "Delayed disclosure or detection due to the offender’s trusted status and the child’s confusion or fear."
+          ]
+        },
+        {
+          "narrative": "A 35-year-old man with a history of various nonsexual offenses, impulsive behavior, and substance misuse frequently visits relatives where children are present. During one visit, after drinking heavily, he finds himself alone with a 9-year-old relative watching television. Acting on impulse, he begins inappropriate touching that escalates quickly to sexual fondling. The episode is brief but serious. He later claims he was drunk, did not plan the abuse, and says it was a “one-time mistake,” despite having a general pattern of disregard for rules and others’ boundaries.",
+          "movement": "Local",
+          "risk": "Medium",
+          "indicators": [
+            "Situational, impulsive offending in a family setting with easy access to a child.",
+            "Background of broader antisocial behavior and poor impulse control.",
+            "Use of substances and intoxication as a disinhibiting factor.",
+            "Minimization and externalization of responsibility (blaming alcohol rather than acknowledging sexual interest or harm).",
+            "Lack of sustained grooming or long-term planning, but high risk for reoffending under similar circumstances."
+          ],
+          "motive_category": "Situational contact child sexual abuser with broader antisocial tendencies",
+          "temporal_markers": [
+            "Rapid onset of abuse during a single period of unsupervised contact.",
+            "Short duration of the abusive episode but with significant impact.",
+            "Potential for future episodes whenever similar opportunity and disinhibition coincide."
+          ]
+        },
+        {
+          "narrative": "A 29-year-old man spends many hours online each day. He begins by viewing adult pornography, then stumbles upon mixed collections that include child sexual exploitation materials. Over time, he deliberately seeks out CSEM and becomes a nonsecure collector, saving large numbers of files and trading them in online communities. He rarely interacts directly with children but joins forums where offenders share material and discuss preferences and fantasies. He justifies his behavior by saying that he is only looking at images and not harming anyone directly. He takes some basic steps to hide his activity but does not use the most sophisticated security tools.",
+          "movement": "Online-only",
+          "risk": "High",
+          "indicators": [
+            "Progression from adult pornography to deliberate CSEM use and collecting.",
+            "Participation in online communities that normalize and reinforce sexual interest in children.",
+            "Cognitive distortions that minimize harm by focusing on indirect involvement (“I’m only looking”).",
+            "Regular, compulsive use of CSEM as a primary source of sexual arousal.",
+            "Limited direct contact with children but elevated risk for continued offending and possible escalation."
+          ],
+          "motive_category": "Online child sexual exploitation materials offender (nonsecure collector/private fantasy user)",
+          "temporal_markers": [
+            "Gradual escalation in content severity and specialization over months or years.",
+            "Regular daily or weekly patterns of CSEM consumption.",
+            "Opportunity for earlier intervention if online activity is detected by service providers or law enforcement monitoring."
+          ]
+        },
+        {
+          "narrative": "A 33-year-old man joins social networking sites and messaging apps under multiple aliases targeting early adolescent profiles. He systematically initiates conversations with 12- to 14-year-olds, complimenting them, building trust, and gradually introducing sexual topics. He requests sexual images and offers to send his own, sometimes engaging in live-streamed sexual activity. With a smaller number of victims, he escalates further, suggesting clandestine meetings in person. In one case, he arranges to meet a 13-year-old at a park, where he engages in hands-on abuse. He views himself as having a ‘relationship’ with his victims and believes they are willing participants.",
+          "movement": "Online-to-local",
+          "risk": "Critical",
+          "indicators": [
+            "Systematic online grooming of multiple minors using social media and messaging platforms.",
+            "Use of compliments, trust-building, and gradual sexualization of conversations.",
+            "Solicitation and collection of self-produced sexual images from victims.",
+            "Transition from online-only exploitation to arranging offline meetings and committing contact offenses.",
+            "Strong cognitive distortions about mutuality, relationship, and victim willingness."
+          ],
+          "motive_category": "Online groomer and mixed online–offline child sexual abuser",
+          "temporal_markers": [
+            "Weeks to months of online grooming before first offline meeting is proposed.",
+            "Intensification of sexual content over time as victims become desensitized or coerced.",
+            "Shift from frequent online contact to coordinated offline encounters that significantly increase physical risk."
+          ]
+        }
+      ]
+    }
+  }
+  

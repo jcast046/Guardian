@@ -11,7 +11,26 @@
       "navy sweatshirt with white logo",
       "greenish-colored hoodie",
       "black t-shirt with writing",
-      "denim jacket"
+      "denim jacket",
+      "light blue t-shirt with cartoon character",
+      "pink zip-up hoodie with front pockets",
+      "yellow raincoat with reflective strips",
+      "gray pullover hoodie with front pouch",
+      "black puffer jacket",
+      "red and black flannel button-up shirt",
+      "white long-sleeve thermal shirt",
+      "navy polo shirt with small logo on chest",
+      "orange football jersey with number on front",
+      "maroon crewneck sweatshirt",
+      "striped long-sleeve shirt (black and white)",
+      "light gray fleece jacket",
+      "purple hoodie with school logo",
+      "dark green sweatshirt with hood",
+      "oversized black t-shirt with band logo",
+      "tie-dye t-shirt (blue and purple)",
+      "light pink cardigan sweater",
+      "tan zip-up fleece",
+      "blue and white soccer jersey"
     ],
     "bottoms": [
       "blue jeans",
@@ -21,7 +40,23 @@
       "navy sweatpants",
       "khaki shorts",
       "black joggers",
-      "blue athletic shorts"
+      "blue athletic shorts",
+      "light-wash ripped jeans",
+      "dark-wash skinny jeans",
+      "black basketball shorts with white stripe",
+      "gray jogger sweatpants with cuffed ankles",
+      "black cargo pants with side pockets",
+      "olive green cargo shorts",
+      "navy school uniform pants",
+      "plaid school skirt (blue and green)",
+      "black yoga pants",
+      "tan chinos",
+      "blue track pants with white side stripes",
+      "denim shorts with frayed edges",
+      "black bike shorts",
+      "purple leggings with small pattern",
+      "gray capri sweatpants",
+      "black pleated skirt"
     ],
     "shoes": [
       "red Crocs",
@@ -29,7 +64,21 @@
       "black sneakers",
       "white sneakers",
       "brown sandals",
-      "black boots"
+      "black boots",
+      "gray running shoes with white soles",
+      "high-top black sneakers with white laces",
+      "pink and white athletic shoes",
+      "navy slip-on canvas shoes",
+      "tan work boots",
+      "black ankle boots with zipper",
+      "blue and neon green running shoes",
+      "white high-top sneakers",
+      "brown hiking boots",
+      "black slides with white logo",
+      "flip-flops with blue straps",
+      "light-up sneakers with multicolor soles",
+      "rain boots with cartoon pattern",
+      "gray skate shoes"
     ],
     "accessories": [
       "black and silver baseball cap with 'Rocky' on it",
@@ -38,12 +87,32 @@
       "blue backpack",
       "silver necklace",
       "smartwatch",
-      "rope bracelet"
+      "rope bracelet",
+      "red baseball cap with curved brim",
+      "black beanie",
+      "pink headband",
+      "black drawstring bag",
+      "camouflage backpack with patches",
+      "small crossbody bag",
+      "blue and white striped scarf",
+      "black belt with silver buckle",
+      "earbuds around neck",
+      "black-framed eyeglasses",
+      "sunglasses with dark lenses",
+      "friendship bracelet with colored threads",
+      "lanyard with keys and ID badge",
+      "simple gold chain necklace",
+      "hair tie on wrist",
+      "face mask with pattern",
+      "gray knit hat with pom-pom"
     ]
   },
   "sample_sentence_patterns": [
     "Last seen wearing a {tops}, {bottoms}, and {shoes}.",
     "Witness reported a {tops} and {bottoms}; {accessories} noted.",
-    "Clothing at time of disappearance: {tops}, {bottoms}; footwear: {shoes}."
-  ]
+    "Clothing at time of disappearance: {tops}, {bottoms}; footwear: {shoes}.",
+    "According to family, the child left home in a {tops}, {bottoms}, and {shoes}, carrying a {accessories}.",
+    "Surveillance shows the child in a {tops} with {bottoms}, wearing {shoes} and a {accessories}."
+  ],
+  "research_note": "Clothing descriptions are important for case identification and witness reports. Truthful callers often provide clear sensory details including clothing descriptions, while false allegation callers may provide minimal sensory detail. Clothing descriptions help establish timeline and last known appearance of the child."
 }

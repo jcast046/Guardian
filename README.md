@@ -463,12 +463,106 @@ Parameter-Efficient Fine-Tuning using QLoRA:
 - **Features**: 4-bit quantization, low-rank adaptation, memory-efficient training
 - **Output**: Fine-tuned models saved to `./finetuned_*/` directories
 
+## 2.3 Mobility Forecasting
+
+Predictive modeling system for forecasting probability distributions over geographic space for missing-person cases at future time horizons.
+
+### Overview
+
+The mobility forecasting system combines:
+- **Multi-source hotspots**: KMeans, DBSCAN, and KDE hotspot data integrated with configurable method weights
+- **Markov chain movement model**: Probabilistic transitions based on road costs, seclusion factors, and day/night patterns
+- **Survival analysis**: Temporal decay models with profile-specific parameters (default, runaway, abduction)
+- **Sequential propagation**: Forecasts build on previous horizons rather than restarting from t=0
+
+### Inputs
+
+- **Grid data**: `eda_out/grid_xy.npy` - Grid coordinates (longitude, latitude)
+- **Road costs**: `eda_out/road_cost.npy` - Road accessibility costs
+- **Seclusion scores**: `eda_out/seclusion.npy` - Seclusion/hiding location scores
+- **Hotspots**: `eda_out/kmeans_hotspots.json`, `eda_out/dbscan_hotspots.json`, `eda_out/kde_hotspots.json`
+- **Case data**: Case JSON files with `spatial.last_seen_lat/lon` and `temporal.last_seen_ts`
+
+### Outputs
+
+- **Probability distributions**: Arrays of shape (N,) summing to 1.0 over grid locations
+- **Top locations**: Indices of highest-probability grid cells with coordinates
+- **Visualizations**: PNG maps showing risk distribution at different time horizons
+
+### Usage
+
+#### Basic Forecasting
+
+```python
+from reinforcement_learning.forecast_api import forecast_distribution, forecast_timeline
+
+# Load a case
+import json
+with open("data/synthetic_cases/GRD-2025-000001.json", "r") as f:
+    case = json.load(f)
+
+# Forecast at 24 hours
+p, top_idx = forecast_distribution(
+    case=case,
+    t_hours=24.0,
+    alpha_prior=0.5,  # Mix KDE prior (50%) with case seed (50%)
+    steps_per_24h=3,  # 3 Markov steps per 24 hours
+)
+
+# Forecast multiple horizons
+forecasts = forecast_timeline(
+    case=case,
+    horizons=(24, 48, 72),
+    alpha_prior=0.5,
+    profile="default",  # or "runaway", "abduction"
+)
+```
+
+#### Visualization
+
+```bash
+# Generate forecast plots for a case
+python scripts/visualize_forecast.py \
+    --case data/synthetic_cases/GRD-2025-000001.json \
+    --horizons 24 48 72 \
+    --output-dir eda_out/forecast_plots
+```
+
+### Key Parameters
+
+- **`alpha_prior`**: Mixing weight for KDE prior vs case-specific seed (0.0 = only seed, 1.0 = only prior)
+- **`steps_per_24h`**: Number of Markov chain propagation steps per 24 hours (default: 3)
+- **`method_weights`**: Dict mapping hotspot method names to weights (e.g., `{"kmeans": 1.0, "dbscan": 0.8, "kde": 1.2}`)
+- **`profile`**: Survival profile type - `"default"` (half_life=24h), `"runaway"` (48h), `"abduction"` (12h)
+- **`beta_cost_day/night`**: Road cost penalty coefficients for day/night transitions
+- **`beta_secl_day/night`**: Seclusion reward coefficients for day/night transitions
+
+### MVP Features
+
+The MVP implementation includes:
+- Multi-source hotspot integration (A1-A3)
+- Transition matrix validation (B1)
+- Configurable movement parameters (B2)
+- Standalone forecasting API (C1-C2)
+- Enhanced survival analysis (D1)
+- Basic visualization tools (F1-F2)
+
+### Phase 2.3.1+ Features (Future)
+
+- CLI wrapper for forecasting (`scripts/forecast_cli.py`)
+- Advanced survival models (Kaplan-Meier, Cox proportional hazards)
+- Corridor-aware movement (highway preference)
+- Enhanced visualizations (GIF generation)
+
 ## Core Algorithms
 
 - **Haversine Distance**: Calculates great-circle distances between geographic coordinates
 - **Dijkstra's Algorithm**: Finds shortest paths in transit networks
 - **Bounded Search**: Optimized graph traversal with distance limits
 - **Geographic Filtering**: Multi-layer validation for spatial accuracy
+- **Markov Chain Propagation**: Probabilistic movement model for risk distribution forecasting
+- **Kernel Density Estimation**: Spatial hotspot detection from historical case data
+- **Survival Analysis**: Temporal decay models for disappearance timelines
 
 ## Optimization Strategies
 

@@ -1,0 +1,145 @@
+{
+    "research_source": "An exploratory study of residential child abduction: An examination of offender, victim and offense characteristics",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "The study does not report a fixed grooming duration; instead, many offenders built familiarity with the victim, the household, and the neighborhood over repeated visits, sometimes observing the child and residence in the days or weeks before the abduction.",
+        "preferred_locations": [
+          "Interior of single-family residences (majority of cases)",
+          "Apartments (minority of cases)",
+          "Victim’s bedroom while the child was sleeping",
+          "Secondary indoor locations after removal (offender’s residence or vacant buildings)",
+          "Secondary outdoor locations after removal (fields, wooded areas, camping areas/parks, nearby backyards)"
+        ],
+        "risk_escalation": "Risk increases as offenders gain familiarity with the child, the family, and the residence, especially when households are chaotic, resource-limited, and frequently leave doors or windows unsecured; escalation commonly culminates in a nighttime or early-morning entry when guardianship is weakest and the child is asleep.",
+        "decision_factors": [
+          "Sexual motivation is the primary driver in most cases (over four-fifths of offenders were sexually motivated).",
+          "Offenders are overwhelmingly male, largely unmarried, and often socially marginal with poor or unstable intimate relationships.",
+          "Prior criminal history is common, particularly burglary and assault, which contributes to offender comfort with unlawful entry into dwellings.",
+          "Offenders frequently have prior lawful or unlawful familiarity with the general area and/or the victim’s residence, including previous visits inside the home.",
+          "Victim age and gender strongly influence targeting: primarily school-aged girls, around 6–11 years old, abducted for sexual purposes.",
+          "Household characteristics (stressful, chaotic, transient occupants, unsecured doors/windows) lower perceived risk and increase opportunity.",
+          "Low level of forensic planning and impulsive decision-making once the opportunity (sleeping child, unsecured home, low guardianship) presents itself."
+        ],
+        "motive_categories": [
+          "Sexual gratification (dominant category among male offenders targeting school-aged girls).",
+          "Maternal desire (rare cases involving very young infants abducted by female offenders to be kept as their own children).",
+          "Emotion-based revenge (rare cases where child abduction is linked to retaliation against an adult partner or family member)."
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Non-parental adult males showing unusual or repeated presence in the neighborhood or around the victim’s residence, especially late at night or in the early morning.",
+        "Prior lawful visits to the victim’s home (socializing, staying over, pick up/drop off) combined with knowledge of the layout and routines.",
+        "Prior unlawful behaviors in the area of the residence such as trespassing, burglary, or peeping.",
+        "Observed stalking behavior: offender watching the child near the home or in the general area prior to the abduction.",
+        "Exploitation of unsecured or unlocked doors and windows, particularly at night.",
+        "Entry during hours when guardians and children are expected to be asleep (midnight to early morning).",
+        "Offender comfort moving inside an occupied dwelling (entering multiple rooms, stealing items, moving objects, entering and exiting more than once).",
+        "Sexualized focus on children combined with failed or problematic attempts to engage adult sexual partners.",
+        "Household patterns of instability, chaos, or frequent visitors/lodgers that make it easier for offenders to blend in or go unnoticed."
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": [
+          "Overnight (12:00 a.m.–5:00 a.m.): majority of incidents occurred in this window.",
+          "Early morning (5:00 a.m.–8:00 a.m.): additional cluster of incidents.",
+          "Daytime incidents (morning, afternoon, early evening) were uncommon and associated more often with non-sexual motives such as maternal desire or revenge."
+        ],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "In many cases where prior contact existed, last known contact between offender and victim occurred within a week of the abduction, with a substantial portion within 24 hours; the study does not specify consistent durations between abduction and recovery, but a majority of victims in this sample were ultimately found deceased.",
+        "escalation_timeline": "Typical escalation involves an offender who becomes aware of the child and household, repeatedly visits or passes through the area, notes vulnerabilities (unlocked entry points, sleeping patterns, guardianship gaps), and then conducts a covert nighttime entry to remove the sleeping child with little or no resistance; in rare infant or revenge cases, overt daytime entries using ruse or force coincide with a more direct, emotionally charged escalation."
+      },
+  
+      "risk_factors": [
+        "Child is under 18, with the highest risk concentrated among school-aged children (approximately 6–11 years old).",
+        "Female victims are at substantially higher risk in residential abductions motivated by sexual gratification.",
+        "Offender is a non-parental adult, usually male, often with a prior criminal history (especially burglary and assault).",
+        "Offender has prior familiarity with the victim, the victim’s family, or the victim’s residence and neighborhood.",
+        "Residence located in an area where the offender routinely travels, lives, works, or socializes.",
+        "Households characterized as stressful, chaotic, resource-limited, or transient, with multiple people staying for short periods.",
+        "Unsecured doors and windows, especially at night, creating easy covert access.",
+        "Low guardianship periods such as midnight to early morning when adults and children are asleep.",
+        "Presence of other children sleeping in the same room as the victim, who may witness the offender but delay disclosure out of fear or confusion.",
+        "Offender history of burglary or other property crimes indicating comfort with entering occupied residences."
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Offenders are typically local to the area: prior research cited in the study indicates that over one-third of child abduction homicide offenders lived within one mile of the victim’s residence and more than two-thirds within five miles; most movement is therefore local or neighborhood-based.",
+        "common_routes": [
+          "Covert approach on foot to the victim’s residence from nearby homes, workplaces, or familiar paths.",
+          "Short movements from the residence to a nearby parked vehicle.",
+          "Direct travel from the residence or pick-up point to a secondary indoor location (offender’s home, vacant building) or nearby outdoor area (field, woods, park)."
+        ],
+        "destination_types": [
+          "Indoor: offender’s residence or a vacant/abandoned residence or building used as a control location for assault.",
+          "Outdoor: fields, wooded areas, camping areas, parks, and nearby backyards used as assault or body disposal sites.",
+          "In rare emotion-based or revenge cases, the primary crime scene includes the victim’s home with adults harmed there, followed by removal of the child to a secondary location."
+        ],
+        "transportation_methods": [
+          "Walking the victim away from the residence, especially to nearby outdoor locations.",
+          "Use of a motor vehicle parked close to the residence; in many cases, the vehicle is owned by or routinely available to the offender.",
+          "Occasional use of rental cars, borrowed vehicles, or rarely stolen vehicles to transport the victim.",
+          "Removal of the child while the victim is still asleep or minimally resistant, enabling movement with limited noise or struggle."
+        ]
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A 9-year-old girl is abducted from her bedroom in a single-family home between midnight and 4 a.m. The front door was left unlocked. The offender, an unmarried adult male in his early thirties who has a history of burglary and lives a few streets away, has previously visited the neighborhood and briefly been inside the home as a guest. On the night of the offense, he enters covertly through the unlocked front door while the family is asleep, goes directly to the children’s bedroom, picks up the sleeping child without waking her siblings, and leaves through the same door. He then walks the child to a nearby parked vehicle and drives her to a secluded wooded area where he sexually assaults her.",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": [
+            "Male non-parent offender in early adulthood with prior burglary history",
+            "Unsecured front door at night",
+            "Offender familiar with the residence and neighborhood",
+            "Child asleep at time of entry",
+            "Low guardianship period (overnight hours)",
+            "Rapid removal to a secondary location for sexual assault"
+          ],
+          "motive_category": "Sexual gratification",
+          "temporal_markers": [
+            "Offense window between 12:00 a.m. and 5:00 a.m.",
+            "Prior contact with victim or family within one week",
+            "Repeated prior presence in the general area of the residence"
+          ]
+        },
+        {
+          "narrative": "A 6-month-old infant is taken from a residence during the day by a female offender in her twenties who has never met the family but has driven through the area and seen signs of a baby living there. She approaches the home openly, uses a ruse to engage the mother at the door, and then gains entry by asking to use the bathroom. Once inside, she waits for an opportunity, grabs the infant, and leaves quickly. Her primary intent is to claim the child as her own due to unmet maternal desires.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Female offender with maternal desire motive",
+            "Daytime overt entry using a ruse",
+            "Limited prior familiarity with the specific household but awareness of a child present",
+            "Targeting of an infant rather than a school-aged child",
+            "Emotionally driven planning focused on acquiring a child"
+          ],
+          "motive_category": "Maternal desire",
+          "temporal_markers": [
+            "Daytime timeframe rather than overnight",
+            "Short observation period of the residence before the offense"
+          ]
+        },
+        {
+          "narrative": "An 11-year-old girl living in a chaotic, overcrowded household is abducted overnight. The offender is a former intimate partner of a family member who has stayed at the residence previously and knows the layout well. He has a criminal history of assault and burglary, has recently argued with the family, and has been seen loitering in the neighborhood. After consuming alcohol, he returns to the residence after midnight, enters through an unlocked back door, goes to the children’s room, and leads the awake but intimidated child out of the house. He drives her to an empty rental property where he sexually assaults her and later kills her.",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": [
+            "Former intimate partner of a family member with direct knowledge of the residence",
+            "History of assault and burglary",
+            "Recent conflict with the family and emotional instability",
+            "Unlocked entry point and low nighttime guardianship",
+            "Use of a private indoor secondary location"
+          ],
+          "motive_category": "Sexual gratification with mixed emotional/revenge elements",
+          "temporal_markers": [
+            "Offense between midnight and 8:00 a.m.",
+            "Recent visits to the residence within 24 hours to one week prior",
+            "Escalation following interpersonal conflict"
+          ]
+        }
+      ]
+    }
+  }
+  

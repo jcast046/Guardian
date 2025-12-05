@@ -63,6 +63,41 @@
       ]
     }
   ],
+  "common_routes_research": {
+    "by_offender_type": {
+      "sexual": [
+        "Covert approach on foot to the victim's residence from nearby homes, workplaces, or familiar paths",
+        "Short movements from the residence to a nearby parked vehicle",
+        "Direct travel from the residence or pick-up point to a secondary indoor location (offender's home, vacant building) or nearby outdoor area (field, woods, park)",
+        "Residential movement within the home or neighborhood",
+        "Public outdoor paths or parks (sexual-motivation cases)"
+      ],
+      "custodial": [
+        "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+        "Local vehicle travel along highways and through community parking areas",
+        "Highway travel for custodial abductions moving to extended family locations or home country",
+        "Interstate routes for family abductions crossing state lines"
+      ],
+      "stranger": [
+        "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+        "Highways, streets, and parking lots as common origination points for stranger abductions",
+        "Routes to and from school or other routine activities (walking routes, bus stops, paths to friends' houses)",
+        "Public spaces where children may be alone or lightly supervised (parks, vacant lots, shopping areas, recreational spaces)"
+      ],
+      "acquaintance": [
+        "Short-distance movements from residential locations to nearby public or semi-public spaces and back",
+        "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+        "Neighborhood-based patterns within familiar areas"
+      ]
+    },
+    "common_patterns": [
+      "Travel from the child's home or yard into nearby streets, highways, or parking lots",
+      "Local vehicle travel along highways and through community parking areas where initial contact or abduction occurs",
+      "Short-distance movements from residential locations to nearby public or semi-public spaces and back",
+      "Covert approach on foot to the victim's residence from nearby homes, workplaces, or familiar paths",
+      "Routes to and from school or other routine activities (walking routes, bus stops, paths to friends' houses)"
+    ]
+  },
   "sample_sentence_patterns": [
     "Vehicle last seen traveling {direction} on {highway} toward {destination}.",
     "Possible route includes {highway} through {segments}.",

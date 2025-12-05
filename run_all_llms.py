@@ -1841,7 +1841,9 @@ def main():
         total_time = time.time() - total_start_time
         
         # Save results
-        save_results(all_results)
+        output_path = Path("eda_out") / "llm_analysis_results.json"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        save_results(all_results, str(output_path))
         
         # --- quick post-processing for EDA ---
         try:

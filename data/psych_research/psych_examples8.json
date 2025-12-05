@@ -1,0 +1,131 @@
+{
+    "research_source": "Keeping_Children_Safe_Rhetoric_and_Reality",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "This article synthesizes research rather than specifying exact grooming timelines, but emphasizes that many child molesters gradually build trust and legitimate access to children over repeated contacts (e.g., as neighbors, babysitters, authority figures, or through jobs that provide ongoing contact), often over weeks, months, or longer.",
+        "preferred_locations": [
+          "Within a quarter mile of the child’s home (typical initial contact zone for abduction/murder cases cited from Washington State data).",
+          "Child’s own home or yard, where neighbors, babysitters, or family friends already have legitimate access.",
+          "Neighborhood spaces where the child regularly encounters familiar adults (apartment complexes, schools, churches, youth groups, stores).",
+          "Settings where adults work with or around children (schools, childcare settings, clubs, volunteer roles, retail environments with frequent child contact)."
+        ],
+        "risk_escalation": "Risk escalates when offenders obtain repeated legitimate access to children and families, are perceived as familiar and trustworthy rather than as strangers, and when cultural messages focus narrowly on ‘stranger danger’ instead of on the far more common risk from known individuals. Risk also increases when children are not encouraged to disclose uncomfortable situations due to ‘don’t be a tattletale’ norms and unconditional pressure to obey adults.",
+        "decision_factors": [
+          "Offenders seek legitimate, routine access to children (e.g., by choosing jobs or roles that place them in regular contact with minors).",
+          "Most sexual offenders against children are male and prefer victims they can reach through preexisting relationships or community roles.",
+          "Offenders exploit children’s limited ability to understand motives and to accurately identify ‘dangerous’ people, especially when those adults are polite, friendly, or familiar.",
+          "Offenders rely on social myths: children equate ‘stranger’ with someone who looks scary or odd, so offenders present as caring, normal, or friendly.",
+          "The fact that parents often focus on stranger danger (and sex offender registries) while underestimating risk from relatives, neighbors, and acquaintances creates blind spots that offenders can exploit.",
+          "Offenders benefit when children are taught not to ‘tattle’ and to always be respectful and compliant with adults, even when they feel uncomfortable."
+        ],
+        "motive_categories": [
+          "Sexual gratification (dominant motive in nonfamily abductions involving molestation or assault).",
+          "Opportunistic sexual exploitation enabled by legitimate access (e.g., babysitting, caregiving, coaching, youth leadership).",
+          "In a smaller subset of cases, combined motives such as power and control or revictimization of children previously assaulted by the same offender."
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Offender is not perceived as a stranger by the child: often a family member, neighbor, babysitter, family friend, authority figure, or other acquaintance.",
+        "Adult seeks or holds positions that provide regular, legitimate access to children (jobs, volunteer roles, or informal caregiving).",
+        "Adult spends one-on-one time with a child outside the presence of parents or guardians, especially when this is framed as ‘helping’ or ‘special attention.’",
+        "Offender blends into the child’s daily routine as someone the family greets, talks to, or trusts (e.g., store clerk, school worker, building staff, youth group leader).",
+        "Adult attempts to normalize or minimize inappropriate contact and relies on the child’s reluctance to ‘tattle’ or get adults in trouble.",
+        "Patterns where a child’s prior victimization by the same offender is followed by revictimization (repeated offenses by the same adult).",
+        "Presence of weapons in a subset of abduction/molestation offenses (some abductors use or display weapons, according to the MTC data).",
+        "Children hold distorted images of ‘strangers’ (e.g., assuming an offender must look scary, dirty, ‘like a punk rocker,’ or obviously evil), which can be exploited by offenders who look ordinary and act friendly."
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "The article cites that many abductions in the NISMART data were relatively short in duration, but focuses more on relationship patterns and victimization scope than on specific time from abduction to recovery.",
+        "escalation_timeline": "Long-standing myths (‘don’t talk to strangers’) and communication norms (‘don’t be a tattletale,’ unconditional respect for adults) create an environment over years in which offenders can groom and access children with little scrutiny. Offenders often begin as familiar, trusted figures; repeated contact builds trust, reduces suspicion, and gradually increases opportunities for boundary violations and eventual sexual assault or abduction."
+      },
+  
+      "risk_factors": [
+        "Child assumes that danger only comes from stereotypically ‘scary’ strangers, not from familiar adults.",
+        "Parents and communities focus heavily on stranger danger and registered sex offenders while underestimating risk from relatives, neighbors, babysitters, family friends, and authority figures.",
+        "High prevalence of child sexual abuse in the general population (e.g., at least 20% of women and 5–10% of men report childhood sexual abuse), indicating that victimization risk is widespread and often hidden.",
+        "Most sexual abuse is committed by males, and 70–90% of offenders are known to the child, with family members constituting a significant portion of perpetrators.",
+        "In both older and more recent clinical samples of child molesters, 66–80% of offenders were known to their victims, undermining the idea that ‘stranger’ is the primary threat.",
+        "In serious nonfamily abduction cases reviewed by NCMEC, 67–84% of victims knew or were acquainted with their abductors, whether the child was recovered alive or deceased.",
+        "Cultural discouragement of ‘tattling’ or reporting concerning behavior, which silences disclosure and hides early warning signs.",
+        "Social expectations that children should obey and respect adults unconditionally, even when they feel uncomfortable or unsafe.",
+        "High levels of parental and child fear focused on rare stereotypical stranger kidnappings, which can lead to misallocated protective efforts."
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Most serious abductions and sexual assaults referenced in the article involve local movement, often with initial contact within a quarter mile of the victim’s home and offenders coming from the same neighborhood or community.",
+        "common_routes": [
+          "Short movements from the child’s home or yard into nearby streets, neighbors’ homes, or local community locations.",
+          "Trips arranged or facilitated by familiar adults (neighbors, babysitters, family friends, authority figures) under the guise of normal activities.",
+          "Local travel between the child’s routine environments (home, school, church, stores, recreational settings) where familiar offenders have regular access."
+        ],
+        "destination_types": [
+          "Offender’s home or residence (including neighbors and babysitters).",
+          "Other nearby private locations (homes of friends or relatives, apartments, private rooms).",
+          "Occasionally public or semi-public spaces where the offender has privacy or control (rarely detailed in this article, but implied in nonfamily abduction cases)."
+        ],
+        "transportation_methods": [
+          "On foot within the neighborhood or within a short distance of the child’s home.",
+          "Private vehicles controlled by the offender (cars used by neighbors, babysitters, family friends, or other acquaintances).",
+          "Occasional use of offender’s work-related or role-related access (e.g., transporting children as part of a job or volunteer role)."
+        ]
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "An 11-year-old girl regularly walks to a nearby convenience store within a quarter mile of her home. The male clerk behind the counter has known her family for years and often chats with her, remembering her favorite snacks. Over time, he begins to offer her free items and asks her to help in the back room for ‘just a minute.’ Because he is familiar and friendly, she does not see him as a stranger or as dangerous. He eventually uses this access and privacy to sexually assault her.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Offender is known to the child and family through routine community contact.",
+            "Initial contact and assault occur within a short distance of the child’s home.",
+            "Offender uses legitimate role and small favors (‘free candy’) to build trust.",
+            "Child’s concept of ‘stranger’ does not include this familiar, seemingly kind adult.",
+            "Assault occurs in a private area connected to a normal daily activity."
+          ],
+          "motive_category": "Sexual gratification via legitimate access",
+          "temporal_markers": [
+            "Repeated contacts over weeks or months at the same store.",
+            "Gradual progression from casual conversation to invitations into private space."
+          ]
+        },
+        {
+          "narrative": "A family hires a teenage babysitter from their neighborhood to watch their children after school. The babysitter’s older boyfriend sometimes ‘drops by’ and spends time in the house during babysitting hours. The younger children see him regularly and greet him by name, so they do not consider him a stranger. One afternoon, while the babysitter is distracted, the boyfriend isolates the 8-year-old child in another room and molests them. The child is confused and afraid to tell, having been taught not to ‘tattle’ on adults or older teens.",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": [
+            "Offender is an acquaintance who has repeated access to the home through a trusted babysitter.",
+            "Adults in the child’s life underestimate risk from familiar visitors and focus on stranger danger instead.",
+            "Child is discouraged by social norms from reporting uncomfortable or abusive behavior.",
+            "Offender exploits unsupervised moments inside the home, not a distant or unknown location."
+          ],
+          "motive_category": "Sexual gratification by acquainted nonfamily offender",
+          "temporal_markers": [
+            "Pattern of frequent after-school babysitting visits over time.",
+            "Offender’s presence normalized before the abuse begins."
+          ]
+        },
+        {
+          "narrative": "A child is taught in school assemblies and at home to ‘never talk to strangers’ and imagines a stranger as a dirty, frightening man in unusual clothes. Later, a well-dressed man in the neighborhood who often chats with parents and children offers the child a ride, saying that the parents sent him. The child does not recognize him as a stranger because he looks friendly and familiar and has spoken to their parents before. The child agrees to go with him, believing that the safety rule does not apply.",
+          "movement": "Local/Regional",
+          "risk": "High",
+          "indicators": [
+            "Child holds a distorted, appearance-based concept of ‘stranger.’",
+            "Offender presents as polite, clean, and friendly rather than threatening.",
+            "Offender leverages limited prior contact and apparent familiarity with parents.",
+            "Narrow safety messages (‘don’t talk to strangers’) fail because the child no longer perceives the offender as a stranger."
+          ],
+          "motive_category": "Opportunistic abduction/assault by perceived acquaintance",
+          "temporal_markers": [
+            "Brief prior encounters where offender greets parents and child.",
+            "Rapid transition from casual neighborhood interaction to offering a ride."
+          ]
+        }
+      ]
+    }
+  }
+  

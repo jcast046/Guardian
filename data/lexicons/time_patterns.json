@@ -1,19 +1,41 @@
 {
   "$schema": "guardian.time.v1",
   "windows": [
-    {"id":"overnight", "hours":[22,6], "guardianship_low": 0.9},
-    {"id":"morning",   "hours":[6,12], "guardianship_low": 0.4},
-    {"id":"afternoon","hours":[12,17], "guardianship_low": 0.7},
-    {"id":"evening",  "hours":[17,22], "guardianship_low": 0.6}
+    {"id":"overnight", "hours":[22,6], "guardianship_low": 0.9, "research_note": "Overnight (12:00 a.m.–5:00 a.m.): majority of residential abduction incidents occurred in this window. Early morning (5:00 a.m.–8:00 a.m.): additional cluster of incidents."},
+    {"id":"morning",   "hours":[6,12], "guardianship_low": 0.4, "research_note": "Daytime incidents (morning, afternoon, early evening) were uncommon for sexual motives and associated more often with non-sexual motives such as maternal desire or revenge."},
+    {"id":"afternoon","hours":[12,17], "guardianship_low": 0.7, "research_note": "Overall abductions cluster between approximately 2:00 p.m. and 9:00 p.m. Stranger abductions peak in the late afternoon around 5:00 p.m., aligning with after-school travel and time spent in public spaces. Higher concentration of nonfamily abductions in the afternoon and early evening, when children travel to and from school and activities or play outside."},
+    {"id":"evening",  "hours":[17,22], "guardianship_low": 0.6, "research_note": "Family abductions peak later in the evening around 9:00 p.m., when family members and children are more likely to be at home. Acquaintance abductions peak even later, around 11:00 p.m., reflecting higher late-night exposure with peers and acquaintances."}
   ],
   "motive_bias": {
     "sexual": {"overnight": 1.3, "afternoon": 1.1},
     "custodial": {"evening": 1.2},
-    "trafficking": {"evening": 1.1, "overnight": 1.1}
+    "trafficking": {"evening": 1.1, "overnight": 1.1},
+    "maternal_desire": {"morning": 1.2, "afternoon": 1.1}
   },
   "lure_bias": {
     "ask_question": {"afternoon": 1.3},
     "offer_ride":   {"afternoon": 1.2},
     "online_grooming": {"evening": 1.2}
+  },
+  "temporal_patterns_research": {
+    "escalation_timelines": [
+      "Typical escalation involves an offender who becomes aware of the child and household, repeatedly visits or passes through the area, notes vulnerabilities (unlocked entry points, sleeping patterns, guardianship gaps), and then conducts a covert nighttime entry to remove the sleeping child with little or no resistance",
+      "For family abductions: relationship conflict, separation/divorce, and custody disputes build over time, followed by threats or withholding, and then a precipitating event (such as a custody hearing or visitation disagreement) that precedes the abduction",
+      "For nonfamily offenders: escalation is more closely tied to the child's age and daily routine, with risk increasing as older youth spend more unsupervised time in public or semi-public locations during after-school and evening hours",
+      "In many cases where prior contact existed, last known contact between offender and victim occurred within a week of the abduction, with a substantial portion within 24 hours"
+    ],
+    "duration_patterns": [
+      "Call lengths ranged widely (39 seconds to ~16 minutes), but duration did not differ between truthful and false allegation callers",
+      "In cited work on child abduction murders, approximately 74% of abducted children who were killed died within the first 3 hours and about 91% within 24 hours of the abduction, indicating that the highest fatal risk window is the first few hours after disappearance",
+      "Many nonfamily abductions are brief and end within the same day, especially those that do not involve extended transport or detention. In more serious stereotypical kidnappings, the child may be held overnight or longer, with the highest risk of serious harm in the first hours following abduction"
+    ],
+    "time_of_day_patterns": [
+      "Overnight (12:00 a.m.–5:00 a.m.): majority of residential abduction incidents occurred in this window",
+      "Early morning (5:00 a.m.–8:00 a.m.): additional cluster of incidents",
+      "Overall abductions cluster between approximately 2:00 p.m. and 9:00 p.m.",
+      "Stranger abductions peak in the late afternoon around 5:00 p.m.",
+      "Family abductions peak later in the evening around 9:00 p.m.",
+      "Acquaintance abductions peak even later, around 11:00 p.m."
+    ]
   }
 }

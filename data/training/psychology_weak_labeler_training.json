@@ -1,0 +1,202 @@
+[
+  {
+    "narrative": "A caregiver reports their 3-year-old son missing after claiming he wandered off. Caller hesitates and repeatedly says 'I think he just disappeared.' Investigation shows caregiver had inflicted fatal abuse earlier in the day.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A mother reports her daughter missing at a park. Provides clear sensory details and immediate timeline. Displays urgency and anxiety. Investigation confirms stranger abduction attempt.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A caregiver calls 911 claiming their child was kidnapped but begins the call by explaining their personal activities first. Provides information in an inappropriate order and contradicts earlier details.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 15-year-old juvenile is reported missing and categorized as a runaway. No signs of foul play. This aligns with the statistical majority of 2024 missing juvenile entries.",
+    "movement": "Local",
+    "risk": "Medium"
+  },
+  {
+    "narrative": "A child under age 10 is classified as 'Endangered' due to circumstances indicating immediate physical danger. This reflects the NCIC endangered category.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A missing person record is coded 'Involuntary,' indicating circumstances suggesting abduction or kidnapping. These represent a very small portion of NCIC entries (less than 1%).",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 9-year-old girl is abducted from her bedroom in a single-family home between midnight and 4 a.m. The front door was left unlocked. The offender, an unmarried adult male in his early thirties who has a history of burglary and lives a few streets away, has previously visited the neighborhood and briefly been inside the home as a guest. On the night of the offense, he enters covertly through the unlocked front door while the family is asleep, goes directly to the children’s bedroom, picks up the sleeping child without waking her siblings, and leaves through the same door. He then walks the child to a nearby parked vehicle and drives her to a secluded wooded area where he sexually assaults her.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 6-month-old infant is taken from a residence during the day by a female offender in her twenties who has never met the family but has driven through the area and seen signs of a baby living there. She approaches the home openly, uses a ruse to engage the mother at the door, and then gains entry by asking to use the bathroom. Once inside, she waits for an opportunity, grabs the infant, and leaves quickly. Her primary intent is to claim the child as her own due to unmet maternal desires.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "An 11-year-old girl living in a chaotic, overcrowded household is abducted overnight. The offender is a former intimate partner of a family member who has stayed at the residence previously and knows the layout well. He has a criminal history of assault and burglary, has recently argued with the family, and has been seen loitering in the neighborhood. After consuming alcohol, he returns to the residence after midnight, enters through an unlocked back door, goes to the children’s room, and leads the awake but intimidated child out of the house. He drives her to an empty rental property where he sexually assaults her and later kills her.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 14-year-old girl with a history of physical abuse, neglect, and multiple foster care placements frequently runs away from group homes. She has engaged in survival sex to obtain food and a place to sleep. A trafficker learns about her history, offers affection and promises of ‘family’ and a better life, and slowly recruits her into commercial sex. After being trafficked, she begins using alcohol and drugs more heavily to cope with trauma and stress. She describes feeling like the trafficker is the only person who understands and ‘loves’ her, despite ongoing violence and exploitation.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 16-year-old youth from a community where prostitution is common witnesses family members engage in commercial sex. She struggles with depression and anxiety and feels she does not belong with peers at school. A group of slightly older girls, already under the control of a trafficker, befriend her and introduce her to ‘the game.’ She initially perceives it as empowering and financially rewarding, but over time experiences violence, sexually transmitted infections, and worsening mental health. She reports feeling trapped and ashamed, yet also loyal to the trafficker and her new ‘family.’",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 13-year-old girl with reactive attachment disorder and a long history of foster placements runs away from a residential program. Lacking family or supportive adults, she is quickly approached by an older male who offers food, clothing, and a place to stay. He frames himself as her boyfriend and protector, then progressively coerces her into sex with others ‘to help pay bills.’ Her alcohol consumption increases significantly after recruitment, and she reports feeling numb and disconnected. Eventually, she is arrested and detained in a secure facility, where sustained time away from the trafficker and supportive contact with law enforcement and clinicians help her recognize the abuse and begin therapy.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A noncustodial parent in a contentious divorce takes the child from school without notifying the custodial parent and leaves the area. The child is initially reported as missing, and media coverage focuses on the fear of a stranger abduction, but investigation quickly shows the abductor is a parent with a pre-existing relationship to the child.",
+    "movement": "Regional",
+    "risk": "High"
+  },
+  {
+    "narrative": "A neighbor who has known the family for years offers to take a child to a nearby event without obtaining clear parental consent. The child is later reported missing. Initial community focus is on registered sex offenders in the area, but the investigation reveals that the known neighbor, who is not a registered sex offender, took the child with sexual motives.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A child disappears while walking home, and the case fits the rare pattern of a stereotypical stranger kidnapping. Media coverage is intense, and sex offender registries are heavily scrutinized. This case represents one of the very small number of stranger abductions involving killing, ransom, or long-term keeping compared to the much larger number of cases involving family and known offenders.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A divorced mother with a history of domestic violence allegations against her ex-partner repeatedly tells friends that the courts do not take her concerns seriously. She has little income, receives no child support, and relies heavily on her extended family in another State. She threatens several times that her ex will ‘never see his son again’ if the court does not listen. After a heated custody hearing, she withdraws money from her accounts, quits her job, loads her car, and drives with her preschool son to her parents’ home in another State, where relatives hide them and tell her she is doing the right thing to ‘protect’ the child.",
+    "movement": "Regional",
+    "risk": "High"
+  },
+  {
+    "narrative": "A father with a long history of arrests, contempt for court orders, and controlling behavior continues to stalk and threaten his ex-partner after their separation. He views the child as his property and refuses to accept shared decision-making. During a visitation period, he fails to return the child, turns off his phone, and leaves the area. He moves between friends’ houses, using cash and a borrowed car. He tells the child that the mother is dangerous and that they must stay hidden. He ignores all court summons and sees no reason why the law should apply to him.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "In a mixed-culture marriage, a mother who is a citizen of another country feels increasingly isolated after separation. She idealizes her homeland and extended family, believes that her culture is being disrespected in the court process, and worries that her child’s ethnic identity is being erased. After a series of disputes over schooling and religious practices, she secures passports for herself and the child, buys one-way tickets, and quietly leaves the United States for her country of origin, where her extended family welcomes and protects her. She justifies the abduction as preserving the child’s cultural and religious heritage.",
+    "movement": "International",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 3-year-old boy lives with his mother following a recent separation. The father, who fears losing custody after court hearings, becomes increasingly angry and threatens that the mother will never see the child again. During a scheduled visitation, he picks up his son from the home as agreed, but at the end of the visit he refuses to return him. He drives the child from the mother’s residence to a relative’s house in another part of the state and ignores court orders and phone calls. The incident is recorded as a family abduction originating at the child’s home.",
+    "movement": "Regional",
+    "risk": "High"
+  },
+  {
+    "narrative": "An 11-year-old girl is taken by a neighbor who has known the family for years. The neighbor often spends time around the apartment complex and has informal access to the child. One evening around 8:00 p.m., while the child is playing near the parking lot after dinner, the neighbor coerces her into his vehicle and drives away. The abduction is classified as an acquaintance incident originating in a residential parking lot, occurring during a time of reduced parental supervision.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 15-year-old girl walks home from a friend’s house along a main road in the late afternoon around 5:00 p.m. A male stranger in his twenties stops his car on the roadside and offers her a ride. When she refuses, he exits the vehicle, grabs her with his hands, and forces her into the car, possibly displaying a knife. The abduction begins along the highway and is classified as a stranger abduction. The event reflects peak after-school risk for older female victims in public spaces.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "An 11-year-old girl regularly walks to a nearby convenience store within a quarter mile of her home. The male clerk behind the counter has known her family for years and often chats with her, remembering her favorite snacks. Over time, he begins to offer her free items and asks her to help in the back room for ‘just a minute.’ Because he is familiar and friendly, she does not see him as a stranger or as dangerous. He eventually uses this access and privacy to sexually assault her.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A family hires a teenage babysitter from their neighborhood to watch their children after school. The babysitter’s older boyfriend sometimes ‘drops by’ and spends time in the house during babysitting hours. The younger children see him regularly and greet him by name, so they do not consider him a stranger. One afternoon, while the babysitter is distracted, the boyfriend isolates the 8-year-old child in another room and molests them. The child is confused and afraid to tell, having been taught not to ‘tattle’ on adults or older teens.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A child is taught in school assemblies and at home to ‘never talk to strangers’ and imagines a stranger as a dirty, frightening man in unusual clothes. Later, a well-dressed man in the neighborhood who often chats with parents and children offers the child a ride, saying that the parents sent him. The child does not recognize him as a stranger because he looks friendly and familiar and has spoken to their parents before. The child agrees to go with him, believing that the safety rule does not apply.",
+    "movement": "Regional",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 39-year-old man spends hours each night online in chat rooms and peer-to-peer networks collecting images and videos of children being sexually abused. Over several years he builds a highly organized digital collection categorized by age, gender, and sexual act. He believes he is ‘only looking’ and has no official criminal history. During a federal investigation into his online trading, forensic review reveals self-produced images of children he babysat for neighbors. A polygraph examination and subsequent interviews with families uncover multiple contact victims aged 6–12 whom he abused over several years while appearing to be a trusted family friend.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 28-year-old man responds to an online advertisement seeking a sexual partner in another state. In his messages he expresses interest in ‘any female’ and later agrees to meet a 14-year-old girl he believes he is chatting with. Over several days he engages in explicit sexual conversations, requests photos, and arranges a meeting at a hotel near her home. He drives across state lines with condoms, lubricant, and a camera in his car. When he arrives at the hotel parking lot, he is arrested by law enforcement; the ‘girl’ was an undercover officer posing as a minor.",
+    "movement": "Interstate",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 45-year-old elementary school counselor, widely regarded as trustworthy, regularly meets alone with students in his office. At home he maintains a large collection of child sexual abuse material focused on children aged 6–12. Over time he begins taking non-explicit photos of selected students during school events and then covertly photographs them in states of undress during overnight school trips. He later progresses to hands-on abuse of two students, recording parts of the abuse on a hidden camera. Investigators uncover the images during a search of his digital devices after a tip about his online trading.",
+    "movement": "Local",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 32-year-old man with a 12-year criminal history that includes burglary, larceny, drug possession, and multiple assaults has been arrested in two different states. He has one prior conviction for a forcible sex offense involving an adult victim but no recorded crimes against children. One evening he encounters a 12-year-old girl walking alone within a few blocks of her home. Seeing an opportunity, he forces her into his car, drives to a remote area, sexually assaults her, and then strangles her to prevent her from identifying him. Her body is found the next day; investigation later reveals his long, diverse criminal history and prior sexual violence.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 28-year-old offender has prior arrests for burglary, breaking and entering, and drug offenses, as well as a non-forcible sex offense. He is known to police in two states and has a record of criminal trespass. One afternoon he observes a 9-year-old boy playing outside within a short distance of his home. The offender lures the child into his vehicle, drives to a vacant property, and sexually assaults him. Fearing that the boy may disclose the assault, he contemplates killing him but, panicking, abandons the child in a nearby field and flees. The child is found alive, traumatized but able to give a description of the offender and vehicle, which ultimately leads investigators to his extensive criminal record.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 26-year-old man with no recorded adult criminal history abducts a 13-year-old Caucasian girl walking home alone from a friend’s house. He forces her into his car, sexually assaults her, and fatally stabs her to prevent her from reporting the crime. Her body is discovered the next day in a wooded area. Background investigation reveals no previous documented arrests, but family reports suggest longstanding behavioral problems and unreported aggression. This case illustrates that a sizeable minority of child abductors may present with no official criminal history before a lethal offense.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 15-year-old girl has a history of family conflict and has run away from home several times. One night she leaves after an argument and does not return. Her caregiver becomes alarmed when she does not answer her phone for several hours and calls the police, who enter her as missing in the National Crime Information Center and notify the national hotline. During the three days she is gone, she stays with older acquaintances she met online and is pressured into sexual activity in exchange for a place to sleep. She is eventually located after contacting a friend, and the case is referred for services addressing both her runaway behavior and sexual victimization.",
+    "movement": "Regional",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 13-year-old boy is not reported missing but spends increasing amounts of unsupervised time online after school. Over several months he is contacted by an adult who sends him sexually explicit images, gradually escalates conversations to sexual topics, and pressures him to share sexual photos of himself. The electronic service provider detects the abusive content, files a mandatory report to the national CyberTipline, and law enforcement is notified. Although the child’s physical whereabouts were never unknown to his caregivers, the case is classified as child sexual exploitation and triggers support services.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "An 11-year-old child walking home from a community event fails to arrive at home. After about an hour of searching the immediate neighborhood, the caregivers contact law enforcement, and the child is entered as missing and an AMBER Alert is considered. Witnesses report seeing the child speaking with a man in a vehicle. The child is later found in another state after being transported overnight by a stranger, matching the definition of a stereotypical kidnapping known to law enforcement. The case involves coordination among local police, national resources, and interstate law enforcement partnerships.",
+    "movement": "Interstate",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 13-year-old girl walks home alone from a friend’s house along a residential street. A man in a car pulls alongside her, asks for directions, and then offers her a ride. When she declines, he stops the car, grabs her, and forces her inside. He drives her to a secluded area outside the neighborhood, sexually assaults her, and leaves her there. She is found by a passerby later that evening and reports the abduction to police.",
+    "movement": "Regional",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 10-year-old boy rides his bicycle around his neighborhood in the late afternoon. A man he does not know, parked near a small park, calls the boy over to ask for help loading items into his trunk. When the boy approaches, the man pushes him into the car and drives off. The offender takes him to a nearby vacant building, assaults him, and then releases him in another part of town. The child eventually finds help and gives a description of the man and vehicle.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "An 11-year-old girl fails to return home from school. After searching the immediate area for about an hour, her parents contact the police. Witnesses later report seeing her talking to an unfamiliar man near a parked car close to the school. Over the next day, investigators learn that the child was taken across a state line and held overnight in a motel by the offender, who sexually assaulted her before abandoning her at a rest stop. This case fits the definition of a stereotypical kidnapping involving nonfamily abduction, extended detention, and long-distance transport.",
+    "movement": "Interstate",
+    "risk": "Critical"
+  },
+  {
+    "narrative": "A 42-year-old man with a stable job and no prior criminal convictions volunteers as a youth leader at a community program. Over several months, he singles out one 11-year-old child for special attention, providing small gifts and extra one-on-one time. He gradually introduces more physical contact through hugs and playful touching that becomes increasingly sexualized. He privately tells himself that the child enjoys the attention and is mature enough to understand. Eventually, he escalates to repeated fondling in secluded rooms at the community center. When confronted, he minimizes the behavior, describing it as harmless affection and denies that the child was harmed.",
+    "movement": "Local",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 35-year-old man with a history of various nonsexual offenses, impulsive behavior, and substance misuse frequently visits relatives where children are present. During one visit, after drinking heavily, he finds himself alone with a 9-year-old relative watching television. Acting on impulse, he begins inappropriate touching that escalates quickly to sexual fondling. The episode is brief but serious. He later claims he was drunk, did not plan the abuse, and says it was a “one-time mistake,” despite having a general pattern of disregard for rules and others’ boundaries.",
+    "movement": "Local",
+    "risk": "Medium"
+  },
+  {
+    "narrative": "A 29-year-old man spends many hours online each day. He begins by viewing adult pornography, then stumbles upon mixed collections that include child sexual exploitation materials. Over time, he deliberately seeks out CSEM and becomes a nonsecure collector, saving large numbers of files and trading them in online communities. He rarely interacts directly with children but joins forums where offenders share material and discuss preferences and fantasies. He justifies his behavior by saying that he is only looking at images and not harming anyone directly. He takes some basic steps to hide his activity but does not use the most sophisticated security tools.",
+    "movement": "Stationary",
+    "risk": "High"
+  },
+  {
+    "narrative": "A 33-year-old man joins social networking sites and messaging apps under multiple aliases targeting early adolescent profiles. He systematically initiates conversations with 12- to 14-year-olds, complimenting them, building trust, and gradually introducing sexual topics. He requests sexual images and offers to send his own, sometimes engaging in live-streamed sexual activity. With a smaller number of victims, he escalates further, suggesting clandestine meetings in person. In one case, he arranges to meet a 13-year-old at a park, where he engages in hands-on abuse. He views himself as having a ‘relationship’ with his victims and believes they are willing participants.",
+    "movement": "Local",
+    "risk": "Critical"
+  }
+]

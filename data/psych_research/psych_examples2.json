@@ -1,0 +1,84 @@
+{
+    "research_source": "NCIC_2024_Missing_Unidentified_Statistics_FBI",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": null,
+        "preferred_locations": null,
+        "risk_escalation": "Certain disappearance categories indicate higher risk, especially 'Endangered' and 'Involuntary' which correlate with danger, abduction, or physical vulnerability.",
+        "decision_factors": [
+          "Age strongly influences how missing persons are coded (majority of cases are juveniles).",
+          "Juvenile category overwhelmingly dominates missing person entries (over 330,000 out of 533,936).",
+          "Involuntary (abduction/kidnapping) cases are extremely rare compared to runaway and endangered categories.",
+          "Race distribution differs by age and category, affecting reporting and classification patterns."
+        ],
+        "motive_categories": [
+          "Runaway",
+          "Endangered",
+          "Involuntary (abduction/kidnapping)",
+          "Disability-related disappearance",
+          "Catastrophe victim",
+          "Other safety concern"
+        ]
+      },
+  
+      "behavioral_indicators": [
+        "Most cases do not involve criminal abduction (less than 1% were stranger abductions).",
+        "Runaway patterns dominate the dataset (95% of all entries using MPC field).",
+        "High-volume disappearance among teens indicates social, family, or environmental stressors rather than offender-driven grooming."
+      ],
+  
+      "temporal_patterns": {
+        "time_of_day": null,
+        "day_of_week": null,
+        "seasonal_patterns": null,
+        "duration_patterns": "Records remain active indefinitely until resolved; disappearance periods vary widely and are not recorded in NCIC statistics.",
+        "escalation_timeline": "Runaway cases constitute rapid-onset disappearances, whereas endangered or involuntary classifications reflect escalating safety concerns."
+      },
+  
+      "risk_factors": [
+        "Being under age 18 is the strongest risk factor for being reported missing (349,557 entries in 2024)",
+        "Youth age 20 and under account for 368,196 out of 533,936 entries (~69%)",
+        "Runaway behavior is the dominant risk factor (accounting for 95% of cases where MPC was used)",
+        "Racial disparities in reporting (e.g., Black youth significantly overrepresented in juvenile missing categories)",
+        "High-risk categories include Endangered, Involuntary, and Disability marking individuals vulnerable to harm"
+      ],
+  
+      "movement_patterns": {
+        "typical_distances": "Not specified; NCIC does not track distance traveled.",
+        "common_routes": null,
+        "destination_types": [
+          "Runaways tend to remain within local/regional areas (based on historical behavioral research, not NCIC data).",
+          "Involuntary/kidnapping cases represent a tiny proportion (0.1% stranger abductions)."
+        ],
+        "transportation_methods": null
+      },
+  
+      "training_examples": [
+        {
+          "narrative": "A 15-year-old juvenile is reported missing and categorized as a runaway. No signs of foul play. This aligns with the statistical majority of 2024 missing juvenile entries.",
+          "movement": "Local",
+          "risk": "Medium",
+          "indicators": ["Juvenile", "Runaway classification", "No involuntary circumstances"],
+          "motive_category": "Runaway",
+          "temporal_markers": ["Immediate reporting after absence detected"]
+        },
+        {
+          "narrative": "A child under age 10 is classified as 'Endangered' due to circumstances indicating immediate physical danger. This reflects the NCIC endangered category.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": ["Endangered category", "Young age", "High vulnerability"],
+          "motive_category": "Endangered",
+          "temporal_markers": ["Rapid onset", "Immediate risk to safety"]
+        },
+        {
+          "narrative": "A missing person record is coded 'Involuntary,' indicating circumstances suggesting abduction or kidnapping. These represent a very small portion of NCIC entries (less than 1%).",
+          "movement": "Local",
+          "risk": "Critical",
+          "indicators": ["Involuntary category", "Possible abduction"],
+          "motive_category": "Involuntary",
+          "temporal_markers": ["Disappearance under suspicious circumstances"]
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,130 @@
+{
+    "research_source": "The Missing and Exploited Children’s (MEC) Program: Background and Policies",
+    "findings": {
+      "motive_patterns": {
+        "grooming_duration": "This report is policy- and incidence-focused and does not quantify grooming timelines; it emphasizes that sexual exploitation can occur both when children are missing and when they are not, and that exploitation may be ongoing rather than a single event.",
+        "preferred_locations": [
+          "Missing episodes occur across multiple contexts including family abductions, nonfamily abductions, runaways/thrownaways, children who become lost or injured, and benign situations such as schedule misunderstandings.",
+          "Stereotypical kidnappings (nonfamily) involve a stranger or slight acquaintance moving or detaining a child, often away from normal routine environments (home, school, neighborhood).",
+          "Sexual exploitation may occur offline or online, with the internet providing a key environment for contact, grooming, and abuse."
+        ],
+        "risk_escalation": "The report highlights that missing children and sexually exploited children are distinct but overlapping populations: some missing children are sexually exploited and some exploited children are never reported missing. It implies escalation when missing episodes intersect with sexual exploitation or trafficking, but does not provide a detailed stepwise offender risk escalation model.",
+        "decision_factors": [
+          "Opportunity structures such as gaps in supervision (e.g., runaway episodes, benign misunderstandings, children being lost or stranded).",
+          "Online access and connectivity that allow offenders to contact and exploit children via electronic service providers.",
+          "System-level decisions that shape response and offender behavior, such as AMBER Alert criteria (imminent danger, sufficient descriptive information, child age, and NCIC entry) and the extent of law enforcement and public mobilization.",
+          "Broader social and technological changes (e.g., widespread cell phone use) that influence whether children are perceived as missing and how quickly they are located."
+        ],
+        "motive_categories": [
+          "Family abduction (parental/family member removal from lawful custodian).",
+          "Nonfamily abduction (stereotypical kidnapping by a stranger or slight acquaintance).",
+          "Running away or being forced/thrown out of the home, often linked to broader victimization risks.",
+          "Online sexual exploitation (including child pornography, online enticement, and exposure to obscene material).",
+          "Child sex trafficking, including commercial sexual exploitation.",
+          "Child sex tourism and related travel-based sexual offending."
+        ]
+      },
+      "behavioral_indicators": [
+        "Repeated running away or being forced to leave home (runaway/thrownaway status).",
+        "Patterns of children being lost, stranded, or injured away from caregivers, leading to caretaker alarm and attempts to locate the child.",
+        "Use of the internet and electronic services to contact or be contacted by adults or older youth for sexual purposes.",
+        "Receipt of unsolicited obscene material or sexual content online (e.g., via email, messaging apps, or websites).",
+        "Online enticement attempts by individuals seeking sexual acts, often framed as friendship, romance, or offers of help.",
+        "Involvement in or exposure to online child pornography (either as a victim whose images are shared or as a child groomed through such material).",
+        "Indicators of sex trafficking such as being controlled by an older individual, evidence of commercial sexual activity, or being moved between locations for exploitation.",
+        "Sexual harassment and unwanted sexual comments or messages, including online, particularly targeting adolescent girls."
+      ],
+      "temporal_patterns": {
+        "time_of_day": [],
+        "day_of_week": [],
+        "seasonal_patterns": [],
+        "duration_patterns": "The NISMART-3 survey defines a ‘caretaker missing’ episode as one where a child’s whereabouts are unknown long enough (at least one hour) for the caretaker to become alarmed and actively attempt to locate the child; ‘reported missing’ cases add the step of contacting law enforcement or a missing children’s agency. Stereotypical kidnappings, as defined in the report, involve extended duration markers such as overnight detention or long-distance transport.",
+        "escalation_timeline": "Over the period between NISMART-2 (1999) and NISMART-3 (2013), the overall rate of both caretaker-missing and reported-missing episodes declined, largely due to fewer benign-missing incidents, possibly influenced by wider cell phone use. The report does not provide a detailed timeline of how individual cases escalate from initial contact to abduction or exploitation, but it notes that missing incidents can quickly become high-risk when they involve abduction or sexual exploitation."
+      },
+      "risk_factors": [
+        "Runaway and thrownaway status: the majority of children whose cases are handled by the National Center for Missing and Exploited Children (NCMEC) are runaways, indicating a large, high-risk subgroup among missing children.",
+        "Adolescent age, especially female adolescents ages 14–17, who have the highest observed rates of sexual victimization in the referenced national survey of children’s exposure to violence.",
+        "Female sex: girls have higher reported rates of sexual victimization than boys, both within the past year and across the lifetime.",
+        "Broad exposure to violence and victimization: sexual abuse often co-occurs with other forms of victimization, increasing overall vulnerability.",
+        "Online exposure to adults or older youth who engage in sexual grooming, send obscene material, or attempt online enticement.",
+        "Homelessness or unstable housing, including youth who have left home without adequate support and may be more vulnerable to trafficking and exploitation.",
+        "Systemic and reporting factors: under-detection and under-reporting of sexual exploitation, and definitional challenges around missing children, mean that many at-risk children may not appear in official counts.",
+        "Geographic and jurisdictional complexity: variation in state and local responses, and the need for national coordination, can affect how quickly missing and exploited children are identified and assisted."
+      ],
+      "movement_patterns": {
+        "typical_distances": "The report notes that stereotypical kidnappings are defined, in part, by the possibility of transporting a child at least 50 miles or detaining the child overnight, but it emphasizes that most missing children are not stereotypically kidnapped; many incidents are local and resolved relatively quickly (e.g., benign misunderstandings, runaways who return or are located).",
+        "common_routes": [
+          "Local movements within a community that result in caretaker alarm (e.g., a child not returning home when expected and being temporarily unaccounted for).",
+          "For stereotypical kidnappings, potential transport by vehicle across communities or across county or state lines, as reflected in cases known to law enforcement.",
+          "Digital ‘routes’ in online exploitation, where movement is virtual rather than physical but still connects offenders to victims across jurisdictions."
+        ],
+        "destination_types": [
+          "For most missing incidents, destinations are ordinary places in the child’s daily life (friend’s homes, public areas, or temporary shelters for runaways).",
+          "In abduction cases, potential movement to unknown private or remote locations, though the report does not detail specific destination typologies.",
+          "Online environments (websites, chat rooms, social media platforms, and other electronic services) where sexual exploitation is initiated and sometimes sustained."
+        ],
+        "transportation_methods": [
+          "On-foot local movement (e.g., a child walking or biking, becoming lost, stranded, or failing to return home as expected).",
+          "Private vehicles used in abduction cases to move children away from initial contact locations, including potential long-distance travel in stereotypical kidnappings.",
+          "Electronic communication technologies (internet, mobile devices) as the primary ‘transportation’ medium for online sexual exploitation, enabling offenders to reach children without physical movement."
+        ]
+      },
+      "training_examples": [
+        {
+          "narrative": "A 15-year-old girl has a history of family conflict and has run away from home several times. One night she leaves after an argument and does not return. Her caregiver becomes alarmed when she does not answer her phone for several hours and calls the police, who enter her as missing in the National Crime Information Center and notify the national hotline. During the three days she is gone, she stays with older acquaintances she met online and is pressured into sexual activity in exchange for a place to sleep. She is eventually located after contacting a friend, and the case is referred for services addressing both her runaway behavior and sexual victimization.",
+          "movement": "Regional",
+          "risk": "High",
+          "indicators": [
+            "Repeated runaway or thrownaway episodes from home.",
+            "Adolescent age and female sex, a group with elevated rates of sexual victimization.",
+            "Online connections with older peers and adults made before and during the runaway episode.",
+            "Periods of being missing long enough for caretakers to be alarmed and involve law enforcement.",
+            "Exposure to sexual exploitation while away from home and protective supervision."
+          ],
+          "motive_category": "Runaway-related missing episode with opportunistic sexual exploitation",
+          "temporal_markers": [
+            "Caregiver alarm and active search beginning within hours of the youth not returning home.",
+            "Multi-day missing episode before location and recovery.",
+            "Prior history of earlier, shorter runaway episodes that did not previously result in official reports."
+          ]
+        },
+        {
+          "narrative": "A 13-year-old boy is not reported missing but spends increasing amounts of unsupervised time online after school. Over several months he is contacted by an adult who sends him sexually explicit images, gradually escalates conversations to sexual topics, and pressures him to share sexual photos of himself. The electronic service provider detects the abusive content, files a mandatory report to the national CyberTipline, and law enforcement is notified. Although the child’s physical whereabouts were never unknown to his caregivers, the case is classified as child sexual exploitation and triggers support services.",
+          "movement": "Local",
+          "risk": "High",
+          "indicators": [
+            "Unsupervised and extensive internet use by a young adolescent.",
+            "Online enticement by an adult, including grooming behaviors and escalating sexual messages.",
+            "Receipt of unsolicited obscene material and requests for self-produced sexual images.",
+            "Case detection via electronic service provider reporting requirements rather than a missing person report.",
+            "Overlap between non-missing status and serious sexual exploitation."
+          ],
+          "motive_category": "Online sexual exploitation without a physical missing episode",
+          "temporal_markers": [
+            "Gradual escalation of grooming and sexual content over weeks or months.",
+            "Single-point law-enforcement awareness when the provider files a report with the CyberTipline.",
+            "Follow-up investigative and support timeline driven by digital evidence review rather than physical search and rescue."
+          ]
+        },
+        {
+          "narrative": "An 11-year-old child walking home from a community event fails to arrive at home. After about an hour of searching the immediate neighborhood, the caregivers contact law enforcement, and the child is entered as missing and an AMBER Alert is considered. Witnesses report seeing the child speaking with a man in a vehicle. The child is later found in another state after being transported overnight by a stranger, matching the definition of a stereotypical kidnapping known to law enforcement. The case involves coordination among local police, national resources, and interstate law enforcement partnerships.",
+          "movement": "Cross-state",
+          "risk": "Critical",
+          "indicators": [
+            "Nonfamily abduction by a stranger or slight acquaintance.",
+            "Child’s whereabouts unknown and caretakers alarmed, triggering a reported-missing episode.",
+            "Transport of the child out of the local area, meeting the criteria for stereotypical kidnapping.",
+            "Rapid mobilization of law enforcement, possible AMBER Alert activation, and use of national missing children resources.",
+            "Interstate coordination for recovery, reflecting the need for national systems and data sharing."
+          ],
+          "motive_category": "Nonfamily stereotypical kidnapping involving long-distance transport",
+          "temporal_markers": [
+            "Movement from caretaker concern to official missing report within the first hour.",
+            "Overnight detention and transport that fit stereotypical kidnapping incidence study criteria.",
+            "Resolution within days, but with intense search activity concentrated in the early hours and first day after disappearance."
+          ]
+        }
+      ]
+    }
+  }
+  
