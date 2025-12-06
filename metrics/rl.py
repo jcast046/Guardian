@@ -5,6 +5,7 @@ distance metrics, and area-based efficiency measures.
 """
 from __future__ import annotations
 
+import json
 import math
 import pathlib
 from datetime import datetime
@@ -154,30 +155,25 @@ def calc_rl_metrics(zones_type: str = "baseline", cfg: dict | None = None) -> di
     }
     buf_m = float(cfg.get("geo", {}).get("hit_buffer_m", 0) or 0)
 
-    truth_rows = read_json_blocks(cfg["paths"]["gold_zones"])
+    # Load ground truth from reinforcement_learning/ground_truth.json
+    truth_path = pathlib.Path("reinforcement_learning/ground_truth.json")
+    if truth_path.exists():
+        with open(truth_path, 'r', encoding='utf-8') as f:
+            truth_data = json.load(f)
+        truth = {
+            case_id: (float(coords["lat"]), float(coords["lon"]))
+            for case_id, coords in truth_data.items()
+            if "lat" in coords and "lon" in coords
+        }
+    else:
+        truth = {}
+
     zones_path = (
         cfg["paths"]["zones_baseline"]
         if zones_type == "baseline"
         else cfg["paths"]["zones_llm"]
     )
     zone_rows = read_json_blocks(zones_path)
-
-    truth = {
-        r.get("case_id"): (
-            r.get("lat")
-            or r.get("center_lat")
-            or r.get("last_seen_lat"),
-            r.get("lon")
-            or r.get("center_lon")
-            or r.get("last_seen_lon"),
-        )
-        for r in truth_rows
-    }
-    truth = {
-        k: (float(a), float(b))
-        for k, (a, b) in truth.items()
-        if a is not None and b is not None
-    }
 
     zone_ids = {r.get("case_id") for r in zone_rows if r.get("case_id")}
     truth_ids = set(truth.keys())

@@ -11,10 +11,10 @@ import pathlib
 _DEFAULT = {
     "paths": {
         "eda_min": "eda_out/eda_cases_min.jsonl",
-        "gold_cases": "gold/cases_gold.jsonl",
-        "gold_zones": "gold/zone_truth.jsonl",
+        "gold_cases": "data/real_cases/guardian_output.jsonl",
+        "gold_zones": "data/real_cases/guardian_output.jsonl",
         "synthetic_cases": "data/synthetic_cases/",
-        "llm_results": "gold/llm_analysis_results.json",
+        "llm_results": "eda_out/llm_analysis_results.json",
         "real_cases": "data/real_cases/guardian_output.jsonl",
         "zones_baseline": "eda_out/zones_rl.jsonl",
         "zones_llm": "eda_out/zones_reweighted.jsonl",
@@ -22,7 +22,7 @@ _DEFAULT = {
         "real_min": "data/real_cases/guardian_output.jsonl"
     },
     "ops": {
-        "llm_timings": "gold/llm_analysis_results.json",
+        "llm_timings": "eda_out/llm_analysis_results.json",
         "validation_report": "eda_out/validation_report.json",
         "expect_outputs": [
             "eda_out/distribution_summary.png",
