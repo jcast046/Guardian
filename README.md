@@ -43,21 +43,21 @@ The system integrates multiple subsystems:
         ┌─────────────────────┼─────────────────────┐
         │                     │                     │
    ┌────▼────┐          ┌────▼────┐          ┌────▼────┐
-   │Clustering│          │Forecast│          │Zone QA │
-   │Hotspots │          │(Markov)│          │(LLM)   │
+   │Clustering│         |Forecast │          │Zone QA  │
+   │Hotspots │          │(Markov) │           │(LLM)    │
    └────┬────┘          └────┬────┘          └────┬────┘
         │                     │                     │
         └─────────────────────┼─────────────────────┘
                               │
                     ┌─────────▼─────────┐
                     │  Search Plan Gen  │
-                    │  (Sectors/Rings)   │
+                    │  (Sectors/Rings)  │
                     └─────────┬─────────┘
                               │
                     ┌─────────▼─────────┐
                     │   Metrics & Eval  │
-                    │  (Geo-hit@K)     │
-                    └──────────────────┘
+                    │  (Geo-hit@K)      │
+                    └────────────────── ┘
 ```
 
 ### Core User Workflow
